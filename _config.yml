@@ -38,5 +38,5 @@ defaults:
       type: post
     values:
       tags: Other
-url: 'https://anticowl.github.io/'
-baseurl: 'anticowl.github.io/'
+#url: 'https://anticowl.github.io/'
+#baseurl: 'anticowl.github.io/'
