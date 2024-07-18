@@ -8,7 +8,7 @@
 ### Resolution 
 Titanfall 2 doesn't detect DSR resolution and the only way to have a fullscreen resolution of 4K is to change these lines in the videoconfig.txt file located in `%USERPROFILE%\Documents\Respawn\Titanfall2\local\videoconfig.txt` by the settings below.
 ```
-"setting.defaultres"3840"
+"setting.defaultres" "3840"
 "setting.defaultresheight" "1920"
 ```
 ### Super Sampling
