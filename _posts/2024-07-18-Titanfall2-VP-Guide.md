@@ -1,1 +1,1 @@
-![Super Sampling](../_images/TF2-Guides.png)
+![Super Sampling](./_images/TF2-Guides.png)
