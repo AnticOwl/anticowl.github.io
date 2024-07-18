@@ -1,1 +1,15 @@
-
+r_shadowAtlasTileSize 6144; vt_maxPPF 64; vt_maxAniso 16; vt_lodBias -2; vt_qualityBC7ColorMask 0; vt_qualityBC6HLightmap 0;vt_qualityHDPLossless 0; vt_qualityHDPPower 0; vt_qualityHDPNormal 0; vt_qualityHDPLightmap 0; vt_qualityHDPSpecular 0; vt_qualityHDPDiffuse 0; vt_qualityBC7ColorMaskTranscode 0; g_setting_photomode 1; image_anisotropy 16;image_lodbias -1; image_BCCompressionQuality 0;r_multiSamples 16;vt_pageImageSizeVmtrUnique 8192;r_flaresQuality 0;r_forceTwoSided 1; r_particlesLightAtlasHeight 2048; r_particlesLightAtlasWidth 4096; r_detailDistance 8000;r_detailFadeDistMax 7000; r_vignette 0; r_flaresquality 0; r_imageAtlasMaxAniso 16; vt_qualityLightmapRoundDenominator 1.0;r_chromaticAberration 0;vt_restart;
+bind KP_PLUS cvaradd g_fov 1
+bind KP_MINUS cvaradd g_fov -1
+bind KP_STAR g_fov 95
+bind KP_SLASH toggle com_overrideDOF
+bind KP_0 toggle g_FreezeTime
+bind KP_1 cvaradd com_override_dof_intensity 0.01
+bind KP_2 cvaradd com_override_dof_intensity -0.01
+bind KP_3 com_override_dof_intensity 1.0
+bind KP_4 cvaradd r_lensFlaresRatio 0.01
+bind KP_5 cvaradd r_lensFlaresRatio -0.01
+bind KP_6 r_lensFlaresRatio 1.0
+bind KP_7 cvaradd r_hdrBloomRatio 0.001
+bind KP_8 cvaradd r_hdrBloomRatio -0.001
+bind KP_9 r_hdrBloomRatio 0.03
