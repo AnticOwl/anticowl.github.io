@@ -5,7 +5,7 @@
 * ReShade with Shaders Toggler for HUD or [The Janitor HUD Toggle](http://www.moddb.com/games/titanfall-2/downloads/toggle-hud5)
 
 ## Pre-Requisite
-* EA App Overlay must be disable as otherwise you won't be able to use the one from the camera tool.
+* EA App Overlay must be disabled as otherwise you won't be able to use the one from the camera tool.
 
 ## Resolution and Super Sampling
 ### Resolution 
