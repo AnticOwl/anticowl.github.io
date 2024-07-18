@@ -1,1 +1,1 @@
-![Super Sampling]({{ '/TF2-Guides.png' | relative_url }})
+![Super Sampling]({{ '/_images/TF2-Guides.png' | relative_url }})
