@@ -26,17 +26,17 @@ To achieve this, you will need to activate the Adaptive Resolution FPS Target an
 
 
 ## Image Quality
-    | Setting | Description |
-    | ------- | ----------- |
-    | "setting.cl_particle_fallback_multiplier"        "0" ||
-    | "setting.r_decals"        "1024"|  Number of impacts visible. Default is 256 |             
-    | "setting.r_lod_switch_scale"        "4.000000"||
-    | "setting.cl_ragdoll_maxcount"        "16"||
-    | "setting.shadow_depthres"        "2048"||
-    | "setting.csm_quality_level"        "3"||
-    | "setting.csm_cascade_res"        "4096"||
-    | "setting.fadeDistScale"        "4.000000"||
 
+| Setting | Description |
+| ------- | ----------- |
+| "setting.cl_particle_fallback_multiplier"        "0" |Render particles effects at max details all the time|
+| "setting.r_decals"        "1024"|  Number of impacts visible. Default is 256 |             
+| "setting.r_lod_switch_scale"        "4.000000"|Level of details for rocks, trees and other game elements. Default High is 1|
+| "setting.cl_ragdoll_maxcount"        "16"||
+| "setting.shadow_depthres"        "2048"|Shadows resolution. The highest the better. Default Very High is 1024. Setting higher than 2048 will crash the game at start|
+| "setting.csm_quality_level"        "3"|Shadow Cascade quality. From 0 to 3 (very low to high)|
+| "setting.csm_cascade_res"        "4096"|Shadow Cascade resolution. Higher is better. Breaks if set to 8192|
+| "setting.fadeDistScale"        "4.000000"|Distance a which the models star to fade|
 
 ## Some Reading
 * [nVidia - titanfall-2 Graphics Performance and Tweaking Guide](https://www.nvidia.com/en-us/geforce/guides/gfecnt/titanfall-2-graphics-performance-and-tweaking-guide/)
