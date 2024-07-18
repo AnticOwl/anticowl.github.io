@@ -1,4 +1,6 @@
-# Required
+# Titanfall 2 Screenshooting Guide
+
+Required
 * Titanfall 2 Camera by Otis_inf.
 * ReShade with Shader Toggler for HUD or [The Janitor HUD Toggle](http://www.moddb.com/games/titanfall-2/downloads/toggle-hud5)
 
