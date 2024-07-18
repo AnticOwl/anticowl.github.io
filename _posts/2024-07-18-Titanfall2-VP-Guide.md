@@ -40,7 +40,7 @@ Open `%USERPROFILE%\Documents\Respawn\Titanfall2\local\videoconfig.txt` and modi
 | "setting.csm_quality_level"        "3"|Shadow Cascade quality. From 0 to 3 (very low to high)|
 | "setting.csm_cascade_res"        "4096"|Shadow Cascade resolution. Higher is better. Breaks if set to 8192|
 | "setting.fadeDistScale"        "4.000000"|Distance a which the models star to fade|
-| "setting.mat_picmip" "-8"| Texture resolution|
+| "setting.mat_picmip" "-8"| Textures resolution|
 
 Once you are done modifying these settings, save and set the file to read only.
 
