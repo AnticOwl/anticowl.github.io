@@ -20,6 +20,10 @@ Titanfall 2 doesn't detect DSR resolutions and the only way to have a fullscreen
 To achieve this, you will need to activate the Adaptive Resolution FPS Target and configure it below your average FPS and activate the Adaptive SuperSampling.
 
 ![image](/assets/images/TF2-Guides.png)
+>NOTE
+>
+>The default anti-aliasing will change to TSAA.
+
 
 ## Image Quality
 
@@ -64,10 +68,6 @@ To achieve this, you will need to activate the Adaptive Resolution FPS Target an
     "setting.configversion"        "7"
 }
 ```
-
->NOTE
->
->The default anti-aliasing will change to TSAA.
 
 ## Some Reading
 * [nVidia - titanfall-2 Graphics Performance and Tweaking Guide](https://www.nvidia.com/en-us/geforce/guides/gfecnt/titanfall-2-graphics-performance-and-tweaking-guide/)
