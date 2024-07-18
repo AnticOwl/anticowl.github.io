@@ -4,6 +4,9 @@
 * Titanfall 2 Camera by Otis_inf.
 * ReShade with Shaders Toggler for HUD or [The Janitor HUD Toggle](http://www.moddb.com/games/titanfall-2/downloads/toggle-hud5)
 
+## Pre-Rquisite
+* EA App Overlay must be disable as otherwise you won't be able to use the one from the camera tool.
+
 ## Resolution and Super Sampling
 ### Resolution 
 Titanfall 2 doesn't detect DSR resolutions and the only way to have a fullscreen resolution of 4K is to change some values in the videoconfig.txt file located in `%USERPROFILE%\Documents\Respawn\Titanfall2\local\videoconfig.txt` by the settings below.
@@ -18,12 +21,10 @@ To achieve this, you will need to activate the Adaptive Resolution FPS Target an
 
 ![image](/assets/images/TF2-Guides.png)
 
+>NOTE
+>
+>The default anti-aliasing will change to TSAA.
+
 ## Some Reading
 * [nVidia - titanfall-2 Graphics Performance and Tweaking Guide](https://www.nvidia.com/en-us/geforce/guides/gfecnt/titanfall-2-graphics-performance-and-tweaking-guide/)
 * [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Titanfall_2)
-
->NOTE
->
-> Be sure the EA App Overlay is disable as if otherwise you won't be able to use the camera tool in game overlay.
-
-
