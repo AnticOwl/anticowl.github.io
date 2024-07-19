@@ -1,4 +1,4 @@
-# Titanfall 2 Screenshooting Guide
+# Titanfall 2
 
 ## Required
 * Titanfall 2 Camera by Otis_inf.
