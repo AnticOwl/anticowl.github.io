@@ -27,6 +27,15 @@
 
 Some AV software is known to block the program - you may need to add the game directory to the exclusion list.
 
+## Image Quality and Draw Distance
+
+Edit the `AssassinRogue.ini` located in `%USERPROFILE%\Documents\Assassin's Creed Rogue` and replace the default values by the ones below.
+
+```
+EnvironmentQuality=4
+TextureQuality=2
+```
+
 ## Controls
 
 | Key | Description |
