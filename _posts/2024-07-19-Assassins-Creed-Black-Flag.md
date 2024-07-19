@@ -1,4 +1,4 @@
-# Assassin's Creed - Black Flag - Camera Tool
+# Assassin's Creed - Black Flag
 ### A free camera mod for Assassin's Creed IV Black Flag
 
 <br>
