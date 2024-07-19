@@ -33,7 +33,7 @@ Edit the `AssassinRogue.ini` located in `%USERPROFILE%\Documents\Assassin's Cree
 
 ```
 EnvironmentQuality=4
-TextureQuality=2
+TextureQuality=4
 ```
 
 ## Controls
