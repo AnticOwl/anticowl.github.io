@@ -2,7 +2,7 @@
 ### A free camera mod for Assassin's Creed IV Black Flag
 
 ## Requirements
-- Windows 10
+- Windows 10 Only
 - Ubisoft Connect game version (1.07)
 - Mod Loader ([Download Here](https://github.com/LionAG/ScriptEngine/releases/latest))
 
