@@ -16,7 +16,7 @@ twitter_username: "olivier__cesar"
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
-theme: "slate"
+theme: "minima"
 
 #rss: rss
 
