@@ -16,8 +16,8 @@ twitter_username: "olivier__cesar"
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
-#theme: "slate"
-remote_theme: pages-themes/slate@v0.2.0
+theme: "slate"
+
 #rss: rss
 
 kramdown:
