@@ -1,8 +1,9 @@
-# ACRogue-CameraTool
+# Assassin's Creed - Rogue
 
 ### A free camera mod for Assassin's Creed Rogue
 
 ## Requirements
+- Windows 10 Only
 - Ubisoft Connect game version (1.1.0)
 - Mod Loader ([Download Here](https://github.com/LionAG/ScriptEngine/releases/latest))
 
@@ -25,8 +26,6 @@
 - Click on `Run` to start the game.
 
 Some AV software is known to block the program - you may need to add the game directory to the exclusion list.
-
-If you need help feel free to join the chat on [Element](https://matrix.to/#/!fiJSxMURNZlyjalmyA:matrix.org?via=matrix.org)
 
 ## Controls
 
