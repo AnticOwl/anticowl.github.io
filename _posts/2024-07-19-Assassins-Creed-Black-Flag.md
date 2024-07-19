@@ -1,22 +1,6 @@
 # Assassin's Creed - Black Flag
 ### A free camera mod for Assassin's Creed IV Black Flag
 
-<br>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/LionAG/ACBlackFlag-CameraTool/main/Pic/AC4%20(1).png" />
-
-  <br>
-  <br>
-
-  <img src="https://raw.githubusercontent.com/LionAG/ACBlackFlag-CameraTool/main/Pic/AC4%20(2).png" />
-
-  <br>
-  <br>
-
-  <img src="https://raw.githubusercontent.com/LionAG/ACBlackFlag-CameraTool/main/Pic/AC4%20(3).png" />
-</p>
-
 ## Requirements
 - Windows 10
 - Ubisoft Connect game version (1.07)
