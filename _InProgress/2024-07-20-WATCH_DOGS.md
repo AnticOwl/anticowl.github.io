@@ -37,7 +37,7 @@ Required: ReShade and Real Long Exposure shader configured at like 0.2-0.4 secon
 
 - Press F5 to pause the game and F4 to hide the HUD.
 - Activate the camera by pressing Home then Insert to show the UCT GUI.
-![image](assets/images/UCT-01.png)
+![image](/assets/images/UCT-01.png)
 
 - Change the mode to Look At Player. The camera will be positioned attached to back back of the vehicule.
   
@@ -57,8 +57,8 @@ Required: ReShade and Real Long Exposure shader configured at like 0.2-0.4 secon
 
 Example
 
-<img src="images/UCT-02.png" />
-<img src="images/UCT-03.png" />
+![image](/assets/images/UCT-02.png)
+![image](/assets/images/UCT-03.png)
 
 >[!IMPORTANT]
 >The Transitions and Lights tabs will only appear when the camera is active.
