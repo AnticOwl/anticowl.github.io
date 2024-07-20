@@ -39,7 +39,7 @@ Open `%USERPROFILE%\Documents\Respawn\Titanfall2\local\videoconfig.txt` and modi
 | "setting.shadow_depthres"        "2048"|Shadows resolution. The highest the better. Default Very High is 1024. Setting higher than 2048 will crash the game at start|
 | "setting.csm_quality_level"        "3"|Shadow Cascade quality. From 0 to 3 (very low to high)|
 | "setting.csm_cascade_res"        "4096"|Shadow Cascade resolution. Higher is better. Breaks if set to 8192|
-| "setting.fadeDistScale"        "4.000000"|Distance a which the models star to fade|
+| "setting.fadeDistScale"        "4.000000"|Distance a which the models start to fade|
 | "setting.mat_picmip" "-8"| Textures resolution|
 
 Once you are done modifying these settings, save and set the file to read only.
