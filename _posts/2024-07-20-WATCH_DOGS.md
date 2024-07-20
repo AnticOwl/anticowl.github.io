@@ -66,3 +66,5 @@ The DOF (Depth Of Field) isn't useable while in gameplay mode.
 </pre>
 {{site.data.alerts.end}}
 
+{% include callout.html content="The Transitions and Lights tabs will only appear when the camera is active.
+The DOF (Depth Of Field) isn't useable while in gameplay mode." type="info" %} 
