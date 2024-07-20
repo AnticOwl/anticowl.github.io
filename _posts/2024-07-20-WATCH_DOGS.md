@@ -65,5 +65,3 @@ The Transitions and Lights tabs will only appear when the camera is active.
 The DOF (Depth Of Field) isn't useable while in gameplay mode.
 </pre>
 {{site.data.alerts.end}}
-
-{% include note.html content="This is my note. All the content I type here is treated as a single paragraph. <br/><br/> Now I'm typing on a  new line." %}
