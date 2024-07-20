@@ -37,19 +37,17 @@ Required: ReShade and Real Long Exposure shader configured at like 0.2-0.4 secon
 
 - Press F5 to pause the game and F4 to hide the HUD.
 - Activate the camera by pressing Home then Insert to show the UCT GUI.
-![image](/assets/images/UCT-00.png)
-
 - Change the mode to Look At Player. The camera will be positioned attached to back back of the vehicule.
-  
+![image](/assets/images/UCT-00.png)  
 - Press Static Angles.
 - Change the angles to your preferences in the Ideal Position Offset.
   First box is for horizontal axe, second is he depth, and third vertical.
 - Change the angles to your preferences in the Ideal Angle Offset.
   First box is for tilt, second is roll, and third pan.
 - Start the game back but in slow motion by pressing F6.
-- Press your assigned shortcut keybing to start the long exposure. 
+- Press your assigned shortcut to start the long exposure. 
 - Press Print Screen to save your shot.
-- To end the Motion Blur shot, press your assigne long exposure keybind, Home, F4 and finally F6 to return to the normal game speed.
+- Press your long exposure shortcut, disable the camera and press F6 to return to the game normal speed.
 
 *Note:* 
 *Tilt, roll and pan are orbital when in Look At Player mode.*
