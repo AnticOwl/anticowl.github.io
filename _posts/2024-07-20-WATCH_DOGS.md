@@ -57,20 +57,6 @@ Required: ReShade and Real Long Exposure shader configured at like 0.2-0.4 secon
 
 Example
 
-<div class="slider container" style="aspect-ratio: 1920/823">
-  <div class="slider__img slider__img-after">
-    <p>After</p>
-    <img src="/assets/images/UCT-02.png" />
-  </div>
-  <div class="slider__img slider__img-before">
-    <p>Before</p>
-    <img src="/assets/images/UCT-03.png" />
-  </div>
-  <input type="range" min="0" max="100" value="50" step="0.01" 
-    id="slider" class="slider__input" 
-    autocomplete="off" onwheel="this.blur()" 
-  />
-</div>
 ![image](/assets/images/UCT-02.png)
 ![image](/assets/images/UCT-03.png)
 
