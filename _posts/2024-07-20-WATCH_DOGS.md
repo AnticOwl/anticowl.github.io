@@ -66,6 +66,11 @@ Example
     <p>Before</p>
     <img src="/assets/images/UCT-03.png" />
   </div>
+  <input type="range" min="0" max="100" value="50" step="0.01" 
+    id="slider" class="slider__input" 
+    autocomplete="off" onwheel="this.blur()" 
+  />
+</div>
 ![image](/assets/images/UCT-02.png)
 ![image](/assets/images/UCT-03.png)
 
