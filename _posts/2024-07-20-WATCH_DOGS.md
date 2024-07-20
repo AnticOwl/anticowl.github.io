@@ -62,5 +62,11 @@ Example
 >The Transitions and Lights tabs will only appear when the camera is active.
 >The DOF (Depth Of Field) isn't useable while in gameplay mode.
 
-
+{{site.data.alerts.note}}
+<p>This is my note.</p>
+<pre>
+def foo(x):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return x+1
+</pre>
+{{site.data.alerts.end}}
 
