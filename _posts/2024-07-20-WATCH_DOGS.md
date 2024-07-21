@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "WATCH_DOGS - Utlimate Camera Tool"
+title:  "WATCH_DOGS"
 date:   2024-07-20 18:05:55 +0300
 image:  WD_POST.jpg
 tags:   Screenshooting
 ---
 
-# WATCH_DOGS - Ultimate Camera Tools 
+# WATCH_DOGS
 
 ## REQUIRED
 * Sad_Gamers Ultimate Camera Tool
