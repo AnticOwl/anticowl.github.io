@@ -67,9 +67,5 @@ Example
 ![image](/assets/images/UCT-03.png)
 
 
-{{site.data.alerts.note}}
-<pre>
-The Transitions and Lights tabs will only appear when the camera is active.
-The DOF (Depth Of Field) isn't useable while in gameplay mode.
-</pre>
-{{site.data.alerts.end}}
+{% include note.html content="The Transitions and Lights tabs will only appear when the camera is active.
+The DOF (Depth Of Field) isn't useable while in gameplay mode."%}
