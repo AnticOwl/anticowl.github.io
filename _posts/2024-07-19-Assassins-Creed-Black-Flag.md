@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "Assassin's Creed - Black Flag"
+date:   2024-07-19 17:05:55 +0300
+image:  ACBF_POST.jpg
+tags:   Screenshooting
+---
+
 # Assassin's Creed - Black Flag
 ### A free camera mod for Assassin's Creed IV Black Flag
 
