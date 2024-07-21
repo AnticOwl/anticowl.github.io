@@ -20,7 +20,7 @@ tags:   Screenshooting
 This mode let you freely move the camera around
 
 | Keys  | Movements |
-|-------------|-------------|
+| -------- | ------- |
 | Arrow Up  | Move Forward  |
 | Arrow Down  | Move Backward  |
 | Arrow Left  | Move Left  |
