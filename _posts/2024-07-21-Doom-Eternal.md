@@ -40,3 +40,4 @@ bind "F7" "com_override_dof_intensity 1.0";
 Now it's time to test your config. For this, start the game . Once you are ready to fight demons and the level is loaded, press the `~` (tilde).
 Type `exec myconfig`, press enter and your config will load. After it's loaded, you should see the Photo Mode message appearing.
 
+{% include note.html content="Info's content" %}
