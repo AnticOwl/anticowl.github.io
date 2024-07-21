@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Assassin's Creed - Rogue"
-date:   2024-07-19 17:05:55 +0300
+date:   2024-07-19 17:04:55 +0300
 image:  ACROGUE_POST.jpg
 tags:   Screenshooting
 ---
