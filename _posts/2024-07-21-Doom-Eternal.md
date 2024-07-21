@@ -6,4 +6,37 @@ image:  DOOMEternal_POST.jpg
 tags:   Screenshooting
 ---
 
-# DOOM Eternal
+# DOOM Eternal (WIP)
+
+## Required
+
+* [DOOM Eternal Console Unlocker 1.6 by Sunbeam ]
+
+## How To Use
+Once the game is started, open the cheat table and check the boxes like in the print screen below.
+When done, you will have full access to the in game console. 
+
+![image](/images/DOOMEternal-01.png)
+ 
+## Photo Mode Anytime and Image Quality 
+
+
+In `%USERPROFILE%\Documents\Saved Games\id Software\DOOMEternal\base` create a new file called `myconfig.cfg` and copy the content below in it. 
+Save it when done. 
+
+Notice the `g_allowphotomode 1`. This will allow you to open the photo mode whenever you want. 
+
+```
+g_allowphotomode 1;photomode_freecamleashdistance -1;photomode_freecammovementtype 2;r_lodforce "0";r_texturelodbias "-8";p_showFootstepParticles "1";r_shadowAtlasWidth 16384;r_shadowAtlasHeight 16384;r_shadowAtlasTileSize 5200;g_showPlayerShadow 1;r_filmGrainRatio -1;r_cloudsQuality 3;r_cloudsQualityUseJitter 0;r_shadowPlayerLOD 1;r_dofHalfRes 0;r_lodScale 10;r_lodForce 0;r_lodRender 1; ;_shadowLodForceValue 0;r_flaresQuality 0;r_dlssTextureLodBias -5;r_cineLensflaresBlurMode 2;r_cineLensflaresAnamorphicIntensity 1.05;r_blurRadialQuality 3;r_blurRadialScale 1.0;r_SSDORaytrace 1;r_lightGridResolutionX 16;r_lightGridResolutionY 16;r_lightGridResolutionZ 16;pm_photoModeTurnFXOff 0;r_cineLensflaresAnamorphicWidth 1.5; r_cineLensflaresAnamorphicBlueshift 0.4";
+bind "F1" "g_stopTime 0";
+bind "F2" "g_stopTime 1";
+bind "F3" "timescale 0.1";
+bind "F4" "timescale 1";
+bind "F5" "toggle r_hdrAutoExposureRatio";
+bind "F6" "r_cineLensflaresAnamorphicIntensity 0.925; 
+bind "F7" "com_override_dof_intensity 1.0";
+```
+
+Now it's time to test your config. For this, start the game . Once you are ready to fight demons and the level is loaded, press the `~` (tilde).
+Type `exec myconfig`, press enter and your config will load. After it's loaded, you should see the Photo Mode message appearing.
+
