@@ -39,7 +39,7 @@ Some AV software is known to block the program - you may need to add the game di
 ## Controls
 
 | Key | Description |
-| -- | -- |
+|-- |-- |
 | F1				| Toggle HUD |
 | F2				| Toggle world stop |
 | F3				| Toggle slow motion  |
