@@ -6,7 +6,7 @@ image:  DOOMEternal_POST.jpg
 tags:   Screenshooting
 ---
 
-# DOOM Eternal (WIP)
+This guide is currently work in progress. Will add more in a few days.
 
 ## Required
 
