@@ -47,5 +47,7 @@ bind "F7" "com_override_dof_intensity 1.0";
 
 Now it's time to test your config. For this, start the game . Once you are ready to fight demons and the level is loaded, press the `~` (tilde).
 Type `exec myconfig`, press enter and your config will load. After it's loaded, you should see the Photo Mode message appearing.
+You will need to recall and apply the line at every new level. If you don't sse the photo mode option in the hud, re-excute the line by opeining the console and pressing arrow up. 
+Press enter to apply.
 
-{% include note.html content="* If loading your config crash the game, copy and paste the line in the game console and press enter. * You will need to recall and apply the line at every new level. If you don't sse the photo mode option in the hud, re-excute the line by opeining the console and pressing arrow up. Press enter to apply." %}
+{% include note.html content="If loading your config crash the game, copy and paste the line in the game console and press enter." %}
