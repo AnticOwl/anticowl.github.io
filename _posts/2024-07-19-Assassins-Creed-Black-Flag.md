@@ -39,7 +39,7 @@ Some AV software is known to block the program - you may need to add the game di
 ## Controls
 
 | Key | Description |
-| --|-- |
+| -- | -- |
 | F1				| Toggle HUD |
 | F2				| Toggle world stop |
 | F3				| Toggle slow motion  |
@@ -77,7 +77,7 @@ Some AV software is known to block the program - you may need to add the game di
 ## Color Corrections
 
 | Key | Description |
-| --|-- |
+| -- | -- |
 |ALT + NUMPAD9  |Increase Hue|
 |ALT + NUMPAD7  |Decrease Hue|
 |ALT + NUMPAD6  |Increase Saturation|
