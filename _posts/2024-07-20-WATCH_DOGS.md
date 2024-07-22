@@ -62,27 +62,6 @@ Required: ReShade and Real Long Exposure shader configured at like 0.2-0.4 secon
 *For better image quality you can also use Cheat Engine Speed Hack when the tool Slomo is active.*
 
 Example
-<div class="slider container" style="aspect-ratio: 16/9">
-  <div class="slider__img slider__img-after">
-    <p>After</p>
-    <img src="../assets/images/UCT-03.png" />
-  </div>
-  <div class="slider__img slider__img-before">
-    <p>Before</p>
-    <img src="../assets/images/UCT-02.png" />
-  </div>
-  <input type="range" min="0" max="100" value="50" step="0.01" 
-    id="slider" class="slider__input" 
-    autocomplete="off" onwheel="this.blur()" 
-  />
-</div>
-
-<div class="juxtapose">
-    <img src="/assets/images/UCT-02.png" />
-    <img src="/assets/images/UCT-03.png" />
-</div>
-<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
-<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
 
 ![image](/assets/images/UCT-02.png)
 ![image](/assets/images/UCT-03.png)
