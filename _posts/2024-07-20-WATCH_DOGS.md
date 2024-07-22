@@ -76,11 +76,5 @@ Example
   <img slot="second" src="/assets/images/UCT-03.png" />
 </img-comparison-slider>
 
-
-
-![image](/assets/images/UCT-02.png)
-![image](/assets/images/UCT-03.png)
-
-
 {% include note.html content="The Transitions and Lights tabs will only appear when the camera is active.
 The DOF (Depth Of Field) isn't useable while in gameplay mode."%}
