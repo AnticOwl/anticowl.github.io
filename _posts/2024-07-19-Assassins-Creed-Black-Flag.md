@@ -5,7 +5,7 @@ date:   2024-07-19 17:05:55 +0300
 image:  ACBF_POST.jpg
 tags:   Screenshooting
 ---
-Sail the Caribbean seas lika a Pirate. Hunt whales, board other ships and sink them. Loot what you can. But don't forget to take shots of the marvelous colours of the sunset.
+Sail the Caribbean seas lika a Pirate. Hunt whales, board other ships and sink them (or not). Loot what you can. But do not forget to take shots of the marvelous colours of the sunset.
 
 ## Requirements
 - Windows 10 Only
