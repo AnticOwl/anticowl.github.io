@@ -6,7 +6,7 @@ image:  WD_POST.jpg
 tags:   Screenshooting
 ---
 
-Be the hacker. Or, sort of. It's mostly be the vigilante. Thanks to Sad_Gamers great work on the camera and some mods to make the game even more attractive, you will see WATCH_DOGS like you never saw it.   
+Be the hacker. Or, sort of. It's mostly be the vigilante. Thanks to Sad_Gamers great work on the camera, and some mods to make the game even more attractive, you will see WATCH_DOGS like you never saw it.   
 
 ## REQUIRED
 * [Sad_Gamers Ultimate Camera Tool](https://www.nexusmods.com/watchdogs/mods/258)
