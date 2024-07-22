@@ -62,10 +62,10 @@ Required: ReShade and Real Long Exposure shader configured at like 0.2-0.4 secon
 *For better image quality you can also use Cheat Engine Speed Hack when the tool Slomo is active.*
 
 Example
-<script
-  defer
-  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
-></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
