@@ -63,6 +63,11 @@ Required: ReShade and Real Long Exposure shader configured at like 0.2-0.4 secon
 
 Example
 
+<div class="b-dics" style="width: 590px">
+  <img src="http://codictados.com/wp-content/uploads/2017/01/god-p4k.jpg" alt="4k" />
+  <img src="http://codictados.com/wp-content/uploads/2017/01/god-performance.jpg" alt="Performance mode" />
+</div>
+
 ![image](/assets/images/UCT-02.png)
 ![image](/assets/images/UCT-03.png)
 
