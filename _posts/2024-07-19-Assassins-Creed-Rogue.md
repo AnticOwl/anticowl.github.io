@@ -6,7 +6,7 @@ image:  ACROGUE_POST.jpg
 tags:   Screenshooting
 ---
 
-More colder than the Caribeean seas, the North Atlantic Ocean is where Shay will forge his destiny. Cold blue toning for the icebergs, endless water and a camera to imortalize these beautiful views.
+Colder than the Caribeean seas, the North Atlantic Ocean is where Shay will forge his destiny. Cold blue toning for the icebergs, endless water and a camera to imortalize these beautiful views.
 
 ## Requirements
 - Windows 10 Only
