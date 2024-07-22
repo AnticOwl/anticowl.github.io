@@ -83,17 +83,91 @@ TextureQuality=4
 
 ## Color Corrections
 
-| Key | Description |
-| --|-- |
-|ALT + NUMPAD9  |Increase Hue|
-|ALT + NUMPAD7  |Decrease Hue|
-|ALT + NUMPAD6  |Increase Saturation|
-|ALT + NUMPAD4  |Decrease Saturation|
-|ALT + NUMPAD3  |Increase Brightness|
-|ALT + NUMPAD1  |Decrease Brightness|
-|ALT + NUMPAD8  |Increase Contrast|
-|ALT + NUMPAD2  |Decrease Contrast|
-|ALT + NUMPAD5  |Reset|
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <thead>
+        <tr>
+            <th>Key </th>
+            <th> Description </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ALT + NUMPAD9 </td>
+            <td>Increase Hue </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD7 </td>
+            <td>Decrease Hue </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD6 </td>
+            <td>Increase Saturation </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD4 </td>
+            <td>Decrease Saturation </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD3 </td>
+            <td>Increase Brightness </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD1 </td>
+            <td>Decrease Brightness </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD8 </td>
+            <td>Increase Contrast </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD2 </td>
+            <td>Decrease Contrast </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD5 </td>
+            <td>Reset </td>
+        </tr>
+        <tr></tr>
+    </tbody>
+</table>
+</div>
+
 
 ## Custom keybinding
 
