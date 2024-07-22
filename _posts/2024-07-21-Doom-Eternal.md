@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "DOOM Eternal"
+title:  "DOOM Eternal (WIP)"
 date:   2024-07-21 17:43:55 +0300
 image:  DOOMEternal_POST.jpg
-tags:   Screenshooting
+tags:   
 ---
 
-This guide is currently work in progress. Will add more in a few days.
+DOOM Eternal, beautiful decors, and demons. Still as brutal as the first one and even more fast paced. No rest until they are all gon!
 
 ## Required
 
