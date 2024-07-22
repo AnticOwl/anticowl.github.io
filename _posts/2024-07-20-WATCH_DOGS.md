@@ -69,7 +69,7 @@ Example
   </div>
   <div class="slider__img slider__img-before">
     <p>Before</p>
-    <img src=".\assets\images\UCT-02.png" />
+    <img src="../assets/images\UCT-02.png" />
   </div>
   <input type="range" min="0" max="100" value="50" step="0.01" 
     id="slider" class="slider__input" 
