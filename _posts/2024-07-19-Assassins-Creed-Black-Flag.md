@@ -37,7 +37,6 @@ Some AV software is known to block the program - you may need to add the game di
 
 
 ## Controls
-
 <style>
 .table_component {
     overflow: auto;
@@ -223,7 +222,6 @@ Some AV software is known to block the program - you may need to add the game di
 </div>
 
 ## Color Corrections
-
 <style>
 .table_component {
     overflow: auto;
