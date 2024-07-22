@@ -259,71 +259,49 @@ Some AV software is known to block the program - you may need to add the game di
 </style>
 <div class="table_component" role="region" tabindex="0">
 <table>
-    <caption>
-        <p><br></p>
-    </caption>
+    <caption>ACBF.csv</caption>
     <thead>
         <tr>
-            <th> Key </th>
+            <th>Key </th>
             <th> Description </th>
-            <th>
-            </th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>ALT + NUMPAD9 </td>
-            <td>Increase Hue</td>
-            <td>
-            </td>
+            <td>Increase Hue </td>
         </tr>
         <tr>
             <td>ALT + NUMPAD7 </td>
-            <td>Decrease Hue</td>
-            <td>
-            </td>
+            <td>Decrease Hue </td>
         </tr>
         <tr>
             <td>ALT + NUMPAD6 </td>
-            <td>Increase Saturation</td>
-            <td>
-            </td>
+            <td>Increase Saturation </td>
         </tr>
         <tr>
             <td>ALT + NUMPAD4 </td>
-            <td>Decrease Saturation</td>
-            <td>
-            </td>
+            <td>Decrease Saturation </td>
         </tr>
         <tr>
             <td>ALT + NUMPAD3 </td>
-            <td>Increase Brightness</td>
-            <td>
-            </td>
+            <td>Increase Brightness </td>
         </tr>
         <tr>
             <td>ALT + NUMPAD1 </td>
-            <td>Decrease Brightness</td>
-            <td>
-            </td>
+            <td>Decrease Brightness </td>
         </tr>
         <tr>
             <td>ALT + NUMPAD8 </td>
-            <td>Increase Contrast</td>
-            <td>
-            </td>
+            <td>Increase Contrast </td>
         </tr>
         <tr>
             <td>ALT + NUMPAD2 </td>
-            <td>Decrease Contrast</td>
-            <td>
-            </td>
+            <td>Decrease Contrast </td>
         </tr>
         <tr>
             <td>ALT + NUMPAD5 </td>
-            <td>Reset</td>
-            <td>
-            </td>
+            <td>Reset </td>
         </tr>
         <tr></tr>
     </tbody>
