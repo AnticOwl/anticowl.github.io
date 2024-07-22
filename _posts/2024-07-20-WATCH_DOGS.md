@@ -5,11 +5,8 @@ date:   2024-07-20 18:05:55 +0300
 image:  WD_POST.jpg
 tags:   Screenshooting
 ---
-
-# WATCH_DOGS
-
 ## REQUIRED
-* Sad_Gamers Ultimate Camera Tool
+* [Sad_Gamers Ultimate Camera Tool](https://www.nexusmods.com/watchdogs/mods/258)
 
 ## Camera Modes
 
@@ -18,22 +15,109 @@ tags:   Screenshooting
 ### Unbounded A.K.A Free Camera
 
 This mode let you freely move the camera around
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
 
-| Keys  | Movements |
-| -------- | ------- |
-| Arrow Up  | Move Forward  |
-| Arrow Down  | Move Backward  |
-| Arrow Left  | Move Left  |
-| Arrow Right  | Move Right  |
-| Page Up  | Lift Up  |
-| Page Down  | Lift Down |
-| Mouse | Tilt and Pan  |
-| Numpad 7 | Roll Left |
-| Numpad 4 | Reset Roll |
-| Numpad 1 | Roll Right |
-| Numpad 9 | Decrease FOV |
-| Numpad 6 | Reset FOV |
-| Numpad 3 |Increase FOV |
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <caption>
+        <p><br></p>
+    </caption>
+    <thead>
+        <tr>
+            <th>Keys</th>
+            <th> Movements </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Arrow Up</td>
+            <td> Move Forward </td>
+        </tr>
+        <tr>
+            <td>Arrow Down</td>
+            <td> Move Backward </td>
+        </tr>
+        <tr>
+            <td>Arrow Left</td>
+            <td> Move Left </td>
+        </tr>
+        <tr>
+            <td>Arrow Right</td>
+            <td> Move Right </td>
+        </tr>
+        <tr>
+            <td>Page Up</td>
+            <td> Lift Up </td>
+        </tr>
+        <tr>
+            <td>Page Down</td>
+            <td> Lift Down </td>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td> Tilt and Pan </td>
+        </tr>
+        <tr>
+            <td>Numpad 7</td>
+            <td> Roll Left </td>
+        </tr>
+        <tr>
+            <td>Numpad 4</td>
+            <td> Reset Roll </td>
+        </tr>
+        <tr>
+            <td>Numpad 1</td>
+            <td> Roll Right </td>
+        </tr>
+        <tr>
+            <td>Numpad 9</td>
+            <td> Decrease FOV </td>
+        </tr>
+        <tr>
+            <td>Numpad 6</td>
+            <td> Reset FOV </td>
+        </tr>
+        <tr>
+            <td>Numpad 3</td>
+            <td> Increase FOV</td>
+        </tr>
+    </tbody>
+</table>
+<div style="margin-top:8px">Made with <a href="https://www.htmltables.io/" target="_blank">HTML Tables</a></div>
+</div>
 
 ### Look At Player
 
