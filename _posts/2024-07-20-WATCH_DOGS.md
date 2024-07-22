@@ -65,7 +65,7 @@ Example
 <div class="slider container" style="aspect-ratio: 16/9">
   <div class="slider__img slider__img-after">
     <p>After</p>
-    <img src=".\assets\images\UCT-03.png" />
+    <img src="./assets/images/UCT-03.png" />
   </div>
   <div class="slider__img slider__img-before">
     <p>Before</p>
