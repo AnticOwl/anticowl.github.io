@@ -258,7 +258,6 @@ Some AV software is known to block the program - you may need to add the game di
 </style>
 <div class="table_component" role="region" tabindex="0">
 <table>
-    <caption>ACBF.csv</caption>
     <thead>
         <tr>
             <th>Key </th>
