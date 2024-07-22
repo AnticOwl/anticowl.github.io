@@ -62,11 +62,21 @@ Required: ReShade and Real Long Exposure shader configured at like 0.2-0.4 secon
 *For better image quality you can also use Cheat Engine Speed Hack when the tool Slomo is active.*
 
 Example
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
+></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
 
-<div class="b-dics" style="width: 590px">
-  <img src="http://codictados.com/wp-content/uploads/2017/01/god-p4k.jpg" alt="4k" />
-  <img src="http://codictados.com/wp-content/uploads/2017/01/god-performance.jpg" alt="Performance mode" />
-</div>
+<img-comparison-slider>
+  <img slot="first" src="/assets/images/UCT-02.png" />
+  <img slot="second" src="/assets/images/UCT-03.png" />
+</img-comparison-slider>
+
+
 
 ![image](/assets/images/UCT-02.png)
 ![image](/assets/images/UCT-03.png)
