@@ -3,7 +3,7 @@ layout: post
 title:  "DOOM Eternal (WIP)"
 date:   2024-07-21 17:43:55 +0300
 image:  DOOMEternal_POST.jpg
-tags:   
+tags:   Screenshooting
 ---
 
 DOOM Eternal, beautiful decors, and demons. Still as brutal as the first one and even more fast paced. No rest until they are all gone! 
