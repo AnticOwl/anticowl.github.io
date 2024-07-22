@@ -52,9 +52,6 @@ This mode let you freely move the camera around
 </style>
 <div class="table_component" role="region" tabindex="0">
 <table>
-    <caption>
-        <p><br></p>
-    </caption>
     <thead>
         <tr>
             <th>Keys</th>
@@ -116,7 +113,6 @@ This mode let you freely move the camera around
         </tr>
     </tbody>
 </table>
-<div style="margin-top:8px">Made with <a href="https://www.htmltables.io/" target="_blank">HTML Tables</a></div>
 </div>
 
 ### Look At Player
