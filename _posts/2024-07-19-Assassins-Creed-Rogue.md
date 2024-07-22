@@ -8,8 +8,6 @@ tags:   Screenshooting
 
 More colder than the Caribeean seas, the North Atalntic Ocean is where Shay will forge his destiny. Cold blue toning for the icebergs, endless water and a camera to imortalize these beautiful views.
 
-### A free camera mod for Assassin's Creed Rogue
-
 ## Requirements
 - Windows 10 Only
 - Ubisoft Connect game version (1.1.0)
