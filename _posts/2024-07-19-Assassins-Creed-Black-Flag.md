@@ -38,42 +38,6 @@ Some AV software is known to block the program - you may need to add the game di
 
 ## Controls
 
-|Key |Description |
-|-----|-----|
-| F1				| Toggle HUD |
-| F2				| Toggle world stop |
-| F3				| Toggle slow motion  |
-| F5				| Reload configuration | 
-| F6				| Reset camera to initial position |
-| F7				| Store camera position |
-| F8				| Restore camera position |
-| F9				| Individual capture |
-| F10				| Panoramic capture |
-| Delete			| First person view  |
-||
-| Numpad 3			| Time of day forward |
-| Numpad 1			| Time of day backward |
-| Numpad 0			| Time of day freeze |
-||
-| Home				| Enable free camera |
-| I					| Camera forward |
-| K					| Camera backward  |
-| J					| Camera left  |
-| L					| Camera right |
-| Space				| Camera up |
-| Control				| Camera down |
-| Numpad +			| Increase FOV |
-| Numpad -			| Decrease FOV |
-||
-| End				| Activate rotation |
-| Numpad 8			| Pitch up |
-| Numpad 2			| Pitch down |
-| Numpad 4			| Yaw left |
-| Numpad 6			| Yaw right |
-| Numpad 7			| Roll left |
-| Numpad 9			| Roll right |
-| Numpad 5			| Reset rotation to default |
-
 <style>
 .table_component {
     overflow: auto;
@@ -260,17 +224,113 @@ Some AV software is known to block the program - you may need to add the game di
 
 ## Color Corrections
 
-| Key | Description |
-| -- | -- |
-|ALT + NUMPAD9  |Increase Hue|
-|ALT + NUMPAD7  |Decrease Hue|
-|ALT + NUMPAD6  |Increase Saturation|
-|ALT + NUMPAD4  |Decrease Saturation|
-|ALT + NUMPAD3  |Increase Brightness|
-|ALT + NUMPAD1  |Decrease Brightness|
-|ALT + NUMPAD8  |Increase Contrast|
-|ALT + NUMPAD2  |Decrease Contrast|
-|ALT + NUMPAD5  |Reset|
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <caption>
+        <p><br></p>
+    </caption>
+    <thead>
+        <tr>
+            <th> Key </th>
+            <th> Description </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ALT + NUMPAD9 </td>
+            <td>Increase Hue</td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD7 </td>
+            <td>Decrease Hue</td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD6 </td>
+            <td>Increase Saturation</td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD4 </td>
+            <td>Decrease Saturation</td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD3 </td>
+            <td>Increase Brightness</td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD1 </td>
+            <td>Decrease Brightness</td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD8 </td>
+            <td>Increase Contrast</td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD2 </td>
+            <td>Decrease Contrast</td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>ALT + NUMPAD5 </td>
+            <td>Reset</td>
+            <td>
+            </td>
+        </tr>
+        <tr></tr>
+    </tbody>
+</table>
+</div>
 
 ## Custom keybinding
 
