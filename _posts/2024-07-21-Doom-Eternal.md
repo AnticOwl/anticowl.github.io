@@ -6,7 +6,8 @@ image:  DOOMEternal_POST.jpg
 tags:   
 ---
 
-DOOM Eternal, beautiful decors, and demons. Still as brutal as the first one and even more fast paced. No rest until they are all gon!
+DOOM Eternal, beautiful decors, and demons. Still as brutal as the first one and even more fast paced. No rest until they are all gone! 
+So let's see what we can do to get the most of the game for some epic shots.
 
 ## Required
 
