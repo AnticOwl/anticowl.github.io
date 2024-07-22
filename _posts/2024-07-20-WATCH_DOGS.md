@@ -77,6 +77,13 @@ Example
   />
 </div>
 
+<div class="juxtapose">
+    <img src="/assets/images/UCT-02.png" />
+    <img src="/assets/images/UCT-03.png" />
+</div>
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+
 ![image](/assets/images/UCT-02.png)
 ![image](/assets/images/UCT-03.png)
 
