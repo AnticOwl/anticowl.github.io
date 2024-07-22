@@ -221,7 +221,6 @@ Some AV software is known to block the program - you may need to add the game di
 </table>
 </div>
 
-## Color Corrections
 <style>
 .table_component {
     overflow: auto;
