@@ -16,6 +16,8 @@ So let's see what we can do to get the most of the game for some epic shots.
 ## Optional
 * ReShade 6.1.1
 
+{% include note.html content="ReShade works only via the installer. Be sure to activate 'Enable ReShade in Vulkan Globally'." %}
+
 ## How To Use
 Once the game is started, open the cheat table, connect to the game process and check the boxes like in the print screen below.
 When done, you will have full access to the in game console. 
@@ -23,7 +25,6 @@ When done, you will have full access to the in game console.
 ![image](/images/DOOMEternal-01.png)
  
 ## Photo Mode Anytime and Image Quality 
-{% include note.html content="ReShade works only via the installer. Be sure to activate 'Enable ReShade in Vulkan Globally'." %}
 
 In `%USERPROFILE%\Documents\Saved Games\id Software\DOOMEternal\base` create a new file called `myconfig.cfg` and copy the content below in it. 
 Save it when done. 
