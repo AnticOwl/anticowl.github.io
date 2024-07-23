@@ -137,7 +137,7 @@ bind KP_9 r_cineLensflaresAnamorphicWidth 1.5
 </table>
 </div>
 
-Some other lens flares values that can be tweaked
+Some other lens flares variables and their defaultvalues that can be tweaked.
 
 ```
 r_cineLensflaresAnamorphicBlueshift "0.4"
