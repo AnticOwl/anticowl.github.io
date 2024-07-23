@@ -107,7 +107,7 @@ bind KP_9 r_cineLensflaresAnamorphicWidth 1.5
         </tr>
         <tr>
             <td>NumPad 3</td>
-            <td>Reset DOF to default value (1) </td>
+            <td>Reset DOF to default value 1.0 </td>
         </tr>
         <tr>
             <td>NumPad 4</td>
@@ -119,7 +119,7 @@ bind KP_9 r_cineLensflaresAnamorphicWidth 1.5
         </tr>
         <tr>
             <td>NumPad 6</td>
-            <td>Reset lens flare to default value (1) </td>
+            <td>Reset lens flare to default value 1.0 </td>
         </tr>
         <tr>
             <td>NumPad 7</td>
