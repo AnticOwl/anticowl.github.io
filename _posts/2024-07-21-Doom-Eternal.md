@@ -17,7 +17,7 @@ So let's see what we can do to get the most of the game for some epic shots.
 * ReShade 6.1.1
 
 ## How To Use
-Once the game is started, open the cheat table and check the boxes like in the print screen below.
+Once the game is started, open the cheat table, connect to the game process and check the boxes like in the print screen below.
 When done, you will have full access to the in game console. 
 
 ![image](/images/DOOMEternal-01.png)
