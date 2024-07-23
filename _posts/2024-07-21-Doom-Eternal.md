@@ -47,6 +47,7 @@ bind KP_7 cvaradd r_cineLensflaresAnamorphicWidth 0.01
 bind KP_8 cvaradd r_cineLensflaresAnamorphicWidth -0.01
 bind KP_9 r_cineLensflaresAnamorphicWidth 1.5
 ```
+<br>
 <style>
 .table_component {
     overflow: auto;
