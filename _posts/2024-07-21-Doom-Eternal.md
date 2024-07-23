@@ -151,6 +151,7 @@ r_cineLensflaresGhostOffset      "0.2"
 r_cineLensflaresHaloIntensity    "0.05"
 r_cineLensflaresHaloSize         "0.4"
 ```
+<br>
 Now it's time to test your config. For this, start the game . Once you are ready to fight demons and the level is loaded, press the `~` (tilde).
 Type `exec myconfig`, press enter and your config will load. After it's loaded, you should see the Photo Mode message appearing.
 You will need to recall and apply the line at every new level. If you don't sse the photo mode option in the hud, re-excute the line by opeining the console and pressing arrow up. 
