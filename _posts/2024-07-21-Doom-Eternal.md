@@ -35,16 +35,106 @@ g_allowphotomode 1;photomode_freecamleashdistance -1;photomode_freecammovementty
 r_shadowAtlasWidth 16384;r_shadowAtlasHeight 16384;r_shadowAtlasTileSize 5200;g_showPlayerShadow 1;r_filmGrainRatio -1;r_cloudsQuality 3;
 r_cloudsQualityUseJitter 0;r_shadowPlayerLOD 1;r_dofHalfRes 0;r_lodScale 10;r_lodForce 0;r_lodRender 1; ;_shadowLodForceValue 0;r_flaresQuality 0;
 r_dlssTextureLodBias -5;r_cineLensflaresBlurMode 2;r_cineLensflaresAnamorphicIntensity 1.05;r_blurRadialQuality 3;r_blurRadialScale 1.0;r_SSDORaytrace 1;
-r_lightGridResolutionX 16;r_lightGridResolutionY 16;r_lightGridResolutionZ 16;pm_photoModeTurnFXOff 0;r_cineLensflaresAnamorphicWidth 1.5;
-r_cineLensflaresAnamorphicBlueshift 0.4";
-bind "F1" "g_stopTime 0";
-bind "F2" "g_stopTime 1";
-bind "F3" "timescale 0.1";
-bind "F4" "timescale 1";
-bind "F5" "toggle r_hdrAutoExposureRatio";
-bind "F6" "r_cineLensflaresAnamorphicIntensity 0.925; 
-bind "F7" "com_override_dof_intensity 1.0";
+r_lightGridResolutionX 16;r_lightGridResolutionY 16;r_lightGridResolutionZ 16;pm_photoModeTurnFXOff 0;
+bind KP_0 toggle com_overrideDOF
+bind KP_1 cvaradd com_override_dof_intensity 0.01
+bind KP_2 cvaradd com_override_dof_intensity -0.01
+bind KP_3 com_override_dof_intensity 1.0
+bind KP_4 cvaradd r_cineLensflaresAnamorphicIntensity 0.01
+bind KP_5 cvaradd r_cineLensflaresAnamorphicIntensity -0.01
+bind KP_6 r_cineLensflaresAnamorphicIntensity 0.925
+bind KP_7 cvaradd r_cineLensflaresAnamorphicWidth 0.01
+bind KP_8 cvaradd r_cineLensflaresAnamorphicWidth -0.01
+bind KP_9 r_cineLensflaresAnamorphicWidth 1.5
 ```
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Effect </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>NumPad 0</td>
+            <td>Allow override default DOF value </td>
+        </tr>
+        <tr>
+            <td>NumPad 1</td>
+            <td>Raise DOF intensity by 0.01 </td>
+        </tr>
+        <tr>
+            <td>NumPad 2</td>
+            <td>Lower DOF intensity by 0.01 </td>
+        </tr>
+        <tr>
+            <td>NumPad 3</td>
+            <td>Reset DOF to default value (1) </td>
+        </tr>
+        <tr>
+            <td>NumPad 4</td>
+            <td>Raise lens flare intensity by 0.01 </td>
+        </tr>
+        <tr>
+            <td>NumPad 5</td>
+            <td>Lower lens flare intensity by 0.01 </td>
+        </tr>
+        <tr>
+            <td>NumPad 6</td>
+            <td>Reset lens flare to default value (1) </td>
+        </tr>
+        <tr>
+            <td>NumPad 7</td>
+            <td>Raise lens flare width by 0.01 </td>
+        </tr>
+        <tr>
+            <td>NumPad 8</td>
+            <td>Lower lens flare width by 0.001 </td>
+        </tr>
+        <tr>
+            <td>NumPad 9</td>
+            <td>Reset lens flare width to default value 1.5 </td>
+        </tr>
+        <tr></tr>
+    </tbody>
+</table>
+</div>
 
 Now it's time to test your config. For this, start the game . Once you are ready to fight demons and the level is loaded, press the `~` (tilde).
 Type `exec myconfig`, press enter and your config will load. After it's loaded, you should see the Photo Mode message appearing.
