@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "WATCH_DOGS"
+title:  "WATCH_DOGS (WIP)"
 date:   2024-07-20 18:05:55 +0300
 image:  WD_POST.jpg
 tags:   Screenshooting
@@ -14,6 +14,19 @@ Be the hacker. Or, sort of. It's mostly be the vigilante. Thanks to Sad_Gamers g
 ## OPTIONAL
 * [EPIC MOD PACK](https://www.nexusmods.com/watchdogs/mods/269)
 
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
+
+<img-comparison-slider>
+  <img slot="first" src="/images/WD_SR-Before.jpg" />
+  <img slot="second" src="/images/WD_SR-After.jpg" />
+</img-comparison-slider>
 ## Camera Modes
 
 2 modes available: Unbounded and Look At Player
