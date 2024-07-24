@@ -14,6 +14,11 @@ Be the hacker. Or, sort of. It's mostly be the vigilante. Thanks to Sad_Gamers g
 ## OPTIONAL
 * [EPIC MOD PACK](https://www.nexusmods.com/watchdogs/mods/269)
 
+## RENDERING
+<div style="width:20%; margin: auto;">
+<img src="/images/WD_Menu_Rendering.jpg" alt="WATCH_DOGS UTC Rendering Menu" style="box-shadow: 3px 3px 3px gray;">
+</div>
+
 
 <script defer
   src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
