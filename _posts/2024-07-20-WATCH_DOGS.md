@@ -16,7 +16,7 @@ Be the hacker. Or, sort of. It's mostly be the vigilante. Thanks to Sad_Gamers g
 
 ## RENDERING
 This section will allow you to modifiy the LOD, Anti Aliasing, Shadow and texture map fot the water.
-If you have a graphic card with enough VRAM, you can activate the `Super Render`. This wsill maximize the detail and render twsice you resolution.
+If you have a graphic card with enough VRAM, you can activate the `Super Render`. This wsill maximize the detail and render twice you resolution.
 
 <div style="width:65%; margin: auto;">
 <img src="/images/WD_Menu_Rendering.jpg" alt="WATCH_DOGS UTC Rendering Menu" style="box-shadow: 3px 3px 3px gray;">
