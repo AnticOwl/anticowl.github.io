@@ -136,6 +136,13 @@ This mode will attach the camera to the player. Whatever on foot or in/on a vehi
 
 {% include note.html content="The Transitions and Lights tabs will only appear when the camera is active.
 The DOF (Depth Of Field) isn't useable while in gameplay mode."%}
+### Transitions
+
+<div style="width:65%; margin: auto;">
+<img src="/images/WD_Menu-Transition.jpg" alt="WATCH_DOGS UTC Transitions Menu" style="box-shadow: 3px 3px 3px gray;">
+</div>
+
+This can be useful if you decide to make some short videos.  
 
 ## Rendering
 This section will allow you to modifiy the LOD, Anti Aliasing, Shadow and texture map fot the water.
