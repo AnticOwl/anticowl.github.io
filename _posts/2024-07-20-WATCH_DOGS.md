@@ -14,7 +14,9 @@ Be the hacker. Or, sort of. It's mostly be the vigilante. Thanks to Sad_Gamers g
 ## Optional
 * [EPIC MOD PACK](https://www.nexusmods.com/watchdogs/mods/269)
 
-## Camera Modes
+## The Tool
+
+### Camera
 
 2 modes available: Unbounded and Look At Player
 
@@ -125,7 +127,34 @@ This mode let you freely move the camera around
 
 This mode will attach the camera to the player. Whatever on foot or in/on a vehicle
 
-__How To Make Motion Blur Shots__
+{% include note.html content="The Transitions and Lights tabs will only appear when the camera is active.
+The DOF (Depth Of Field) isn't useable while in gameplay mode."%}
+
+## Rendering
+This section will allow you to modifiy the LOD, Anti Aliasing, Shadow and texture map fot the water.
+If you have a graphic card with enough VRAM, you can activate the `Super Render`. This wsill maximize the detail and render twice you resolution.
+
+<div style="width:65%; margin: auto;">
+<img src="/images/WD_Menu_Rendering.jpg" alt="WATCH_DOGS UTC Rendering Menu" style="box-shadow: 3px 3px 3px gray;">
+</div>
+
+Below and example with and without "Super Render".
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
+
+<img-comparison-slider>
+  <img slot="first" src="/images/WD_SR-Before.jpg" />
+  <img slot="second" src="/images/WD_SR-After.jpg" />
+</img-comparison-slider>
+
+## How To
+
+### Motion Blur Shots
 
 Required: ReShade and Real Long Exposure shader configured at like 0.2-0.4 seconds with a start shortcut key.
 
@@ -159,29 +188,4 @@ Example
 <img-comparison-slider>
   <img slot="first" src="/assets/images/UCT-02.png" />
   <img slot="second" src="/assets/images/UCT-03.png" />
-</img-comparison-slider>
-
-{% include note.html content="The Transitions and Lights tabs will only appear when the camera is active.
-The DOF (Depth Of Field) isn't useable while in gameplay mode."%}
-
-## RENDERING
-This section will allow you to modifiy the LOD, Anti Aliasing, Shadow and texture map fot the water.
-If you have a graphic card with enough VRAM, you can activate the `Super Render`. This wsill maximize the detail and render twice you resolution.
-
-<div style="width:65%; margin: auto;">
-<img src="/images/WD_Menu_Rendering.jpg" alt="WATCH_DOGS UTC Rendering Menu" style="box-shadow: 3px 3px 3px gray;">
-</div>
-
-Below and example with and without "Super Render".
-<script defer
-  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
-</script>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
-/>
-
-<img-comparison-slider>
-  <img slot="first" src="/images/WD_SR-Before.jpg" />
-  <img slot="second" src="/images/WD_SR-After.jpg" />
 </img-comparison-slider>
