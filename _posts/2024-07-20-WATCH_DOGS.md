@@ -23,7 +23,7 @@ Once done, you are good to go and you can start playing and shooting.
 
 ### Camera
 <div style="width:65%; margin: auto;">
-<img src="/images/WD_Menu_Camera.jpg" alt="WATCH_DOGS UTC Camera Menu" style="box-shadow: 3px 3px 3px gray;">
+<img src="/images/WD_Menu-Camera.jpg" alt="WATCH_DOGS UTC Camera Menu" style="box-shadow: 3px 3px 3px gray;">
 </div>
 2 modes available: Unbounded and Look At Player
 
