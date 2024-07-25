@@ -14,6 +14,11 @@ Be the hacker. Or, sort of. It's mostly be the vigilante. Thanks to Sad_Gamers g
 ## Optional
 * [EPIC MOD PACK](https://www.nexusmods.com/watchdogs/mods/269)
 
+## Installation
+
+Unzip the camera tool in the `Watch_Dogs\bin` directory. thats where the `Watch_Dogs.exe` resides.
+Once done, you are good to go and you can start playing and shooting.
+
 ## The Tool
 
 ### Camera
