@@ -151,6 +151,13 @@ This can be useful if you decide to make some short videos.
 
 This is ideal for portraits in low light like night or evening times. 3 type of light temperatures are available: white, warm and cool.
 
+## World
+<div style="width:65%; margin: auto;">
+<img src="/images/WD_Menu-World.jpg" alt="WATCH_DOGS UTC Camera Menu" style="box-shadow: 3px 3px 3px gray;">
+</div>
+
+This is where you can change weather and time. 
+
 ## Rendering
 This section will allow you to modifiy the LOD, Anti Aliasing, Shadow and texture map fot the water.
 If you have a graphic card with enough VRAM, you can activate the `Super Render`. This will maximize the detail and render twice your actual resolution internally.
