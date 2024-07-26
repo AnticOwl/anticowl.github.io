@@ -32,21 +32,7 @@ Save it when done.
 Notice the `g_allowphotomode 1`. This will allow you to open the photo mode whenever you want. 
 
 ```
-g_allowphotomode 1;photomode_freecamleashdistance -1;photomode_freecammovementtype 2;r_lodforce "0";r_texturelodbias "-8";p_showFootstepParticles "1";
-r_shadowAtlasWidth 16384;r_shadowAtlasHeight 16384;r_shadowAtlasTileSize 5200;g_showPlayerShadow 1;r_filmGrainRatio -1;r_cloudsQuality 3;
-r_cloudsQualityUseJitter 0;r_shadowPlayerLOD 1;r_dofHalfRes 0;r_lodScale 10;r_lodForce 0;r_lodRender 1; ;_shadowLodForceValue 0;r_flaresQuality 0;
-r_dlssTextureLodBias -5;r_cineLensflaresBlurMode 2;r_cineLensflaresAnamorphicIntensity 1.05;r_blurRadialQuality 3;r_blurRadialScale 1.0;r_SSDORaytrace 1;
-r_lightGridResolutionX 16;r_lightGridResolutionY 16;r_lightGridResolutionZ 16;pm_photoModeTurnFXOff 0;
-bind KP_0 toggle com_overrideDOF
-bind KP_1 cvaradd com_override_dof_intensity 0.01
-bind KP_2 cvaradd com_override_dof_intensity -0.01
-bind KP_3 com_override_dof_intensity 1.0
-bind KP_4 cvaradd r_cineLensflaresAnamorphicIntensity 0.01
-bind KP_5 cvaradd r_cineLensflaresAnamorphicIntensity -0.01
-bind KP_6 r_cineLensflaresAnamorphicIntensity 0.925
-bind KP_7 cvaradd r_cineLensflaresAnamorphicWidth 0.01
-bind KP_8 cvaradd r_cineLensflaresAnamorphicWidth -0.01
-bind KP_9 r_cineLensflaresAnamorphicWidth 1.5
+g_allowphotomode 1;photomode_freecamleashdistance -1;photomode_freecammovementtype 2;r_lodforce "0";r_texturelodbias "-8";p_showFootstepParticles "1"; r_shadowAtlasWidth 16384;r_shadowAtlasHeight 16384;r_shadowAtlasTileSize 5200;g_showPlayerShadow 1;r_filmGrainRatio -1;r_cloudsQuality 3;r_cloudsQualityUseJitter 0;r_shadowPlayerLOD 1;r_dofHalfRes 0;r_lodScale 10;r_lodForce 0;r_lodRender 1; ;_shadowLodForceValue 0;r_flaresQuality 0;r_dlssTextureLodBias -5;r_cineLensflaresBlurMode 2;r_cineLensflaresAnamorphicIntensity 1.05;r_blurRadialQuality 3;r_blurRadialScale 1.0;r_SSDORaytrace 1;r_lightGridResolutionX 16;r_lightGridResolutionY 16;r_lightGridResolutionZ 16;pm_photoModeTurnFXOff 0;bind KP_0 toggle com_overrideDOF;bind KP_1 cvaradd com_override_dof_intensity 0.01;bind KP_2 cvaradd com_override_dof_intensity -0.01;bind KP_3 com_override_dof_intensity 1.0;bind KP_4 cvaradd r_cineLensflaresAnamorphicIntensity 0.01;bind KP_5 cvaradd r_cineLensflaresAnamorphicIntensity -0.01;bind KP_6 r_cineLensflaresAnamorphicIntensity 0.925;bind KP_7 cvaradd r_cineLensflaresAnamorphicWidth 0.01;bind KP_8 cvaradd r_cineLensflaresAnamorphicWidth -0.01;bind KP_9 r_cineLensflaresAnamorphicWidth 1.5;
 ```
 <br>
 <style>
