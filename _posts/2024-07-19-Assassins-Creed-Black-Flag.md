@@ -12,6 +12,9 @@ Sail the Caribbean seas lika a Pirate. Hunt whales, board other ships and sink t
 - Ubisoft Connect game version (1.07)
 - Mod Loader ([Download Here](https://github.com/LionAG/ScriptEngine/releases/latest))
 
+## Optional
+* ReShade
+
 ## Features
 - Camera control, also in cutscene (including custom roll, pitch, yaw)
 - Built-in individual / panoramic screen capture 
