@@ -13,6 +13,9 @@ Colder than the Caribeean seas, the North Atlantic Ocean is where Shay will forg
 - Ubisoft Connect game version (1.1.0)
 - Mod Loader ([Download Here](https://github.com/LionAG/ScriptEngine/releases/latest))
 
+## Optional
+* ReShade
+
 ## Features
 - Camera control, also in cutscene (including custom roll, pitch, yaw)
 - Built-in individual / panoramic screen capture 
