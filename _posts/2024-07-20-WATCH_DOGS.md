@@ -158,6 +158,21 @@ This is ideal for portraits in low light like night or evening times. 3 type of 
 
 This is where you can change weather and time. 
 
+## Player
+<div style="width:65%; margin: auto;">
+<img src="/images/WD_Menu-Player.jpg" alt="WATCH_DOGS UTC Camera Menu" style="box-shadow: 3px 3px 3px gray;">
+</div>
+
+In this tab, you can swap Aiden with any other main character or even NPC.
+Tha animation / Poses section allow you to play quite a lot of different animation or poses like standing against a wall, looking at, etc.
+
+## Actor
+<div style="width:65%; margin: auto;">
+<img src="/images/WD_Menu-Actor.jpg" alt="WATCH_DOGS UTC Camera Menu" style="box-shadow: 3px 3px 3px gray;">
+</div>
+
+Here, you can spawn any character available in the game, give them a pose or animate and place them wherever you want. 
+
 ## Rendering
 This section will allow you to modifiy the LOD, Anti Aliasing, Shadow and texture map fot the water.
 If you have a graphic card with enough VRAM, you can activate the `Super Render`. This will maximize the detail and render twice your actual resolution internally.
@@ -167,7 +182,7 @@ This means that if your
 <img src="/images/WD_Menu_Rendering.jpg" alt="WATCH_DOGS UTC Rendering Menu" style="box-shadow: 3px 3px 3px gray;">
 </div>
 
-Below and example with and without "Super Render".
+Below, two examples with and without "Super Render".
 <script defer
   src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
 </script>
@@ -180,6 +195,27 @@ Below and example with and without "Super Render".
   <img slot="first" src="/images/WD_SR-Before.jpg" />
   <img slot="second" src="/images/WD_SR-After.jpg" />
 </img-comparison-slider>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
+
+<img-comparison-slider>
+  <img slot="first" src="/images/WD_SR-Before2.jpg" />
+  <img slot="second" src="/images/WD_SR-After2.jpg" />
+</img-comparison-slider>
+
+## Configure
+<div style="width:65%; margin: auto;">
+<img src="/images/WD_Menu-Conf.jpg" alt="WATCH_DOGS UTC Camera Menu" style="box-shadow: 3px 3px 3px gray;">
+</div>
+
+Self explicit. Here you can change your keybinds. Or at least the ones thare are not fix.
+The fixes section includes mods previously separately available from the camera author. enable or desactivate them at will.
 
 ## How To
 
