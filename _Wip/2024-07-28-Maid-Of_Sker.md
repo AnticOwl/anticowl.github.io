@@ -11,7 +11,7 @@ Maid of Sker is one of them.
 
 ## Required
 * [Melon Loader 0.5.7](https://github.com/HerpDerpinstine/MelonLoader/releases/latest/download/MelonLoader.Installer.exe)
-* [Cinematic Unity Explorer v 1.2.0  - IL2CPP](https://github.com/originalnicodr/CinematicUnityExplorer/releases/latest/download/CinematicUnityExplorer.MelonLoader.IL2CPP.zip)
+* [Cinematic Unity Explorer](https://github.com/originalnicodr/CinematicUnityExplorer/releases) and choose CinematicUnityExplorer.MelonLoader.IL2CPP.zip
 
 ## Optional
 * Reshade
