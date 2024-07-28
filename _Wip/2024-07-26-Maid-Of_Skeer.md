@@ -28,7 +28,9 @@ Unzip the content to your game directory usually something like `\steamapps\comm
 Don't be affraid, this 2 folders may already exist but are empty. 
 
 Once this all done, start the game. It may take some times to see the first game splash screen. This is completely normal.
-Second time, your game will start in no time. Press `F7` to hide the CUE interface
+Second time, your game will start in no time. You should see something like this. Press `F7` to hide the CUE interface.
+
+![image](/images/MOS_Interface.jpg)
 
 ## How To Take A Screenshot
 
@@ -42,12 +44,13 @@ Basically, for this game this how you would proceed to get the shooting part eas
 * Press `Begin Freecam`. 
 * Press `Inspect Free Camera` and click `Inspect Game Object`.
 * Uncheck the `Opsive.UltimateCharacterController.Camera.CameraController`. Don't press anywhere else as it will open the properties of that variable. Just uncheck it.
+  ![image](/images/MOS_Inspector.jpg)
 * Press `F7` to hide CUE interface.
 * Frame and take your shot.
 
 Once done, enable CUE interface, check back `Opsive.UltimateCharacterController.Camera.CameraController`, End the Free Cam session, Un-Hide the interface and finally resume the game.
 
-The cheat code for that one is now `Page Up`, `Delete`, `Insert`, `F7`, uncheck, `F7` to start the shooting session. Then the way around to come back to the game.
+The cheat code for that one is now `Page Up`, `Delete`, `Insert`, `F7`, uncheck, `F7` to start the shooting session. Then the other way around to come back to the game.
 Easy peasy! 
 
 
