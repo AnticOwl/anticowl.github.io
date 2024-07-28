@@ -6,9 +6,6 @@ image:  LIR_POST.jpg
 tags:   Screenshooting
 ---
 
-Now the Originalnicodr release his last version of his Cinematic Unity Explorer, it is even easier than before to shot some of these marvelous Unity games.
-Maid of Sker is one of them.
-
 ## Required
 * [Melon Loader 0.5.7](https://github.com/HerpDerpinstine/MelonLoader/releases/latest/download/MelonLoader.Installer.exe)
 * [Cinematic Unity Explorer](https://github.com/originalnicodr/CinematicUnityExplorer/releases) and choose CinematicUnityExplorer.MelonLoader.IL2CPP.zip
