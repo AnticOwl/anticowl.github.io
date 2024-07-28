@@ -27,7 +27,7 @@ Back to Melon Loader installer, click `Install`
 Unzip the content to your game directory usually something like `\steamapps\common\Maid of Sker` (Steam).
 Don't be affraid, this 2 folders may already exist but are empty. 
 
-Once this all done, start the game. It may take some times to see the first game splash screen. This is completely normal.
+Once this all done, start the game. It may take some time to see the first game splash screen. This is completely normal.
 Second time, your game will start in no time. You should see something like this. Press `F7` to hide the CUE interface.
 
 ![image](/images/MOS_Interface.jpg)
@@ -47,8 +47,10 @@ Basically, for this game this how you would proceed to get the shooting part eas
   ![image](/images/MOS_Inspector.jpg)
 * Press `F7` to hide CUE interface.
 * Frame and take your shot.
+  
+For the camera movement, refer to the free camera window when CUE interface is active. 
 
-Once done, enable CUE interface, check back `Opsive.UltimateCharacterController.Camera.CameraController`, End the Free Cam session, Un-Hide the interface and finally resume the game.
+Once done, enable CUE interface, check back `Opsive.UltimateCharacterController.Camera.CameraController`, end the Free Cam session, Un-Hide the interface and finally resume the game.
 
 The cheat code for that one is now `Page Up`, `Delete`, `Insert`, `F7`, uncheck, `F7` to start the shooting session. Then the other way around to come back to the game.
 Easy peasy! 
