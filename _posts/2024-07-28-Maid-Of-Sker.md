@@ -15,6 +15,7 @@ Maid of Sker is one of them.
 
 ## Optional
 * Reshade
+* [Unity IGCS Connector for ReShade IGCSDOF](https://github.com/originalnicodr/CinematicUnityExplorer/releases) 
 
 ## Installation
 
@@ -48,7 +49,7 @@ Basically, for this game this how you would proceed to get the shooting part eas
 * Press `F7` to hide CUE interface.
 * Frame and take your shot.
   
-For the camera movement, refer to the free camera window when CUE interface is active. 
+For the camera movements, refer to the free camera window when CUE interface is active. 
 
 Once done, enable CUE interface, check back `Opsive.UltimateCharacterController.Camera.CameraController`, end the Free Cam session, Un-Hide the interface and finally resume the game.
 
