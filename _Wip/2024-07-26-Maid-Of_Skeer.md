@@ -43,7 +43,7 @@ Basically, for this game this how you would proceed to get the shooting part eas
 * Check `Use Game Camera` if you want to keep the game post processing. You will only need to do this once. That setting stays active the whole time the game is running.
 * Press `Begin Freecam`. 
 * Press `Inspect Free Camera` and click `Inspect Game Object`.
-* Uncheck the `Opsive.UltimateCharacterController.Camera.CameraController`. Don't press anywhere else as it will open the properties of that variable. Just uncheck it.
+* Uncheck the `Opsive.UltimateCharacterController.Camera.CameraController`. Don't press anywhere else as it will open the properties of that component. Just uncheck it.
   ![image](/images/MOS_Inspector.jpg)
 * Press `F7` to hide CUE interface.
 * Frame and take your shot.
