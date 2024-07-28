@@ -12,3 +12,13 @@ tags:   Screenshooting
 
 ## Installation
 
+### Melon Loader Installation
+Start Melon Loader installer and uncheck `Latest`. Click on triangle in the `Version` field and choose 0.5.7
+Click on `Select` and point to your game installation directory. Choose `Maid of Sker.exe` and click `Open`.
+Back to Melon Loader installer, click `Install`
+
+### Cinematic Unity Explorer Instaéllation
+Unzip the content to your game directory usually something like `\steamapps\common\Maid of Sker` (Steam).
+Don't be affraid, this 2 folders may already exist but are empty. 
+
+Once this all done, start the game. It may take some times to see the first game splash screen. 
