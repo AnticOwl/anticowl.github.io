@@ -18,7 +18,7 @@ tags:   Screenshooting
 
 ### Melon Loader Installation
 Start Melon Loader installer and uncheck `Latest`. Click on triangle in the `Version` field and choose 0.5.7
-Click on `Select` and point to your game installation directory. Choose `Maid of Sker.exe` and click `Open`.
+Click on `Select` and point to your game installation directory. Choose `Lost In Random.exe` and click `Open`.
 Back to Melon Loader installer, click `Install`
 
 ### Cinematic Unity Explorer Installation
@@ -30,7 +30,6 @@ Second time, your game will start in no time. You should see something like this
 
 ## How To Take A Screenshot
 
-OK, don't be affraid, it easy and don't ask NASA knowledge. Just some first manipulations.
 Basically, for this game this how you would proceed to get the shooting part easier.
 
 * Press `Page Up` to pause the game.
