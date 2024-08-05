@@ -37,7 +37,8 @@ You are now ready to start!
 
 ## Things to Remember When Shooting
 First off, have a read to [IDK31 post](https://steamcommunity.com/sharedfiles/filedetails/?id=662482735). You will find a lot of usefeul informations. Trust me, you won't loose your time.
-So, from my experience with Remember Me is that there are things you need to remember when shooting. The noise/grain in the game is quite heavy. Check belos foa a Before and After when taking a shot.
+So, from my experience with Remember Me is that there are things you need to remember when shooting. 
+* The noise/grain in the game is quite heavy. Check below for a Before and After when taking a shot. Need to be deactivated at reload or level change. You can do it via `SPECIAL EFFECTS > Other Effects/Alt DOF > NOISE/FILM GRAIN`. Click on `ON` and change the value to `-` and press OK.
 <script defer
   src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
 </script>
@@ -50,6 +51,9 @@ So, from my experience with Remember Me is that there are things you need to rem
   <img slot="first" src="/images/RM_03.jpg" />
   <img slot="second" src="/images/RM_04.jpg" />
 </img-comparison-slider> 
+
+* When you pause the game with F5, the blur from the DOF (Depth of Field) is in most cases removed.
+* HUD can only be deactivated vie the cheat table.
 
 
 
