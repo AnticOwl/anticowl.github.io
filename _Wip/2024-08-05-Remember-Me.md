@@ -15,13 +15,14 @@ tags:   Screenshooting
 * [Nilin Regular Outfit](https://www.nexusmods.com/rememberme/mods/5)
 * [Nilin Intro Outfit](https://www.nexusmods.com/rememberme/mods/1)
 * [Enhanced Lighting Modification](https://www.nexusmods.com/rememberme/mods/12)
+* [No Grain (really, you need that one!)](https://www.nexusmods.com/rememberme/mods/2)
 * [Better Graphics](https://www.nexusmods.com/rememberme/mods/24) 
 * [TexMod Autoload](https://www.nexusmods.com/rememberme/mods/4?tab=files) (very optional)
 
 ## Installation
-If you go for the optional items, and once downloaded, extract the 2 texture mods in your installation folder (.\steamapps\common\Remember Me\Binaries\Win32).
+If you go for the optional items, and once downloaded, extract the 2 texture and no grain mods in your installation folder (.\steamapps\common\Remember Me\Binaries\Win32).
 Each time you want to play and/or take some shots you will have to start `texmod.exe` and choose the texture mods and game exe like int the print below.     
-![image](/images/RM_02.jpg)
+![image](/images/RM_01.jpg)
 
 You can also use `TexMod Autoload` if you feel confortable writing the ini file yourself. 
 <br>
