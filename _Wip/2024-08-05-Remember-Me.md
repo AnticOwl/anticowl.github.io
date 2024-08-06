@@ -57,7 +57,9 @@ So, from my experience with Remember Me is that there are things you need to rem
 * When you pause the game with F5, the blur from the DOF (Depth of Field) is in most cases removed.
 * HUD can only be deactivated via the cheat table (or you can try adding the line like for the pause `Bindings=(Name="Delete",Command="ShowHud | show scaleform")`).
 
-Happy shooting!
+## Resources
+* [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Remember_Me)
+* [Steam IDK31](https://steamcommunity.com/sharedfiles/filedetails/?id=662482735)
 
 
 
