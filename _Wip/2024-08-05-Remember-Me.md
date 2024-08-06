@@ -15,7 +15,7 @@ tags:   Screenshooting
 * [Nilin Regular Outfit](https://www.nexusmods.com/rememberme/mods/5)
 * [Nilin Intro Outfit](https://www.nexusmods.com/rememberme/mods/1)
 * [Enhanced Lighting Modification](https://www.nexusmods.com/rememberme/mods/12)
-* [No Grain (really, you need that one!)](https://www.nexusmods.com/rememberme/mods/2)
+* [No Grain](https://www.nexusmods.com/rememberme/mods/2) (really, you need that one!)
 * [Better Graphics](https://www.nexusmods.com/rememberme/mods/24) 
 * [TexMod Autoload](https://www.nexusmods.com/rememberme/mods/4?tab=files) (very optional)
 
