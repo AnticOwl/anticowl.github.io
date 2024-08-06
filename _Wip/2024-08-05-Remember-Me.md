@@ -53,6 +53,8 @@ Under `[ExampleGame.ExamplePlayerInput]` add the line `Bindings=(Name="F5",Comma
 <br>
 You are now ready to start!
 
+{% include note.html content="Don't forget to switch texture when Nilin put her regula outfit."%}
+
 ## Things to Remember When Shooting
 First off, have a read to [IDK31 post](https://steamcommunity.com/sharedfiles/filedetails/?id=662482735). You will find a lot of usefeul informations. Trust me, you won't loose your time.
 So, from my experience with Remember Me is that there are things you need to remember when shooting. 
