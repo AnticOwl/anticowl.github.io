@@ -25,7 +25,7 @@ Each time you want to play and/or take some shots you will have to start `texmod
 
 You can also use `TexMod Autoload` if you feel confortable writing the ini file yourself. 
 <br>
-Now, for the `Enhanced Lighting Modification` and `Better Graphices` you will need to extract the first one in `\Documents\My Games\UnrealEngine3\RememberMeGame\Config`.
+Now, for the `Enhanced Lighting Modification` and `Better Graphices` you will need to extract the first file in `\Documents\My Games\UnrealEngine3\RememberMeGame\Config`.
 But, before that, be sure you backup these files first (rename the .ini file in .org by example)! The file residing in `Colour & Lighting` needs to be extracted in the same folder as the 2 previous texture mods.
 For the `Better Graphics`, you can safely overwrite the file when extracting. But, I would recommend a backup first and test as it could introduce shadow banding in some cases. 
 
