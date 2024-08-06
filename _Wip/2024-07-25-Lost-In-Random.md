@@ -39,7 +39,9 @@ Basically, for this game this how you would proceed to get the shooting part eas
 * Press `Begin Freecam`. 
 * Press `F7` to hide CUE interface.
 * Frame and take your shot.
-  
+
+So, the second time you want or need to activate the camera for a shot, the cheat code is: Page Up, Delete and Insert. The way around to get back in the game. 
+
 For the camera movements, refer to the free camera window when CUE interface is active. 
 
 
