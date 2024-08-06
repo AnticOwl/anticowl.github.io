@@ -20,14 +20,14 @@ tags:   Screenshooting
 
 ## Installation
 If you go for the optional items, and once downloaded, extract the 2 texture mods in your installation folder (.\steamapps\common\Remember Me\Binaries\Win32).
-Each time you want to play and/or take some shots you will have to start `texmode.exe` and choose the texture mods and game exe like int the print below.     
+Each time you want to play and/or take some shots you will have to start `texmod.exe` and choose the texture mods and game exe like int the print below.     
 ![image](/images/RM_02.jpg)
 
 You can also use `TexMod Autoload` if you feel confortable writing the ini file yourself. 
 <br>
 Now, for the `Enhanced Lighting Modification` and `Better Graphices` you will need to extract the first one in `\Documents\My Games\UnrealEngine3\RememberMeGame\Config`.
-But, before that, be sure you backup these files first! The file residing in `Colour & Lighting` needs to be extracted in the same folder as the 2 previous texture mods.
-For the `Better Graphics`, you can safely overwrite the file. But, I would backup it and test as it could introduce shadow banding in some cases. 
+But, before that, be sure you backup these files first (rename the .ini file in .org by example)! The file residing in `Colour & Lighting` needs to be extracted in the same folder as the 2 previous texture mods.
+For the `Better Graphics`, you can safely overwrite the file when extracting. But, I would recommend a backup first and test as it could introduce shadow banding in some cases. 
 
 ## Configuration
 There isn't much to configure beside adding a keybind for a Pause. So, again, head to `\Documents\My Games\UnrealEngine3\RememberMeGame\Config` and open the `ExampleInput.ini` with Notepad.
@@ -53,7 +53,9 @@ So, from my experience with Remember Me is that there are things you need to rem
 </img-comparison-slider> 
 
 * When you pause the game with F5, the blur from the DOF (Depth of Field) is in most cases removed.
-* HUD can only be deactivated vie the cheat table.
+* HUD can only be deactivated via the cheat table (or you can try adding the line like for the pause `Bindings=(Name="Delete",Command="ShowHud | show scaleform")`).
+
+Happy shooting!
 
 
 
