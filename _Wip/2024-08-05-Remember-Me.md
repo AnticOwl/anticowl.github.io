@@ -60,7 +60,7 @@ First off, have a read to [IDK31 post](https://steamcommunity.com/sharedfiles/fi
 So, from my experience with Remember Me is that there are things you need to remember when shooting. 
 
 * When you pause the game with F5, the blur from the DOF (Depth of Field) is in most cases removed.
-* Full HUD removal can only be deactivated via the cheat table. You  can try `Bindings=(Name="Delete",Command="ShowHud | show scaleform")` but it won't remove some indicators like climb points.
+* Full HUD removal can only be achieved via the cheat table. You  can try `Bindings=(Name="Delete",Command="ShowHud | show scaleform")` but it won't remove some indicators like climb points.
 
 ## Resources
 * [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Remember_Me)
