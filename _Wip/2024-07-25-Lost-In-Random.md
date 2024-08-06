@@ -44,5 +44,6 @@ So, the second time you want or need to activate the camera for a shot, the chea
 
 For the camera movements, refer to the free camera window when CUE interface is active. 
 
+{% include note.html content="If you decide to enable the emit shadows in the `Misc` option, be aware that it could introduce heavy shadow banding."%}
 
 
