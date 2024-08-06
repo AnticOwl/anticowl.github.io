@@ -26,6 +26,20 @@ Each time you want to play and/or take some shots you will have to start `texmod
 
 You can also use `TexMod Autoload` if you feel confortable writing the ini file yourself. 
 <br>
+Example with and without grain. 
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
+
+<img-comparison-slider>
+  <img slot="first" src="/images/RM_10.jpg" />
+  <img slot="second" src="/images/RM_11.jpg" />
+</img-comparison-slider> 
+
 Now, for the `Enhanced Lighting Modification` extract the file in `\Documents\My Games\UnrealEngine3\RememberMeGame\Config`.
 But, before that, be sure you backup these files first (rename the .ini file in .org by example)! The file residing in `Colour & Lighting` needs to be extracted in the same folder as the 2 previous texture mods.
 For the `Better Graphics`, you can safely overwrite the file when extracting. But, I would recommend a backup first and test as it could introduce shadow banding in some cases. 
@@ -39,19 +53,6 @@ You are now ready to start!
 ## Things to Remember When Shooting
 First off, have a read to [IDK31 post](https://steamcommunity.com/sharedfiles/filedetails/?id=662482735). You will find a lot of usefeul informations. Trust me, you won't loose your time.
 So, from my experience with Remember Me is that there are things you need to remember when shooting. 
-* The noise/grain in the game is quite heavy. Check below for a Before and After when taking a shot. Need to be deactivated at reload or level change. You can do it via `SPECIAL EFFECTS > Other Effects/Alt DOF > NOISE/FILM GRAIN`. Click on `ON` and change the value to `-` and press OK.
-<script defer
-  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
-</script>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
-/>
-
-<img-comparison-slider>
-  <img slot="first" src="/images/RM_03.jpg" />
-  <img slot="second" src="/images/RM_04.jpg" />
-</img-comparison-slider> 
 
 * When you pause the game with F5, the blur from the DOF (Depth of Field) is in most cases removed.
 * HUD can only be deactivated via the cheat table (or you can try adding the line like for the pause `Bindings=(Name="Delete",Command="ShowHud | show scaleform")`).
