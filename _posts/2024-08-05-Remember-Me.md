@@ -20,7 +20,7 @@ tags:   Screenshooting
 * [TexMod Autoload](https://www.nexusmods.com/rememberme/mods/4?tab=files) (very optional)
 
 ## Installation
-If you go for the optional items, and once downloaded, extract the 2 texture and no grain mods in your installation folder (.\steamapps\common\Remember Me\Binaries\Win32).
+If you go for the optional items, and once downloaded, extract the 2 textures and no grain mods in your installation folder (.\steamapps\common\Remember Me\Binaries\Win32).
 Each time you want to play and/or take some shots you will have to start `texmod.exe` and choose the texture mods and game exe like int the print below.     
 
 <div style="width:65%; margin: auto;">
