@@ -5,6 +5,7 @@ date:   2024-08-05 18:05:55 +0300
 image:  RM_POST.jpg
 tags:   Screenshooting
 ---
+Game that went below my radar years ago. Game that was gathering dust in my library. Game that I finally started thanks to some people's shots.
 
 ## Required
 * [IDK31 EXCELLENT Camera Cheat Table](https://steamcommunity.com/sharedfiles/filedetails/?id=662482735)
