@@ -5,11 +5,11 @@ date:   2024-08-05 18:05:55 +0300
 image:  RM_POST.jpg
 tags:   Screenshooting
 ---
-Game that went below my radar years ago. Game that was gathering dust in my library. Game that I finally started thanks to some people's shots. I honestly recommend it to anyone who wants a great story.
+A game that went below my radar years ago. A game that was gathering dust in my library. A game that I finally started thanks to some people's shots. I honestly recommend it to anyone who wants a great story.
 
 ## Required
 * [IDK31 EXCELLENT Camera Cheat Table](https://steamcommunity.com/sharedfiles/filedetails/?id=662482735)
-* [Cheat Egnine](https://www.cheatengine.org/)
+* [Cheat Engine](https://www.cheatengine.org/)
 
 ## Optional
 * Reshade 4.9.1 (versions above will probably give you problems when ALT-Tabbing).
@@ -21,16 +21,16 @@ Game that went below my radar years ago. Game that was gathering dust in my libr
 * [TexMod Autoload](https://www.nexusmods.com/rememberme/mods/4?tab=files) (very optional)
 
 ## Installation
-If you go for the optional items, and once downloaded, extract the 2 textures and no grain mods in your installation folder (.\steamapps\common\Remember Me\Binaries\Win32).
-Each time you want to play and/or take some shots you will have to start `texmod.exe` and choose the texture mods and game exe like int the print below.     
+If you go for the optional items, and once downloaded, extract the 2 textures and no grain mods and place them in your installation folder (.\steamapps\common\Remember Me\Binaries\Win32).
+Each time you want to play and/or take some shots with the mods enabled, you will have to run the texmod.exe then choose the Remember Me game exe and the texture mods you want to use like in the print below.     
 
 <div style="width:65%; margin: auto;">
 <img src="/images/RM_01.jpg" alt="Remember Me TexMod" style="box-shadow: 3px 3px 3px gray;">
 </div>
 
-You can also use `TexMod Autoload` if you feel confortable writing the ini file yourself. 
+If you feel comfortable with writing the.ini file yourself, you can also use TexMod Autoload to remove the need to manually select and load the mod files each time. 
 <br>
-Example with and without grain. 
+Example with and without the No Grain mod. 
 <script defer
   src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
 </script>
@@ -44,9 +44,12 @@ Example with and without grain.
   <img slot="second" src="/images/RM_11.jpg" />
 </img-comparison-slider> 
 
-Now, for the `Enhanced Lighting Modification` extract the file in `\Documents\My Games\UnrealEngine3\RememberMeGame\Config`.
-But, before that, be sure you backup these files first (rename the .ini file in .org by example)! The file residing in `Colour & Lighting` needs to be extracted in the same folder as the 2 previous texture mods.
-For the `Better Graphics`, you can safely overwrite the file when extracting. But, I would recommend a backup first and test as it could introduce shadow banding in some cases. 
+Now, for the `Enhanced Lighting` Modification. Before you start, make a backup of the files in the following location: `\Documents\My Games\UnrealEngine3\RememberMeGame\Config`. You can do this by renaming  the .ini file in .org by example.
+
+You can now extract the `Enhanced Lighting Modification` .rar file and copy the contents of the Config folder to the above location. The files residing in ``olour & Lighting` need to be extracted in the same folder as the 2 previous texture mods: `.\steamapps\common\Remember Me\Binaries\Win32`
+
+For the Better Graphics, you can safely overwrite the `ExampleEngine.ini` file when extracting, but I would recommend a backup first. You should also test this mod as it could introduce shadow banding in some cases.
+
 
 ## Configuration
 There isn't much to configure beside adding a keybind for a Pause. So, again, head to `\Documents\My Games\UnrealEngine3\RememberMeGame\Config` and open the `ExampleInput.ini` with Notepad.
@@ -57,10 +60,10 @@ You are now ready to start!
 {% include note.html content="Don't forget to switch texture when Nilin put her regula outfit."%}
 
 ## Things to Remember When Shooting
-First off, have a read to [IDK31 post](https://steamcommunity.com/sharedfiles/filedetails/?id=662482735). You will find a lot of usefeul informations. Trust me, you won't loose your time.
-So, from my experience with Remember Me is that there are things you need to remember when shooting. 
+First off, you have a read to [IDK31 post](https://steamcommunity.com/sharedfiles/filedetails/?id=662482735). You will find a lot of usefeul information there. Trust me, you won't lose your time.
+From my experience with Remember Me is that these are the things you need to remember when shooting. 
 
-* When you pause the game with F5, the blur from the DOF (Depth of Field) is in most cases removed.
+* When you pause the game with F5, the blur from the DoF (Depth of Field) is removed in most cases.
 * Full HUD removal can only be achieved via the cheat table. You  can try `Bindings=(Name="Delete",Command="ShowHud | show scaleform")` but it won't remove some indicators like climb points.
 
 ## Resources
