@@ -125,19 +125,6 @@ The installation directory will depend of the store version (Steam, GOG or Epic)
             <td>H</td>
             <td>High Speed</td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
     </tbody>
 </table>
-<div style="margin-top:8px">Made with <a href="https://www.htmltables.io/" target="_blank">HTML Tables</a></div>
-</div>
+
