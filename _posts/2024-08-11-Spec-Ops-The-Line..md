@@ -122,14 +122,7 @@ Place the file in `Documents\My Games\SpecOps-TheLine\SRGame\Config`. Be sure to
 To do so, unzip the [Spec Ops: The Line INI Decrypt/Encrypt Tool](https://www.moddb.com/games/spec-ops-the-line/downloads/spec-ops-the-line-ini-decryptencrypt-tool) in `\Documents\My Games\SpecOps-TheLine\SRGame\Config`.
 Once done, drag and drop the `SRInput.ini` on `Gibbed.SpecOpsTheLine.IniDecrypt.exe`. Your file is now decrypted. Open it with Notepad++ and add the lines below just before `[IniVersion]`.
 
-```
-Bindings=(Name="NumPadFour",Command="FOV 20")
-Bindings=(Name="NumPadFive",Command="FOV 30")
-Bindings=(Name="NumPadSix",Command="FOV 40")
-Bindings=(Name="NumPadSeven",Command="FOV 50")
-Bindings=(Name="NumPadEight",Command="FOV 60")
-Bindings=(Name="NumPadNine",Command="FOV 80")
-```
+
 
 When finished, save the file and drag it on `Gibbed.SpecOpsTheLine.IniEncrypt.exe` to encrypt it back.
 
