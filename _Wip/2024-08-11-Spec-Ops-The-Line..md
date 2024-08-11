@@ -128,3 +128,7 @@ Bindings=(Name="NumPadEight",Command="FOV 60")
 Bindings=(Name="NumPadNine",Command="FOV 80")
 ```
 When finished, save the file and drag it on `Gibbed.SpecOpsTheLine.IniEncrypt.exe` to encrypt it back.
+
+## Resources
+* [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Spec_Ops%3A_The_Line)
+* [How to enable Anti-Aliasing in Spec Ops: The Line](https://steamcommunity.com/sharedfiles/filedetails/?id=567778402)
