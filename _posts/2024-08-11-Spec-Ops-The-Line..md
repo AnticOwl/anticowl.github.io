@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Spec Ops: The Line"
-date:   2024-08-12 18:05:55 +0300
+date:   2024-08-11 18:05:55 +0300
 image:  SOTL_POST.jpg
 tags:   Screenshooting
 ---
