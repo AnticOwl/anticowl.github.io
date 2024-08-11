@@ -5,7 +5,7 @@ date:   2024-08-11 18:05:55 +0300
 image:  SOTL_POST.jpg
 tags:   Screenshooting
 ---
-What about you and your team are sent in recognition and end up in the most messed up situation possible. This, in a now destroyed Dubai where sand storms are typical.
+What about you and your team are sent in recognition and end up in the most messed up situation possible. This, in a now destroyed Dubai where sand storms are becoming typical.
 
 ## Required
 * [Free Camera and Effects](https://www.moddb.com/games/spec-ops-the-line/downloads/sotl-camera-effect-binds))
