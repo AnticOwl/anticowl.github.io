@@ -55,7 +55,6 @@ Place the file in `Documents\My Games\SpecOps-TheLine\SRGame\Config`. Be sure to
 </style>
 <div class="table_component" role="region" tabindex="0">
 <table>
-    <caption>Table 1</caption>
     <thead>
         <tr>
             <th>Key</th>
