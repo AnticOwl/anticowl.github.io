@@ -5,7 +5,7 @@ date:   2024-08-11 18:05:55 +0300
 image:  SOTL_POST.jpg
 tags:   Screenshooting
 ---
-What about you and your team are sent in recognition and end up in the most messed up situation possible. This, in a now destroyed Dubai.
+What about you and your team are sent in recognition and end up in the most messed up situation possible. This, in a now destroyed Dubai where sand storms are typical.
 
 ## Required
 * [Free Camera and Effects](https://www.moddb.com/games/spec-ops-the-line/downloads/sotl-camera-effect-binds))
@@ -121,6 +121,7 @@ Place the file in `Documents\My Games\SpecOps-TheLine\SRGame\Config`. Be sure to
 ## How To Add Other FoV Values
 To do so, unzip the [Spec Ops: The Line INI Decrypt/Encrypt Tool](https://www.moddb.com/games/spec-ops-the-line/downloads/spec-ops-the-line-ini-decryptencrypt-tool) in `\Documents\My Games\SpecOps-TheLine\SRGame\Config`.
 Once done, drag and drop the `SRInput.ini` on `Gibbed.SpecOpsTheLine.IniDecrypt.exe`. Your file is now decrypted. Open it with Notepad++ and add the lines below just before `[IniVersion]`.
+
 ```
 Bindings=(Name="NumPadFour",Command="FOV 20")
 Bindings=(Name="NumPadFive",Command="FOV 30")
@@ -129,6 +130,7 @@ Bindings=(Name="NumPadSeven",Command="FOV 50")
 Bindings=(Name="NumPadEight",Command="FOV 60")
 Bindings=(Name="NumPadNine",Command="FOV 80")
 ```
+
 When finished, save the file and drag it on `Gibbed.SpecOpsTheLine.IniEncrypt.exe` to encrypt it back.
 
 ## Resources
