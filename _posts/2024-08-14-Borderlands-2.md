@@ -33,7 +33,7 @@ First off, open the PythonSDK.zip and drag the content as is in your game root d
 ### Mods Installation
 Once the loader is installed, it's time to add some mods. Let's start with the Photo Mode one. Open the zip file you previously downloaded and extract the content to `\Borderlands 2\Binaries\Win32\Mods` You should end up with something like that after having extracted the mods you need. 
 <div style="width:65%; margin: auto;">
-<img src="/images/BL2_01.jpg" alt="BL2 Mods Installation" style="box-shadow: 3px 3px 3px gray;">
+<img src="/images/BL2_03.jpg" alt="BL2 Mods Installation" style="box-shadow: 3px 3px 3px gray;">
 </div>
 
 ## How To
@@ -41,7 +41,7 @@ Once the loader is installed, it's time to add some mods. Let's start with the P
 Once everything is installed, start the game and head to `Mods` from the main menu. Select the mod you want to enable or disable.
 Press `A` on your controller or `Enter` on keyboard. 
 <div style="width:65%; margin: auto;">
-<img src="/images/BL2_03.jpg" alt="BL2 Mods Enabling/Disabling" style="box-shadow: 3px 3px 3px gray;">
+<img src="/images/BL2_01.jpg" alt="BL2 Mods Enabling/Disabling" style="box-shadow: 3px 3px 3px gray;">
 </div>
 
 ### Configure Mods Keybinds
