@@ -24,9 +24,13 @@ So, for the [Willow Mod Manager](https://github.com/bl-sdk/willow-mod-manager) c
 Now, for the [Photo Mode](https://github.com/juso40/bl2sdk_Mods/blob/master/Photomode/Photomode.zip), click on the `...` then `Download`. Same for the 2 other optional mods that I recommend.
 
 ## Installation
+### Loader Installation
 Now that you have downloaded the required files, it's time to install the Mod Manager and the Photo Mode. 
 First off, open the PythonSDK.zip and drag the content as is in your game root directory `\steamapps\common\Borderlands 2`. Or, you can follow this little video to know how to do it.
 <iframe width="420" height="315" src="https://youtu.be/57WxvASCX70?si=BYCDaAFArd6cBWHs" frameborder="0" allowfullscreen></iframe>
+
+### Mods Installation
+Once the loader is installed, it's time to add some mods. Let's start with the Photo Mode one. Open the zip file you previously downloaded and extract the content to `\Borderlands 2\Binaries\Win32\Mods` You should end up with something like that after having extracted the mods you need. 
 
 ## How To
 ### Enable/Disable Mods
