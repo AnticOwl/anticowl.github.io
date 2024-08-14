@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Borderlands 2"
-date:   2024-08-11 18:05:55 +0300
+date:   2024-08-14 15:54:55 +0300
 image:  BL2_POST.jpg
 tags:   Screenshooting
 ---
