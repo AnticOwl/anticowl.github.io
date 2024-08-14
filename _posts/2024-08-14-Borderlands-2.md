@@ -182,3 +182,7 @@ This one looks only to be accessible from the `Mods` menu via `Options`. Be awar
 <div style="width:65%; margin: auto;">
 <img src="/images/BL2_02.jpg" alt="Remember Me TexMod" style="box-shadow: 3px 3px 3px gray;">
 </div>
+
+## Resources
+[PythonSDK Mod Database](https://bl-sdk.github.io/)
+[PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Borderlands_2)
