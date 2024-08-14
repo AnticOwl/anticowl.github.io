@@ -31,6 +31,9 @@ First off, open the PythonSDK.zip and drag the content as is in your game root d
 ### Enable/Disable Mods
 Once everything is installed, start the game and head to `Mods` from the main menu. Select the mod you want to enable or disable.
 Press `A` on your controller or `Enter` on keyboard. 
+<div style="width:65%; margin: auto;">
+<img src="/images/BL2_01.jpg" alt="Remember Me TexMod" style="box-shadow: 3px 3px 3px gray;">
+</div>
 
 ### Configure Mods Keybinds
 Head to `Options` then `Keyboard and Mouse` and finally `Modded Key Bindings` to change the keyboard bindings if needed. Most chance you won't have to do it.
