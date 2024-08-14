@@ -14,7 +14,8 @@ What about you and your team are sent in recognition and end up in the most mess
 ## Optional
 * Reshade 
 * [Uber Post Processing](https://github.com/juso40/bl2sdk_Mods/blob/master/UberPostProcessing/UberPostProcessing.zip)
-* [BL2 Eternal](https://github.com/juso40/bl2sdk_Mods/blob/master/BL2Eternal/BL2Eternal.zip) 
+* [BL2 Eternal](https://github.com/juso40/bl2sdk_Mods/blob/master/BL2Eternal/BL2Eternal.zip)
+* [Time of Day Changer](https://github.com/slserpent/bl-sdk-mods/blob/main/DayNight/DayNight.zip)
 
 ## How to Download
 Sounds funny, isn't it. But everything you need is hosted on GitHub. And, it's not the most friendly place.
