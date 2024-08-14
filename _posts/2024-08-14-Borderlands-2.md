@@ -115,7 +115,7 @@ Not like in Borderlands 3 or any other game. Here straight forward. Press `P` to
 
 
 ### Time of Day Changer
-This mod can be a game changer in some situations. Where by example you have a great scene but not a so nice lighting. Changing thr time of day will allow you to fix that. 
+This mod can be a game changer in some situations. Where by example you have a great scene but not a so nice lighting. Changing the time of day will allow you to fix that. 
 <style>
 .table_component {
     overflow: auto;
