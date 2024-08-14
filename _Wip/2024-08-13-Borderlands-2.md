@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Spec Ops: The Line"
+title:  "Borderlands 2"
 date:   2024-08-11 18:05:55 +0300
 image:  BL2_POST.jpg
 tags:   Screenshooting
@@ -27,4 +27,145 @@ Now that you have downloaded the required files, it's time to install the Mod Ma
 First off, open the PythonSDK.zip and drag the content as is in your game root directory `\steamapps\common\Borderlands 2`. Or, you can follow this little video to know how to do it.
 <iframe width="420" height="315" src="https://youtu.be/57WxvASCX70?si=BYCDaAFArd6cBWHs" frameborder="0" allowfullscreen></iframe>
 
+## How To
+### Enable/Disable Mods
+Once everything is installed, start the game and head to `Mods` from the main menu. Select the mod you want to enable or disable.
+Press `A` on your controller or `Enter` on keyboard. 
 
+### Configure Mods Keybinds
+Head to `Options` then `Keyboard and Mouse` and finally `Modded Key Bindings` to change the keyboard bindings if needed. Most chance you won't have to do it.
+
+### Photo Mode
+Not like in Borderlands 3 or any other game. Here straight forward. Press `P` to enable or disable it.
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Effect</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>P</td>
+            <td>Enable/Disable Photo Mode</td>
+        </tr>
+        <tr>
+            <td>R + Mouse Wheel</td>
+            <td>Camera Roll</td>
+        </tr>
+        <tr>
+            <td>F + Mouse Wheel</td>
+            <td>Change FoV</td>
+        </tr>
+        <tr>
+            <td>Left Shift</td>
+            <td>Camera Speed</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+### Time of Day Changer
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Effect</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>F5</td>
+            <td>Day</td>
+        </tr>
+        <tr>
+            <td>F6</td>
+            <td>Night</td>
+        </tr>
+        <tr>
+            <td>F7</td>
+            <td>Increment Time by 30 mins (default)</td>
+        </tr>
+        <tr>
+            <td>Left Shift</td>
+            <td>Camera Speed</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+### Uber Processing
