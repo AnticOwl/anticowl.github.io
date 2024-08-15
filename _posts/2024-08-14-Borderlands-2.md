@@ -21,7 +21,7 @@ A new era of shoot and loot is about to begin. Play as one of four new vault hun
 Sounds funny, isn't it. But everything you need is hosted on GitHub. And, it's not the most friendly place.
 So, for the [Willow Mod Manager](https://github.com/bl-sdk/willow-mod-manager) click on `Releases` then scroll a bit down and click on `PythonSDK.zip
 `. That's all you have to do here.
-Now, for the [Photo Mode](https://github.com/juso40/bl2sdk_Mods/blob/master/Photomode/Photomode.zip), click on the `...` then `Download`. Same for the 2 other optional mods that I recommend.
+Now, for the [Photo Mode](https://github.com/juso40/bl2sdk_Mods/blob/master/Photomode/Photomode.zip), click on the `...` then `Download`. Same for the three other optional mods that I recommend.
 
 ## Installation
 ### Loader Installation
@@ -185,5 +185,5 @@ This one looks only to be accessible from the `Mods` menu via `Options`. Be awar
 </div>
 
 ## Resources
-* [PythonSDK Mod Database](https://bl-sdk.github.io/)
+* [PythonSDK Mod Database](https://bl-sdk.github.io/) - For a full list of mods and their game compatibility 
 * [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Borderlands_2)
