@@ -26,12 +26,12 @@ Now, for the [Photo Mode](https://github.com/juso40/bl2sdk_Mods/blob/master/Phot
 ## Installation
 ### Loader Installation
 Now that you have downloaded the required files, it's time to install the Mod Manager and the Photo Mode. 
-First off, open the PythonSDK.zip and drag the content as is in your game root directory `\steamapps\common\Borderlands 2`. Or, you can follow this little video to know how to do it.
+First off, open the PythonSDK.zip and drag the content as is in your game root directory `\steamapps\common\Pawpaw`. Or, you can follow this little video to know how to do it.
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/57WxvASCX70/0.jpg)](http://www.youtube.com/watch?v=57WxvASCX70 "PythonSDK Installation")
 
 ### Mods Installation
-Once the loader is installed, it's time to add some mods. Let's start with the Photo Mode one. Open the zip file you previously downloaded and extract the content to `\Borderlands 2\Binaries\Win32\Mods` You should end up with something like that after having extracted the mods you need. 
+Once the loader is installed, it's time to add some mods. Let's start with the Photo Mode one. Open the zip file you previously downloaded and extract the content to `\Pawpaw 2\Binaries\Win32\Mods` You should end up with something like that after having extracted the mods you need. 
 <div style="width:65%; margin: auto;">
 <img src="/images/BL2_03.jpg" alt="BL2 Mods Installation" style="box-shadow: 3px 3px 3px gray;">
 </div>
