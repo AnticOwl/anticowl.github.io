@@ -2,7 +2,7 @@
 layout: post
 title:  "Borderlands: The Pre-Sequel"
 date:   2024-08-16 18:05:55 +0300
-image:  BTPS_POST.jpg
+image:  BLTPS_POST.jpg
 tags:   Screenshooting
 ---
 
@@ -116,7 +116,7 @@ Not like in Borderlands 3 or any other game. Here straight forward. Press `P` to
 ### Uber Processing
 This one looks only to be accessible from the `Mods` menu via `Options`. Be aware that each map has his own post process. So, if you want to do your own, the `Post Process Volume` needs to be `Off`. Then you can start doing yours.    
 <div style="width:65%; margin: auto;">
-<img src="/images/TTAODK_01.jpg" alt="Borderlands Post Processing" style="box-shadow: 3px 3px 3px gray;">
+<img src="/images/BLTPS_01.jpg" alt="Borderlands Post Processing" style="box-shadow: 3px 3px 3px gray;">
 </div>
 
 ## Resources
