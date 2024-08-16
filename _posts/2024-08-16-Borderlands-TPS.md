@@ -6,7 +6,7 @@ image:  BLTPS_POST.jpg
 tags:   Screenshooting
 ---
 
-Smash skeletons, defeat dragons, and battle giant golems in Tiny Tina's Assault on Dragon Keep: A Wonderlands One-Shot Adventure. Experience the acclaimed 2013 quest that started it all in this standalone campaign jam-packed with fantasy, fun, and mountains of magical loot
+LAUNCH INTO THE BORDERLANDS UNIVERSE AND SHOOT ‘N’ LOOT YOUR WAY THROUGH A BRAND NEW ADVENTURE THAT ROCKETS YOU ONTO PANDORA’S MOON IN BORDERLANDS: THE PRE-SEQUEL!
 
 ## Required
 * [Willow Mod Manager](https://github.com/bl-sdk/willow-mod-manager)
