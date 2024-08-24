@@ -35,7 +35,7 @@ Second time, your game will start in no time. You should see something like this
 
 ## How To Take A Screenshot
 
-OK, don't be affraid, it easy and don't ask NASA knowledge. Just some first manipulations.
+OK, don't be afraid, it easy and don't ask NASA knowledge. Just some first manipulations.
 Basically, for this game this how you would proceed to get the shooting part easier.
 
 * Press `Page Up` to pause the game.
