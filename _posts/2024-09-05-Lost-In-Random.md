@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lost in Random"
-date:   2024-07-28 18:05:55 +0300
+date:   2024-09-05 07:05:55 +0300
 image:  LIR_POST.jpg
 tags:   Screenshooting
 ---
