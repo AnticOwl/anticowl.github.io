@@ -5,7 +5,7 @@ date:   2024-09-05 07:05:55 +0300
 image:  LIR_POST.jpg
 tags:   Screenshooting
 ---
-
+Play the odds in Lost in Random™, a gothic-fairy-tale-inspired action-adventure where every citizen’s fate is determined by a roll of the dice. 
 ## Required
 * [Melon Loader 0.5.7](https://github.com/HerpDerpinstine/MelonLoader/releases/latest/download/MelonLoader.Installer.exe)
 * [Cinematic Unity Explorer](https://github.com/originalnicodr/CinematicUnityExplorer/releases) and choose CinematicUnityExplorer.MelonLoader.IL2CPP.zip
