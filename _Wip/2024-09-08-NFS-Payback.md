@@ -17,5 +17,8 @@ Start the game and resume where you left. Once the map is loaded, launch `NFS Pa
 Just click OK and it will continue to load. A console window will popup and after everything is loaded the GUI should be visible in game. 
 For better shadows change the default value (1600) to something like `3072` or `4096`.
 
-
+<img-comparison-slider>
+  <img slot="first" src="/images/NFS-02A.jpg" />
+  <img slot="second" src="/images/NFS-02B.jpg" />
+</img-comparison-slider>
 * 
