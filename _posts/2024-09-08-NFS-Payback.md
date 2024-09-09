@@ -129,7 +129,13 @@ So, what would be the procedure to get some nice slomo shots? Follow the guide.
 * Take your screenshot and Press `DELETE` again to pause the game back.
 * Press your second Cheat Engine keybind to come back to the default game speed and press `INSERT` to disable the camera, `HOME` to show the GUI and `DELETE` to unpause the game.
 * Continue driving your car.  
-
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
 <img-comparison-slider>
   <img slot="first" src="/images/NFS-02A.jpg" />
   <img slot="second" src="/images/NFS-02B.jpg" />
