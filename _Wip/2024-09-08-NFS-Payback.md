@@ -111,14 +111,6 @@ For better shadows change the default value (1600) to something like `3072` or `
             <td>RS/LS down</td>
             <td>Increase/cecrease FOV</td>
         </tr>
-        <tr>
-            <td>F11</td>
-            <td>Enable/Disable Fog</td>
-        </tr>
-        <tr>
-            <td>F12</td>
-            <td>Enable/Disable Post Process</td>
-        </tr>
     </tbody>
 </table>
 </div>
