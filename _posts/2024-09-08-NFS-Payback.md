@@ -140,4 +140,4 @@ So, what would be the procedure to get some nice slomo shots? Follow the guide.
   <img slot="first" src="/images/NFS-02A.jpg" />
   <img slot="second" src="/images/NFS-02B.jpg" />
 </img-comparison-slider>
-
+{% include note.html content="For a better and more realistic image, it's recommended to disable the in-game motion blur."%}
