@@ -119,18 +119,6 @@ For better shadows change the default value (1600) to something like `3072` or `
             <td>F12</td>
             <td>Enable/Disable Post Process</td>
         </tr>
-        <tr>
-            <td>Page Up</td>
-            <td>FoV 70</td>
-        </tr>
-        <tr>
-            <td>Page Down</td>
-            <td>FoV 90</td>
-        </tr>
-        <tr>
-            <td>Home</td>
-            <td>FoV 110</td>
-        </tr>
     </tbody>
 </table>
 </div>
