@@ -115,8 +115,14 @@ For better shadows change the default value (1600) to something like `3072` or `
 </table>
 </div>
 
+### How To Make Motion Blur Shots
 
+First of all, as there is no game speed option in the tool, you will have to use the Speed Hack in Cheat Engine. For this, configure two hotkeys and set the lowest key to 0.01 and the other to 1.00.
+Now, configure ReShade - Real Long Exposure to something like 0.2 or 0.3 to start. As you are slowing down the game itself, it will also have an impact on the long exposure time. So, test first with these values.
+So, what would be the procedure to get some nice slomo shots? Follow the guide.
 
+* In game, press `DELETE` to pause the game.
+* Press `F1` to show the tools UI and **VERY IMPORTANT HERE** click on `Lock ` 
 
 <img-comparison-slider>
   <img slot="first" src="/images/NFS-02A.jpg" />
