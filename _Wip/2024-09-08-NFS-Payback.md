@@ -20,7 +20,7 @@ Just click OK and it will continue to load. A console window will popup and afte
 <img src="/images/NFS-01A.jpg" alt="NFS Payback Camera Tools GUI" style="box-shadow: 3px 3px 3px gray;">
 </div>
 
-Also, don't forget to apply the LOD Fix in the visuals. In this section you can also alter the time of day by clicking on `Override Time of Day` and changing it by clicking the `+` or `-`.
+Also, don't forget to apply the LOD fixes in the visuals. In this section you can also alter the time of day by clicking on `Override Time of Day` and changing it by clicking the `+` or `-`.
 Manual input is also possible. 
 
 <div style="width:65%; margin: auto;">
@@ -118,11 +118,13 @@ For better shadows change the default value (1600) to something like `3072` or `
 ### How To Make Motion Blur Shots
 
 First of all, as there is no game speed option in the tool, you will have to use the Speed Hack in Cheat Engine. For this, configure two hotkeys and set the lowest key to 0.01 and the other to 1.00.
-Now, configure ReShade - Real Long Exposure to something like 0.2 or 0.3 to start. As you are slowing down the game itself, it will also have an impact on the long exposure time. So, test first with these values.
+Now, configure ReShade - Real Long Exposure to something like 0.2 or 0.3 to start. Assigna keybind to start and stop it too while you are at it. As you are slowing down the game itself, it will also have an impact on the long exposure time. So, test first with these values.
 So, what would be the procedure to get some nice slomo shots? Follow the guide.
 
 * In game, press `DELETE` to pause the game.
-* Press `F1` to show the tools UI and **VERY IMPORTANT HERE** click on `Lock ` 
+* Press `F1` to show the tools UI and **VERY IMPORTANT HERE** click on `Lock to player` and uncheck `Disable keyboard and mouse input` (see first print screen). `F1` again to close the UI.
+* Press `Insert` to enable the camera and frame your shot. Once done **UNCHECK** `Disable gamepad input`. This will allow you to control your car while the camera is active.
+* 
 
 <img-comparison-slider>
   <img slot="first" src="/images/NFS-02A.jpg" />
