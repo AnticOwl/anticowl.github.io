@@ -125,7 +125,7 @@ So, what would be the procedure to get some nice slomo shots? Follow the guide.
 * Press `F1` to show the tools UI. And **VERY IMPORTANT HERE** click on `Lock to player` and uncheck `Disable keyboard and mouse input` (see first print screen). `F1` again to close the UI.
 * Press `HOME` to disable the game UI.
 * Press `Insert` to enable the camera and frame your shot. Once done **UNCHECK** `Disable gamepad input`. This will allow you to control your car while the camera is active.
-* Press your first Cheat Engine keybind to activate the slow motion the `DELETE` to unpause the game. It can take a few seconds before you see your car moving again. Control it and press the key assigned to for the Reshade real long exposure.
+* Press your first Cheat Engine keybind to activate the slow motion then `DELETE` to unpause the game. It can take a few seconds before you see your car moving again. Control it and press the key assigned to for the Reshade real long exposure.
 * Take your screenshot and Press `DELETE` again to pause the game back.
 * Press your second Cheat Engine keybind to come back to the default game speed and press `INSERT` to disable the camera, `HOME` to show the GUI and `DELETE` to unpause the game.
 * Continue driving your car.  
