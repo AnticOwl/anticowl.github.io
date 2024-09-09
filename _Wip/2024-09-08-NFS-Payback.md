@@ -15,8 +15,25 @@ Set in the underworld of Fortune Valley, you and your crew were divided by betra
 ## How to Use
 Start the game and resume where you left. Once the map is loaded, launch `NFS Payback Cinematic Tools.exe`. You will get an error saying `Unable to check for updates.`. 
 Just click OK and it will continue to load. A console window will popup and after everything is loaded the GUI should be visible in game. 
+
+<div style="width:65%; margin: auto;">
+<img src="/images/NFS-01A.jpg" alt="NFS Payback Camera Tools GUI" style="box-shadow: 3px 3px 3px gray;">
+</div>
+
+Also, don't forget to apply the LOD Fix in the visuals. In this section you can also alter the time of day by clicking on `Override Time of Day` and changing it by clicking the `+` or `-`.
+Manual input is also possible. 
+
+<div style="width:65%; margin: auto;">
+<img src="/images/NFS-01B.jpg" alt="Remember Me TexMod" style="box-shadow: 3px 3px 3px gray;">
+</div>
+
 For better shadows change the default value (1600) to something like `3072` or `4096`.
 
+<div style="width:65%; margin: auto;">
+<img src="/images/NFS-01C.jpg" alt="Remember Me TexMod" style="box-shadow: 3px 3px 3px gray;">
+</div>
+
+{% include note.html content="Changing the resolution scale in the tool will lead to a game crash. The camera needs to be reset at every use."%}
 ### Controls
 <style>
 .table_component {
@@ -64,35 +81,35 @@ For better shadows change the default value (1600) to something like `3072` or `
     <tbody>
         <tr>
             <td>Insert</td>
-            <td>Enable/Disable Camera</td>
+            <td>Enable/disable camera</td>
         </tr>
         <tr>
             <td>Delete</td>
-            <td>Pause/Unpause Game</td>
+            <td>Pause/unpause game</td>
         </tr>
         <tr>
             <td>Home</td>
             <td>Disable HUD</td>
         </tr>
         <tr>
-            <td>F6</td>
-            <td>Attached to Player (Look At)</td>
+            <td>Left stick</td>
+            <td>Move camera forward/backwards/lef/right</td>
         </tr>
         <tr>
-            <td>F7</td>
-            <td>Attached to Player&nbsp;</td>
+            <td>Right stick</td>
+            <td>Pan and yaw</td>
         </tr>
         <tr>
-            <td>F8</td>
-            <td>Top View</td>
+            <td>RB/LB</td>
+            <td>Roll left/right</td>
         </tr>
         <tr>
-            <td>F9</td>
-            <td>Reset</td>
+            <td>RT/LT</td>
+            <td>Move camera up/down</td>
         </tr>
         <tr>
-            <td>F10</td>
-            <td>Hide Animations</td>
+            <td>RS/LS down</td>
+            <td>Increase/cecrease FOV</td>
         </tr>
         <tr>
             <td>F11</td>
