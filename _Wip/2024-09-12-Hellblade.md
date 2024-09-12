@@ -7,7 +7,9 @@ tags:   Screenshooting
 ---
 
 ## Required
-* [UUU v3/v4]
+* [UUU v3/v4](https://framedsc.com/GeneralGuides/universal_ue4_consoleunlocker.htm)
 
 ## Optional
 * Reshade
+
+`r.NY.SkelMeshLODBase`,`r.NT.PMV.ShadowsMode` and `r.NT.PMV.PixelTileSize`
