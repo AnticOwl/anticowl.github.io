@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Farewell North"
-date:   2024-09-19 07:05:55 +0300
+date:   2024-10-04 07:05:55 +0300
 image:  FN_POST.jpg
 tags:   Screenshooting
 ---
