@@ -29,7 +29,7 @@ But honestly, you better read the Framed guide. Everything is explained in detai
 
 ## Some Small Hints
 
-#### Pause When ALT-TAB
+### Pause When ALT-TAB
 If you, like me, ALT-TAB a lot, I would recommend changing `anshar.PauseGameOnUnfocused` from `1` to `0`. This, especially if you are using lights or post process features avalable in UUU v4.x.
 
 ### Full Character On Screen
