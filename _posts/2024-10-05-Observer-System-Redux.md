@@ -51,3 +51,5 @@ By default, the global illumination and lens flares are disable, you can activat
 </img-comparison-slider>
 {% include note.html content="Global Illumination effect isn't always visible in certain scenes."%}
 
+## Some Reading
+[PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Observer:_System_Redux)
