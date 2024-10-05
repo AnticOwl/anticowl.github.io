@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Obeserver: System Redux"
-date:   2024-08-21 18:05:55 +0300
+date:   2024-10-06 00:05:55 +0300
 image:  OBSERVER_POST.jpg
 tags:   Screenshooting
 ---
