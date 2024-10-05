@@ -15,7 +15,7 @@ The year is 2084. In a dark cyberpunk world shattered by plagues and wars, becom
 
 ##How To Take A Screenshot
 
-Please, read carefully [THI GUIDE](https://framedsc.com/GeneralGuides/universal_ue4_consoleunlocker.htm). It's not long and it has everything you need to know tu use the free UUU unlocker.
+Please, read carefully [THIS GUIDE](https://framedsc.com/GeneralGuides/universal_ue4_consoleunlocker.htm). It's not long and it has everything you need to know tu use the free UUU unlocker.
 The free version is UUU v3. You will need to download v3.0.21. Once that version downloaded and extracted in a folder, start your game. then:
 * Start UUU (uuuClient.exe).
 * Click `Select` and choose `ObserverSystemRedux.exe` from the list.
@@ -37,4 +37,17 @@ To have the Observer AKA Rutger Hauer head displayed, type `toggledebugcamera` i
 
 ### Global Illumination And Lens Flare
 By default, the global illumination and lens flares are disable, you can activate it by typing `r.RayTracing.GlobalIllumination 2` in the console. To activate the lens flare, type (or copy and paste) `r.DefaultFeature.LensFlare 1| r.LensFlareQuality 2`. `0` being disable and `3` high quality.
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
+<img-comparison-slider>
+  <img slot="first" src="/images/OBSERVER_02A.jpg" />
+  <img slot="second" src="/images/OBSERVER_02B.jpg" />
+</img-comparison-slider>
+{% include note.html content="Global Illumination effect isn't always visible in certain scenes."%}
 
