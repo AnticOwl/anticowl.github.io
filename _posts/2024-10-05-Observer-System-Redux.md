@@ -15,7 +15,7 @@ The year is 2084. In a dark cyberpunk world shattered by plagues and wars, becom
 
 ## How To Take A Screenshot
 
-Please, read carefully [THIS GUIDE](https://framedsc.com/GeneralGuides/universal_ue4_consoleunlocker.htm). It's not long and it has everything you need to know tu use the free UUU unlocker.
+Please, read carefully [THIS GUIDE](https://framedsc.com/GeneralGuides/universal_ue4_consoleunlocker.htm). It's not long and it has everything you need to know to use the free UUU version.
 The free version is UUU v3. You will need to download v3.0.21. Once that version downloaded and extracted in a folder, start your game. then:
 * Start UUU (uuuClient.exe).
 * Click `Select` and choose `ObserverSystemRedux.exe` from the list.
