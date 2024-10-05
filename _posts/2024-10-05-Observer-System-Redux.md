@@ -25,7 +25,7 @@ The free version is UUU v3. You will need to download v3.0.21. Once that version
 <img src="/images/OBSERVER_01.jpg" alt="UUU v3 GUI" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
-But honestly, you better read the Framed guide. Everything is explained in details. 
+But honestly, you better read the Framed guide. Everything is explained in detail. 
 
 ## Some Small Hints
 
