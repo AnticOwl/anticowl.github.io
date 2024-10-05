@@ -35,6 +35,6 @@ If you, like me, ALT-TAB a lot, I would recommend changing `anshar.PauseGameOnUn
 ### Full Character On Screen
 To have the Observer AKA Rutger Hauer head displayed, type `toggledebugcamera` in the console when you are in Free Camera Mode via UUU. Recall the command and execute it again to disable the debug camera after you have taken your shot. Disable UUU Free Camera. Done.
 
-### Global Illumination
+### Global Illumination And Lens Flare
 By default, the global illumination and lens flares are disable, you can activate it by typing `r.RayTracing.GlobalIllumination 2` in the console. To activate the lens flare, type (or copy and paste) `r.DefaultFeature.LensFlare 1| r.LensFlareQuality 2`. `0` being disable and `3` high quality.
 
