@@ -6,6 +6,8 @@ image:  BAC_POST.jpg
 tags:   Screenshooting
 ---
 
+Bruce Wayne is incarcerated in Arkham City, a super-prison enclosing the decaying urban slums of Gotham City. He dons his alter ego, Batman, and goes on a mission to uncover the secret behind a sinister scheme orchestrated by the facility's warden, Hugo Strange.
+
 ## Required
 * [Debug Menu by dron_3](https://mega.nz/file/k0kQhQhL#T7UaN_fmEgqAqSr2tB7EU1lnttRO_6ZQ8ltP5-9KVKY)
 * [Arkham City Redux](https://www.nexusmods.com/batmanarkhamcity/mods/407)
