@@ -137,6 +137,14 @@ Great thing about it is that it has 3 modes: Free, chase and oribtal.
             <td>Y</td>
             <td>Character Lighting</td>
         </tr>
+        <tr>
+            <td>RS Pressed</td>
+            <td>Orbital Camera</td>
+        </tr>
+        <tr>
+            <td>LS Pressed</td>
+            <td>Chase Camera</td>
+        </tr>        
     </tbody>
 </table>
 </div>
