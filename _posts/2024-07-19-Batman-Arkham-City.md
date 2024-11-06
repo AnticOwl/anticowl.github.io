@@ -81,8 +81,7 @@ Great thing about it is that it has 3 modes: Free, chase and oribtal.
 </style>
 <div class="table_component" role="region" tabindex="0">
 <table>
-    <caption>Table 1</caption>
-    <thead>
+        <thead>
         <tr>
             <th>Key</th>
             <th>Effect</th>
