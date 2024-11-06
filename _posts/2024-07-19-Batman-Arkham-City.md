@@ -154,8 +154,8 @@ Press `BACKSPACE` again when you get your shot to get back into the game.
 
 ## Debug Menu and Visuals
 
-To access the debug menu, two choices `RT + Menu` or hold `Right SHIFT` or `DEL`.
-The navigation is far esier with the controller as you won't have to keep the debug menu key pressed when navigating.
+To access the debug menu, two choices `RT + Menu` on your controller or hold `Right SHIFT` or `DEL`.
+The navigation is far more easier with the controller as you won't have to keep the debug menu key pressed when navigating.
 
 To have a better LOD (Level of Details), navigate until you reach the `ENGINE` page. you should see this
 
