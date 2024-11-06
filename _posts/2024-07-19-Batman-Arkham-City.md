@@ -139,6 +139,7 @@ Great thing about it is that it has 3 modes: Free, chase and oribtal.
         </tr>
     </tbody>
 </table>
+</div>
 
 Press `BACKSPACE` again when you get your shot to get back into the game.
 
