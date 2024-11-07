@@ -159,7 +159,7 @@ The navigation is far more easier with the controller as you won't have to keep 
 To have a better LOD (Level of Details), navigate until you reach the `ENGINE` page. you should see this
 
 <div style="width:65%; margin: auto;">
-<img src="/images/BAO-0O.jpg" alt="UUU v3 GUI" style="box-shadow: 3px 3px 3px gray;">
+<img src="/images/BAO-00.jpg" alt="Debug Menu  style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
 
