@@ -83,7 +83,8 @@ Great thing about it is that it has 3 modes: Free, chase and oribtal.
 </style>
 <div class="table_component" role="region" tabindex="0">
 <table>
-        <thead>
+    <caption>Table 1</caption>
+    <thead>
         <tr>
             <th>Key</th>
             <th>Effect</th>
@@ -91,44 +92,12 @@ Great thing about it is that it has 3 modes: Free, chase and oribtal.
     </thead>
     <tbody>
         <tr>
-            <td>Right Stick</td>
-            <td>Pitch Up/Down - Pan Left/Right</td>
-        </tr>
-        <tr>
-            <td>Left Stick</td>
-            <td>Forward/Backward/Left/Right</td>
-        </tr>
-        <tr>
-            <td>Right Trigger</td>
-            <td>Camera Lift Up</td>
-        </tr>
-        <tr>
-            <td>Left Trigger</td>
-            <td>Camera Lift Down</td>
-        </tr>
-        <tr>
-            <td>D-Pad Up</td>
-            <td>Zoom In</td>
-        </tr>
-        <tr>
-            <td>D-Pad Down</td>
-            <td>Zoom Out</td>
-        </tr>
-        <tr>
-            <td>D-Pad Left</td>
-            <td>Roll Left</td>
-        </tr>
-        <tr>
-            <td>D-Pad Right</td>
-            <td>Roll Right&nbsp;</td>
-        </tr>
-        <tr>
             <td>A</td>
-            <td>Frame By Frame&nbsp;</td>
+            <td>Single Step Frame Advance</td>
         </tr>
         <tr>
             <td>B</td>
-            <td>Enable Depth of Field</td>
+            <td>Focus DoF</td>
         </tr>
         <tr>
             <td>X</td>
@@ -136,16 +105,56 @@ Great thing about it is that it has 3 modes: Free, chase and oribtal.
         </tr>
         <tr>
             <td>Y</td>
-            <td>Character Lighting</td>
+            <td>Debug Light</td>
         </tr>
         <tr>
-            <td>RS Pressed</td>
-            <td>Orbital Camera</td>
+            <td>LT</td>
+            <td>Move Up</td>
         </tr>
         <tr>
-            <td>LS Pressed</td>
-            <td>Chase Camera</td>
-        </tr>        
+            <td>RT</td>
+            <td>Move Down</td>
+        </tr>
+        <tr>
+            <td>LB</td>
+            <td>Slow Down Camera Movements</td>
+        </tr>
+        <tr>
+            <td>RB</td>
+            <td>Speed Up Camera Movements</td>
+        </tr>
+        <tr>
+            <td>Zoom In / Increase FoV</td>
+            <td>D-Pad Up</td>
+        </tr>
+        <tr>
+            <td>Zoom Out / Decrease FoV</td>
+            <td>D-Pad Down</td>
+        </tr>
+        <tr>
+            <td>Roll Left</td>
+            <td>D-Pad Left</td>
+        </tr>
+        <tr>
+            <td>Roll Right</td>
+            <td>D-Pad Right</td>
+        </tr>
+        <tr>
+            <td>LS Down</td>
+            <td>Camera Tracking Mode</td>
+        </tr>
+        <tr>
+            <td>RS Down</td>
+            <td>Camera Orbital Mode</td>
+        </tr>
+        <tr>
+            <td>L</td>
+            <td>Slow Motion</td>
+        </tr>
+        <tr>
+            <td>H</td>
+            <td>High Speed</td>
+        </tr>
     </tbody>
 </table>
 </div>
