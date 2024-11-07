@@ -10,3 +10,5 @@ Want to contact me? Two choices:
 
 * https://bsky.app/profile/anticowl.bsky.social
 * https://x.com/Olivier__Cesar
+
+  Don't hesitate.
