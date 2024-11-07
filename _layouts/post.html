@@ -100,5 +100,6 @@ layout: default
         {% endif %}
       </p>
     </div>
-    {% endif %}
+   {% if site.data.settings.disqus-identifier %} {% include disqus-comments.html %} {% endif %}
+    
 
