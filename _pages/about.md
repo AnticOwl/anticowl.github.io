@@ -5,4 +5,5 @@ permalink: /about/
 image:
 ---
 
-Not much to see here.
+Dad, music lover, concerts make me feel alive and photogrpahy is great.
+
