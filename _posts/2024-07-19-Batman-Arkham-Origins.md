@@ -157,12 +157,10 @@ To access the debug menu, two choices `RT + Menu` on your controller or `Right S
 The navigation is far more easier with the controller as you won't have to keep the debug menu key pressed when navigating.
 
 To have a better LOD (Level of Details), navigate until you reach the `ENGINE` page. you should see this
-
 <div style="width:65%; margin: auto;">
-<img src="/images/BAO-00.jpg" alt="Debug Menu  style="box-shadow: 3px 3px 3px gray;">
+<img src="/images/BAO-00.jpg" alt="Debug Menu" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
-
 If the `Min Obj Pixels` default value is on 25.0000, lower it until you reach 0.5000 for more detailed environment.By default, the `MassiveLOD Distance Scale` is set to 1.0000. Set it to 5.0000
 
 <script defer
