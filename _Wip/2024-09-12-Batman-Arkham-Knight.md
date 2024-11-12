@@ -13,7 +13,7 @@ In this explosive finale, Batman faces the ultimate threat against the city that
 * [ReShade](https://reshade.me/)
 
 ## Optional
-* https://steamcommunity.com/app/208650/discussions/0/523890046870624615/
+* Snacks and soda
 
 ## Installation
 
