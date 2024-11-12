@@ -178,11 +178,43 @@ It looks difficult but it's not. Really. Easy peasy to do. But you will need to 
 *If you do not disable the slomo, the game will still run at 0.05 when you come back to it*
 * Press `Backspace` to disable the debug camera.
 
-Example
-
 <div style="width:65%; margin: auto;">
 <img src="/images/BAK_01.jpg" alt="UUU v3 GUI" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
+
+## Interesting Console Commands
+Here are some interesting console commands that can or could be used in game.
+
+Add heavy rain. Change the amount of falling rain. Around 150000-185000 is already enough.<br />
+Keep in mind that it also has an impact on the bloom when moving the camera<br />
+`set engine.RRainComponent ParticleCount 999999`<br />
+
+Switches on headlights of all abandoned cars.<br />
+`set BmGame.RAbandonedVehicle HeadlightsSwitchedOn true`<br />
+
+Switches on interior lights of all abandoned cars.<br />
+`set BmGame.RAbandonedVehicle InteriorLightsSwitchedOn true`<br />	
+
+Switches on AUX lights of all abandoned cars.<br />
+`set BmGame.RAbandonedVehicle AuxLightsSwitchedOn true`<br />	
+
+Switches on hazard lights of all abandoned cars.<br />
+`set BmGame.RAbandonedVehicle HazardLightsSwitchedOn true`<br />	
+
+Makes abandoned Taxis on fire.<br />
+`set BmGame.RAbandonedVehicle bOnFire true`<br />
+
+Removes Coloured Strike Trails.<br />
+`set BmGame.RPersistentDebugData Debug_Combat_DisableStrikeTrails true`<br />
+
+Removes Stun Stars above enemies when knocked down.<br />
+`set BmGame.RPersistentDebugData Debug_Combat_DisableStunStars true`<br />
+
+Remove hit marker when hitting an enemy.<br />
+`set BmGame.RPersistentDebugData Debug_Combat_DisableImpactVFX 1`<br />
+
+God Mode.<br />
+`set engine.playercontroller bgodmode true`<br />
 
 
