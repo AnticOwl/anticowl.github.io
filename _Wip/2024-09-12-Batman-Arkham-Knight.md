@@ -187,7 +187,8 @@ It looks difficult but it's not. Really. Easy peasy to do. But you will need to 
 Here are some interesting console commands that can or could be used in game.
 
 Add heavy rain. Change the amount of falling rain. Around 150000-185000 is already enough.<br />
-Keep in mind that it also has an impact on the bloom when moving the camera<br />
+Keep in mind that it also has an impact on the bloom when moving the camera.<br />
+Execute tht command in the main menu or ingame followed by `|restartlevel`.<br />
 `set engine.RRainComponent ParticleCount 999999`<br />
 
 Switches on headlights of all abandoned cars.<br />
