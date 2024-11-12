@@ -20,10 +20,10 @@ In this explosive finale, Batman faces the ultimate threat against the city that
 * Unzip and copy the d3d9.dll in your game folder where the .exe reside. Usually in `steamapps\common\Batman Arkham Knight\Binaries\Win64)`
 * In `\steamapps\common\Batman Arkham Knight\DLC\356474\Content\BmGame\Config` create a new file called `bminput.ini`
 * Add these lines 
-```
+```<br />
 [Engine.Console]
 
-ConsoleKey=Tilde
+ConsoleKey=Tilde<br /> 
 TypeKey=Backslash
 ```
 * Change the Console key according to your needs (optional)
