@@ -155,6 +155,8 @@ Great thing about it is that it has 3 modes: Free, track and oribtal.
 
 Press `BACKSPACE` again when you get your shot.
 
+{% include note.html content="About H and L, pressing one of these 2 keys has an impact on the game speed and the frame advance. If you want to fine tune your shot and advance with a slower frame, use L then press A on your controller. press L again to come back to the normal game speed. Thanks Filip Cop for this trick"%}
+
 ### Batmobile Motion Blur
 
 It looks difficult but it's not. Really. Easy peasy to do. But you will need to configure ReShade first.
