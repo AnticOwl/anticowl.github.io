@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Batman: Arkham Knight"
-date:   2024-11-13 08:05:55 +0300
+date:   2024-11-12 08:05:55 +0300
 image:  BAK_POST.jpg
 tags:   Screenshooting
 ---
