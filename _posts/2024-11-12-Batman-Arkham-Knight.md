@@ -20,16 +20,16 @@ In this explosive finale, Batman faces the ultimate threat against the city that
 * Unzip and copy the d3d9.dll in your game folder where the .exe reside. Usually in `steamapps\common\Batman Arkham Knight\Binaries\Win64)`
 * In `\steamapps\common\Batman Arkham Knight\DLC\356474\Content\BmGame\Config` create a new file called `bminput.ini`
 * Add these lines <br />
-```<br />
+
 [Engine.Console]
 
 ConsoleKey=Tilde<br /> 
 TypeKey=Backslash<br />
-```
+
 * Change the Console key according to your needs (optional)
 * Load the game and test in the menu if you can open the console.
 
-{% include note.html content="The console will crash your game while entering the batmobile. To avoid these, you will have to disable the nVidia settings Interactive smoke/fog and paper debris. "%}
+{% include note.html content="The console will crash your game while entering the batmobile. To avoid these, you will have to disable the nVidia settings Interactive smoke/fog and paper debris. "%}<br />
 
 ## How To Take A Shot
 
