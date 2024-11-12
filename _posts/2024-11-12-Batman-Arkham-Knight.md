@@ -9,7 +9,7 @@ tags:   Screenshooting
 In this explosive finale, Batman faces the ultimate threat against the city that he is sworn to protect, as Scarecrow returns to unite the super criminals of Gotham and destroy the Batman forever.
 
 ## Required
-* [Console Unlocker by Sunbeam](https://www.youtube.com/watch?v=NcvzZl5vXng) - Downlad in the description
+* [Console Unlocker by Sunbeam](https://www.youtube.com/watch?v=NcvzZl5vXng) - Download in the description
 * [ReShade](https://reshade.me/)
 
 ## Optional
