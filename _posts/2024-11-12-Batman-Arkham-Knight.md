@@ -91,7 +91,7 @@ Great thing about it is that it has 3 modes: Free, track and oribtal.
         </tr>
         <tr>
             <td>B</td>
-            <td>Focus DoF</td>
+            <td>N/A</td>
         </tr>
         <tr>
             <td>X</td>
@@ -99,7 +99,7 @@ Great thing about it is that it has 3 modes: Free, track and oribtal.
         </tr>
         <tr>
             <td>Y</td>
-            <td>Debug Light</td>
+            <td>Teleport</td>
         </tr>
         <tr>
             <td>LT</td>
