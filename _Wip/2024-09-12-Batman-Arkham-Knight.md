@@ -12,6 +12,9 @@ In this explosive finale, Batman faces the ultimate threat against the city that
 * [Console Unlocker by Sunbeam](https://www.youtube.com/watch?v=NcvzZl5vXng) - Downlad in the description
 * [ReShade](https://reshade.me/)
 
+## Optional
+* https://steamcommunity.com/app/208650/discussions/0/523890046870624615/
+
 ## Installation
 
 * Unzip and copy the d3d9.dll in your game folder where the .exe reside. Usually in `steamapps\common\Batman Arkham Knight\Binaries\Win64)`
@@ -29,6 +32,8 @@ TypeKey=Backslash
 {% include note.html content="The console will crash your game while entering the batmobile. To avoid these, you will have to disable the nVidia settings Interactive smoke/fog and paper debris. "%}
 
 ## How To Take A Shot
+
+### Simple Shot
 
 Here you have 2 choices. You use the internal photo mode with limited range. Or, you use the debug camera with an unlimited range and many more capabilities.
 
@@ -148,7 +153,36 @@ Great thing about it is that it has 3 modes: Free, track and oribtal.
 </table>
 </div>
 
-Press `BACKSPACE` again when you get your shot to get back into the game.
+Press `BACKSPACE` again when you get your shot.
 
+### Batmobile Motion Blur
+
+It looks difficult but it's not. Really. Easy peasy to do. But you will need to configure ReShade first.
+
+**ReShade**
+
+* Configure `RealLongExposure.fx` with a delay of zero second and an exposure between 0.5 and 2 seconds.
+* Assign a key to start the motion blur with ReShade UI disabled.
+
+**In Game**
+
+* In console, paste that command `set BmGame.RVehicleBatmobileBase ForceHeadlightsSwitchedOn 1` **!!!IMPORTANT!!!**<br />
+*If you do not enter that command, the batmobile lights will be turned off as soon as you start the motion blur.*
+* Enter debug camera by pressing `backspace`
+* Frame your shot and enter orbital mode by pressing the right stick. **!!!IMPORTANT!!!**
+* In console type `slomo 0.05`. Lower values won't work. The car won't move at all.
+* In console type `playersonly`.
+* Press your assigned key to start the motion blur.
+* Press your assigned key to take your shot.
+* In console disable the slomo by typing `slomo 1`. **!!!IMPORTANT!!!**
+*If you do not disable the slomo, the game will still run at 0.05 when you come back to it*
+* Press `Backspace` to disable the debug camera.
+
+Example
+
+<div style="width:65%; margin: auto;">
+<img src="/images/BAK_01.jpg" alt="UUU v3 GUI" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
 
