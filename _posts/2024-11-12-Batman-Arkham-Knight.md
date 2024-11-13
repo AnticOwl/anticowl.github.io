@@ -29,7 +29,7 @@ TypeKey=Backslash<br />
 * Change the Console key according to your needs (optional)
 * Load the game and test in the menu if you can open the console.
 
-{% include note.html content="The console will crash your game while entering the batmobile. To avoid these, you will have to disable the nVidia settings Interactive smoke/fog and paper debris. "%}<br />
+{% include note.html content="The console will crash your game while entering the batmobile. To avoid these, you will have to disable the NVIDIA settings Interactive smoke/fog and paper debris. "%}<br />
 
 ## How To Take A Shot
 
@@ -153,7 +153,7 @@ Great thing about it is that it has 3 modes: Free, track and oribtal.
 </table>
 </div>
 
-Press `BACKSPACE` again when you get your shot.
+To exit the debug camera and return to game, press `BACKSPACE`.
 
 {% include note.html content="About H and L, pressing one of these 2 keys has an impact on the game speed and the frame advance. If you want to fine tune your shot and advance with a slower frame, use L then press A on your controller. press L again to come back to the normal game speed. Thanks Filip Cop for this trick"%}<br />
 
@@ -190,7 +190,7 @@ Here are some interesting console commands that can or could be used in game.
 
 Add heavy rain. Change the amount of falling rain. Around 150000-185000 is already enough.<br />
 Keep in mind that it also has an impact on the bloom when moving the camera.<br />
-Execute tht command in the main menu or ingame followed by `|restartlevel`.<br />
+Execute that command in the main menu or in game followed by `|restartlevel`.<br />
 `set engine.RRainComponent ParticleCount 999999`<br />
 
 Switches on headlights of all abandoned cars.<br />
