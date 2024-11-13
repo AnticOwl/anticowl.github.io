@@ -7,7 +7,7 @@ tags:   Screenshooting
 ---
 
 ## Required
-* [One3rd Cheat Table for Free Camera and Post Processing](https://anticowl.github.com/files/BatmanAA_One3rd_Camera_Merged.CT)
+* [One3rd Cheat Table for Free Camera and Post Processing](https://anticowl.github.io/files/BatmanAA_One3rd_Camera_Merged.CT)
 
 ## Optional
 * Reshade
