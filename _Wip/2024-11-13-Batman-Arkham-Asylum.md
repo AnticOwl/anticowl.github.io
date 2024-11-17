@@ -23,9 +23,18 @@ Experience what it’s like to be Batman and face off against Gotham's greatest 
 Unzip, copy and paste the `dinput8.dll` file into the game folder direcotry `.\steamapps\common\Batman Arkham Asylum GOTY\Binaries`.
 The installation directory will depend of the store version (Steam, GOG or Epic). 
 
-### Asylum Reborn - HD Texture Pack and Asylum HD Installation
-Once you have downloaded the 2 texture packs and the TFC Installer, open [THIS](https://steamcommunity.com/sharedfiles/filedetails/?id=1159691355) link and read it carefully. The installation of these 2 mods are absolutely not difficult at all. Also read the Advanced Launcher part as it has a lot of very useful informations regarding image quality. <be />
-You will need to first begin with [Asylum HD](https://www.nexusmods.com/batmanarkhamasylum/mods/177?tab=files) **THEN** [Asylum Reborn - HD Texture Pack](https://www.nexusmods.com/batmanarkhamasylum/mods/1?tab=description)
+### Asylum Reborn - HD Texture Pack And Asylum HD Installation
+Once you have downloaded the 2 texture packs and the TFC Installer, open [THIS](https://steamcommunity.com/sharedfiles/filedetails/?id=1159691355) link and read it carefully.<br /> You will need to first begin with [Asylum HD](https://www.nexusmods.com/batmanarkhamasylum/mods/177?tab=files) **THEN** [Asylum Reborn - HD Texture Pack](https://www.nexusmods.com/batmanarkhamasylum/mods/1?tab=description). The installation of these 2 mods are absolutely not difficult at all. Just read the installation for each texture mods and you are good to go. Keep in mind that the Asylum HD can take quite some time to install.<br />
+Be sure to install the launcher as it has a lot to give regarding the image quality!
+
+<div style="width:65%; margin: auto;">
+<img src="/images/BAA-01.jpg" alt="UUU v3 GUI" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+
+## How To Take A Shot
+
+2 choices here. You use the debug camera but you won't have FOV available on the controller nor Roll. Or you use the attached cheat table and you will have full control of the camera and the main menu filter goodie! 
 
 
 
