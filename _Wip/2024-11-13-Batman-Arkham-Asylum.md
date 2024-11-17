@@ -271,6 +271,8 @@ Fine tune if needed while holding `CTRL`. Example below with filter power at 0 a
   <img slot="second" src="/images/BAA-03.jpg" />
 </img-comparison-slider>
 
+## Resources
+[PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Batman:_Arkham_Asylum)
 
 
 
