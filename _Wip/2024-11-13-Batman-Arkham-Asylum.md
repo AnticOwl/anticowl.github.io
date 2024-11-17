@@ -112,7 +112,7 @@ Press F3 to disable the HUD
         </tr>
         <tr>
             <td>LS</td>
-            <td>Move Camera</td>
+            <td>Move Camera Left, Right, Forward and Backward</td>
         </tr>
         <tr>
             <td>RS</td>
@@ -120,13 +120,139 @@ Press F3 to disable the HUD
         </tr>
         <tr>
             <td>I</td>
-            <td>Invert Pitch</td>
+            <td>Invert Camera Pitch</td>
         </tr>
     </tbody>
 </table>
 </div>
 
 To exit the debug camera and return to game, press `BACKSPACE`.
+
+### One3rd Cheat Table
+One3rd cheat table is the most complete set you will ever have for Arkham Asylum. Allowing you to roll and controll the FOV as you wish.<br />
+Also featuring a way to use the main menu filter for some comics effect.
+
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <caption>Table 1</caption>
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Effect</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Numpad 4, 5, 6, 8</td>
+            <td>Forward, Backward, Left, Right</td>
+        </tr>
+        <tr>
+            <td>Numpad 7, 9</td>
+            <td>Up and Down</td>
+        </tr>
+        <tr>
+            <td>Numpad+ +&nbsp;Numpad 4, 5, 6, 8</td>
+            <td>Pitch and Yaw</td>
+        </tr>
+        <tr>
+            <td>Numpad+ +&nbsp;Numpad 7, 9</td>
+            <td>Zoom In and Out</td>
+        </tr>
+        <tr>
+            <td>Numpad+ + Numpad 1, 3</td>
+            <td>Roll Left and Right</td>
+        </tr>
+        <tr>
+            <td>Numpad . (Decimal)</td>
+            <td>Disable HUD</td>
+        </tr>
+        <tr>
+            <td>CTRL +&nbsp;Numpad . (Decimal)</td>
+            <td>Enable HUD</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Decrease Main Menu Filter Power by 0.1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>Increase Main Menu Filter Power by 0.1</td>
+        </tr>
+        <tr>
+            <td>CTRL + 9</td>
+            <td>Decrease Main Menu Filter Power by 0.01</td>
+        </tr>
+        <tr>
+            <td>CTRL + 0</td>
+            <td>Increase Main Menu Filter Power by 0.01</td>
+        </tr>
+        <tr>
+            <td>Numpad . (Decimal)</td>
+            <td>Reset Main Menu Filter</td>
+        </tr>
+                <tr>
+            <td>CTRL + Numpad key</td>
+            <td>Faster Camera Movements</td>
+        </tr>
+        <tr>
+            <td>ALT + Numpad key</td>
+            <td>Solwer Camera Movements</td>
+        </tr>        
+    </tbody>
+</table>
+
+So, how to use it? What you **SHOULD** do before anything. 
+
+* Be sure you have Cheat Engine installed
+* Click twice on `BatmanAA_One3rd_Camera_Merged-V2024.CT`
+* Check `Auto Attach To Game`
+* Load the game (if you installed the new launcher, press `Start Game`)
+* Continue or make a new game
+* Once in game press Page Down (leave active !)
+
+Now that you are in game and you want to take a shot, do the following.
+
+* Press `Menu` on your controller or `Esc` on your keyborad to pause the game
+* Press `Numpad .` (or `F3` if the launcher is intalled) to disable the HUD
+* Frame your shot with the keys from the table
+* Take your shot.
+* Enbale the HUD back and press `Esc` to resume the game
+
 
 
 
