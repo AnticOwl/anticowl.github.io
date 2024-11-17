@@ -235,7 +235,7 @@ Also featuring a way to use the main menu filter for some comics effect.
         </tr>        
     </tbody>
 </table>
-
+</div>
 So, how to use it? What **SHOULD YOU** do before anything. 
 
 * Be sure you have Cheat Engine installed
