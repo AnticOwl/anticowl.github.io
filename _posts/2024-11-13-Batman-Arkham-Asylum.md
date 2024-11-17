@@ -253,7 +253,7 @@ Now that you are in game and you want to take a shot, do the following.
 
 What if I want to use the main menu filter for some artie shot? <br />
 <br />
-Pretty simple. Once you are in free camera mode (see the point above), press `0` to increase or `9` to decrease.<br />
+Pretty simple. Once you are in free camera mode (see the point above), press `0` to increase or `9` to decrease the filter effect.<br />
 Fine tune if needed while holding `CTRL`. Example below with filter power at 0 and half. 
 
 <script defer
