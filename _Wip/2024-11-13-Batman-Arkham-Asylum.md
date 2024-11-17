@@ -236,7 +236,7 @@ Also featuring a way to use the main menu filter for some comics effect.
     </tbody>
 </table>
 
-So, how to use it? What you **SHOULD** do before anything. 
+So, how to use it? What **SHOULD YOU** do before anything. 
 
 * Be sure you have Cheat Engine installed
 * Click twice on `BatmanAA_One3rd_Camera_Merged-V2024.CT`
@@ -252,6 +252,24 @@ Now that you are in game and you want to take a shot, do the following.
 * Frame your shot with the keys from the table
 * Take your shot.
 * Enbale the HUD back and press `Esc` to resume the game
+
+What if I want to use the main menu filter for some artie shot? <br />
+<br />
+Pretty simple. 0nce you are in free camera mode (see the point above), press `0` to increase or `9` to decrease.<br />
+Fine tune if needed while holding `CTRL`. Example below with filter power at 0 and half. 
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
+
+<img-comparison-slider>
+  <img slot="first" src="/images/BAA-02.jpg" />
+  <img slot="second" src="/images/BAA-03.jpg" />
+</img-comparison-slider>
 
 
 
