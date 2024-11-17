@@ -251,7 +251,7 @@ Now that you are in game and you want to take a shot, do the following.
 * Press `Numpad .` (or `F3` if the launcher is intalled) to disable the HUD
 * Frame your shot with the keys from the table
 * Take your shot.
-* Enbale the HUD back and press `Esc` to resume the game
+* Enable the HUD back and press `Esc` to resume the game
 
 What if I want to use the main menu filter for some artie shot? <br />
 <br />
