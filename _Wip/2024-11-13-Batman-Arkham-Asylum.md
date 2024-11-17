@@ -231,7 +231,7 @@ Also featuring a way to use the main menu filter for some comics effect.
         </tr>
         <tr>
             <td>ALT + Numpad key</td>
-            <td>Solwer Camera Movements</td>
+            <td>Slower Camera Movements</td>
         </tr>        
     </tbody>
 </table>
