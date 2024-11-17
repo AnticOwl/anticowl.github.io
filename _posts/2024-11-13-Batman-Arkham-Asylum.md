@@ -169,7 +169,6 @@ Also featuring a way to use the main menu filter for some comics effect.
 </style>
 <div class="table_component" role="region" tabindex="0">
 <table>
-    <caption>Table 1</caption>
     <thead>
         <tr>
             <th>Key</th>
