@@ -5,7 +5,7 @@ date:   2024-11-16 18:05:55 +0300
 image:  BAA_POST.jpg
 tags:   Screenshooting
 ---
-Experience what it’s like to be Batman and face off against Gotham's greatest villians. Explore every inch of Arkham Asylum and roam freely on the infamous island. Be The Batman!
+Experience what it’s like to be Batman and face off against Gotham's greatest villians. Explore every inch of Arkham Asylum and roam freely on the infamous island. Be The Batman!<br />
 
 ## Required
 * [One3rd Cheat Table for Free Camera and Post Processing](https://anticowl.github.com/files/BatmanAA_One3rd_Camera_Merged-V2024.CT)
