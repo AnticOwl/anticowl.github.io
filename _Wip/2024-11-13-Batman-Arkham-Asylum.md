@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Batman: Arkham Asylum"
-date:   2024-08-21 18:05:55 +0300
+date:   2024-11-16 18:05:55 +0300
 image:  BAA_POST.jpg
 tags:   Screenshooting
 ---
