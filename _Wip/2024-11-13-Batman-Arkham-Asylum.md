@@ -34,7 +34,99 @@ Be sure to install the launcher as it has a lot to give regarding the image qual
 
 ## How To Take A Shot
 
-2 choices here. You use the debug camera but you won't have FOV available on the controller nor Roll. Or you use the attached cheat table and you will have full control of the camera and the main menu filter goodie! 
+You have 2 choices here. You use the debug camera but you won't have FOV available on the controller nor Roll. Or you use the attached cheat table and you will have full control of the camera and the main menu filter goodie! 
+
+### Debug Camera
+
+If you decide to use the debug camera, once in game, simply press `BACKSPACE` on your keyboard to enter in debug camera mode. 
+Press F3 to disable the HUD
+
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <caption>Table 1</caption>
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Effect</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>A</td>
+            <td>Single Step Frame Advance</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>X</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>Y</td>
+            <td>Character Lighting</td>
+        </tr>
+        <tr>
+            <td>LT</td>
+            <td>Move Up</td>
+        </tr>
+        <tr>
+            <td>RT</td>
+            <td>Move Down</td>
+        </tr>
+        <tr>
+            <td>LS</td>
+            <td>Move Camera</td>
+        </tr>
+        <tr>
+            <td>RS</td>
+            <td>Pitch and Yaw</td>
+        </tr>
+        <tr>
+            <td>I</td>
+            <td>Invert Pitch</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+To exit the debug camera and return to game, press `BACKSPACE`.
 
 
 
