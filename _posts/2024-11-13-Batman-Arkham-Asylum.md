@@ -8,14 +8,14 @@ tags:   Screenshooting
 Experience what it’s like to be Batman and face off against Gotham's greatest villians. Explore every inch of Arkham Asylum and roam freely on the infamous island. Be The Batman!<br />
 
 ## Required
-* [One3rd Cheat Table for Free Camera and Post Processing](https://anticowl.github.com/files/BatmanAA_One3rd_Camera_Merged-V2024.CT)
+* [One3rd Cheat Table for Free Camera and Post Processing](https://anticowl.github.io/files/BatmanAA_One3rd_Camera_Merged-V2024.CT)
 * [Debug Menu by dron_3](https://mega.nz/file/k0kQhQhL#T7UaN_fmEgqAqSr2tB7EU1lnttRO_6ZQ8ltP5-9KVKY)
 * [Asylum Reborn - HD Texture Pack](https://www.nexusmods.com/batmanarkhamasylum/mods/1?tab=description)
 * [Asylum HD](https://www.nexusmods.com/batmanarkhamasylum/mods/177?tab=files)
 * [TFC Installer](https://www.nexusmods.com/site/mods/588)
 
 ## Optional
-* Reshade
+* [Reshade](https://reshade.me/)
 
 ## Installation 
 
@@ -24,7 +24,7 @@ Unzip, copy and paste the `dinput8.dll` file into the game folder direcotry `.\s
 The installation directory will depend of the store version (Steam, GOG or Epic). 
 
 ### Asylum Reborn - HD Texture Pack And Asylum HD Installation
-Once you have downloaded the 2 texture packs and the TFC Installer, open [THIS](https://steamcommunity.com/sharedfiles/filedetails/?id=1159691355) link and read it carefully.<br /> You will need to first begin with [Asylum HD](https://www.nexusmods.com/batmanarkhamasylum/mods/177?tab=files) **THEN** [Asylum Reborn - HD Texture Pack](https://www.nexusmods.com/batmanarkhamasylum/mods/1?tab=description). The installation of these 2 mods are absolutely not difficult at all. Just read the installation for each texture mods and you are good to go. Keep in mind that the Asylum HD can take quite some time to install.<br />
+Once you have downloaded the 2 texture packs and the TFC Installer, open [THIS](https://steamcommunity.com/sharedfiles/filedetails/?id=1159691355) link and read it carefully.<br /> You will need to first begin with [Asylum HD](https://www.nexusmods.com/batmanarkhamasylum/mods/177?tab=files) **THEN** [Asylum Reborn - HD Texture Pack](https://www.nexusmods.com/batmanarkhamasylum/mods/1?tab=description). The installation of these 2 mods are absolutely not difficult at all. Just read the installation for each texture mod and you are good to go. Keep in mind that the Asylum HD can take quite some time to install.<br />
 Be sure to install the launcher as it has a lot to give regarding the image quality!
 
 <div style="width:65%; margin: auto;">
@@ -128,8 +128,8 @@ Press F3 to disable the HUD
 To exit the debug camera and return to game, press `BACKSPACE`.
 
 ### One3rd Cheat Table
-One3rd cheat table is the most complete set you will ever have for Arkham Asylum. Allowing you to roll and controll the FOV as you wish.<br />
-Also featuring a way to use the main menu filter for some comics effect.
+One3rd cheat table is the most complete set you will ever have for Arkham Asylum. Allowing you to roll and control the FOV as you wish.<br />
+Also featuring a way to use the main menu filter for some comic-style effect.
 
 <style>
 .table_component {
@@ -245,13 +245,13 @@ So, how to use it? What **SHOULD YOU** do before anything.
 
 Now that you are in game and you want to take a shot, do the following.
 
-* Press `Menu` on your controller or `Esc` on your keyborad to pause the game
+* Press `Menu` on your controller or `Esc` on your keyboard to pause the game
 * Press `Numpad .` (or `F3` if the launcher is intalled) to disable the HUD
 * Frame your shot with the keys from the table
-* Take your shot.
+* Take your shot
 * Enable the HUD back and press `Esc` to resume the game
 
-What if I want to use the main menu filter for some artie shot? <br />
+What if I want to use the main menu filter for some arty shot? <br />
 <br />
 Pretty simple. Once you are in free camera mode (see the point above), press `0` to increase or `9` to decrease the filter effect.<br />
 Fine tune if needed while holding `CTRL`. Example below with filter power at 0 and half. 
