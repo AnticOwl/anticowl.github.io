@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Need for Speed:  Most Wanted (2012)"
-date:   2024-12-10 18:05:55 +0300
+date:   2024-12-10 08:05:55 +0300
 image:  NFSMW_POST.jpg
 tags:   Screenshooting
 ---
@@ -34,7 +34,7 @@ Also one of the simpliest thing to do
 
 ## Configuration
 For the HD Effects, read what the mod does. I can guarantee you that you won't be disappointed. 
-To configure it, go to your game installation folder then in `scripts`. Ususally like `E:\Games\Need for Speed(TM) Most Wanted\scripts`.
+To configure it, go to your game installation folder then in `scripts`. Ususally like `\Need for Speed(TM) Most Wanted\scripts`.
 Open the file called `NFSMW2012HDEffects.ini` with a text editor. You will notice that for every setting there is an explanation. 
 For me, the most interesting sections are [RESOLUTION], [VIEW DISTANCE] and [GENERAL]. 
 If you have a GPU that is at least an NVIDIA Serie 2K or 8GB, you can set the [RESOLUTION] and [VIEW DISTANCE] at max.
