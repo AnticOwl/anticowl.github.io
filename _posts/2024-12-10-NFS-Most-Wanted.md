@@ -17,7 +17,7 @@ Fight your way past cops and rivals using skill, high-end car tech and tons of n
 * [ReShade](https://reshade.me/downloads/ReShade_Setup_6.3.3_Addon.exe)
 
 ## Pre-Requisite
-* EA App Overlay must be disabled (check if not magically re-activated).
+* EA App Overlay must be enabled for internal store.
 
 ## Installation
 
