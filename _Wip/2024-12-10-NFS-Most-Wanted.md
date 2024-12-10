@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Need for Speed:  Most Wanted 2012"
+title:  "Need for Speed:  Most Wanted (2012)"
 date:   2024-12-10 18:05:55 +0300
 image:  NFSMW_POST.jpg
 tags:   Screenshooting
@@ -186,7 +186,8 @@ So, when you feel you have a great view and want to take a shot, Do as follow
     </tbody>
 </table>
 </div>
-
+## Resources
+[PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Need_for_Speed:_Most_Wanted_(2012))
 
 
 
