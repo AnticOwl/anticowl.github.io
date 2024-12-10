@@ -132,7 +132,7 @@ So, when you feel you have a great view and want to take a shot, Do as follow
             <td>TrackIR (must be enable in config)</td>
         </tr>
         <tr>
-            <td>Numpad 7</td>
+            <td>Numpad 7 or F6</td>
             <td>Toggle HUD</td>
         </tr>
         <tr>
@@ -170,6 +170,18 @@ So, when you feel you have a great view and want to take a shot, Do as follow
         <tr>
             <td>SHIFT</td>
             <td>Move Faster</td>
+        </tr>
+                <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>F7</td>
+            <td>Disable Lens Dirt</td>
+        </tr>
+        <tr>
+            <td>F8</td>
+            <td>Change Time of Day</td>
         </tr>
     </tbody>
 </table>
