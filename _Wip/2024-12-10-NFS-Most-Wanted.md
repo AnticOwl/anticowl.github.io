@@ -186,6 +186,7 @@ So, when you feel you have a great view and want to take a shot, Do as follow
     </tbody>
 </table>
 </div>
+
 ## Resources
 [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Need_for_Speed:_Most_Wanted_(2012))
 
