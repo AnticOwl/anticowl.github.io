@@ -123,7 +123,7 @@ So, what would be the procedure to get some nice slomo shots? Follow the guide.
 * Press `Insert` to enable the camera.
 * ALT-TAB to show the tools UI. And **VERY IMPORTANT HERE** click on `Lock to player` and ALT-TAB back to game.
 * Frame your shot.
-* ALT-TAB again. Uncheck `DISABLE GMAEPAD INPUT` to allow you to control your ship if needed. Go to the `MISC / ABOUT` tab. There, change the game timescale to a value that is like `0.003` to `0.01` (you choice).
+* ALT-TAB again. Uncheck `DISABLE GAMEPAD INPUT` to allow you to control your ship if needed. Go to the `MISC / ABOUT` tab. There, change the game timescale to a value that is like `0.003` to `0.01` (you choice).
 * Quickly ALT-TAB to the game again and move your ship like you would like to have it.
 * Press the `Real Long Exposure` key or control your ship until you see it's a good shot.
 * Take your screenshot and Press `INSERT`, `HOME` and `DELETE` to go back to normal.
