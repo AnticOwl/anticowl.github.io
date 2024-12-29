@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Star Wars: Battlefront
+title:  Star Wars Battlefront
 date:   2024-07-19 15:01:35 +0300
 image:  SWBF_POST.jpg
 tags:   Screenshooting
