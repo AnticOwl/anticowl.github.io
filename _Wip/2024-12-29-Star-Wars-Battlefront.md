@@ -15,11 +15,23 @@ Engage in epic battles on iconic planets including Hoth, Endor, and Tatooine. Al
 
 ## How to Use
 Start the game and resume where you left. Once the map is loaded, launch `SWBF Cinematic Tools.exe`. You will get an error saying `Unable to check for updates.`. 
-Just click OK and it will continue to load. The tool GUI and a console window will popup. 
+Just click OK and it will continue to load. The tool GUI and a console window will popup. Click on `FIX LOD` for better in game details.
 
 <div style="width:65%; margin: auto;">
-<img src="/images/SWBF-01A.jpg" alt="NFS Payback Camera Tools GUI" style="box-shadow: 3px 3px 3px gray;">
+<img src="/images/SWBF-01.jpg" alt="NFS Payback Camera Tools GUI" style="box-shadow: 3px 3px 3px gray;">
 </div>
+
+The ENVIRONMENT tab allows you to control the color correction, DOF, Tonemap and vignette
+<div style="width:65%; margin: auto;">
+<img src="/images/SWBF-02.jpg" alt="NFS Payback Camera Tools GUI" style="box-shadow: 3px 3px 3px gray;">
+</div>
+
+The MISC / ABOUT has some small things like Shadow Map Size (change it to 4096 for better shadows), Resolution Scale and Game Timescale that will be later useful.
+<div style="width:65%; margin: auto;">
+<img src="/images/SWBF-03.jpg" alt="NFS Payback Camera Tools GUI" style="box-shadow: 3px 3px 3px gray;">
+</div>
+
+If a a moment or another you would like to make usage of lights, click on `More Tools` and ... TADA!! 
 
 ### Controls
 <style>
