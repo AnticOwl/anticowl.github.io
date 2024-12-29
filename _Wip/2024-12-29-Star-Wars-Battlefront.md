@@ -20,7 +20,7 @@ Start the game and resume where you left. Once the map is loaded, launch `SWBF C
 <img src="/images/SWBF-01.jpg" alt="NFS Payback Camera Tools GUI" style="box-shadow: 3px 3px 3px gray;">
 </div>
 
-The ENVIRONMENT tab allows you to control the color correction, DOF, Tonemap and vignette
+The ENVIRONMENT tab allows you to control the color correction, DOF, Tonemap and vignette.
 <div style="width:65%; margin: auto;">
 <img src="/images/SWBF-02.jpg" alt="NFS Payback Camera Tools GUI" style="box-shadow: 3px 3px 3px gray;">
 </div>
