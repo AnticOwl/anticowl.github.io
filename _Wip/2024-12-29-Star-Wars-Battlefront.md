@@ -14,8 +14,7 @@ Engage in epic battles on iconic planets including Hoth, Endor, and Tatooine. Al
 * [ReShade](https://reshade.me/downloads/ReShade_Setup_6.3.3.exe)
 
 ## How to Use
-Start the game and resume where you left. Once the map is loaded, launch `SWBF Cinematic Tools.exe`. You will get an error saying `Unable to check for updates.`. 
-Just click OK and it will continue to load. The tool GUI and a console window will popup. Click on `FIX LOD` for better in game details.
+Start the game and resume where you left. Once the map is loaded, launch `SWBF Cinematic Tools.exe`. The tool GUI and a console window should popup. Click on `FIX LOD` for better in game details.
 
 <div style="width:65%; margin: auto;">
 <img src="/images/SWBF-01.jpg" alt="NFS Payback Camera Tools GUI" style="box-shadow: 3px 3px 3px gray;">
@@ -128,5 +127,6 @@ So, what would be the procedure to get some nice slomo shots? Follow the guide.
 * Quickly ALT-TAB to the game again and move your ship like you would like to have it.
 * Press the `Real Long Exposure` key or control your ship until you see it's a good shot.
 * Take your screenshot and Press `INSERT`, `HOME` and `DELETE` to go back to normal.
+  
 {% include note.html content="If you changed the FOV, you will need to type `-1` back in the `CAMERA` Tab"%}
 
