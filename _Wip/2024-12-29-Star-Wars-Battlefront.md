@@ -14,7 +14,7 @@ Engage in epic battles on iconic planets including Hoth, Endor, and Tatooine. Al
 * [ReShade](https://reshade.me/downloads/ReShade_Setup_6.3.3.exe)
 
 ## How to Use
-Start the game and resume where you left. Once the map is loaded, launch `SWBF Cinematic Tools.exe`. The tool GUI and a console window should popup. Click on `FIX LOD` for better in game details.
+Start the game and launch `SWBF Cinematic Tools.exe`. The tool GUI and a console window should popup. Click on `FIX LOD` for better in game details.
 
 <div style="width:65%; margin: auto;">
 <img src="/images/SWBF-01.jpg" alt="NFS Payback Camera Tools GUI" style="box-shadow: 3px 3px 3px gray;">
