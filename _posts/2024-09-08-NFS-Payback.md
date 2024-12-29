@@ -93,7 +93,7 @@ For better shadows change the default value (1600) to something like `3072` or `
         </tr>
         <tr>
             <td>Left stick</td>
-            <td>Move camera forward/backwards/lef/right</td>
+            <td>Move camera forward/backwards/left/right</td>
         </tr>
         <tr>
             <td>Right stick</td>
@@ -109,7 +109,7 @@ For better shadows change the default value (1600) to something like `3072` or `
         </tr>
         <tr>
             <td>RS/LS down</td>
-            <td>Increase/cecrease FOV</td>
+            <td>Increase/decrease FOV</td>
         </tr>
     </tbody>
 </table>
