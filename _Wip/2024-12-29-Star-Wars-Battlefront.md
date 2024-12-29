@@ -6,62 +6,22 @@ image:  SWBF_POST.jpg
 tags:   Screenshooting
 ---
 
-DOOM 2016 is without saying, one of the most brutal and gory FPS of the last 10 years. Finally able to take screenshots thanks to the mod which allows you to open the console and have access to a lot of beautiful things. follow the guide...
+Engage in epic battles on iconic planets including Hoth, Endor, and Tatooine. Also, bring the fight to the previously unexplored planet, Sullust. Command a diverse set of ground-based vehicles including nimble speeder bikes, massive AT-ATs, and more.
 
 ## Required
 
-* [DOOM 2016 Legacy Mod by emoose](https://www.moddb.com/games/doom-4/downloads/doomlegacymod-v201901)
-* Pre 2024 Update
+* [Star Wars Battlefront Cinematic Tool by Hatti Watti](https://www.mediafire.com/file/4axk4e12cw8wn9z/CT_SWBF_20170119-8fa295.rar/file)
+* [ReShade](https://reshade.me/downloads/ReShade_Setup_6.3.3.exe)
 
-## Optional
-* ReShade
+## How to Use
+Start the game and resume where you left. Once the map is loaded, launch `SWBF Cinematic Tools.exe`. You will get an error saying `Unable to check for updates.`. 
+Just click OK and it will continue to load. The tool GUI and a console window will popup. 
 
-## Mod Installation
-Unzip the previously downloaded file in the game's root directory.
-the dinput8.dll should reside next to `DOOMx64.exe` and `DOOMx64vk.exe`
+<div style="width:65%; margin: auto;">
+<img src="/images/SWBF-01A.jpg" alt="NFS Payback Camera Tools GUI" style="box-shadow: 3px 3px 3px gray;">
+</div>
 
-## Reverting to the next to last update
-Via steam console copy and paste this command `download_depot 379720 379721 2206249600939156631`.
-This will download the exe that works with the console unlocker.
-
-To access the console, in a RUN box type `steam://nav/console`
-  
-## Photo Mode Anytime and Image Quality 
-
-
-In `%USERPROFILE%\Documents\Saved Games\id Software\DOOM\base` create a new file called `myconfig.cfg` and copy the content below in it. 
-Save it when done. 
-
-Notice the `g_setting_photomode 1` and `bind KP_0 toggle g_FreezeTime`. The first one will allow you to open the photo mode whenever you want. 
-The other will allow you to use the internal free camera and have The Slayer visime.
-
-```
-r_shadowAtlasTileSize 6144; vt_maxPPF 64; vt_maxAniso 16; vt_lodBias -2;
-vt_qualityBC7ColorMask 0; vt_qualityBC6HLightmap 0;vt_qualityHDPLossless 0;
-vt_qualityHDPPower 0; vt_qualityHDPNormal 0; vt_qualityHDPLightmap 0;
-vt_qualityHDPSpecular 0; vt_qualityHDPDiffuse 0; vt_qualityBC7ColorMaskTranscode 0;
-g_setting_photomode 1; image_anisotropy 16;image_lodbias -1; image_BCCompressionQuality 0;
-r_multiSamples 16;vt_pageImageSizeVmtrUnique 8192;r_flaresQuality 0;
-r_forceTwoSided 1; r_particlesLightAtlasHeight 2048; r_particlesLightAtlasWidth 4096;
-r_detailDistance 8000;r_detailFadeDistMax 7000; r_vignette 0; r_flaresquality 0;
-r_imageAtlasMaxAniso 16; vt_qualityLightmapRoundDenominator 1.0;r_chromaticAberration 0;
-vt_restart;
-bind KP_PLUS cvaradd g_fov 1
-bind KP_MINUS cvaradd g_fov -1
-bind KP_STAR g_fov 95
-bind KP_SLASH toggle com_overrideDOF
-bind KP_0 toggle g_FreezeTime
-bind KP_1 cvaradd com_override_dof_intensity 0.01
-bind KP_2 cvaradd com_override_dof_intensity -0.01
-bind KP_3 com_override_dof_intensity 1.0
-bind KP_4 cvaradd r_lensFlaresRatio 0.01
-bind KP_5 cvaradd r_lensFlaresRatio -0.01
-bind KP_6 r_lensFlaresRatio 1.0
-bind KP_7 cvaradd r_hdrBloomRatio 0.001
-bind KP_8 cvaradd r_hdrBloomRatio -0.001
-bind KP_9 r_hdrBloomRatio 0.03
-```
-<br>
+### Controls
 <style>
 .table_component {
     overflow: auto;
@@ -102,70 +62,59 @@ bind KP_9 r_hdrBloomRatio 0.03
     <thead>
         <tr>
             <th>Key</th>
-            <th>Effect </th>
+            <th>Effect</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>NumPad +</td>
-            <td>Lower FOV by 1 </td>
+            <td>Insert</td>
+            <td>Enable/ disable camera</td>
         </tr>
         <tr>
-            <td>NumPad -</td>
-            <td>Raise FOV by 1 </td>
+            <td>Delete</td>
+            <td>Pause/ unpause game</td>
         </tr>
         <tr>
-            <td>NumPad *</td>
-            <td>Rest FOV to default 95 </td>
+            <td>Home</td>
+            <td>Disable HUD</td>
         </tr>
         <tr>
-            <td>NumPad /</td>
-            <td>Allow override default DOF value </td>
+            <td>Left stick</td>
+            <td>Move camera forward/ backwards/ left/ right</td>
         </tr>
         <tr>
-            <td>NumPad 0</td>
-            <td>Pause game and enter Free Camera </td>
+            <td>Right stick</td>
+            <td>Pan and yaw</td>
         </tr>
         <tr>
-            <td>NumPad 1</td>
-            <td>Raise DOF intensity by 0.01 </td>
+            <td>RB/LB</td>
+            <td>Roll left/ right</td>
         </tr>
         <tr>
-            <td>NumPad 2</td>
-            <td>Lower DOF intensity by 0.01 </td>
+            <td>RT/LT</td>
+            <td>Move camera up/ down</td>
         </tr>
         <tr>
-            <td>NumPad 3</td>
-            <td>Reset DOF to default value 1.0 </td>
+            <td>RS/LS down</td>
+            <td>Increase/ decrease FOV</td>
         </tr>
-        <tr>
-            <td>NumPad 4</td>
-            <td>Raise lens flare intensity by 0.01 </td>
-        </tr>
-        <tr>
-            <td>NumPad 5</td>
-            <td>Lower lens flare intensity by 0.01 </td>
-        </tr>
-        <tr>
-            <td>NumPad 6</td>
-            <td>Reset lens flare to default value 1.0 </td>
-        </tr>
-        <tr>
-            <td>NumPad 7</td>
-            <td>Raise bloom intensity by 0.001 </td>
-        </tr>
-        <tr>
-            <td>NumPad 8</td>
-            <td>Lower bloom intensity by 0.001 </td>
-        </tr>
-        <tr>
-            <td>NumPad 9</td>
-            <td>Reset bloom to default value 0.03 </td>
-        </tr>
-        <tr></tr>
     </tbody>
 </table>
+</div>
 
-Now it's time to test your config. For this, start the game . Once you are ready to fight demons and the level is loaded, press the `~` (tilde).
-Type `exec myconfig`, press enter and your config will load. After it's loaded, you should see the Photo Mode message appearing.
-You will need to recall and apply the line at every new level. If you don’t see the photo mode option in the hud, re-excute the line by opeining the console and pressing arrow up. Press enter to apply.
+### How To Make Motion Blur Shots
+
+You will need to configure ReShade - Real Long Exposure to something like 0.7 or 4.5 seconds. Assigna keybind to start and stop it too while you are at it. This time, no Cheat Engine needed so, you won't aaffect the game slow motion.
+So, what would be the procedure to get some nice slomo shots? Follow the guide.
+
+* In game, press `DELETE` to pause the game.
+* Press `HOME` to disable the game UI.
+* Press `Insert` to enable the camera.
+* ALT-TAB to show the tools UI. And **VERY IMPORTANT HERE** click on `Lock to player` and ALT-TAB back to game.
+* Frame your shot.
+* ALT-TAB again. Uncheck `DISABLE GMAEPAD INPUT` to allow you to control your ship if needed. Go to the `MISC / ABOUT` tab. There, change the game timescale to a value that is like `0.003` to `0.01` (you choice).
+* Quickly ALT-TAB to the game again and move your ship like you would like to have it.
+* Press the `Real Long Exposure` key or control your ship until you see it's a good shot.
+* Take your screenshot and Press `INSERT`, `HOME` and `DELETE` to go back to normal.
+{% include note.html content="If you changed the FOV, you will need to type `-1` back in the `CAMERA` Tab"%}
+
