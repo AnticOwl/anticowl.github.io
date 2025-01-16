@@ -16,7 +16,8 @@ tags:   Screenshooting
 Alias Isolation
 
 If you have a modded `ENGINE_SETTINGS.XML` be sure that the `Anti Aliasing` is exactly as this 
-```		<Setting name="AntiAliasing">
+```
+			<Setting name="AntiAliasing">
 			<Quality name="Off"  				int="0"		precedence="1"/>
 			<Quality name="FXAA"				int="1"		precedence="2"/>
 			<Quality name="SMAA T1x"			int="2"		precedence="3"/>
