@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Alien: Isolation"
-date:   2024-08-21 18:05:55 +0300
+date:   2025-01-21 18:05:55 +0300
 image:  AI_POST.jpg
 tags:   Screenshooting
 ---
@@ -86,7 +86,7 @@ You have 2 choices here. First one will be in game and second one via the ini fi
     </tbody>
 </table>
 
-[!CAUTION]
+### About Modded Engine File
 If you have a modded `ENGINE_SETTINGS.XML` be sure that the `Anti Aliasing` is exactly as this 
 ```
 			<Setting name="AntiAliasing">
