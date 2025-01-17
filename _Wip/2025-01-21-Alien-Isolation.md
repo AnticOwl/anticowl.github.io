@@ -28,7 +28,20 @@ Start OpenCAGE and it will The tool will set themselve up. When all done, click 
 
 ### Alias Isolation
 You have 2 choices here. First one will be in game and second one via the ini file. 
-### Controls
+
+### About Modded Engine File
+If you have a modded `ENGINE_SETTINGS.XML` be sure that the `Anti Aliasing` section is exactly as this. 
+```
+			<Setting name="AntiAliasing">
+			<Quality name="Off"  				int="0"		precedence="1"/>
+			<Quality name="FXAA"				int="1"		precedence="2"/>
+			<Quality name="SMAA T1x"			int="2"		precedence="3"/>
+			<Quality name="SMAA T2x"			int="3"		precedence="4"/>
+```
+The `x` after T1 and T2 **MUST** be in lower case. Without that, the TAA won't work. 
+
+## Controls
+### Alias Isolation
 <style>
 .table_component {
     overflow: auto;
@@ -88,19 +101,7 @@ You have 2 choices here. First one will be in game and second one via the ini fi
     </tbody>
 </table>
 
-### About Modded Engine File
-If you have a modded `ENGINE_SETTINGS.XML` be sure that the `Anti Aliasing` section is exactly as this. 
-```
-			<Setting name="AntiAliasing">
-			<Quality name="Off"  				int="0"		precedence="1"/>
-			<Quality name="FXAA"				int="1"		precedence="2"/>
-			<Quality name="SMAA T1x"			int="2"		precedence="3"/>
-			<Quality name="SMAA T2x"			int="3"		precedence="4"/>
-```
-The `x` after T1 and T2 **MUST** be in lower case. Without that, the TAA won't work. 
-
-## Controls
-
+### Cinametic Tools
 <style>
 .table_component {
     overflow: auto;
