@@ -18,7 +18,9 @@ tags:   Screenshooting
 Put the downloaded `OpenCAGE.exe` in Alien Isolation root directory alon with the game exe. That all you have to do for now.
 
 ### Alias Isolation
-Extract the mod into the root game folder. Be sure to see the mod folder being there.
+There are two versions of the anti aliasing mod. One for pre-2011 CPU that doesn't not support AVX (`AliasIsolation-v1.2.0-SSE3-Legacy.7z`) but SSE3 and the other that support AVX (`AliasIsolation-v1.2.0.7z`). you will probably want to download the one with AVX support.
+
+Extract the mod into the root game folder. Be sure to see the mod folder being there. Again, you are done.with the installation
 
 ## Configuration
 ### OpenCAGE
