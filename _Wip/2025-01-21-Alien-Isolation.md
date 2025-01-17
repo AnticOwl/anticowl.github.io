@@ -300,7 +300,7 @@ The `x` after T1 and T2 **MUST** be in lower case. Without that, the TAA won't w
 </div>
 
 ## How to Take A Screenshot
-Now that 
+After completeing and saved the graphic configuration click on `Open Game`. 
 
 <div style="width:65%; margin: auto;">
 <img src="/images/AI_01.png" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
