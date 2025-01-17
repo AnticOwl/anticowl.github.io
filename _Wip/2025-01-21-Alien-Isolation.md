@@ -22,7 +22,7 @@ Extract the mod into the root game folder. Be sure to see the mod folder being t
 
 ## Configuration
 ### OpenCAGE
-Start OpenCAGE and click on `Edit Configurations`.
+Start OpenCAGE and it will The tool will set themselve up. When all done, click on `Edit Configurations`. For more information 
 
 ### Alias Isolation
 You have 2 choices here. First one will be in game and second one via the ini file. 
