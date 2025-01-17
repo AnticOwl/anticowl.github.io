@@ -97,17 +97,6 @@ If you have a modded `ENGINE_SETTINGS.XML` be sure that the `Anti Aliasing` sect
 ```
 The `x` after T1 and T2 **MUST** be in lower case. Without that, the TAA won't work. 
 
-<div style="width:65%; margin: auto;">
-<img src="/images/AI_01.png" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
-</div>
-<div> </div>
-
-
-<div style="width:65%; margin: auto;">
-<img src="/images/AI_02.png" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
-</div>
-<div> </div>
-
 ## Controls
 
 <style>
@@ -311,4 +300,15 @@ The `x` after T1 and T2 **MUST** be in lower case. Without that, the TAA won't w
 </div>
 
 ## How to Take A Screenshot
+Now that 
 
+<div style="width:65%; margin: auto;">
+<img src="/images/AI_01.png" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+
+
+<div style="width:65%; margin: auto;">
+<img src="/images/AI_02.png" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
