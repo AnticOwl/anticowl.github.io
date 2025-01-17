@@ -141,13 +141,13 @@ The `x` after T1 and T2 **MUST** be in lower case. Without that, the TAA won't w
             <th>Key</th>
             <th>Effect </th>
         </tr>
+    </thead>
+    <tbody>
         <tr>
             <tr>Toggle Camera Tools UI</tr>
             <tr>F5 </tr>
         </tr>
-    </thead>
-    <tbody>
-        <tr>
+	<tr>
             <td>Toggle Camera</td>
             <td>Insert </td>
         </tr>
