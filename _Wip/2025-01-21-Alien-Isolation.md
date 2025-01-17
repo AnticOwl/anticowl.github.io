@@ -137,162 +137,162 @@ The `x` after T1 and T2 **MUST** be in lower case. Without that, the TAA won't w
 <div class="table_component" role="region" tabindex="0">
 <table>
     <thead>
+	<tr>
+            <th>Key</th>
+            <th>Effect </th>
+        </tr>
         <tr>
-            <th>ToggleUI</th>
-            <th>F5 </th>
+            <tr>Toggle Camera Tools UI</tr>
+            <tr>F5 </tr>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>ToggleCamera</td>
+            <td>Toggle Camera</td>
             <td>Insert </td>
         </tr>
         <tr>
-            <td>Key</td>
-            <td>Effect </td>
-        </tr>
-        <tr>
-            <td>ToggleHUD</td>
+            <td>Toggle HUD</td>
             <td>Home </td>
         </tr>
         <tr>
-            <td>ToggleFreezeTime</td>
+            <td>Toggle Freeze Time</td>
             <td>Delete </td>
         </tr>
         <tr>
-            <td>Camera_Forward</td>
+            <td>Camera Forward</td>
             <td>W </td>
         </tr>
         <tr>
-            <td>Camera_Backward</td>
+            <td>Camera Backward</td>
             <td>S </td>
         </tr>
         <tr>
-            <td>Camera_Left</td>
+            <td>Camera Left</td>
             <td>A </td>
         </tr>
         <tr>
-            <td>Camera_Right</td>
+            <td>Camera Right</td>
             <td>D </td>
         </tr>
         <tr>
-            <td>Camera_Up</td>
+            <td>Camera Up</td>
             <td>Space </td>
         </tr>
         <tr>
-            <td>Camera_Down</td>
+            <td>Camera Down</td>
             <td>Left Ctrl </td>
         </tr>
         <tr>
-            <td>Camera_ForwardSecondary</td>
+            <td>Camera Forward Secondary</td>
             <td>(None) </td>
         </tr>
         <tr>
-            <td>Camera_BackwardSecondary</td>
+            <td>Camera Backward Secondary</td>
             <td>(None) </td>
         </tr>
         <tr>
-            <td>Camera_LeftSecondary</td>
+            <td>Camera Left Secondary</td>
             <td>(None) </td>
         </tr>
         <tr>
-            <td>Camera_RightSecondary</td>
+            <td>Camera Right Secondary</td>
             <td>(None) </td>
         </tr>
         <tr>
-            <td>Camera_UpSecondary</td>
+            <td>Camera Up Secondary</td>
             <td>(None) </td>
         </tr>
         <tr>
-            <td>Camera_DownSecondary</td>
+            <td>Camera Down Secondary</td>
             <td>(None) </td>
         </tr>
         <tr>
-            <td>Camera_PitchUp</td>
+            <td>Camera Pitch Up</td>
             <td>Up Arrow </td>
         </tr>
         <tr>
-            <td>Camera_PitchDown</td>
+            <td>Camera Pitch Down</td>
             <td>Down Arrow </td>
         </tr>
         <tr>
-            <td>Camera_YawLeft</td>
+            <td>Camera Yaw Left</td>
             <td>Left Arrow </td>
         </tr>
         <tr>
-            <td>Camera_YawRight</td>
+            <td>Camera Yaw Right</td>
             <td>Right Arrow </td>
         </tr>
         <tr>
-            <td>Camera_RollLeft</td>
+            <td>Camera Roll Left</td>
             <td>(None) </td>
         </tr>
         <tr>
-            <td>Camera_RollRight</td>
+            <td>Camera Roll Right</td>
             <td>(None) </td>
         </tr>
         <tr>
-            <td>Camera_IncFov</td>
+            <td>Increment Fov</td>
             <td>NumPad + </td>
         </tr>
         <tr>
-            <td>Camera_DecFov</td>
+            <td>Decrement Fov</td>
             <td>NumPad - </td>
         </tr>
         <tr>
-            <td>Track_CreateNode</td>
+            <td>Track Create Node</td>
             <td>F1 </td>
         </tr>
         <tr>
-            <td>Track_DeleteNode</td>
+            <td>Track Delete Node</td>
             <td>F2 </td>
         </tr>
         <tr>
-            <td>Track_Play</td>
+            <td>Track Play</td>
             <td>F3 </td>
         </tr>
         <tr>
-            <td>Object_PickUp</td>
+            <td>Object Pick Up</td>
             <td>Q </td>
         </tr>
         <tr>
-            <td>Object_Rotate</td>
+            <td>Object Rotate</td>
             <td>E </td>
         </tr>
         <tr>
-            <td>Object_Remove</td>
+            <td>Object Remove</td>
             <td>R </td>
         </tr>
         <tr>
-            <td>Visuals_IncDofScale</td>
+            <td>Incrememnt Dof Scale</td>
             <td>NumPad 3 </td>
         </tr>
         <tr>
-            <td>Visuals_DecDofScale</td>
+            <td>Decrement Dof Scale</td>
             <td>NumPad 2 </td>
         </tr>
         <tr>
-            <td>Visuals_IncDofStrength</td>
+            <td>Increment Dof Strength</td>
             <td>NumPad 8 </td>
         </tr>
         <tr>
-            <td>Visuals_DecDofStrength</td>
+            <td>Decrement Dof Strength</td>
             <td>NumPad 9 </td>
         </tr>
         <tr>
-            <td>Visuals_IncFocusDist</td>
+            <td>Increment Focus Distance </td>
             <td>NumPad 6 </td>
         </tr>
         <tr>
-            <td>Visuals_DecFocusDist</td>
+            <td>Decrement Focus Distance </td>
             <td>NumPad 5 </td>
         </tr>
         <tr>
-            <td>ToggleInvisibility</td>
+            <td>Toggle Invisibility</td>
             <td>I </td>
         </tr>
         <tr>
-            <td>FreezeCharacters</td>
+            <td>Freeze Characters</td>
             <td>F7</td>
         </tr>
     </tbody>
