@@ -144,8 +144,8 @@ The `x` after T1 and T2 **MUST** be in lower case. Without that, the TAA won't w
     </thead>
     <tbody>
         <tr>
-            <tr>Toggle Camera Tools UI</tr>
-            <tr>F5 </tr>
+            <td>Toggle Camera Tools UI</td>
+            <td>F5 </td>
         </tr>
 	<tr>
             <td>Toggle Camera</td>
