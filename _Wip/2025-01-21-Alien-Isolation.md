@@ -40,6 +40,26 @@ If you have a modded `ENGINE_SETTINGS.XML` be sure that the `Anti Aliasing` sect
 ```
 The `x` after T1 and T2 **MUST** be in lower case. Without that, the TAA won't work. 
 
+### About Missing Shadows And Reflection After Planar Gloss Activation
+You will need to executre the script below map per map. Once done most of the reflections and shadows will be visible.
+Some can be missing.
+```
+Commands commands = new Commands("commands.pak");
+foreach (Composite composite in commands.Entries)
+{
+    foreach (FunctionEntity function in composite.functions)
+    {
+        if (function.function != CommandsUtils.GetFunctionTypeGUID(FunctionType.ModelReference))
+            continue;
+
+        function.AddParameter("include_in_planar_reflections", new cBool(true));
+        function.AddParameter("cast_shadows", new cBool(true));
+        function.AddParameter("cast_shadows_in_torch", new cBool(true));
+    }
+}
+commands.Save();
+```
+
 ## Controls
 ### Alias Isolation
 <style>
