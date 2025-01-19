@@ -348,3 +348,7 @@ You shoudl see the log windows poping up. If yes, all OK.
 <img src="/images/AI_02.png" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
+
+### Note About ReShade
+The game can crash after taking 2 or 3, or maybe 4 shots. This because the space needed in the game memory goes above the 2 gigabyte alllowed by the 32 bit.
+Workaround would be to take your shots in BMP. Be warned that the files could be **VERY** large.
