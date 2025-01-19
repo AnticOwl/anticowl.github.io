@@ -9,6 +9,7 @@ tags:   Screenshooting
 ## Required
 * [OpenCAGE by Matt Filer](https://github.com/MattFiler/OpenCAGE)
 * [Alias Isolation by Ryan J Gray](https://github.com/aliasIsolation/aliasIsolation/releases)
+* [Enhanced Graphics (Plus) by BUR7N and Patrxgt](https://www.nexusmods.com/alienisolation/mods/67)
   
 ## Optional
 * Reshade
@@ -24,7 +25,15 @@ Extract the mod into the root game folder. Be sure to see the mod folder being t
 
 ## Configuration
 ### OpenCAGE
-Start OpenCAGE and it will The tool will set themselve up. When all done, click on `Edit Configurations`. For more information 
+Start OpenCAGE and it will The tool will set themselve up. When all done, click on `Edit Configurations`. Add your resoutions, shadow map size, lod etc. the way you want.
+
+<div style="width:65%; margin: auto;">
+<img src="/images/AI_03.jpg" alt="OpenCAGE Configuration" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+OR
+<div> </div>
+You can simple replace the existing `ENGINE_SETTINGS.XML` by the one from BUR7N and Patrxgt. You will just need to extract the zip in the game root folder.
 
 ### Alias Isolation
 You have 2 choices here. First one will be in game and second one via the ini file. 
@@ -323,14 +332,18 @@ commands.Save();
 </div>
 
 ## How to Take A Screenshot
-After completeing and saved the graphic configuration click on `Open Game`. 
-
+After completing and saved the graphic configuration click on `Save` and close the window.
+Click on `Open Game`. 
+<div style="width:65%; margin: auto;">
+<img src="/images/AI_04.png" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+Be sure to to check `Enable Cinematic Tools` then press `Star Alien: Isolation`. 
 <div style="width:65%; margin: auto;">
 <img src="/images/AI_01.png" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
-
-
+You shoudl see the log windows poping up. If yes, all OK.
 <div style="width:65%; margin: auto;">
 <img src="/images/AI_02.png" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
 </div>
