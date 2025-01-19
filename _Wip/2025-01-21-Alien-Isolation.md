@@ -49,7 +49,7 @@ If you have a modded `ENGINE_SETTINGS.XML` be sure that the `Anti Aliasing` sect
 ```
 The `x` after T1 and T2 **MUST** be in lower case. Without that, the TAA won't work. 
 
-### About Missing Shadows And Reflection After Planar Gloss Activation
+### About Missing Shadows And Reflections After Planar Gloss Activation
 You will need to executre the script below map per map. Once done most of the reflections and shadows will be visible.
 Some can be missing.
 ```
