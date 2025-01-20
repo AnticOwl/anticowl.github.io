@@ -337,12 +337,12 @@ Click on `Open Game`.
 <div style="width:65%; margin: auto;">
 <img src="/images/AI_04.jpg" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
 </div>
-<div> </div>
+<p></p>
 Be sure to to check `Enable Cinematic Tools` then press `Star Alien: Isolation`. 
 <div style="width:65%; margin: auto;">
 <img src="/images/AI_01.png" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
 </div>
-<div> </div>
+<p></p>
 You shoudl see the log windows poping up. If yes, all OK.
 <div style="width:65%; margin: auto;">
 <img src="/images/AI_02.png" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
