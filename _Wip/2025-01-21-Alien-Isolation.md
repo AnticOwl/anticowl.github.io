@@ -9,7 +9,7 @@ tags:   Screenshooting
 ## Required
 * [OpenCAGE by Matt Filer](https://github.com/MattFiler/OpenCAGE)
 * [Alias Isolation by Ryan J Gray](https://github.com/aliasIsolation/aliasIsolation/releases)
-* [Enhanced Graphics (Plus) by BUR7N and Patrxgt](https://www.nexusmods.com/alienisolation/mods/67)
+* [Improved Graphics by GPUnity](https://www.nexusmods.com/alienisolation/mods/19)
   
 ## Optional
 * Reshade
@@ -33,7 +33,7 @@ Start OpenCAGE and it will The tool will set themselve up. When all done, click 
 <div> </div>
 OR
 <div> </div>
-You can simple replace the existing `ENGINE_SETTINGS.XML` by the one from BUR7N and Patrxgt. You will just need to extract the zip in the game root folder.
+Run the GPUnity tool to modify the `ENGINE_SETTINGS.XML`. Disable startup movies and/or lens falre if you want. 
 
 ### Alias Isolation
 You have 2 choices here. First one will be in game and second one via the ini file. 
