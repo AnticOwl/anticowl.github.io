@@ -9,14 +9,14 @@ tags:   Screenshooting
 ## Required
 * [OpenCAGE by Matt Filer](https://github.com/MattFiler/OpenCAGE)
 * [Alias Isolation by Ryan J Gray](https://github.com/aliasIsolation/aliasIsolation/releases)
-* [Improved Graphics by GPUnity](https://www.nexusmods.com/alienisolation/mods/19)
   
 ## Optional
-* Reshade
+* [Reshade](https://reshade.me)
+* [Improved Graphics by GPUnity](https://www.nexusmods.com/alienisolation/mods/19)
 
 ## Installation
 ### OpenCAGE
-Put the downloaded `OpenCAGE.exe` in Alien Isolation root directory alon with the game exe. That all you have to do for now.
+Put the downloaded `OpenCAGE.exe` in Alien Isolation root directory along with the game exe. That's all you have to do for now.
 
 ### Alias Isolation
 There are two versions of the anti aliasing mod. One for pre-2011 CPU that doesn't not support AVX (`AliasIsolation-v1.2.0-SSE3-Legacy.7z`) but SSE3 and the other that support AVX (`AliasIsolation-v1.2.0.7z`). you will probably want to download the one with AVX support.
@@ -68,6 +68,9 @@ foreach (Composite composite in commands.Entries)
 }
 commands.Save();
 ```
+LODs can disable entirely by using the graphics settings editor or the LODControls scripting entity. 
+This will give you the highest possible image quality. 
+
 
 ## Controls
 ### Alias Isolation
