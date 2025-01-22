@@ -24,7 +24,14 @@ Extract the mod into the root game folder. Be sure to see the mod folder being t
 
 ## Configuration
 ### OpenCAGE
-Start OpenCAGE and it will The tool will set themselve up. When all done, click on `Edit Configurations`. Add your resoutions, shadow map size, lod etc. the way you want.
+Start OpenCAGE and the tool will set themselve up. When all done, click on `Edit Configurations`. 
+
+<div style="width:65%; margin: auto;">
+<img src="/images/AI_00a.jpg" alt="OpenCAGE Configuration" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+
+Add your resoutions, shadow map size, lod etc. the way you want.
 
 <div style="width:65%; margin: auto;">
 <img src="/images/AI_00.jpg" alt="OpenCAGE Configuration" style="box-shadow: 3px 3px 3px gray;">
@@ -33,6 +40,8 @@ Start OpenCAGE and it will The tool will set themselve up. When all done, click 
 
 The `Shadow Map Resolution` maximum value is by default `2048`. The engine support higher with a maximum of `4096`. Everything set above that value will fallback to that value.
 Regarding the LOD, the default `Ultra` value is by default `1.0`. You can go to `999` for no texture popup.
+<p></p>
+To be able to use Alias Isolation with OpenCAGE, you wheel need to click on the cogwheel and check `Receive updates from staging branch` and click `Apply Settings`.
 
 ### Alias Isolation
 You have 2 choices here. First one will be in game and second one via the ini file. 
@@ -46,7 +55,7 @@ If you have a modded `ENGINE_SETTINGS.XML` from one of the mods available on Nex
 			<Quality name="SMAA T1x"			int="2"		precedence="3"/>
 			<Quality name="SMAA T2x"			int="3"		precedence="4"/>
 ```
-The `x` after T1 and T2 **MUST** be in lower case. Without that, the TAA won't work. 
+The `x` after T1 and T2 **MUST** be in lower case. Without that, the Alias Isolation won't work. 
 
 ### About Missing Shadows And Reflections After Planar Gloss Activation
 You will need to executre the script below map per map. Once done most of the reflections and shadows will be visible.
