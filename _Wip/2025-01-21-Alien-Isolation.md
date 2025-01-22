@@ -167,163 +167,47 @@ commands.Save();
 <div class="table_component" role="region" tabindex="0">
 <table>
     <thead>
-	<tr>
+        <tr>
             <th>Key</th>
-            <th>Effect </th>
+            <th>Effect</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Toggle Camera Tools UI</td>
-            <td>F5 </td>
-        </tr>
-	<tr>
-            <td>Toggle Camera</td>
-            <td>Insert </td>
+       <tr>
+            <td>F5</td>
+            <td>Show/ hide camera tool</td>
         </tr>
         <tr>
-            <td>Toggle HUD</td>
-            <td>Home </td>
+            <td>Insert</td>
+            <td>Enable/ disable camera</td>
         </tr>
         <tr>
-            <td>Toggle Freeze Time</td>
-            <td>Delete </td>
+            <td>Delete</td>
+            <td>Pause/ unpause game</td>
         </tr>
         <tr>
-            <td>Camera Forward</td>
-            <td>W </td>
+            <td>Home</td>
+            <td>Disable HUD</td>
         </tr>
         <tr>
-            <td>Camera Backward</td>
-            <td>S </td>
+            <td>Left stick</td>
+            <td>Move camera forward/ backwards/ left/ right</td>
         </tr>
         <tr>
-            <td>Camera Left</td>
-            <td>A </td>
+            <td>Right stick</td>
+            <td>Pan and yaw</td>
         </tr>
         <tr>
-            <td>Camera Right</td>
-            <td>D </td>
+            <td>RB/LB</td>
+            <td>Roll left/ right</td>
         </tr>
         <tr>
-            <td>Camera Up</td>
-            <td>Space </td>
+            <td>RT/LT</td>
+            <td>Move camera up/ down</td>
         </tr>
         <tr>
-            <td>Camera Down</td>
-            <td>Left Ctrl </td>
-        </tr>
-        <tr>
-            <td>Camera Forward Secondary</td>
-            <td>(None) </td>
-        </tr>
-        <tr>
-            <td>Camera Backward Secondary</td>
-            <td>(None) </td>
-        </tr>
-        <tr>
-            <td>Camera Left Secondary</td>
-            <td>(None) </td>
-        </tr>
-        <tr>
-            <td>Camera Right Secondary</td>
-            <td>(None) </td>
-        </tr>
-        <tr>
-            <td>Camera Up Secondary</td>
-            <td>(None) </td>
-        </tr>
-        <tr>
-            <td>Camera Down Secondary</td>
-            <td>(None) </td>
-        </tr>
-        <tr>
-            <td>Camera Pitch Up</td>
-            <td>Up Arrow </td>
-        </tr>
-        <tr>
-            <td>Camera Pitch Down</td>
-            <td>Down Arrow </td>
-        </tr>
-        <tr>
-            <td>Camera Yaw Left</td>
-            <td>Left Arrow </td>
-        </tr>
-        <tr>
-            <td>Camera Yaw Right</td>
-            <td>Right Arrow </td>
-        </tr>
-        <tr>
-            <td>Camera Roll Left</td>
-            <td>(None) </td>
-        </tr>
-        <tr>
-            <td>Camera Roll Right</td>
-            <td>(None) </td>
-        </tr>
-        <tr>
-            <td>Increment Fov</td>
-            <td>NumPad + </td>
-        </tr>
-        <tr>
-            <td>Decrement Fov</td>
-            <td>NumPad - </td>
-        </tr>
-        <tr>
-            <td>Track Create Node</td>
-            <td>F1 </td>
-        </tr>
-        <tr>
-            <td>Track Delete Node</td>
-            <td>F2 </td>
-        </tr>
-        <tr>
-            <td>Track Play</td>
-            <td>F3 </td>
-        </tr>
-        <tr>
-            <td>Object Pick Up</td>
-            <td>Q </td>
-        </tr>
-        <tr>
-            <td>Object Rotate</td>
-            <td>E </td>
-        </tr>
-        <tr>
-            <td>Object Remove</td>
-            <td>R </td>
-        </tr>
-        <tr>
-            <td>Incrememnt Dof Scale</td>
-            <td>NumPad 3 </td>
-        </tr>
-        <tr>
-            <td>Decrement Dof Scale</td>
-            <td>NumPad 2 </td>
-        </tr>
-        <tr>
-            <td>Increment Dof Strength</td>
-            <td>NumPad 8 </td>
-        </tr>
-        <tr>
-            <td>Decrement Dof Strength</td>
-            <td>NumPad 9 </td>
-        </tr>
-        <tr>
-            <td>Increment Focus Distance </td>
-            <td>NumPad 6 </td>
-        </tr>
-        <tr>
-            <td>Decrement Focus Distance </td>
-            <td>NumPad 5 </td>
-        </tr>
-        <tr>
-            <td>Toggle Invisibility</td>
-            <td>I </td>
-        </tr>
-        <tr>
-            <td>Freeze Characters</td>
-            <td>F7</td>
+            <td>RS/LS down</td>
+            <td>Increase/ decrease FOV</td>
         </tr>
     </tbody>
 </table>
