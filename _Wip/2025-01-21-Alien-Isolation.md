@@ -12,7 +12,6 @@ tags:   Screenshooting
   
 ## Optional
 * [Reshade](https://reshade.me)
-* [Improved Graphics by GPUnity](https://www.nexusmods.com/alienisolation/mods/19)
 
 ## Installation
 ### OpenCAGE
