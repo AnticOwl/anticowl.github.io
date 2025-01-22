@@ -356,4 +356,4 @@ You shoudl see the log windows poping up. If yes, all OK.
 The game can crash after taking 2 or 3, or maybe 4 shots. This because the space needed in the game memory goes above the 2 gigabyte alllowed by the 32 bit.
 Workaround would be to take your shots in BMP. Be warned that the files could be **VERY** large.
 <p></p>
-A special thanks to Ryan J Gray and Matt Filler for the precious help!
+A special thanks to Ryan J Gray and Matt Filler for their precious help!
