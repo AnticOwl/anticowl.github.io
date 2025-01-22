@@ -27,18 +27,18 @@ Extract the mod into the root game folder. Be sure to see the mod folder being t
 Start OpenCAGE and it will The tool will set themselve up. When all done, click on `Edit Configurations`. Add your resoutions, shadow map size, lod etc. the way you want.
 
 <div style="width:65%; margin: auto;">
-<img src="/images/AI_03.jpg" alt="OpenCAGE Configuration" style="box-shadow: 3px 3px 3px gray;">
+<img src="/images/AI_00.jpg" alt="OpenCAGE Configuration" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
-OR
-<div> </div>
-Run the GPUnity tool to modify the `ENGINE_SETTINGS.XML`. Disable startup movies and/or lens falre if you want. 
+
+The `Shadow Map Resolution` maximum value is by default `2048`. The engine support higher with a maximum of `4096`. Everything set above that value will fallback to that value.
+Regarding the LOD, the default `Ultra` value is by default `1.0`. You can go to `999` for no texture popup.
 
 ### Alias Isolation
 You have 2 choices here. First one will be in game and second one via the ini file. 
 
 ### About Modded Engine File
-If you have a modded `ENGINE_SETTINGS.XML` be sure that the `Anti Aliasing` section is exactly as this. 
+If you have a modded `ENGINE_SETTINGS.XML` from one of the mods available on Nexus Mods, be sure that the `Anti Aliasing` section is exactly as this. 
 ```
 			<Setting name="AntiAliasing">
 			<Quality name="Off"  				int="0"		precedence="1"/>
@@ -67,10 +67,6 @@ foreach (Composite composite in commands.Entries)
 }
 commands.Save();
 ```
-LODs can disable entirely by using the graphics settings editor or the LODControls scripting entity. 
-This will give you the highest possible image quality. 
-
-
 ## Controls
 ### Alias Isolation
 <style>
