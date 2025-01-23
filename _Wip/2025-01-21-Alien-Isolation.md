@@ -62,7 +62,7 @@ The `x` after T1 and T2 **MUST** be in lower case. Without that, the Alias Isola
 
 ### About Missing Shadows And Reflections After Planar Gloss Activation
 You will need to executre the script below map per map. Once done most of the reflections and shadows will be visible.
-Some can be missing.
+Some can be missing. This can be done via Visual Studio.
 ```
 Commands commands = new Commands("commands.pak");
 foreach (Composite composite in commands.Entries)
