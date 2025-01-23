@@ -24,7 +24,8 @@ Extract the mod into the root game folder. Be sure to see the mod folder being t
 
 ## Configuration
 ### OpenCAGE
-Start OpenCAGE and the tool will set themselve up. When all done, click on `Edit Configurations`. 
+Start OpenCAGE and the tool will set themselve up. Click on the cogwheel and check `Receive updates from staging branch` and click `Apply Settings`. OpenCAGE will start updating.
+The update will resolve some bugs regarding Alias Isolation and the Graphic Settings Editor. When all done, click on `Edit Configurations`. 
 
 <div style="width:65%; margin: auto;">
 <img src="/images/AI_00a.jpg" alt="OpenCAGE Configuration" style="box-shadow: 3px 3px 3px gray;">
@@ -38,13 +39,15 @@ Add your resoutions, shadow map size, lod etc. the way you want.
 </div>
 <div> </div>
 
-The `Shadow Map Resolution` maximum value is by default `2048`. The engine support higher with a maximum of `4096`. Everything set above that value will fallback to that value.
+The `Shadow Map Resolution` maximum value is by default `2048`. You can go up to `4096` as this is the maximum value allowed by the engine. Everything set above that value will fallback to the engine maximum value.
 Regarding the LOD, the default `Ultra` value is by default `1.0`. You can go to `999` for no texture popup.
-<p></p>
-To be able to use Alias Isolation with OpenCAGE, you wheel need to click on the cogwheel and check `Receive updates from staging branch` and click `Apply Settings`.
 
 ### Alias Isolation
-You have 2 choices here. First one will be in game and second one via the ini file. 
+You have 2 choices fro the configurtion. While in game by pressing `DELETE` or via a file called `settings.txt`. This file can be found in `\steamapps\common\Alien Isolation\mods\aliasIsolation\`.
+```
+sharpening = 0.600000
+chromaticAberration = 0.000000
+```
 
 ### About Modded Engine File
 If you have a modded `ENGINE_SETTINGS.XML` from one of the mods available on Nexus Mods, be sure that the `Anti Aliasing` section is exactly as this. 
@@ -137,7 +140,7 @@ commands.Save();
     </tbody>
 </table>
 
-### Cinametic Tools
+### Cinematic Tools
 <style>
 .table_component {
     overflow: auto;
