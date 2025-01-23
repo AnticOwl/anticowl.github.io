@@ -43,7 +43,7 @@ The `Shadow Map Resolution` maximum value is by default `2048`. You can go up to
 Regarding the LOD, the default `Ultra` value is by default `1.0`. You can go to `999` for no texture popup.
 
 ### Alias Isolation
-You have 2 choices fro the configurtion. While in game by pressing `DELETE` or via a file called `settings.txt`. This file can be found in `\steamapps\common\Alien Isolation\mods\aliasIsolation\`.
+For the configuration, you have 2 choices. While in game by pressing `DELETE` or via a file called `settings.txt`. This file can be found in `\steamapps\common\Alien Isolation\mods\aliasIsolation\`.
 ```
 sharpening = 0.600000
 chromaticAberration = 0.000000
