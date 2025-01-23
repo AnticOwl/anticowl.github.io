@@ -223,11 +223,18 @@ Be sure to to check `Enable Cinematic Tools` then press `Start Alien: Isolation`
 <img src="/images/AI_01.png" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <p></p>
-You shoudl see the log windows poping up. If yes, all OK.
+You should see the log windows poping up.
 <div style="width:65%; margin: auto;">
 <img src="/images/AI_02.png" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
 </div>
-<div> </div>
+<p></p>
+In game, the Cinematic Tool UI should be displayed. Press F5 to close it.
+<div style="width:65%; margin: auto;">
+<img src="/images/AI_00c.jpg" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<p></p>
+
+If you decide to use Alias Isolation, I would recommend to rebind `Insert` and `Delete` to something else.
 
 ### Note About ReShade
 The game can crash after taking 2 or 3, or maybe 4 shots. This because the space needed in the game memory goes above the 2 gigabyte alllowed by the 32 bit.
