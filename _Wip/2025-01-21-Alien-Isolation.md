@@ -61,24 +61,9 @@ If you have a modded `ENGINE_SETTINGS.XML` from one of the mods available on Nex
 The `x` after T1 and T2 **MUST** be in lower case. Without that, the Alias Isolation won't work. 
 
 ### About Missing Shadows And Reflections After Planar Gloss Activation
-You will need to executre the script below map per map. Once done most of the reflections and shadows will be visible.
-Some can be missing. This can be done via Visual Studio.
-```
-Commands commands = new Commands("commands.pak");
-foreach (Composite composite in commands.Entries)
-{
-    foreach (FunctionEntity function in composite.functions)
-    {
-        if (function.function != CommandsUtils.GetFunctionTypeGUID(FunctionType.ModelReference))
-            continue;
+For performance reasons, some or most objects are not reflected as the can add performance overhead on lower-end systems.
+The only way to activate most of them would be per scripting (Visual Studio)
 
-        function.AddParameter("include_in_planar_reflections", new cBool(true));
-        function.AddParameter("cast_shadows", new cBool(true));
-        function.AddParameter("cast_shadows_in_torch", new cBool(true));
-    }
-}
-commands.Save();
-```
 ## Controls
 ### Alias Isolation
 <style>
