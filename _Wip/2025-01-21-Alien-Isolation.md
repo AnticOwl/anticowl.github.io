@@ -217,7 +217,7 @@ Click on `Open Game`.
 <img src="/images/AI_04.jpg" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <p></p>
-Be sure to to check `Enable Cinematic Tools` then press `Star Alien: Isolation`. 
+Be sure to to check `Enable Cinematic Tools` then press `Start Alien: Isolation`. 
 <div style="width:65%; margin: auto;">
 <img src="/images/AI_01.png" alt="SOD2 Mod Manager" style="box-shadow: 3px 3px 3px gray;">
 </div>
@@ -230,6 +230,6 @@ You shoudl see the log windows poping up. If yes, all OK.
 
 ### Note About ReShade
 The game can crash after taking 2 or 3, or maybe 4 shots. This because the space needed in the game memory goes above the 2 gigabyte alllowed by the 32 bit.
-Workaround would be to take your shots in BMP. Be warned that the files could be **VERY** large.
+Workaround would be to take your shots in BMP. Be warned that the files can be **VERY** large.
 <p></p>
 A special thanks to Ryan J Gray and Matt Filler for their precious help!
