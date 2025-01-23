@@ -125,6 +125,7 @@ The only way to activate most of them would be per scripting (Visual Studio)
         </tr>
     </tbody>
 </table>
+</div>
 
 ### Cinematic Tools
 <style>
