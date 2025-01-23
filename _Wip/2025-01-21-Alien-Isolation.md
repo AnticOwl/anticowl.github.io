@@ -32,15 +32,16 @@ The update will resolve some bugs regarding Alias Isolation and the Graphic Sett
 </div>
 <div> </div>
 
-Add your resoutions, shadow map size, lod etc. the way you want.
+Add your resolutions, shadow map size, lod etc. the way you want.
 
 <div style="width:65%; margin: auto;">
 <img src="/images/AI_00.jpg" alt="OpenCAGE Configuration" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
 
-The `Shadow Map Resolution` maximum value is by default `2048`. You can go up to `4096` as this is the maximum value allowed by the engine. Everything set above that value will fallback to the engine maximum value.
-Regarding the LOD, the default `Ultra` value is by default `1.0`. You can go to `999` for no texture popup.
+* The `Shadow Map Resolution` maximum value is by default `2048`. You can go up to `4096` as this is the maximum value allowed by the engine. Everything set above that value will fallback to the engine maximum value.
+* Regarding the LOD, the default `Ultra` value is by default `1.0`. You can go to `999` for no texture popup.
+* The `Shadow Map Filter Quality` has a maximum engine value of `6`. Higher value will have the same effect as `High`.
 
 ### Alias Isolation
 For the configuration, you have 2 choices. While in game by pressing `DELETE` or via a file called `settings.txt`. This file can be found in `\steamapps\common\Alien Isolation\mods\aliasIsolation\`.
