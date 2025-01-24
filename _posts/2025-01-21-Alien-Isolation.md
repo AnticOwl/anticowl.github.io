@@ -7,7 +7,7 @@ tags:   Screenshooting
 ---
 
 ## Required
-* [OpenCAGE by Matt Filer](https://github.com/MattFiler/OpenCAGE)
+* [OpenCAGE by Matt Filer](https://store.steampowered.com/app/3367530)
 * [Alias Isolation by Ryan J Gray](https://github.com/aliasIsolation/aliasIsolation/releases)
   
 ## Optional
@@ -15,7 +15,7 @@ tags:   Screenshooting
 
 ## Installation
 ### OpenCAGE
-Put the downloaded `OpenCAGE.exe` in the _Alien: Isolation_ root directory (where the game's `AI.exe` file is). That's all you have to do for now.
+Download the tool from Steam and that it. That's all you have to do for now.
 
 ### Alias Isolation
 There are two versions of this anti-aliasing mod. One for old pre-2011 CPUs that don't support the AVX (vector extensions for performance optimisation) (`AliasIsolation-v1.2.0-SSE3-Legacy.7z`), and the other version that only supports AVX (`AliasIsolation-v1.2.0.7z`). you will very likely want to download the one with AVX support for best performance on post-2011 hardware.
