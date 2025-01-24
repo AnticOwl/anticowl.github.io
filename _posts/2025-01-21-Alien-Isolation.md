@@ -7,7 +7,7 @@ tags:   Screenshooting
 ---
 
 ## Required
-* [OpenCAGE by Matt Filer](https://store.steampowered.com/app/3367530)
+* [OpenCAGE by Matt Filer](https://github.com/MattFiler/OpenCAGE/releases)
 * [Alias Isolation by Ryan J Gray](https://github.com/aliasIsolation/aliasIsolation/releases)
   
 ## Optional
