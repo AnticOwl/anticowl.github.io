@@ -6,6 +6,8 @@ image:  AI_POST.jpg
 tags:   Screenshooting
 ---
 
+Discover the true meaning of fear in Alien: Isolation, a survival horror set in an atmosphere of constant dread and mortal danger. Fifteen years after the events of Alien™, Ellen Ripley’s daughter, Amanda enters a desperate battle for survival, on a mission to unravel the truth behind her mother's disappearance.
+
 ## Required
 * [OpenCAGE by Matt Filer](https://github.com/MattFiler/OpenCAGE/releases)
 * [Alias Isolation by Ryan J Gray](https://github.com/aliasIsolation/aliasIsolation/releases)
