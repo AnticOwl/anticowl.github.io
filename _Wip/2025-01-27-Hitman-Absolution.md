@@ -16,9 +16,11 @@ Betrayed by the Agency and hunted by the police, Agent 47 finds himself pursuing
 [ReShade](https://reshade.me)
 
 ## Installation
-Drop the zip content in the game root directory 
+Simply unzip the content in the game root directory. 
 
 ## Configuration
+Start the game and load a save. press the `~` or `²` on your keyboard to open the SDK.
+Click on `MOD` and check the ones you would like to use
 ![image](https://github.com/user-attachments/assets/16f4f669-fa5e-4584-afca-78b51934127a)
 ![image](https://github.com/user-attachments/assets/cd087763-f354-4090-bbd8-41e507f78b2b)
 ![image](https://github.com/user-attachments/assets/362b7323-5a65-4f32-bbf0-236be28a82d1)
