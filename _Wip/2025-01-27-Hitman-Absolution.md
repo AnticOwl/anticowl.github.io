@@ -142,5 +142,5 @@ The `Camera` mod will allow you to completely disable the internal post proccess
 
 
 
-### About ReSahde
+### About ReShade
 rename dxgi.dll to d3d11.dll to avoid the SDK to no load correctly.
