@@ -32,7 +32,13 @@ Click on `MODS` and check the ones you would like to use. Press OK when done. Th
 </div>
 <p></p>
 
-![image](https://github.com/user-attachments/assets/362b7323-5a65-4f32-bbf0-236be28a82d1)
+The `Camera` mod will allow you to completely disable the internal posp proccessing and change the default game FOV.
+<div style="width:65%; margin: auto;">
+<img src="/images/HMA_03.jpg" alt="MODS Hitman SDK" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<p></p>
+
+
 ![image](https://github.com/user-attachments/assets/4d9a12e6-e089-416d-8ca9-e2ac9bf38bb3)
 
 ## Controls
