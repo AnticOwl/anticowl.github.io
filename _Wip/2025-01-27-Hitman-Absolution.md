@@ -32,7 +32,7 @@ Click on `MODS` and check the ones you would like to use. Press OK when done. Th
 </div>
 <p></p>
 
-The `Camera` mod will allow you to completely disable the internal posp proccessing and change the default game FOV.
+The `Camera` mod will allow you to completely disable the internal post proccessing and change the default game FOV.
 <div style="width:65%; margin: auto;">
 <img src="/images/HMA_03.jpg" alt="MODS Hitman SDK" style="box-shadow: 3px 3px 3px gray;">
 </div>
@@ -42,7 +42,105 @@ The `Camera` mod will allow you to completely disable the internal posp proccess
 ![image](https://github.com/user-attachments/assets/4d9a12e6-e089-416d-8ca9-e2ac9bf38bb3)
 
 ## Controls
-![image](https://github.com/user-attachments/assets/0a0e5d26-079f-4c41-940b-6e5fb78e3bf6)
+
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <caption><br></caption>
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Effect</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>K</td>
+            <td>Enable/Disable Free Camera</td>
+        </tr>
+        <tr>
+            <td>B+R</td>
+            <td>Increase/Decrease Camera Speed</td>
+        </tr>
+        <tr>
+            <td>LS</td>
+            <td>Forward/Backward/Left/Right</td>
+        </tr>
+        <tr>
+            <td>RS</td>
+            <td>Pan/Tilt</td>
+        </tr>
+        <tr>
+            <td>A+LS</td>
+            <td>Roll Camera</td>
+        </tr>
+        <tr>
+            <td>Y+LS</td>
+            <td>Change FOV</td>
+        </tr>
+        <tr>
+            <td>LB</td>
+            <td>Lock Camera and Enable 47 Input</td>
+        </tr>
+        <tr>
+            <td>RT (HOLD)</td>
+            <td>Faster Camera Movements</td>
+        </tr>
+        <tr>
+            <td>LT+RS</td>
+            <td>Camera Lift Up/Down</td>
+        </tr>
+        <tr>
+            <td>A+LS (Press)</td>
+            <td>Reset Roll</td>
+        </tr>
+        <tr>
+            <td>F9</td>
+            <td>Kill NPC</td>
+        </tr>
+        <tr>
+            <td>CTRL+F9</td>
+            <td>Teleport 47 To Camera</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
 
 
 rename dxgi.dll to d3d11.dll
