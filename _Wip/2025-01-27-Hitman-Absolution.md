@@ -20,7 +20,12 @@ Simply unzip the content in the game root directory.
 
 ## Configuration
 Start the game and load a save. press the `~` or `²` on your keyboard to open the SDK.
-Click on `MOD` and check the ones you would like to use
+Click on `MODS` and check the ones you would like to use.
+
+<div style="width:65%; margin: auto;">
+<img src="/images/HMA_01.jpg" alt="WATCH_DOGS UTC Camera Menu" style="box-shadow: 3px 3px 3px gray;">
+</div>
+
 ![image](https://github.com/user-attachments/assets/16f4f669-fa5e-4584-afca-78b51934127a)
 ![image](https://github.com/user-attachments/assets/cd087763-f354-4090-bbd8-41e507f78b2b)
 ![image](https://github.com/user-attachments/assets/362b7323-5a65-4f32-bbf0-236be28a82d1)
