@@ -38,6 +38,7 @@ The `Camera` mod will allow you to completely disable the internal post proccess
 </div>
 <p></p>
 
+The `Editor` mod will allow you to change the LOD, enebale or disable parts of the scene, move and modify lights and many more other things.
 
 ![image](https://github.com/user-attachments/assets/4d9a12e6-e089-416d-8ca9-e2ac9bf38bb3)
 
