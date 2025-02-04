@@ -19,7 +19,7 @@ Betrayed by the Agency and hunted by the police, Agent 47 finds himself pursuing
 Simply unzip the content in the game root directory. 
 
 ## Configuration
-Start the game. You will see a console window poping up and the launcher appearing. Press Play. 
+Start the game. You will see a console window popping up and the launcher appearing. Press Play. 
 <div style="width:65%; margin: auto;">
 <img src="/images/HMA_02.jpg" alt="Console Window HMA" style="box-shadow: 3px 3px 3px gray;">
 </div>
