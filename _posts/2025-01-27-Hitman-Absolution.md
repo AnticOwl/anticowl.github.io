@@ -154,7 +154,7 @@ The `Editor` mod will allow you to change the LOD, enable or disable parts of th
 </div>
 
 ## How to Take A Screenshot
-This one is quite simple. Once the game loaded and your level loaded, press `F11` to pause the game and the `K` to activate the camera.
+This one is quite simple. Once the game loaded and your level loaded, press `F11` to pause the game and then `K` to activate the camera.
 Alternatively, you can press `F10` to do both.
 <p></p>
 Once done, pres `F10` to come back to the game.
