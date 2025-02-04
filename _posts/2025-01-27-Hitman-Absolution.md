@@ -160,4 +160,4 @@ Alternatively, you can press `F10` to do both.
 Once done, pres `F10` to come back to the game.
 
 ### About ReShade and HUD
-rename dxgi.dll to d3d11.dll to avoid the SDK to no load correctly. The HUD mod needs to be loaded for the keybind to work.
+rename dxgi.dll to d3d11.dll to avoid the SDK to not load correctly. The HUD mod needs to be loaded for the keybind to work.
