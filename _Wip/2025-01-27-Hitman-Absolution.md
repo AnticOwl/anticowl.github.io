@@ -136,6 +136,18 @@ The `Camera` mod will allow you to completely disable the internal post proccess
             <td>CTRL+F9</td>
             <td>Teleport 47 To Camera</td>
         </tr>
+        <tr>
+            <td>F8</td>
+            <td>Enable/Disable HUD</td>
+        </tr>
+        <tr>
+            <td>F10</td>
+            <td>Pause/Unpause Game and Activate/Deactivate Free Camera</td>
+        </tr>
+        <tr>
+            <td>F11</td>
+            <td>Pause/Unpause Game</td>
+        </tr>        
     </tbody>
 </table>
 </div>
