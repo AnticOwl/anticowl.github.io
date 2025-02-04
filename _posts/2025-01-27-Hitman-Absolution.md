@@ -157,7 +157,7 @@ The `Editor` mod will allow you to change the LOD, enable or disable parts of th
 This one is quite simple. Once the game loaded and your level loaded, press `F11` to pause the game and the `K` to activate the camera.
 Alternatively, you can press `F10` to do both.
 <p></p>
-Once done, pres `F10` to coma back to the game.
+Once done, pres `F10` to come back to the game.
 
 ### About ReShade and HUD
 rename dxgi.dll to d3d11.dll to avoid the SDK to no load correctly. The HUD mod needs to be loaded for the keybind to work.
