@@ -154,7 +154,7 @@ The `Editor` mod will allow you to change the LOD, enable or disable parts of th
 </table>
 </div>
 
-For mods like `Freecamera` `HUD` `NoClip` and `Player`, you can change the key binds. To do this, go to `steamapps\common\Hitman Absolution\mods` and open the ini file for the corresponding mod. 
+For mods like `Freecamera`, `HUD`, `NoClip` and `Player`, you can change the key binds. To do this, go to `steamapps\common\Hitman Absolution\mods` and open the ini file for the corresponding mod. 
 Here is an example for `freecamera.ini` if I want to pause and activate the camera.
 ```
 [Bindings]
