@@ -19,6 +19,7 @@ Betrayed by the Agency and hunted by the police, Agent 47 finds himself pursuing
 Simply unzip the content in the game root directory. 
 
 ## Configuration
+
 Start the game. You will see a console window popping up and the launcher appearing. Press Play. 
 <div style="width:65%; margin: auto;">
 <img src="/images/HMA_02.jpg" alt="Console Window HMA" style="box-shadow: 3px 3px 3px gray;">
@@ -152,6 +153,20 @@ The `Editor` mod will allow you to change the LOD, enable or disable parts of th
     </tbody>
 </table>
 </div>
+
+For mods like `Freecamera` `HUD` `NoClip` and `Player`, you can change the key binds. To do this, go to `steamapps\common\Hitman Absolution\mods` and open the ini file for the corresponding mod. 
+Here is an example for `freecamera.ini` if I want to pause and activate the camera.
+```
+[Bindings]
+EnableBindings=true
+ToggleFreeCamera=k
+Teleport=lctrl+f9,rctrl+f9
+InstantKill=f9
+FreezeCamera=f3
+PauseGame=f11
+ToggleFreeCameraAndPauseGame=num0
+```
+A list is available [here](https://github.com/AnticOwl/anticowl.github.io/blob/main/files/keys.txt)
 
 ## How to Take A Screenshot
 This one is quite simple. Once the game loaded and your level loaded, press `F11` to pause the game and then `K` to activate the camera.
