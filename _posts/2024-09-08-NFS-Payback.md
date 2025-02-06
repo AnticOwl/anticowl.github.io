@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Need For Speed: Payback"
+title:  "Need for Speed: Payback"
 date:   2024-09-08 18:05:55 +0300
 image:  NFSP_POST.jpg
 tags:   Screenshooting
