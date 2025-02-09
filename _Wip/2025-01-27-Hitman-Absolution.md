@@ -166,7 +166,7 @@ FreezeCamera=f3
 PauseGame=f11
 ToggleFreeCameraAndPauseGame=num0
 ```
-A list is available [here](https://anticowl.github.io/files/keys.txt)
+A list of available keyboard keys is available[here](https://anticowl.github.io/files/keys.txt)
 
 ## How to Take A Screenshot
 This one is quite simple. Once the game loaded and your level loaded, press `F11` to pause the game and then `K` to activate the camera.
