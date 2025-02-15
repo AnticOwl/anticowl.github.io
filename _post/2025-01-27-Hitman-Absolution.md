@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hitman: Absolution"
-date:   2025-01-27 18:40:00 +0100
+date:   2025-02-07 18:40:00 +0100
 image:  HMA_POST.jpg
 tags:   Screenshooting
 ---
