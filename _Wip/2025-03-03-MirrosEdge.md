@@ -16,3 +16,5 @@ You are a Runner called Faith and this innovative first-person action-adventure 
 ## Optional
 * [Native Motion Blur](https://www.moddb.com/games/mirrors-edge/addons/native-motion-blur)
 * [Rain Mod by Klecris](https://www.moddb.com/games/mirrors-edge/addons/rainy-mod)
+* [Mirror's Edge Multiplayer Mod](https://github.com/LucasOe/mmultiplayer/releases)
+* [ReShade](https://reshade.me)
