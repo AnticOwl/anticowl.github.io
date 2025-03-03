@@ -25,3 +25,4 @@ Enable cheats first by, in console, typing `exec cheats` and then `UltraGraphics
 
 LOD in Tweakers Min and Max must be like 1024 to 4096. Global like 1,0 or -1
 
+Reshade d3d9.dll to be renamed in dinput8.dll if using mmultiplayer mod
