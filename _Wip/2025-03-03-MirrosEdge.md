@@ -15,6 +15,13 @@ You are a Runner called Faith and this innovative first-person action-adventure 
 
 ## Optional
 * [Native Motion Blur](https://www.moddb.com/games/mirrors-edge/addons/native-motion-blur)
-* [Rain Mod by Klecris](https://www.moddb.com/games/mirrors-edge/addons/rainy-mod)
+* [Rain Mod by keku](https://www.moddb.com/games/mirrors-edge/addons/rainy-mod)
 * [Mirror's Edge Multiplayer Mod](https://github.com/LucasOe/mmultiplayer/releases)
 * [ReShade](https://reshade.me)
+
+
+UltraGraphics
+Enable cheats first by, in console, typing `exec cheats` and then `UltraGraphics`.
+
+LOD in Tweakers Min and Max must be like 1024 to 4096. Global like 1,0 or -1
+
