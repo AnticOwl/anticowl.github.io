@@ -85,7 +85,9 @@ The `exec cheats` **MUST** be activated before being able to use the `UltraGraph
   <img slot="second" src="/images/ME_01B.jpg" />
 </img-comparison-slider>
 
-
+### mmultiplayer
+This mod is not "just" adding support for multiplayer. It's much more than that. You can by example disable part of the scene, disable the lighting, have track recording with nodes, etc. 
+![image](https://github.com/user-attachments/assets/d22f682d-c12e-4252-80a1-d787c7fb5705)
 
 
 ## About Reshade
