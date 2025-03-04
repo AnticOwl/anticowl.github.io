@@ -6,7 +6,7 @@ image:  ME_POST.jpg
 tags:   Screenshooting
 ---
 
-In a city where information is heavily monitored, couriers called Runners transport sensitive data. In this seemingly utopian paradise, a crime has been committed, & you are being hunted. 
+In a city where information is heavily monitored, couriers called Runners transport sensitive data. In this seemingly utopian paradise, a crime has been committed, and you are being hunted. 
 You are a Runner called Faith and this innovative first-person action-adventure is your story.
 
 ## Required
