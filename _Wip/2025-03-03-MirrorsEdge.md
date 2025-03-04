@@ -88,6 +88,6 @@ The `exec cheats` **MUST** be activated before being able to use the `UltraGraph
 
 
 
-
-
-Reshade d3d9.dll to be renamed in dinput8.dll if using mmultiplayer mod
+## About Reshade
+If you installed the `mmultiplayer` mod, and if reshade is installed, the gamee will not start correctly. For this, you will need to rename `d3d9.dll` to `dinput8.dll`.
+You will then be able to use ReShade in conjunction with the multiplayer mod.
