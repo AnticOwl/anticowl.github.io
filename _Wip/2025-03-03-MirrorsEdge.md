@@ -59,15 +59,16 @@ Last, enable the Cinematic Faith model and you are done with the tweaks.
 </div>
 <div> </div>
 
-{% include note.html content="If you use the Steam version starting the game from the tweaker will result in a startup crash."%}
+{% include note.html content="If you use the Steam version starting the game from the tweaker will result in a startup crash. Disablind the DoF automatically disable the Bloom as they are tied."%}
 
 ### Keybinds and Ultra Graphics
 You will need to add some keybinds to take advantage of the Ultra Graphics and the availables cheats. For this, go to `C:\Users\<YourUserName>\Documents\EA Games\Mirror's Edge\TdGame\Config` and uncheck the `Read Only` flag first. Edit TdInput.ini and add these lines just underneath `[Engine.PlayerInput]`. Save the file and set the file back to `Read Only`.
 ```
 Bindings=(Name="F1",Command="exec cheats",Control=False,Shift=False,Alt=False)
 Bindings=(Name="F1",Command="UltraGraphics",Control=True,Shift=False,Alt=False)
-Bindings=(Name="F2",Command="tdpause",Control=False,Shift=False,Alt=False)
+Bindings=(Name="F2",Command="set DOFEffect bAutoFocus 0 | set DOFEffect MaxFarBlurAmount 0",Control=False,Shift=False,Alt=False)
 Bindings=(Name="F3",Command="FreeFlightCamera",Control=False,Shift=False,Alt=False)
+Bindings=(Name="F4",Command="tdpause",Control=False,Shift=False,Alt=False)
 ```
 The `exec cheats` **MUST** be activated before being able to use the `UltraGraphics`. So, press F1 first, the level will reload and then press CTRL+F1 to activate the grpahic tweak.
 
