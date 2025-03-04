@@ -26,13 +26,18 @@ If you prefer that way you will find the launcher in your start menu.
 Download and extract the tweaker in your game directory. 
 
 ## Configuration
-Start `Mirror's Edge Tweaks` and the first thing to do is point to your game directory and 
+Start `Mirror's Edge Tweaks` and the first thing to do is point to your game directory and choose `TdGame Fix` as your version if you care of being able to have a Cinematic Faith model.
 <div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/9fb5066e-24bc-48ed-8568-73721a17d310" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
+It's important here to have the fps locked at whatever fps you want. put exactly the same for the PhysX fps.
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/3e0a7b48-62f6-4b63-bbae-c8907f28b226" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
-![image](https://github.com/user-attachments/assets/3e0a7b48-62f6-4b63-bbae-c8907f28b226)
+Now start to configure your
 ![image](https://github.com/user-attachments/assets/bff46ef0-35a8-4935-ae39-90dfef2ac8f3)
 ![image](https://github.com/user-attachments/assets/9e65f5ee-ac8e-4eaa-9a84-0bf64573d089)
 ![image](https://github.com/user-attachments/assets/8288f7be-bd4f-41cc-82d3-2c3b1d77aded)
