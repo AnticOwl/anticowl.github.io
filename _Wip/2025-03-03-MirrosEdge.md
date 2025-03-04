@@ -26,7 +26,7 @@ If you prefer that way you will find the launcher in your start menu.
 Download and extract the tweaker in your game directory. 
 
 ## Configuration
-Start `Mirror's Edge Tweaks` and the first thing to do is point to your game directory and choose `TdGame Fix` as your version if you care of being able to have a Cinematic Faith model.
+Start `Mirror's Edge Tweaks` and the first thing to do is point to your game directory and choose `TdGame Fix` as your version if you care of being able to have a Cinematic Faith model. You will only have to do this once. 
 
 <div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/9fb5066e-24bc-48ed-8568-73721a17d310" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
@@ -46,14 +46,17 @@ For the Graphic Tweaks, it's up to you. Just one thing: do not set the anti alia
 <div> </div>
 
 Enable `HQ dynamic shadows` and set Texture management to `Modern` for a better and smooth texture display. Leave or change the LOD. Your choice. 
-![image](https://github.com/user-attachments/assets/9e65f5ee-ac8e-4eaa-9a84-0bf64573d089)
-![image](https://github.com/user-attachments/assets/8288f7be-bd4f-41cc-82d3-2c3b1d77aded)
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/9e65f5ee-ac8e-4eaa-9a84-0bf64573d089" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
 
-
-
-
-
+Last, enable the Cinematic Faith model and you are done with the tweaks. 
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/8288f7be-bd4f-41cc-82d3-2c3b1d77aded" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
 
 ```
@@ -66,6 +69,6 @@ Bindings=(Name="F3",Command="FreeFlightCamera",Control=False,Shift=False,Alt=Fal
 UltraGraphics
 Enable cheats first by, in console, typing `exec cheats` and then `UltraGraphics`.
 
-LOD in Tweakers Min and Max must be like 1024 to 4096. Global like 1,0 or -1
+
 
 Reshade d3d9.dll to be renamed in dinput8.dll if using mmultiplayer mod
