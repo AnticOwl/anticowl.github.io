@@ -26,6 +26,7 @@ If you prefer that way you will find the launcher in your start menu.
 Download and extract the tweaker in your game directory. 
 
 ## Configuration
+### Mirror's Edge Tweaks
 Start `Mirror's Edge Tweaks` and the first thing to do is point to your game directory and choose `TdGame Fix` as your version if you care of being able to have a Cinematic Faith model. You will only have to do this once. 
 
 <div style="width:65%; margin: auto;">
@@ -58,16 +59,33 @@ Last, enable the Cinematic Faith model and you are done with the tweaks.
 </div>
 <div> </div>
 
+{% include note.html content="If you use the Steam version starting the game from the tweaker will result in a startup crash."%}
 
+### Keybinds and Ultra Graphics
+You will need to add some keybinds to take advantage of the Ultra Graphics and the availables cheats. For this, go to `C:\Users\<YourUserName>\Documents\EA Games\Mirror's Edge\TdGame\Config` and uncheck the `Read Only` flag first. Edit TdInput.ini and add these lines just underneath `[Engine.PlayerInput]`. Save the file and set the file back to `Read Only`.
 ```
 Bindings=(Name="F1",Command="exec cheats",Control=False,Shift=False,Alt=False)
 Bindings=(Name="F1",Command="UltraGraphics",Control=True,Shift=False,Alt=False)
 Bindings=(Name="F2",Command="tdpause",Control=False,Shift=False,Alt=False)
 Bindings=(Name="F3",Command="FreeFlightCamera",Control=False,Shift=False,Alt=False)
 ```
+The `exec cheats` **MUST** be activated better being able to use the `UltraGraphics`. So, press F1 first, the level will reload and then press CTRL+F1 to activate the grpahic tweak.
 
-UltraGraphics
-Enable cheats first by, in console, typing `exec cheats` and then `UltraGraphics`.
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
+
+<img-comparison-slider>
+  <img slot="first" src="/images/ME_01A.jpg" />
+  <img slot="second" src="/images/ME_01B.jpg" />
+</img-comparison-slider>
+
+
+
 
 
 
