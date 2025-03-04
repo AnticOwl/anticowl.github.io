@@ -40,8 +40,12 @@ Apply the `Console` and `Mod` patches, install the `Cheats and trainer` and have
 <div> </div>
 
 For the Graphic Tweaks, it's up to you. Just one thing: do not set the anti aliasing to 16xQ! It's not supported anymore on NVIDIA cards. Your game won't start if you do so.
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/bff46ef0-35a8-4935-ae39-90dfef2ac8f3" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
-![image](https://github.com/user-attachments/assets/bff46ef0-35a8-4935-ae39-90dfef2ac8f3)
+Enable `HQ dynamic shadows` and set Texture management to `Modern` for a better and smooth texture display. Leave or change the LOD. Your choice. 
 ![image](https://github.com/user-attachments/assets/9e65f5ee-ac8e-4eaa-9a84-0bf64573d089)
 ![image](https://github.com/user-attachments/assets/8288f7be-bd4f-41cc-82d3-2c3b1d77aded)
 
