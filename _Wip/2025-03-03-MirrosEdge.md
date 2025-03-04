@@ -27,17 +27,20 @@ Download and extract the tweaker in your game directory.
 
 ## Configuration
 Start `Mirror's Edge Tweaks` and the first thing to do is point to your game directory and choose `TdGame Fix` as your version if you care of being able to have a Cinematic Faith model.
+
 <div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/9fb5066e-24bc-48ed-8568-73721a17d310" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
-Apply the `console` and `Mod` patches and have your fps and PhysX fps capped at the same value. Very very very important for later. 
+
+Apply the `Console` and `Mod` patches, install the `Cheats and trainer` and have your fps and PhysX fps capped at the same value. Very very very important for later. 
 <div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/5f9be333-261b-4f52-828b-0719d6b919c8" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
 
-Now start to configure your
+For the Graphic Tweaks, it's up to you. Just one thing: do not set the anti aliasing to 16xQ! It's not supported anymore on NVIDIA cards. Your game won't start if you do so.
+
 ![image](https://github.com/user-attachments/assets/bff46ef0-35a8-4935-ae39-90dfef2ac8f3)
 ![image](https://github.com/user-attachments/assets/9e65f5ee-ac8e-4eaa-9a84-0bf64573d089)
 ![image](https://github.com/user-attachments/assets/8288f7be-bd4f-41cc-82d3-2c3b1d77aded)
