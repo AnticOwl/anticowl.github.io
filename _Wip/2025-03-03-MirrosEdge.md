@@ -31,9 +31,9 @@ Start `Mirror's Edge Tweaks` and the first thing to do is point to your game dir
 <img src="https://github.com/user-attachments/assets/9fb5066e-24bc-48ed-8568-73721a17d310" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
-It's important here to have the fps locked at whatever fps you want. put exactly the same for the PhysX fps.
+Apply the `console` and `Mod` patches and have your fps and PhysX fps capped at the same value. Very very very important for later. 
 <div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/3e0a7b48-62f6-4b63-bbae-c8907f28b226" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+<img src="https://github.com/user-attachments/assets/5f9be333-261b-4f52-828b-0719d6b919c8" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
 
