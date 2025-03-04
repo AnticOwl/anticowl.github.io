@@ -69,7 +69,7 @@ Bindings=(Name="F1",Command="UltraGraphics",Control=True,Shift=False,Alt=False)
 Bindings=(Name="F2",Command="tdpause",Control=False,Shift=False,Alt=False)
 Bindings=(Name="F3",Command="FreeFlightCamera",Control=False,Shift=False,Alt=False)
 ```
-The `exec cheats` **MUST** be activated better being able to use the `UltraGraphics`. So, press F1 first, the level will reload and then press CTRL+F1 to activate the grpahic tweak.
+The `exec cheats` **MUST** be activated before being able to use the `UltraGraphics`. So, press F1 first, the level will reload and then press CTRL+F1 to activate the grpahic tweak.
 
 <script defer
   src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
