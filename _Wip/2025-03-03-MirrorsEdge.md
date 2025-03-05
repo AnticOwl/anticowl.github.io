@@ -93,7 +93,7 @@ This mod is not "just" adding support for multiplayer. It's much more than that.
 
 You will need to use the `Dolly` option from `mmultiplayer` to accomplish this. Keep in mind that the count is made in frames and not in seconds. But here, it has not much importance. So, to do so, follow these steps:
 
-### the Recording
+### The Recording
 * In the `mmultiplayer` interface enable the `Trainer` to have the flycam available. Using the `FreeFlightCam` won't work.
 * Go to `Dolly` and add your first markup/node.
 * Press `2` to activate the fly cam and move around. Press `Insert` to disable the `mmultiplayer` interface.
