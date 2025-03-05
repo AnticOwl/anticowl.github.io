@@ -10,7 +10,7 @@ In a city where information is heavily monitored, couriers called Runners transp
 You are a Runner called Faith and this innovative first-person action-adventure is your story.
 
 ## Required
-* Mirror's Edge Free Camera by IDK31.
+* Mirror's Edge Free Camera by IDK31
 * [Mirror's Edge Tweaker by softsoundd](https://www.moddb.com/games/mirrors-edge/addons/persistent-fov)
 * [Mirror's Edge Multiplayer Mod](https://github.com/LucasOe/mmultiplayer/releases)
 
@@ -88,6 +88,30 @@ The `exec cheats` **MUST** be activated before being able to use the `UltraGraph
 ### mmultiplayer
 This mod is not "just" adding support for multiplayer. It's much more than that. You can by example disable part of the scene, disable the lighting, have track recording with nodes, etc. 
 ![image](https://github.com/user-attachments/assets/d22f682d-c12e-4252-80a1-d787c7fb5705)
+
+## In Flight Screenshotting
+
+You will need to use the `Dolly` option from `mmultiplayer` to accomplish this. Keep in mind that the count is made in frames and not in seconds. But here, it has not much importance. So, to do so, follow these steps:
+
+### the Recording
+* In the `mmultiplayer` interface enable the `Trainer` to have the flycam available. Using the `FreeFlightCam` won't work.
+* Go to `Dolly` and add your first markup/node.
+* Press `2` to activate the fly cam and move around. Press `Insert` to disable the `mmultiplayer` interface.
+* Press `Insert` and set the n° of frames at like 120 and add a new node/markup where you will land. Other buildaning or part of a building. Your choice.
+* Once done, click on `Go To` on your first node/markup and press `2` to disable the flycam.
+* Now Press `Start Recording` and follow the marked path.
+* Open the `mmultiplaye` interface and press `Stop Recording`. Close the interface.
+
+### Play the Recording
+* Press `2` to activate the freecam and then `Insert` to display the interface.
+* Uncheck `Display Path`.
+* Press `Play` to start the recording and press `Insert` back to display the interface.
+* Now, press `Stop` and move the cursor on the `Timeline`.
+* Once you see Faith move frame per frame until you get your shot.
+* Frame your shot, capture it and disable the free camera.
+* Press `Play` to resume.
+
+With this techique you will now be able to finally take shots of Faith in flight. 
 
 
 ## About Reshade
