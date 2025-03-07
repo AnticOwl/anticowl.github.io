@@ -155,9 +155,6 @@ With this techique you will now be able to finally take shots of Faith in flight
 </style>
 <div class="table_component" role="region" tabindex="0">
 <table>
-    <caption>
-        <p><br></p>
-    </caption>
     <thead>
         <tr>
             <th>Command</th>
