@@ -107,7 +107,7 @@ You will need to use the `Dolly` option from `mmultiplayer` to accomplish this. 
 
 ### Play the Recording
 * Press `2` to activate the freecam and then `Insert` to display the interface.
-* Uncheck `Display Path`.
+* Uncheck `Display Path` and `Camera View`.
 * Press `Play` to start the recording and press `Insert` back to display the interface.
 * Now, press `Stop` and move the cursor on the `Timeline`.
 * Once you see Faith move frame per frame until you get your shot.
