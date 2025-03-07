@@ -98,9 +98,9 @@ Let's say you want to take a sot of Faith jumping from one roof the another. You
 
 #### The Recording
 * In the `MMultiplayer` interface enable the `Trainer` to have the flycam available. Using the `FreeFlightCam` won't work. Close the interface.
-* Press `2` to activate the freecam then `F5` to add your first markup.
+* Press `2` to activate the flycam then `F5` to add your first markup.
 * Move the camera to where your jump will end and press `F6` to add 100 frames followed by `F5` to add your second and last markup.
-* Go back to the first markup and press `2` to disable the freecam.
+* Go back to the first markup and press `2` to disable the flycam.
 * Press `F9` to start the recording, run, jump and press back `F9` to stop the recording.
 
 #### Play the Recording
@@ -119,7 +119,7 @@ With this techique you will now be able to finally take shots of Faith in flight
 
 
 ## About Reshade
-If you installed the `mmultiplayer` mod, and if reshade is installed, the gamee will not start correctly. For this, you will need to rename `d3d9.dll` to `dinput8.dll`.
+If you installed the `MMultiplayer` mod, and if reshade is installed, the gamee will not start correctly. For this, you will need to rename `d3d9.dll` to `dinput8.dll`.
 You will then be able to use ReShade in conjunction with the multiplayer mod.
 
 <style>
