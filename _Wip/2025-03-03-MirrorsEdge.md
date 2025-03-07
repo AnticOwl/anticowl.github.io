@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mirror's Edge"
-date:   2025-03-03 18:05:55 +0300
+date:   2023-12-12 18:05:55 +0300
 image:  ME_POST.jpg
 tags:   Screenshooting
 ---
@@ -27,6 +27,7 @@ Download and extract the tweaker in your game directory.
 
 ## Configuration
 ### Mirror's Edge Tweaks
+The last softsoundd release will do everything for you. No need to download the exe patcher, ini tweaks (beside the ones a bit further) or anything like that.  
 Start `Mirror's Edge Tweaks` and the first thing to do is point to your game directory and choose `TdGame Fix` as your version if you care of being able to have a Cinematic Faith model. You will only have to do this once. 
 
 <div style="width:65%; margin: auto;">
@@ -116,12 +117,7 @@ With this techique you will now be able to finally take shots of Faith in flight
 
 ### Clip Recording
 
-
-
-## About Reshade
-If you installed the `MMultiplayer` mod, and if reshade is installed, the gamee will not start correctly. For this, you will need to rename `d3d9.dll` to `dinput8.dll`.
-You will then be able to use ReShade in conjunction with the multiplayer mod.
-
+## Some Interesting Commands
 <style>
 .table_component {
     overflow: auto;
@@ -187,9 +183,15 @@ You will then be able to use ReShade in conjunction with the multiplayer mod.
         </tr>
     </tbody>
 </table>
-<div style="margin-top:8px">Made with <a href="https://www.htmltables.io/" target="_blank">HTML Tables</a></div>
 </div>
+
+## About Reshade
+If you installed the `mmultiplayer` mod, and if reshade is installed, the game will not start correctly. For this, you will need to rename `d3d9.dll` to `dinput8.dll`.
+You will then be able to use ReShade in conjunction with the multiplayer mod.
+
 
 ## Resources
 * [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Mirror%27s_Edge#:~:text=Mirror%27s%20Edge%20is%20a%20sci,title%20began%20full%2Dscale%20production.)
 * [Mirror's Edge Various Tweaks and QOL Mods](https://docs.google.com/document/d/10D4a3mbhmcOR08EgqD59pSLqT3JcAZX_3FeExK_FqKc/preview?tab=t.0#heading=h.u0or801068b4)
+<p></p>
+Many thanks tyo softsoundd and Ady Endre for their help! 
