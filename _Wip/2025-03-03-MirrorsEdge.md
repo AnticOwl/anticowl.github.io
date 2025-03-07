@@ -68,9 +68,9 @@ Bindings=(Name="F1",Command="exec cheats",Control=False,Shift=False,Alt=False)
 Bindings=(Name="F1",Command="UltraGraphics",Control=True,Shift=False,Alt=False)
 Bindings=(Name="F2",Command="set DOFEffect bAutoFocus 0 | set DOFEffect MaxFarBlurAmount 0",Control=False,Shift=False,Alt=False)
 Bindings=(Name="F3",Command="FreeFlightCamera",Control=False,Shift=False,Alt=False)
-Bindings=(Name="F4",Command="GameSpee 0.01",Control=False,Shift=False,Alt=False)
-Bindings=(Name="F4",Command="GameSpee 0.1",Control=True,Shift=False,Alt=False)
-Bindings=(Name="F4",Command="GameSpee 1.0",Control=False,Shift=True,Alt=False)
+Bindings=(Name="F4",Command="GameSpeed 0.01",Control=False,Shift=False,Alt=False)
+Bindings=(Name="F4",Command="GameSpeed 0.1",Control=True,Shift=False,Alt=False)
+Bindings=(Name="F4",Command="GameSpeed 1.0",Control=False,Shift=True,Alt=False)
 Bindings=(Name="F5",Command="FreezeWorld",Control=False,Shift=False,Alt=False)
 ```
 The `exec cheats` **MUST** be activated before being able to use the `UltraGraphics`, `GameSpeed` and `FreezeWorld`. So, press F1 first, the level will reload and then press CTRL+F1 to activate the grpahic tweak.
