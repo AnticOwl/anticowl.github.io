@@ -88,15 +88,15 @@ The `exec cheats` **MUST** be activated before being able to use the `UltraGraph
   <img slot="second" src="/images/ME_01B.jpg" />
 </img-comparison-slider>
 
-### mmultiplayer
+## mmultiplayer
 This mod is not "just" adding support for multiplayer. It's much more than that. You can by example disable part of the scene, disable the lighting, have track recording with nodes, etc. 
 ![image](https://github.com/user-attachments/assets/d22f682d-c12e-4252-80a1-d787c7fb5705)
 
-## In Flight Screenshotting
+### In Flight Screenshotting
 
 You will need to use the `Dolly` option from `mmultiplayer` to accomplish this. Keep in mind that the count is made in frames and not in seconds. But here, it has not much importance. So, to do so, follow these steps:
 
-### The Recording
+#### The Recording
 * In the `mmultiplayer` interface enable the `Trainer` to have the flycam available. Using the `FreeFlightCam` won't work.
 * Go to `Dolly` and add your first markup/node.
 * Press `2` to activate the fly cam and move around. Press `Insert` to disable the `mmultiplayer` interface.
@@ -105,7 +105,7 @@ You will need to use the `Dolly` option from `mmultiplayer` to accomplish this. 
 * Now Press `Start Recording` and follow the marked path.
 * Open the `mmultiplaye` interface and press `Stop Recording`. Close the interface.
 
-### Play the Recording
+#### Play the Recording
 * Press `2` to activate the freecam and then `Insert` to display the interface.
 * Uncheck `Display Path` and `Camera View`.
 * Press `Play` to start the recording and press `Insert` back to display the interface.
@@ -120,6 +120,74 @@ With this techique you will now be able to finally take shots of Faith in flight
 ## About Reshade
 If you installed the `mmultiplayer` mod, and if reshade is installed, the gamee will not start correctly. For this, you will need to rename `d3d9.dll` to `dinput8.dll`.
 You will then be able to use ReShade in conjunction with the multiplayer mod.
+
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <caption>
+        <p><br></p>
+    </caption>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ToggleOcclusions</td>
+            <td>Enable/disable ambient occlusions</td>
+        </tr>
+        <tr>
+            <td>ToggleDynamicContrast</td>
+            <td>Enable/disable tone mapping and curves</td>
+        </tr>
+        <tr>
+            <td>show lensflares</td>
+            <td>Enable/disable lens flares&nbsp;</td>
+        </tr>
+        <tr>
+            <td>scale toggle TdSunHaze</td>
+            <td>Enable/disable sun haze</td>
+        </tr>
+    </tbody>
+</table>
+<div style="margin-top:8px">Made with <a href="https://www.htmltables.io/" target="_blank">HTML Tables</a></div>
+</div>
 
 ## Resources
 [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Mirror%27s_Edge#:~:text=Mirror%27s%20Edge%20is%20a%20sci,title%20began%20full%2Dscale%20production.)
