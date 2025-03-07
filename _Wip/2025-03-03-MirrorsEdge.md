@@ -94,7 +94,7 @@ This mod is not "just" adding support for multiplayer. It's much more than that.
 
 ### In Flight Screenshotting
 
-Let's say you want to take a sot of Faith jumping from one roof the another. You will need to use the `Dolly` option from `mmultiplayer` to accomplish this. Keep in mind that the count is made in frames and not in seconds. But here, it has not much importance. So, to do so, follow these steps:
+Let say you want to take a sot of Faith jumping from one roof the another. You will need to use the `Dolly` option from `mmultiplayer` to accomplish this. Keep in mind that the count is made in frames and not in seconds. But here, it has not much importance. So, to do so, follow these steps:
 
 #### The Recording
 * In the `MMultiplayer` interface enable the `Trainer` to have the flycam available. Using the `FreeFlightCam` won't work. Close the interface.
