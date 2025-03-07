@@ -88,8 +88,8 @@ The `exec cheats` **MUST** be activated before being able to use the `UltraGraph
   <img slot="second" src="/images/ME_01B.jpg" />
 </img-comparison-slider>
 
-## mmultiplayer
-This mod is not "just" adding support for multiplayer. It's much more than that. You can by example disable part of the scene, disable the lighting, have track recording with nodes, etc. 
+## What is MMultiplayer
+This mod is not "just" adding support for multiplayer. It's much more than that. You can by example disable part of the scene, disable the lighting, have track recording with nodes, etc. We will focus on the `Dolly` part here for the sake of screenshotting and video clip recording. 
 ![image](https://github.com/user-attachments/assets/d22f682d-c12e-4252-80a1-d787c7fb5705)
 
 ### In Flight Screenshotting
@@ -115,6 +115,9 @@ You will need to use the `Dolly` option from `mmultiplayer` to accomplish this. 
 * Press `Play` to resume.
 
 With this techique you will now be able to finally take shots of Faith in flight. 
+
+### Clip Recording
+
 
 
 ## About Reshade
