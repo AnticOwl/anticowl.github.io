@@ -89,20 +89,17 @@ The `exec cheats` **MUST** be activated before being able to use the `UltraGraph
   <img slot="second" src="/images/ME_01B.jpg" />
 </img-comparison-slider>
 
-## What is MMultiplayer
+## MMultiplayer for Screenshots 
 This mod is not "just" adding support for multiplayer. It's much more than that. You can by example disable part of the scene, disable the lighting, have track recording with nodes, etc. We will focus on the `Dolly` part here for the sake of screenshotting and video clip recording. 
 ![image](https://github.com/user-attachments/assets/d22f682d-c12e-4252-80a1-d787c7fb5705)
 
-### In Flight Screenshotting
+### In Flight 
 
 Let say you want to take a sot of Faith jumping from one roof the another. You will need to use the `Dolly` option from `mmultiplayer` to accomplish this. Keep in mind that the count is made in frames and not in seconds. But here, it has not much importance. So, to do so, follow these steps:
 
-#### The Recording
 * Press `F9` to start the recoding.
 * Start running and make you jump.
 * Press `F9` again to stop the recording.
-
-#### Play the Recording
 * Press `2` to activate the freecam.
 * Press `F9` twice and then press `Insert` to open the Dolly interface.
 * Move the cursor on the `Timeline` until you get the correct pose.
@@ -112,7 +109,12 @@ Let say you want to take a sot of Faith jumping from one roof the another. You w
 
 With this techique you will now be able to finally take shots of Faith in flight. 
 
-### Clip Recording
+### Static shot
+
+* Press `F9` to start the recoding.
+* Take the pose.
+* Press `F9` again to stop the recording.
+* 
 
 ## Some Interesting Commands
 <style>
