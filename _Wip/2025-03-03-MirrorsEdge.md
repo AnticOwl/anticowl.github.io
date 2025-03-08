@@ -101,7 +101,7 @@ Let say you want to take a sot of Faith jumping from one roof the another. You w
 * Start running and make you jump.
 * Press `F9` again to stop the recording.
 * Press `2` to activate the freecam.
-* Press `F9` twice and then press `Insert` to open the Dolly interface.
+* Press `F7` twice and then press `Insert` to open the Dolly interface.
 * Move the cursor on the `Timeline` until you get the correct pose.
 * Frame your shot, capture it and disable the free camera.
 * Get back to your initial position and press `2`.
@@ -114,7 +114,11 @@ With this techique you will now be able to finally take shots of Faith in flight
 * Press `F9` to start the recoding.
 * Take the pose.
 * Press `F9` again to stop the recording.
-* 
+* Press `2` to activate the freecam.
+* Press `F7` twice
+* Frame and take your shot
+* Get back to your initial position and press `2`.
+* Delete the recording and resume your play.
 
 ## Some Interesting Commands
 <style>
