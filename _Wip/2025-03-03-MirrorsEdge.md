@@ -98,20 +98,17 @@ This mod is not "just" adding support for multiplayer. It's much more than that.
 Let say you want to take a sot of Faith jumping from one roof the another. You will need to use the `Dolly` option from `mmultiplayer` to accomplish this. Keep in mind that the count is made in frames and not in seconds. But here, it has not much importance. So, to do so, follow these steps:
 
 #### The Recording
-* In the `MMultiplayer` interface enable the `Trainer` to have the flycam available. Using the `FreeFlightCam` won't work. Close the interface.
-* Press `2` to activate the flycam then `F5` to add your first markup.
-* Move the camera to where your jump will end and press `F6` to add 100 frames followed by `F5` to add your second and last markup.
-* Go back to the first markup and press `2` to disable the flycam.
-* Press `F9` to start the recording, run, jump and press back `F9` to stop the recording.
+* Press `F9` to start the recoding.
+* Start running and make you jump.
+* Press `F9` again to stop the recording.
 
 #### Play the Recording
-* Press `2` to activate the freecam and then `Insert` to display the interface.
-* Uncheck `Display Path` and `Camera View`.
-* Press `Play` to start the recording and press `Insert` back to display the interface.
-* Now, press `Stop` and move the cursor on the `Timeline`.
-* Once you see Faith move frame per frame until you get your shot.
+* Press `2` to activate the freecam.
+* Press `F9` twice and then press `Insert` to open the Dolly interface.
+* Move the cursor on the `Timeline` until you get the correct pose.
 * Frame your shot, capture it and disable the free camera.
-* Press `Play` to resume.
+* Get back to your initial position and press `2`.
+* Delete the recording and resume your play.
 
 With this techique you will now be able to finally take shots of Faith in flight. 
 
