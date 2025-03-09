@@ -10,7 +10,6 @@ In a city where information is heavily monitored, couriers called Runners transp
 You are a Runner called Faith and this innovative first-person action-adventure is your story.
 
 ## Required
-* Mirror's Edge Free Camera by IDK31
 * [Mirror's Edge Tweaker by softsoundd](https://www.moddb.com/games/mirrors-edge/addons/persistent-fov)
 * [Mirror's Edge Multiplayer Mod](https://github.com/LucasOe/mmultiplayer/releases)
 
@@ -60,7 +59,7 @@ Last, enable the Cinematic Faith model and you are done with the tweaks.
 </div>
 <div> </div>
 
-{% include note.html content="If you use the Steam version starting the game from the tweaker will result in a startup crash. Disablind the DoF automatically disable the Bloom as they are tied."%}
+{% include note.html content="If you use the Steam version starting the game from the tweaker will result in a startup crash. Disabling the DoF automatically disable the Bloom as they are tied."%}
 
 ### Keybinds and Ultra Graphics
 You will need to add some keybinds to take advantage of the Ultra Graphics and the availables cheats. For this, go to `C:\Users\<YourUserName>\Documents\EA Games\Mirror's Edge\TdGame\Config` and uncheck the `Read Only` flag first. Edit TdInput.ini and add these lines just underneath `[Engine.PlayerInput]`. Save the file and set the file back to `Read Only`.
@@ -73,7 +72,83 @@ Bindings=(Name="F4",Command="GameSpeed 0.1",Control=False,Shift=False,Alt=False)
 Bindings=(Name="F4",Command="GameSpeed 0.3",Control=True,Shift=False,Alt=False)
 Bindings=(Name="F4",Command="GameSpeed 1.0",Control=False,Shift=True,Alt=False)
 ```
-The `exec cheats` **MUST** be activated before being able to use the `UltraGraphics`, `GameSpeed` and `FreezeWorld`. So, press F1 first, the level will reload and then press CTRL+F1 to activate the grpahic tweak.
+
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <caption><br></caption>
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>F1</td>
+            <td>Enable cheats</td>
+        </tr>
+        <tr>
+            <td>CTRL+F1</td>
+            <td>Enable highest graphics available</td>
+        </tr>
+        <tr>
+            <td>F2</td>
+            <td>Disable the depth of field but leave the bloom active</td>
+        </tr>
+        <tr>
+            <td>F3</td>
+            <td>Freeze everything beside yourself</td>
+        </tr>
+        <tr>
+            <td>F4</td>
+            <td>Set games speed at 1/10 of the normal game speed</td>
+        </tr>
+        <tr>
+            <td>CTRL+F4</td>
+            <td>Set games speed at 3/10 of the normal game speed</td>
+        </tr>
+        <tr>
+            <td>SHIFT+F4</td>
+            <td>Set games speed at normal game speed</td>
+        </tr>
+    </tbody>
+</table>
+</div>
 
 <script defer
   src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
@@ -82,7 +157,9 @@ The `exec cheats` **MUST** be activated before being able to use the `UltraGraph
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
 />
+The `exec cheats` **MUST** be activated before being able to use the `UltraGraphics`, `GameSpeed` and `FreezeWorld`.  
 
+Image comparison with in-game setting at highest values and Ultra Graphics.
 <img-comparison-slider>
   <img slot="first" src="/images/ME_01A.jpg" />
   <img slot="second" src="/images/ME_01B.jpg" />
@@ -90,11 +167,15 @@ The `exec cheats` **MUST** be activated before being able to use the `UltraGraph
 
 ## MMultiplayer for Screenshots 
 This mod is not "just" adding support for multiplayer. It's much more than that. You can by example disable part of the scene, disable the lighting, have track recording with nodes, etc. We will focus on the `Dolly` part here for the sake of screenshotting and video clip recording. 
-![image](https://github.com/user-attachments/assets/d22f682d-c12e-4252-80a1-d787c7fb5705)
+
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/1f7d92ea-20df-4325-80c3-97d190aa65e2" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
 ### In Flight 
 
-Let say you want to take a sot of Faith jumping from one roof the another. You will need to use the `Dolly` option from `mmultiplayer` to accomplish this. Keep in mind that the count is made in frames and not in seconds. But here, it has not much importance. So, to do so, follow these steps:
+Let say you want to take a shot of Faith jumping from one roof to another. You will need to use the `Dolly` option from `MMultiplayer` to accomplish this. The great thing here is you won't need to add markups. So, to do so, follow these steps:
 
 * Press `F9` to start the recoding.
 * Start running and make you jump.
