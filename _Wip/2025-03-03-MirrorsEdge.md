@@ -68,11 +68,10 @@ You will need to add some keybinds to take advantage of the Ultra Graphics and t
 Bindings=(Name="F1",Command="exec cheats",Control=False,Shift=False,Alt=False)
 Bindings=(Name="F1",Command="UltraGraphics",Control=True,Shift=False,Alt=False)
 Bindings=(Name="F2",Command="set DOFEffect bAutoFocus 0 | set DOFEffect MaxFarBlurAmount 0",Control=False,Shift=False,Alt=False)
-Bindings=(Name="F3",Command="FreeFlightCamera",Control=False,Shift=False,Alt=False)
-Bindings=(Name="F4",Command="GameSpeed 0.01",Control=False,Shift=False,Alt=False)
-Bindings=(Name="F4",Command="GameSpeed 0.1",Control=True,Shift=False,Alt=False)
+Bindings=(Name="F3",Command="FreezeWorld",Control=False,Shift=False,Alt=False)
+Bindings=(Name="F4",Command="GameSpeed 0.1",Control=False,Shift=False,Alt=False)
+Bindings=(Name="F4",Command="GameSpeed 0.3",Control=True,Shift=False,Alt=False)
 Bindings=(Name="F4",Command="GameSpeed 1.0",Control=False,Shift=True,Alt=False)
-Bindings=(Name="F5",Command="FreezeWorld",Control=False,Shift=False,Alt=False)
 ```
 The `exec cheats` **MUST** be activated before being able to use the `UltraGraphics`, `GameSpeed` and `FreezeWorld`. So, press F1 first, the level will reload and then press CTRL+F1 to activate the grpahic tweak.
 
@@ -108,8 +107,12 @@ Let say you want to take a sot of Faith jumping from one roof the another. You w
 * Delete the recording and resume your play.
 
 With this techique you will now be able to finally take shots of Faith in flight. 
+<div style="width:65%; margin: auto;">
+<img src="/images/ME_02.jpg" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
-### Static shot
+### Static 
 
 * Press `F9` to start the recoding.
 * Take the pose.
@@ -119,6 +122,42 @@ With this techique you will now be able to finally take shots of Faith in flight
 * Frame and take your shot
 * Get back to your initial position and press `2`.
 * Delete the recording and resume your play.
+
+<div style="width:65%; margin: auto;">
+<img src="/images/ME_03.jpg" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+
+
+### Action
+This one is a little bit more complicated and will involve taking some time to perfect it. The most important thing here is that the cheats **must** be active.
+
+* Press `F9` to start the recoding.
+* Do your stuff like in a movie.
+* Press `F9` again to stop the recording.
+* Press `F3` to freeze the world beside your character.
+* Open the console by pressing `~` or `CTRL+TAB`.
+* Type `GOD` **IMPORTANT**
+* Press `F3` again to unfreeze. If you are being shot at, cut the sound.
+* Press `2` to activate the flycam
+* Press `F7` twice followed by `Insert` to open the interface.
+* Move the cursor on the `Timeline` until you get the correct pose and move around to frame your shot.
+* REMEMBER THE POSITION!!!
+* Open the console again and recall the `GOD` command with the `Arrow Up`.
+* DIE (I am not even joking)!
+* Do a rerun until a bit before you reach the point you started the recording.
+* At this point you should see your character freezed !! 
+* Press `F3` to freeze the world and press `F4` to enter slow motion.
+* Press `2` to enter flycam and move at your freezed character.
+* Press `F3` again to unfreeze the scene.
+* If you are being shot at behind glass, wait until you have it flying around and press `F3` again to freeze the whole scene.
+* Position yourself again where you wanted the camera to be.
+* Take your shot.
+
+<div style="width:65%; margin: auto;">
+<img src="/images/ME_04.jpg" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
 ## Some Interesting Commands
 <style>
