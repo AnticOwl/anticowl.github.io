@@ -301,6 +301,14 @@ This one is a little bit more complicated and will involve taking some time to p
             <td>scale toggle TdSunHaze</td>
             <td>Enable/disable sun haze</td>
         </tr>
+        <tr>
+            <td>set primitivecomponent bownernosee 1/0</td>
+            <td>Make Faith visible or invisible</td>
+        </tr>
+        <tr>
+            <td>set tdmotionblurpostprocess tdmotionblurenable 1/0</td>
+            <td>Enable/disable motion blur</td>
+        </tr>
     </tbody>
 </table>
 </div>
