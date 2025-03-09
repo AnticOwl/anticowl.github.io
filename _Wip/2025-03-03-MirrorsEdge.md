@@ -177,11 +177,11 @@ This mod is not "just" adding support for multiplayer. It's much more than that.
 
 Let say you want to take a shot of Faith jumping from one roof to another. You will need to use the `Dolly` option from `MMultiplayer` to accomplish this. The great thing here is you won't need to add markups. So, to do so, follow these steps:
 
-* Press `F9` to start the recoding.
+* Press `F7` to start the recoding.
 * Start running and make you jump.
-* Press `F9` again to stop the recording.
+* Press `F7` again to stop the recording.
 * Press `2` to activate the freecam.
-* Press `F7` twice and then press `Insert` to open the Dolly interface.
+* Press `F9` twice and then press `Insert` to open the Dolly interface.
 * Move the cursor on the `Timeline` until you get the correct pose.
 * Frame your shot, capture it and disable the free camera.
 * Get back to your initial position and press `2`.
@@ -195,11 +195,11 @@ With this techique you will now be able to finally take shots of Faith in flight
 
 ### Static 
 
-* Press `F9` to start the recoding.
+* Press `F7` to start the recoding.
 * Take the pose.
-* Press `F9` again to stop the recording.
+* Press `F7` again to stop the recording.
 * Press `2` to activate the freecam.
-* Press `F7` twice
+* Press `F9` twice
 * Frame and take your shot
 * Get back to your initial position and press `2`.
 * Delete the recording and resume your play.
@@ -213,15 +213,15 @@ With this techique you will now be able to finally take shots of Faith in flight
 ### Action
 This one is a little bit more complicated and will involve taking some time to perfect it. The most important thing here is that the cheats **must** be active.
 
-* Press `F9` to start the recoding.
+* Press `F7` to start the recoding.
 * Do your stuff like in a movie.
-* Press `F9` again to stop the recording.
+* Press `F7` again to stop the recording.
 * Press `F3` to freeze the world beside your character.
 * Open the console by pressing `~` or `CTRL+TAB`.
 * Type `GOD` **IMPORTANT**
 * Press `F3` again to unfreeze. If you are being shot at, cut the sound.
 * Press `2` to activate the flycam
-* Press `F7` twice followed by `Insert` to open the interface.
+* Press `F9` twice followed by `Insert` to open the interface.
 * Move the cursor on the `Timeline` until you get the correct pose and move around to frame your shot.
 * REMEMBER THE POSITION!!!
 * Open the console again and recall the `GOD` command with the `Arrow Up`.
