@@ -272,7 +272,7 @@ This mod is not "just" adding support for multiplayer. It's much more than that.
 </table>
 </div>
 
-{% include note.html content="All the controls can be customised via the in game settings and/or the MMultiplayer."%}
+{% include note.html content="All the controls can be customised via the in game settings and/or the MMultiplayer. `Force Roll` must be enable for the roll to work."%}
 
 ### In Flight 
 
