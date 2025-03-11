@@ -272,6 +272,8 @@ This mod is not "just" adding support for multiplayer. It's much more than that.
 </table>
 </div>
 
+{% include note.html content="All the controls can be customised via the in game settings and/or the MMultiplayer."%}
+
 ### In Flight 
 
 Let say you want to take a shot of Faith jumping from one roof to another. You will need to use the `Dolly` option from `MMultiplayer` to accomplish this. The great thing here is you won't need to add markups. So, to do so, follow these steps:
