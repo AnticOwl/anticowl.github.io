@@ -11,7 +11,7 @@ You are a Runner called Faith and this innovative first-person action-adventure 
 
 ## Required
 * [Mirror's Edge Tweaker by softsoundd](https://www.moddb.com/games/mirrors-edge/addons/persistent-fov)
-* [Mirror's Edge Multiplayer Mod (Ady Endre GitHub Fork)](https://github.com/AdyStudios/mmultiplayer/releases)
+* [Mirror's Edge Multiplayer Mod (Ady Endre GitHub Fork)](https://github.com/AdyStudios/mmultiplayer/releases) and [Lancher](https://github.com/LucasOe/mmultiplayer/releases/download/2.3.2/Launcher.exe) 
 
 ## Optional
 * [Native Motion Blur](https://www.moddb.com/games/mirrors-edge/addons/native-motion-blur)
@@ -19,8 +19,7 @@ You are a Runner called Faith and this innovative first-person action-adventure 
 * [ReShade](https://reshade.me)
 
 ## Installation
-For the multiplayer mod, download `Launcher.exe` and `mmultiplayer.dll` and move them into your game directory. No need of the `mirrors-edge-multiplayer-2.3.3.exe` that is in fact the launcher and dll installer.
-If you prefer that way you will find the launcher in your start menu. 
+For the multiplayer mod, download `Launcher.exe` and `mmultiplayer.dll` and move them into your game directory. 
 <p></p>
 Download and extract the tweaker in your game directory. 
 
