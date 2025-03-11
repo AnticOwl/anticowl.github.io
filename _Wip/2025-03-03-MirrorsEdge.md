@@ -11,7 +11,7 @@ You are a Runner called Faith and this innovative first-person action-adventure 
 
 ## Required
 * [Mirror's Edge Tweaker by softsoundd](https://www.moddb.com/games/mirrors-edge/addons/persistent-fov)
-* [Mirror's Edge Multiplayer Mod (Ady Endre GitHub Fork)](https://github.com/AdyStudios/mmultiplayer/releases) and [Lancher](https://github.com/LucasOe/mmultiplayer/releases/download/2.3.2/Launcher.exe) 
+* [Mirror's Edge Multiplayer Mod (Ady Endre GitHub Fork)](https://github.com/AdyStudios/mmultiplayer/releases) and [Launcher](https://github.com/LucasOe/mmultiplayer/releases/download/2.3.2/Launcher.exe) 
 
 ## Optional
 * [Native Motion Blur](https://www.moddb.com/games/mirrors-edge/addons/native-motion-blur)
