@@ -169,9 +169,108 @@ Image comparison with in-game setting at highest values and Ultra Graphics.
 This mod is not "just" adding support for multiplayer. It's much more than that. You can by example disable part of the scene, disable the lighting, have track recording with nodes, etc. We will focus on the `Dolly` part here for the sake of screenshotting and video clip recording. 
 
 <div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/1f7d92ea-20df-4325-80c3-97d190aa65e2" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+<img src="https://github.com/user-attachments/assets/d2dd4e41-a927-4627-a7ea-9dd87962732b" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
+
+### Controls
+
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <caption><br></caption>
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>W, A, S, D</td>
+            <td>Forward, backward, left and right</td>
+        </tr>
+        <tr>
+            <td>Shift</td>
+            <td>Camera lift down</td>
+        </tr>
+        <tr>
+            <td>Space</td>
+            <td>Camera lift up</td>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td>Yaw and tilt</td>
+        </tr>
+        <tr>
+            <td>Numpad +</td>
+            <td>FOV increase</td>
+        </tr>
+        <tr>
+            <td>Numpad -</td>
+            <td>FOV decrease</td>
+        </tr>
+        <tr>
+            <td>Arrow up</td>
+            <td>Roll increase</td>
+        </tr>
+        <tr>
+            <td>Arrow down</td>
+            <td>Roll decrease</td>
+        </tr>
+        <tr>
+            <td>F5</td>
+            <td>Add marker</td>
+        </tr>
+        <tr>
+            <td>F6/CTRL+F6 </td>
+            <td>Jump/Jumpback frame</td>
+        </tr>
+        <tr>
+            <td>F7</td>
+            <td>Start/stop recording</td>
+        </tr>
+        <tr>
+            <td>F9</td>
+            <td>Play/stop recording</td>
+        </tr>
+    </tbody>
+</table>
+</div>
 
 ### In Flight 
 
