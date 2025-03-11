@@ -167,6 +167,8 @@ Image comparison with in-game setting at highest values and Ultra Graphics.
 ## MMultiplayer for Screenshots 
 This mod is not "just" adding support for multiplayer. It's much more than that. You can by example disable part of the scene, disable the lighting, have track recording with nodes, etc. We will focus on the `Dolly` part here for the sake of screenshotting and video clip recording. 
 
+Start `Launcher` from the `\Binaries` folder and then start the game via Steam. You should see the interface when the game is started.
+
 <div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/d2dd4e41-a927-4627-a7ea-9dd87962732b" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
