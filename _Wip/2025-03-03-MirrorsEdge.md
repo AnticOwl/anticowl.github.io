@@ -177,8 +177,8 @@ This mod is not "just" adding support for multiplayer. It's much more than that.
 
 Let say you want to take a shot of Faith jumping from one roof to another. You will need to use the `Dolly` option from `MMultiplayer` to accomplish this. The great thing here is you won't need to add markups. So, to do so, follow these steps:
 
-* Press `F7` to start the recoding.
-* Start running and make you jump.
+* Press `F7` to start the recording.
+* Start running and make your jump.
 * Press `F7` again to stop the recording.
 * Press `2` to activate the freecam.
 * Press `F9` twice and then press `Insert` to open the Dolly interface.
@@ -195,7 +195,7 @@ With this techique you will now be able to finally take shots of Faith in flight
 
 ### Static 
 
-* Press `F7` to start the recoding.
+* Press `F7` to start the recording.
 * Take the pose.
 * Press `F7` again to stop the recording.
 * Press `2` to activate the freecam.
@@ -213,7 +213,7 @@ With this techique you will now be able to finally take shots of Faith in flight
 ### Action
 This one is a little bit more complicated and will involve taking some time to perfect it. The most important thing here is that the cheats **must** be active.
 
-* Press `F7` to start the recoding.
+* Press `F7` to start the recording.
 * Do your stuff like in a movie.
 * Press `F7` again to stop the recording.
 * Press `F3` to freeze the world beside your character.
@@ -227,9 +227,9 @@ This one is a little bit more complicated and will involve taking some time to p
 * Open the console again and recall the `GOD` command with the `Arrow Up`.
 * DIE (I am not even joking)!
 * Do a rerun until a bit before you reach the point you started the recording.
-* At this point you should see your character freezed !! 
+* At this point you should see your character frozen!! 
 * Press `F3` to freeze the world and press `F4` to enter slow motion.
-* Press `2` to enter flycam and move at your freezed character.
+* Press `2` to enter flycam and move at your frozen character.
 * Press `F3` again to unfreeze the scene.
 * If you are being shot at behind glass, wait until you have it flying around and press `F3` again to freeze the whole scene.
 * Position yourself again where you wanted the camera to be.
@@ -322,4 +322,4 @@ You will then be able to use ReShade in conjunction with the multiplayer mod.
 * [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Mirror%27s_Edge#:~:text=Mirror%27s%20Edge%20is%20a%20sci,title%20began%20full%2Dscale%20production.)
 * [Mirror's Edge Various Tweaks and QOL Mods](https://docs.google.com/document/d/10D4a3mbhmcOR08EgqD59pSLqT3JcAZX_3FeExK_FqKc/preview?tab=t.0#heading=h.u0or801068b4)
 <p></p>
-Many thanks tyo softsoundd and Ady Endre for their help! 
+Many thanks to softsoundd and Ady Endre for their help! 
