@@ -388,10 +388,6 @@ This one is a little bit more complicated and will involve taking some time to p
     </thead>
     <tbody>
         <tr>
-            <td>ToggleOcclusions</td>
-            <td>Enable/disable ambient occlusions</td>
-        </tr>
-        <tr>
             <td>ToggleDynamicContrast</td>
             <td>Enable/disable tone mapping and curves</td>
         </tr>
