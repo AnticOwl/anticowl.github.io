@@ -59,7 +59,7 @@ Last, enable the Cinematic Faith model and you are done with the tweaks.
 <div> </div>
 
 {% include note.html content="If you use the Steam version starting the game from the tweaker will result in a startup crash. Disabling the DoF automatically disable the Bloom as they are tied. If you are playing with headphones I suggest you update the OpenAL Soft (first button)."%}
-
+<p></p>
 ### Keybinds and Ultra Graphics
 You will need to add some keybinds to take advantage of the Ultra Graphics and the availables cheats. For this, go to `C:\Users\<YourUserName>\Documents\EA Games\Mirror's Edge\TdGame\Config` and uncheck the `Read Only` flag first. Edit TdInput.ini and add these lines just underneath `[Engine.PlayerInput]`. Save the file and set the file back to `Read Only`.
 ```
