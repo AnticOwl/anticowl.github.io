@@ -11,7 +11,7 @@ So let's see what we can do to get the most of the game for some epic shots.
 
 ## Required
 
-* [DOOM Eternal Console Unlocker 1.6 by Sunbeam ]
+* [DOOM Eternal Mod Injector](https://gamebanana.com/dl/1327676)
 
 ## Optional
 * ReShade 6.1.1
@@ -19,11 +19,15 @@ So let's see what we can do to get the most of the game for some epic shots.
 {% include note.html content="ReShade works only via the installer. Be sure to activate 'Enable ReShade in Vulkan Globally'." %}
 
 ## How To Use
-Once the game is started, open the cheat table, connect to the game process and check the boxes like in the print screen below.
-When done, you will have full access to the in game console. 
+Extract the content of the zip into the game root directory (.\steamapps\common\DOOMEternal) and overwrite if prompted.
+Now start `EternalModInjector.bat` to patch your game and have full access to the cvars and commands. You will get such window.
+The game will start after the patching is done.
 
-![image](/images/DOOMEternal-01.png)
- 
+![image](https://github.com/user-attachments/assets/703c8c50-2ac4-4c7c-a1c2-3bb13330fff3)
+
+To see if everything was correctly patched, open the console by pressing `~` and type `listcvars`. you shoud have a total of 7397.
+If so, you are good to go.
+
 ## Photo Mode Anytime and Image Quality 
 
 In `%USERPROFILE%\Documents\Saved Games\id Software\DOOMEternal\base` create a new file called `myconfig.cfg` and copy the content below in it. 
