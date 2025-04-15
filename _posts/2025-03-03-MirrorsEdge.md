@@ -64,7 +64,7 @@ Last, enable the Cinematic Faith model and you are done with the tweaks.
 
 You have 2 choices for the free camera. First one is in `Other Tweaks` in the Mirror's Edge Tweaks. Just add a key for the `Toggle Noclip`. 
 <div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/38d3d238-beee-485b-8dbd-d952b71932b4"alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+<img src="https://github.com/user-attachments/assets/38d3d238-beee-485b-8dbd-d952b71932b4" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
 
