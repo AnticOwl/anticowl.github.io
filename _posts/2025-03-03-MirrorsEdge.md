@@ -61,7 +61,9 @@ Last, enable the Cinematic Faith model and you are done with the tweaks.
 {% include note.html content="If you use the Steam version starting the game from the tweaker will result in a startup crash. Disabling the DoF automatically disable the Bloom as they are tied. If you are playing with headphones I suggest you update the OpenAL Soft (first button)."%}
 <p></p>
 ### Keybinds and Ultra Graphics
-You will need to add some keybinds to take advantage of the Ultra Graphics and the availables cheats. For this, go to `C:\Users\<YourUserName>\Documents\EA Games\Mirror's Edge\TdGame\Config` and uncheck the `Read Only` flag first. Edit TdInput.ini and add these lines just underneath `[Engine.PlayerInput]`. Save the file and set the file back to `Read Only`.
+You have 2 choices for the free camera. First one is in `Other Tweaks`. Just add a key for the `Toggle Noclip` or second is via the MMultiplayer in the `Trainer` tab. Enable the trainer and `Reset Fly Speed` and configure your keys for the Fly fileds. 
+
+To take advantage of the Ultra Graphics and the availables cheats add the following key binds. For this, go to `C:\Users\<YourUserName>\Documents\EA Games\Mirror's Edge\TdGame\Config` and uncheck the `Read Only` flag first. Edit TdInput.ini and add these lines just underneath `[Engine.PlayerInput]`. Save the file and set the file back to `Read Only`.
 ```
 Bindings=(Name="F1",Command="exec cheats",Control=False,Shift=False,Alt=False)
 Bindings=(Name="F1",Command="UltraGraphics",Control=True,Shift=False,Alt=False)
