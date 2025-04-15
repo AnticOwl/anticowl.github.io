@@ -62,7 +62,18 @@ Last, enable the Cinematic Faith model and you are done with the tweaks.
 <p></p>
 ### Keybinds and Ultra Graphics
 
-You have 2 choices for the free camera. First one is in `Other Tweaks` in the Mirror's Edge Tweaks. Just add a key for the `Toggle Noclip`. Or second in the MMultiplayer in the `Trainer` tab. Enable the trainer and `Reset Fly Speed` and configure your keys for the Fly fields. 
+You have 2 choices for the free camera. First one is in `Other Tweaks` in the Mirror's Edge Tweaks. Just add a key for the `Toggle Noclip`. 
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/38d3d238-beee-485b-8dbd-d952b71932b4"alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+
+Or second in the MMultiplayer in the `Trainer` tab. Enable the trainer and `Reset Fly Speed` and configure your keys for the Fly fields. 
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/15600295-48b9-42dc-9541-fadbad4e131a" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+
 
 To take advantage of the Ultra Graphics and the availables cheats add the following key binds. For this, go to `C:\Users\<YourUserName>\Documents\EA Games\Mirror's Edge\TdGame\Config` and uncheck the `Read Only` flag first. Edit TdInput.ini and add these lines just underneath `[Engine.PlayerInput]`. Save the file and set the file back to `Read Only`.
 ```
