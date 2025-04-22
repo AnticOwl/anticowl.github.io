@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Mirror's Edge"
+title:  "State of Mind"
 date:   2025-04-22 18:05:55 +0300
 image:  SOM_POST.jpg
 tags:   Screenshooting
@@ -9,8 +9,8 @@ tags:   Screenshooting
 State of Mind is a futuristic thriller game delving into transhumanism. The game explores themes of separation, disjuncture and reunification, in a world that is torn between a dystopian material reality and a utopian virtual future
 
 ## Required
-[State of Mind Cheat Table]()
-[Cheat Engine 7.5 or higher]()
+* [State of Mind Cheat Table](https://anticowl.github.io/files/StateOfMind-Win64-Shipping.CT)
+* [Cheat Engine 7.5 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
 
 ## Optional
 [ReShade](https://reshade.me)
