@@ -61,6 +61,30 @@ State of Mind is a futuristic thriller game delving into transhumanism. The game
         </tr>
     </thead>
     <tbody>
+         <tr>
+            <td>Page Down</td>
+            <td>Enable camera structure</td>
+        </tr>
+        <tr>
+            <td>End</td>
+            <td>Detach camera</td>
+        </tr>
+        <tr>
+            <td>Insert</td>
+            <td>Enable camera movements</td>
+        </tr>
+        <tr>
+            <td>Delete</td>
+            <td>Disable HUD</td>
+        </tr>
+        <tr>
+            <td>NUMPAD 0</td>
+            <td>Stop time</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
         <tr>
             <td>NUMPAD 8,5,4,6</td>
             <td>Forward, backward, left and right</td>
@@ -82,26 +106,6 @@ State of Mind is a futuristic thriller game delving into transhumanism. The game
             <td><br></td>
         </tr>
         <tr>
-            <td>Page Down</td>
-            <td>Enable camera structure</td>
-        </tr>
-        <tr>
-            <td>End</td>
-            <td>Detach camera</td>
-        </tr>
-        <tr>
-            <td>Insert</td>
-            <td>Enable camera movements</td>
-        </tr>
-        <tr>
-            <td>Delete</td>
-            <td>Disable HUD</td>
-        </tr>
-        <tr>
-            <td>NUMPAD 0</td>
-            <td>Stop time</td>
-        </tr>
-        <tr>
             <td>Left Control</td>
             <td>Fast camera movements</td>
         </tr>
@@ -116,7 +120,7 @@ State of Mind is a futuristic thriller game delving into transhumanism. The game
 ## How To
 ### Use The Cheat Table
 Once you have installed Cheat Engine 7.5 or higher (if not already done), click twice on the cheat table file you downloaded. Check the `Auto Attach to Game` box. Cheat Engine will automatically connect to the game when detected.
-Press `Page Down` to enable the camera to be found.
+Press `Page Down` to enable the camera structure.
 
 <div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/07c92f7d-0936-4589-b620-662359a128fb" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
