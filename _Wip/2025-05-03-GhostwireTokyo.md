@@ -140,6 +140,5 @@ Press `Page Down` to enable the camera structure.
 
 You still can change things in the photo mode if needed while being in free camera!
   
-
 ## Resources 
 * [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/State_of_Mind)
