@@ -59,32 +59,8 @@ tags:   Screenshooting
         </tr>
     </thead>
     <tbody>
-         <tr>
-            <td>Page Down</td>
-            <td>Enable camera structure</td>
-        </tr>
         <tr>
-            <td>End</td>
-            <td>Detach camera</td>
-        </tr>
-        <tr>
-            <td>Insert</td>
-            <td>Enable camera movements</td>
-        </tr>
-        <tr>
-            <td>Delete</td>
-            <td>Disable HUD</td>
-        </tr>
-        <tr>
-            <td>NUMPAD 0</td>
-            <td>Stop time</td>
-        </tr>
-        <tr>
-            <td><br></td>
-            <td><br></td>
-        </tr>
-        <tr>
-            <td>NUMPAD 8,5,4,6</td>
+            <td>NUMPAD 85,4,6</td>
             <td>Forward, backward, left and right</td>
         </tr>
         <tr>
@@ -96,8 +72,32 @@ tags:   Screenshooting
             <td>Camera roll</td>
         </tr>
         <tr>
-            <td>NUMPAD +,-</td>
-            <td>Zoom in, out</td>
+            <td>NUMPAD+ + NUMPAD 8,5</td>
+            <td>Pitch up and down</td>
+        </tr>
+        <tr>
+            <td>NUMPAD+ + NUMPAD 4,6</td>
+            <td>Yaw left and right</td>
+        </tr>
+        <tr>
+            <td>NUMPAD+ +&nbsp;NUMPAD 7,9</td>
+            <td>Zoom in an out</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>Del</td>
+            <td>Disable HUD</td>
+        </tr>
+        <tr>
+            <td>Page Down</td>
+            <td>Enable camera structure</td>
+        </tr>
+        <tr>
+            <td>Ins</td>
+            <td>Enable camera movements</td>
         </tr>
         <tr>
             <td><br></td>
@@ -108,11 +108,10 @@ tags:   Screenshooting
             <td>Fast camera movements</td>
         </tr>
         <tr>
-            <td>Left ALT</td>
+            <td>Left Alt</td>
             <td>Slow camera movements</td>
         </tr>
     </tbody>
-</table>
 </div>
 
 ## How To
@@ -121,20 +120,26 @@ Once you have installed Cheat Engine 7.5 or higher (if not already done), click 
 Press `Page Down` to enable the camera structure.
 
 <div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/07c92f7d-0936-4589-b620-662359a128fb" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+<img src="https://github.com/user-attachments/assets/1afb25ba-6a53-4b53-8750-083c453cf260" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
 
-
 ### Take A Screenshot
-This is in fact pretty simple.
-* Press `NUMPAD 0` to pause the game.
+#### Via The Pause Menu
+* Pause the game.
 * Press `Delete` to disable the HUD
-* Press `End` to detach the camera.
-* Press `Insert` to activate the camera movement
+* Press `Ins` to detach the camera and enable the free camera.
 * Frame, take your shot and go the other way around to get back in game.
 
-Camera also works in cutscenes!
+#### Via The Photo Mode
+* Enter the photomode.
+* Set everything like you would like it to be
+* Press `Delete` to disable the HUD
+* Press `Ins` to detach the camera and enable the free camera.
+* Frame, take your shot and go the other way around to get back in game.
+
+You still can change things in the photo mode if needed while being in free camera!
+  
 
 ## Resources 
 * [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/State_of_Mind)
