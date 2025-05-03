@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>83</ID>
+      <Description>"-------------------------------------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8393</ID>
+      <Description>"- Ghostwire Tokyo Camera for Steam"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8394</ID>
+      <Description>"- Antic Owl"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8395</ID>
+      <Description>"- See Table Extra for info"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8396</ID>
+      <Description>"-------------------------------------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>25</ID>
+      <Description>"Camera Structure - Leave ON"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+assert("GWT.exe"+D2A618,8B 48 18 89 4E 18)
+define(camStruct,"GWT.exe"+D2A618)
+registersymbol(camStruct)
+
+alloc(camStructMem,$1000,"GWT.exe"+D2A618)
+registersymbol(camStructMem)
+
+define(pCamStruct,camStructMem+100)
+registersymbol(pCamStruct)
+
+label(code)
+label(return)
+
+camStructMem:
+
+code:
+  mov [pCamStruct], rax
+  mov ecx,[rax+18]
+  mov [rsi+18],ecx
+  jmp return
+
+camStruct:
+  jmp camStructMem
+  nop
+
+return:
+
+[DISABLE]
+
+camStruct:
+  db 8B 48 18 89 4E 18
+unregistersymbol(camStructMem)
+unregistersymbol(pcamStruct)
+unregistersymbol(camStruct)
+dealloc(camStrcutMem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: GWT.exe+D2A618
+
+GWT.exe+D2A5F4: 48 8B D8        - mov rbx,rax
+GWT.exe+D2A5F7: F2 0F 10 00     - movsd xmm0,[rax]
+GWT.exe+D2A5FB: F2 0F 11 06     - movsd [rsi],xmm0
+GWT.exe+D2A5FF: 48 8D 53 40     - lea rdx,[rbx+40]
+GWT.exe+D2A603: 8B 48 08        - mov ecx,[rax+08]
+GWT.exe+D2A606: 89 4E 08        - mov [rsi+08],ecx
+camStruct: F2 0F 10 40 0C  - movsd xmm0,[rax+0C]
+GWT.exe+D2A60E: F2 0F 11 07     - movsd [rdi],xmm0
+GWT.exe+D2A612: 8B 48 14        - mov ecx,[rax+14]
+GWT.exe+D2A615: 89 4F 08        - mov [rdi+08],ecx
+// ---------- INJECTING HERE ----------
+GWT.exe+D2A618: 8B 48 18        - mov ecx,[rax+18]
+// ---------- DONE INJECTING  ----------
+GWT.exe+D2A61B: 89 4E 18        - mov [rsi+18],ecx
+GWT.exe+D2A61E: 48 8D 4E 40     - lea rcx,[rsi+40]
+GWT.exe+D2A622: 8B 40 1C        - mov eax,[rax+1C]
+GWT.exe+D2A625: 89 46 1C        - mov [rsi+1C],eax
+GWT.exe+D2A628: 8B 43 20        - mov eax,[rbx+20]
+GWT.exe+D2A62B: 89 46 20        - mov [rsi+20],eax
+GWT.exe+D2A62E: 8B 43 24        - mov eax,[rbx+24]
+GWT.exe+D2A631: 89 46 24        - mov [rsi+24],eax
+GWT.exe+D2A634: 8B 43 28        - mov eax,[rbx+28]
+GWT.exe+D2A637: 89 46 28        - mov [rsi+28],eax
+}
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>38</ID>
+          <Description>"X +00"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>37</ID>
+          <Description>"Y +04"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+04</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>36</ID>
+          <Description>"Z +08"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+08</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>35</ID>
+          <Description>"Pitch +0C"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+0C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>34</ID>
+          <Description>"Yaw +10"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+10</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>33</ID>
+          <Description>"Roll +14"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+14</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26</ID>
+          <Description>"FOV +18"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+18</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>39</ID>
+      <Description>"Detach Camera"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>//-- Speed modifier for camera movement
+globalalloc(speedModifier,8)
+speedModifier:
+dd (float)7
+
+{$asm}
+[ENABLE]
+assert(GWT.exe+D2B043,F2 0F 11 41 0C)
+//Disable X and Y
+GWT.exe+D2B031:
+  db 90 90 90 90
+
+//Disable Z
+GWT.exe+D2B03B:
+  db 90 90 90
+
+//Disable Pitch and Yaw
+GWT.exe+D2B043:
+  db 90 90 90 90 90
+
+//Disable Roll
+GWT.exe+D2B04B:
+  db 90 90 90
+
+//Disable Roll
+GWT.exe+D2B051:
+  db 90 90 90
+
+{$lua}
+function checkKeys()
+  local speed = readFloat("speedModifier")
+  local pitch = math.rad(readFloat("[pCamStruct]+0C")) -- Vertical (Pitch)
+  local yaw = math.rad(readFloat("[pCamStruct]+10")) -- Horizontal (Yaw)
+  local campitch = readFloat("[pCamStruct]+0C")
+  local camyaw = readFloat("[pCamStruct]+10")
+  local FOV = math.deg(readFloat("[pCamStruct]+18"))
+  local camFOV = readFloat("[pCamStruct]+18")
+  local roll = math.rad(readFloat("[pCamStruct]+14"))
+  local camroll = readFloat("[pCamStruct]+14")
+
+  local camx = readFloat("[pCamStruct]+00")
+  local camy = readFloat("[pCamStruct]+04")
+  local camz = readFloat("[pCamStruct]+08")
+
+  local siny = math.sin(yaw)
+  local cosy = math.cos(yaw)
+  local sinp = math.sin(pitch)
+  local cosp = math.cos(pitch)
+
+  -- =============================
+  -- CAMERA CONTROL MODE
+  -- =============================
+  if isKeyPressed(VK_ADD) then
+    local adjustSpeed = speed * 0.5
+
+    -- Pitch
+    if isKeyPressed(VK_NUMPAD8) then
+      writeFloat("[pCamStruct]+0C", campitch + adjustSpeed)
+    end
+    if isKeyPressed(VK_NUMPAD5) then
+      writeFloat("[pCamStruct]+0C", campitch - adjustSpeed)
+    end
+
+    -- Yaw
+    if isKeyPressed(VK_NUMPAD4) then
+      writeFloat("[pCamStruct]+10", camyaw - adjustSpeed)
+    end
+    if isKeyPressed(VK_NUMPAD6) then
+      writeFloat("[pCamStruct]+10", camyaw + adjustSpeed)
+    end
+
+    -- FOV
+    if isKeyPressed(VK_NUMPAD7) then
+      writeFloat("[pCamStruct]+18", camFOV - adjustSpeed)
+    end
+    if isKeyPressed(VK_NUMPAD9) then
+      writeFloat("[pCamStruct]+18", camFOV + adjustSpeed)
+    end
+
+  else
+    -- =============================
+    -- NORMAL CAMERA MOVEMENT MODE
+    -- =============================
+
+    -- Forward
+    if isKeyPressed(VK_NUMPAD8) then
+      writeFloat("[pCamStruct]+00", camx + (cosy * speed))
+      writeFloat("[pCamStruct]+04", camy + (siny * speed))
+      writeFloat("[pCamStruct]+08", camz + (sinp * speed))
+    end
+    -- Left
+    if isKeyPressed(VK_NUMPAD4) then
+      writeFloat("[pCamStruct]+00", camx + (math.cos(yaw - math.rad(90)) * speed))
+      writeFloat("[pCamStruct]+04", camy + (math.sin(yaw - math.rad(90)) * speed))
+    end
+    -- Back
+    if isKeyPressed(VK_NUMPAD5) then
+      writeFloat("[pCamStruct]+00", camx - (cosy * speed))
+      writeFloat("[pCamStruct]+04", camy - (siny * speed))
+      writeFloat("[pCamStruct]+08", camz - (sinp * speed))
+    end
+    -- Right
+    if isKeyPressed(VK_NUMPAD6) then
+      writeFloat("[pCamStruct]+00", camx - (math.cos(yaw - math.rad(90)) * speed))
+      writeFloat("[pCamStruct]+04", camy - (math.sin(yaw - math.rad(90)) * speed))
+    end
+    -- Forward/Right
+    if isKeyPressed(VK_NUMPAD8) and isKeyPressed(VK_NUMPAD6) then
+      writeFloat("[pCamStruct]+00", camx + (math.cos(yaw + math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+04", camy + (math.sin(yaw + math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+08", camz + (sinp * speed))
+    end
+    -- Forward/Left
+    if isKeyPressed(VK_NUMPAD8) and isKeyPressed(VK_NUMPAD4) then
+      writeFloat("[pCamStruct]+00", camx + (math.cos(yaw - math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+04", camy + (math.sin(yaw - math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+08", camz + (sinp * speed))
+    end
+    -- Back/Left
+    if isKeyPressed(VK_NUMPAD5) and isKeyPressed(VK_NUMPAD4) then
+      writeFloat("[pCamStruct]+00", camx - (math.cos(yaw + math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+04", camy - (math.sin(yaw + math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+08", camz - (sinp * speed))
+    end
+    -- Back/Right
+    if isKeyPressed(VK_NUMPAD5) and isKeyPressed(VK_NUMPAD6) then
+      writeFloat("[pCamStruct]+00", camx - (math.cos(yaw - math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+04", camy - (math.sin(yaw - math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+08", camz - (sinp * speed))
+    end
+    -- Up
+    if isKeyPressed(VK_NUMPAD9) then
+      writeFloat("[pCamStruct]+08", camz + (speed * 0.5))
+    end
+    -- Down
+    if isKeyPressed(VK_NUMPAD7) then
+      writeFloat("[pCamStruct]+08", camz - (speed * 0.5))
+    end
+        -- Roll
+    if isKeyPressed(VK_NUMPAD1) then
+      writeFloat("[pCamStruct]+14", camroll - (speed * 0.5))
+    end
+    if isKeyPressed(VK_NUMPAD3) then
+      writeFloat("[pCamStruct]+14", camroll + (speed * 0.5))
+    end
+  end
+
+   -- Speed Modifiers
+  if isKeyPressed(VK_F) and isKeyPressed(VK_MENU) then
+    writeFloat("speedModifier", 500)
+  elseif isKeyPressed(VK_LCONTROL) then
+    if (speed &lt; 5000) then
+      writeFloat("speedModifier", speed + 2)
+    end
+  elseif isKeyPressed(VK_MENU) then
+    writeFloat("speedModifier", 0.5)
+  else
+    writeFloat("speedModifier", 7)
+  end
+end
+
+-- Timer to check key input
+t = createTimer(nil)
+timer_setInterval(t, 10)
+timer_onTimer(t, checkKeys)
+timer_setEnabled(t, true)
+
+
+
+{$asm}
+[DISABLE]
+//Enable X and Y
+GWT.exe+D2B031:
+  db F2 0F 11 01
+
+//Enable Z
+GWT.exe+D2B03B:
+  db 89 41 08
+
+//Enable Pitch and Yaw
+GWT.exe+D2B043:
+  db F2 0F 11 41 0C
+
+//Enable Roll
+GWT.exe+D2B04B:
+  db 89 41 14
+
+//Disable Roll
+GWT.exe+D2B051:
+  db 89 41 18
+
+{$lua}
+timer_setEnabled(t, false)
+
+
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>45</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>399</ID>
+      <Description>"Disable HUD"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+GWT.exe+E735E6:
+  db 90 90
+
+[DISABLE]
+GWT.exe+E735E6:
+  db 80 3F 0F
+
+
+
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>46</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Change of movsd [rcx+0C],xmm0</Description>
+      <AddressString>GWT.exe+D2B043</AddressString>
+      <Before>
+        <Byte>F2</Byte>
+        <Byte>0F</Byte>
+        <Byte>10</Byte>
+        <Byte>42</Byte>
+        <Byte>0C</Byte>
+      </Before>
+      <Actual>
+        <Byte>F2</Byte>
+        <Byte>0F</Byte>
+        <Byte>11</Byte>
+        <Byte>41</Byte>
+        <Byte>0C</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>42</Byte>
+        <Byte>14</Byte>
+        <Byte>89</Byte>
+        <Byte>41</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :movsd xmm0,[rdx+0C]</Description>
+      <AddressString>GWT.exe+D2B03E</AddressString>
+      <Before>
+        <Byte>42</Byte>
+        <Byte>08</Byte>
+        <Byte>89</Byte>
+        <Byte>41</Byte>
+        <Byte>08</Byte>
+      </Before>
+      <Actual>
+        <Byte>F2</Byte>
+        <Byte>0F</Byte>
+        <Byte>10</Byte>
+        <Byte>42</Byte>
+        <Byte>0C</Byte>
+      </Actual>
+      <After>
+        <Byte>F2</Byte>
+        <Byte>0F</Byte>
+        <Byte>11</Byte>
+        <Byte>41</Byte>
+        <Byte>0C</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :movsd [rcx],xmm0</Description>
+      <AddressString>GWT.exe+D2B031</AddressString>
+      <Before>
+        <Byte>10</Byte>
+        <Byte>02</Byte>
+        <Byte>48</Byte>
+        <Byte>8B</Byte>
+        <Byte>DA</Byte>
+      </Before>
+      <Actual>
+        <Byte>F2</Byte>
+        <Byte>0F</Byte>
+        <Byte>11</Byte>
+        <Byte>01</Byte>
+      </Actual>
+      <After>
+        <Byte>48</Byte>
+        <Byte>8B</Byte>
+        <Byte>F9</Byte>
+        <Byte>8B</Byte>
+        <Byte>42</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of cmp byte ptr [rdi],0F</Description>
+      <AddressString>GWT.exe+E735E6</AddressString>
+      <Before>
+        <Byte>07</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>80</Byte>
+        <Byte>3F</Byte>
+        <Byte>0F</Byte>
+      </Actual>
+      <After>
+        <Byte>59</Byte>
+        <Byte>F5</Byte>
+        <Byte>48</Byte>
+        <Byte>89</Byte>
+        <Byte>44</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of add [rax],al - ingame Hud</Description>
+      <AddressString>GWT.exe+E735E4</AddressString>
+      <Before>
+        <Byte>85</Byte>
+        <Byte>9C</Byte>
+        <Byte>07</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>80</Byte>
+        <Byte>3F</Byte>
+        <Byte>0F</Byte>
+        <Byte>59</Byte>
+        <Byte>F5</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :test [rbx-7CBEF63E],517506FD</Description>
+      <AddressString>GWT.exe+2469B38</AddressString>
+      <Before>
+        <Byte>40</Byte>
+        <Byte>38</Byte>
+        <Byte>3C</Byte>
+        <Byte>10</Byte>
+        <Byte>75</Byte>
+      </Before>
+      <Actual>
+        <Byte>F7</Byte>
+        <Byte>83</Byte>
+        <Byte>C2</Byte>
+        <Byte>09</Byte>
+        <Byte>41</Byte>
+        <Byte>83</Byte>
+        <Byte>FD</Byte>
+        <Byte>06</Byte>
+        <Byte>75</Byte>
+        <Byte>51</Byte>
+      </Actual>
+      <After>
+        <Byte>C7</Byte>
+        <Byte>44</Byte>
+        <Byte>24</Byte>
+        <Byte>64</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>speedModifier</Name>
+      <Address>1F86AD70000</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <Comments>To use the free camera:
+* Press Page Down to enable the structure.
+* Pause the game when you see something you want to shoot
+* Press DEL to disable the HUD
+* Press INS to enter the free camera.
+When finished, just press INS, DEL and unpause the game.
+PGDN - Camera structure
+INS - Detach and enable camera movements
+DEL - Disable HUD
+NUMPAD 8/5/4/6 - Forw/Backward/Left/Right
+NUMPAD 7/9 - Up/Down
+NUMPAD 1/3 - Roll
+NUMPAD +/- - FOV (use ALT for slower movements)
+ARROWS - Pitch and Yaw
+Left Control - Fast Camera Movments
+Left ALT - Slow Camera Movements
+</Comments>
+</CheatTable>
