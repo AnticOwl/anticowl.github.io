@@ -2,7 +2,7 @@
 layout: post
 title:  "Ghostwire: Tokyo"
 date:   2025-05-03 08:05:55 +0300
-image:  SOM_POST.jpg
+image:  GWT_POST.jpg
 tags:   Screenshooting
 ---
 
