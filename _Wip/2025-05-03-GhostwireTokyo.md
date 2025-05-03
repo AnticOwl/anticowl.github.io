@@ -112,7 +112,9 @@ tags:   Screenshooting
             <td>Slow camera movements</td>
         </tr>
     </tbody>
+</table>
 </div>
+
 
 ## How To
 ### Use The Cheat Table
