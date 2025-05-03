@@ -7,7 +7,7 @@ tags:   Screenshooting
 ---
 
 ## Required
-* [Ghostwire: Tokyo cheat table](https://www.moddb.com/mods/crysis-enhanced-edition)
+* [Ghostwire: Tokyo cheat table](https://anticowl.github.io/files/GWT.CT)
 * [Cheat Engine 7.5 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
 
 ## Optional
@@ -143,4 +143,4 @@ Press `Page Down` to enable the camera structure.
 You still can change things in the photo mode if needed while being in free camera!
   
 ## Resources 
-* [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/State_of_Mind)
+* [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Ghostwire:_Tokyo)
