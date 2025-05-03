@@ -11,7 +11,7 @@ tags:   Screenshooting
 * [Cheat Engine 7.5 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
 
 ## Optional
-[ReShade](https://reshade.me)
+* [ReShade](https://reshade.me)
 
 ## Controls
 <style>
