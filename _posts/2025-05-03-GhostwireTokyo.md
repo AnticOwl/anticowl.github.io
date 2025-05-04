@@ -6,6 +6,8 @@ image:  GWT_POST.jpg
 tags:   Screenshooting
 ---
 
+Tokyo's population has vanished, and deadly supernatural forces prowl the streets. Use an arsenal of elemental abilities to unravel the truth behind the disappearance and save Tokyo.
+
 ## Required
 * [Ghostwire: Tokyo cheat table](https://anticowl.github.io/files/GWT.CT)
 * [Cheat Engine 7.5 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
