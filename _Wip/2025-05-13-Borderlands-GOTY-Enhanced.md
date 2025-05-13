@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/1e23594b-d01a-41fb-83d4-27d7709d9a4b)---
+---
 layout: post
 title:  "Borderlands"
 date:   2025-05-13 18:05:55 +0300
@@ -6,7 +6,7 @@ image:  BORDERLANDSGOTY.jpg
 tags:   Screenshooting
 ---
 
-You emerge into this vast wasteland to discover humanity working to rebuild itself against such forces as bandit gangs, mutants, and the Authority – an oppressive government regime that has a special interest in you in particular. 
+Discover the original co-op shooter-looter, crammed with new enhancements! As one of 4 trigger-happy mercenaries with RPG progression, equip bazillions of guns to take on the desert planet Pandora.
 
 ## Required
 * Nothing beside the game.
