@@ -20,10 +20,19 @@ Discover the original co-op shooter-looter, crammed with new enhancements! As on
 ## Installation
 Install ReShade if not already done. If not start the installer. Click OK for the warning and choose you game from the list. Click `Next` twice.
 Install the effects you want or click `Uncheck All` and press `Next`. Now, check the `ShaderToggler by Otis Inf`. Click next and Finish the installation.
-![image](https://github.com/user-attachments/assets/14b93ab3-6845-459d-bf97-49426a850899)
+
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/14b93ab3-6845-459d-bf97-49426a850899" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+
 If not already done, install Cheat Engine. 
 Copy the `ShadderToggler.ini` file here `.\steamapps\common\BorderlandsGOTYEnhanced\Binaries\Win64` and nowhere else.
-![image](https://github.com/user-attachments/assets/7afe40de-92a6-4718-8f25-72e124762fa2)
+
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/7afe40de-92a6-4718-8f25-72e124762fa2" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
 ## Configuration
 **This part is optional unless you want you characte in third person**
