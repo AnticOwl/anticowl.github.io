@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Borderlands"
+title:  "Borderlands GOTY Enhanced"
 date:   2025-05-13 18:05:55 +0300
 image:  BORDERLANDSGOTY.jpg
 tags:   Screenshooting
