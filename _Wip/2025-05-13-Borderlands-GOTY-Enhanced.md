@@ -44,3 +44,10 @@ Bindings=(Name="FirstPersonToggle",Command="Camera FirstPerson | setbind RightMo
 Bindings=(Name="ThirdPersonToggle",Command="Camera ThirdPerson | setbind RightMouseButton ThirdPersonZoom | setbind F1 FirstPersonToggle",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
 Bindings=(Name="F1",Command="ThirdPersonToggle",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
 ```
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/e8b43554-45c1-4a6d-82b7-d8e0a10bd6e5" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+
+
+
