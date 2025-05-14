@@ -175,3 +175,4 @@ This is in fact pretty simple.
 * Frame, take your shot and go the other way around to get back in game.
 
 ## Resources 
+[PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Borderlands:_Game_of_the_Year_Enhanced)
