@@ -47,7 +47,7 @@ Bindings=(Name="F1",Command="ThirdPersonToggle",Control=False,Shift=False,Alt=Fa
 Just like on the print below.
 
 <div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/e8b43554-45c1-4a6d-82b7-d8e0a10bd6e5" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+<img src="https://github.com/user-attachments/assets/02dbcc03-181c-43ca-b217-11abe5e20786" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
 
@@ -102,20 +102,16 @@ Just like on the print below.
             <td>Enable camera structure</td>
         </tr>
         <tr>
-            <td>End</td>
-            <td>Detach camera</td>
+            <td>Isert</td>
+            <td>Detach and enable camera movements</td>
         </tr>
         <tr>
-            <td>Insert</td>
-            <td>Enable camera movements</td>
+            <td>End</td>
+            <td>Enable SloMo</td>
         </tr>
         <tr>
             <td>Delete</td>
             <td>Disable HUD</td>
-        </tr>
-        <tr>
-            <td>NUMPAD 0</td>
-            <td>Stop time</td>
         </tr>
         <tr>
             <td><br></td>
@@ -136,6 +132,14 @@ Just like on the print below.
         <tr>
             <td>NUMPAD +,-</td>
             <td>Zoom in, out</td>
+        </tr>
+        <tr>
+            <td>Arrow up, down</td>
+            <td>Pitch up and down</td>
+        </tr>
+        <tr>
+            <td>Arrow left, right</td>
+            <td>Yaw left and right /td>
         </tr>
         <tr>
             <td><br></td>
