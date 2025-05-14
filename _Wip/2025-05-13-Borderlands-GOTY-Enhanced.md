@@ -102,7 +102,7 @@ Just like on the print below.
             <td>Enable camera structure</td>
         </tr>
         <tr>
-            <td>Isert</td>
+            <td>Insert</td>
             <td>Detach and enable camera movements</td>
         </tr>
         <tr>
@@ -139,7 +139,7 @@ Just like on the print below.
         </tr>
         <tr>
             <td>Arrow left, right</td>
-            <td>Yaw left and right /td>
+            <td>Yaw left and right</td>
         </tr>
         <tr>
             <td><br></td>
