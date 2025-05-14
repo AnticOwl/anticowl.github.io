@@ -27,12 +27,11 @@ Copy the `ShadderToggler.ini` file here `.\steamapps\common\BorderlandsGOTYEnhan
 
 ## Configuration
 **This part is optional unless you want you characte in third person**
-
-
-Third Person mode
-
+Open `WillowInput.ini` located in `C:\Users\<YOURUSERAME>\Documents\My Games\Borderlands Game of the Year\WillowGame\Config` and add the following lines at the end of `[Engine.PlayerInput]` and just before `[Engine.DebugCameraInput]`
+```
 Bindings=(Name="FirstPersonZoom",Command="advancedbutton bAdvancedButtonAux5",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
 Bindings=(Name="ThirdPersonZoom",Command="advancedbutton bAdvancedButtonAux5 | Camera FirstPerson | OnRelease Camera ThirdPerson",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
 Bindings=(Name="FirstPersonToggle",Command="Camera FirstPerson | setbind RightMouseButton FirstPersonZoom | setbind F1 ThirdPersonToggle",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
 Bindings=(Name="ThirdPersonToggle",Command="Camera ThirdPerson | setbind RightMouseButton ThirdPersonZoom | setbind F1 FirstPersonToggle",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
 Bindings=(Name="F1",Command="ThirdPersonToggle",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
+```
