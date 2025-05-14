@@ -9,10 +9,10 @@ tags:   Screenshooting
 Discover the original co-op shooter-looter, crammed with new enhancements! As one of 4 trigger-happy mercenaries with RPG progression, equip bazillions of guns to take on the desert planet Pandora.
 
 ## Required
-* Borderlands GOTY Enhanced cheat table
+* [Borderlands GOTY Enhanced cheat table](https://anticowl.github.io/files/_borderlandsgotye/BorderlandsGOTYEnhanced.CT)
 * Cheat Engine 7.5 or higher
 * ReShade 6.x with add-on support
-* Pause Menu Shader Toggle ini file
+* [Pause Menu Shader Toggle ini file](https://anticowl.github.io/files/_borderlandsgotye/ShaderToggler.ini)
 
 ## Optional
 * Third person mode
