@@ -10,8 +10,8 @@ Discover the original co-op shooter-looter, crammed with new enhancements! As on
 
 ## Required
 * [Borderlands GOTY Enhanced cheat table](https://anticowl.github.io/files/_borderlandsgotye/BorderlandsGOTYEnhanced.CT)
-* Cheat Engine 7.5 or higher
-* ReShade 6.x with add-on support
+* [Cheat Engine 7.5 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
+* [ReShade 6.x with add-on support](https://reshade.me/)
 * [Pause Menu Shader Toggle ini file](https://anticowl.github.io/files/_borderlandsgotye/ShaderToggler.ini)
 
 ## Optional
