@@ -13,7 +13,7 @@ State of Mind is a futuristic thriller game delving into transhumanism. The game
 * [Cheat Engine 7.5 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
 
 ## Optional
-[ReShade](https://reshade.me)
+* [ReShade](https://reshade.me)
 
 ## Controls
 <style>
@@ -102,6 +102,10 @@ State of Mind is a futuristic thriller game delving into transhumanism. The game
             <td>Zoom in, out</td>
         </tr>
         <tr>
+            <td>Arrows</td>
+            <td>Pitch and yaw</td>
+        </tr>
+        <tr>
             <td><br></td>
             <td><br></td>
         </tr>
@@ -123,10 +127,9 @@ Once you have installed Cheat Engine 7.5 or higher (if not already done), click 
 Press `Page Down` to enable the camera structure.
 
 <div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/07c92f7d-0936-4589-b620-662359a128fb" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+<img src="https://github.com/user-attachments/assets/4c67d34d-eac6-447a-b40e-ba715cdf5c95" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
-
 
 ### Take A Screenshot
 This is in fact pretty simple.
