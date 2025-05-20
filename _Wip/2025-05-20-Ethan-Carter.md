@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Outlast"
+title:  "The Vanishing of Ethan Carter Redux"
 date:   2025-05-13 08:05:55 +0300
 image:  TVOEC_POST.jpg
 tags:   Screenshooting
@@ -15,6 +15,18 @@ Ethan has vanished in the wake of a brutal murder, which Paul quickly discerns m
 
 ## Optional
 * [ReShade](https://reshade.me)
+
+## Read Before You Start!
+The camera only works with the version that as the console open. Add the `exe` as a non Steam game to Steam if you don't want to navigate to the game folder everytime.
+* Right click the game and choose `Browse local file`.
+* Once in the folder open `\EthanCarter\Binaries\Win64`.
+* Copy the full path. Eg `D:\Games\steamapps\common\The Vanishing of Ethan Carter Redux\EthanCarter\Binaries\Win64`
+* In Steam click `Add a Game` located bottom left.
+* Choose `Add a non Steam Game` and click on `Browse`.
+* Paste the path and choose `EthanCarter-Win64-Console.exe` the `Open`.
+* CLick `Add Selected Programs`.
+
+It should appears in your game list as `EthanCarter-Win64-Console`.
 
 ## Controls
 <style>
