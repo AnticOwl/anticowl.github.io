@@ -1,55 +1,32 @@
 ---
 layout: post
-title:  "Borderlands"
-date:   2023-05-13 18:05:55 +0300
-image:  BORDERLANDSGOTY.jpg
+title:  "The Vanishing of Ethan Carter Redux"
+date:   2023-05-13 08:05:55 +0300
+image:  TVOEC_POST.jpg
 tags:   Screenshooting
 ---
-
-Discover the original co-op shooter-looter, crammed with new enhancements! As one of 4 trigger-happy mercenaries with RPG progression, equip bazillions of guns to take on the desert planet Pandora.
+You play the game as Paul Prospero, an occult-minded detective who receives a disturbing letter from Ethan Carter. 
+Realizing the boy is in grave danger, Paul arrives at Ethan’s home of Red Creek Valley, where things turn out to be even worse than he imagined. 
+Ethan has vanished in the wake of a brutal murder, which Paul quickly discerns might not be the only local murder worth looking into.
 
 ## Required
-* Borderlands GOTY Enhanced cheat table
-* Cheat Engine 7.5 or higher
-* ReShade 6.x with add-on support
-* Pause Menu Shader Toggle ini file
+* [The Vanishing of Ethan Carter Cheat Table]()
+* [Cheat Engine 7.5 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
 
 ## Optional
-* Third person mode
+* [ReShade](https://reshade.me)
 
-## Installation
-Install ReShade if not already done. If not start the installer. Click OK for the warning and choose you game from the list. Click `Next` twice.
-Install the effects you want or click `Uncheck All` and press `Next`. Now, check the `ShaderToggler by Otis Inf`. Click next and Finish the installation.
+## Read Before You Start!
+The camera only works with the version that as the console open. Add the `exe` as a non Steam game to Steam if you don't want to navigate to the game folder everytime.
+* Right click the game and choose `Browse local file`.
+* Once in the folder open `\EthanCarter\Binaries\Win64`.
+* Copy the full path. Eg `D:\Games\steamapps\common\The Vanishing of Ethan Carter Redux\EthanCarter\Binaries\Win64`
+* In Steam click `Add a Game` located bottom left.
+* Choose `Add a non Steam Game` and click on `Browse`.
+* Paste the path and choose `EthanCarter-Win64-Console.exe` the `Open`.
+* CLick `Add Selected Programs`.
 
-<div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/14b93ab3-6845-459d-bf97-49426a850899" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
-</div>
-<div> </div>
-
-If not already done, install Cheat Engine. 
-Copy the `ShadderToggler.ini` file here `.\steamapps\common\BorderlandsGOTYEnhanced\Binaries\Win64` and nowhere else.
-
-<div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/7afe40de-92a6-4718-8f25-72e124762fa2" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
-</div>
-<div> </div>
-
-## Configuration
-**This part is optional unless you want you characte in third person**
-Open `WillowInput.ini` located in `C:\Users\<YOURUSERAME>\Documents\My Games\Borderlands Game of the Year\WillowGame\Config` and add the following lines at the end of `[Engine.PlayerInput]` and just before `[Engine.DebugCameraInput]`
-```
-Bindings=(Name="FirstPersonZoom",Command="advancedbutton bAdvancedButtonAux5",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
-Bindings=(Name="ThirdPersonZoom",Command="advancedbutton bAdvancedButtonAux5 | Camera FirstPerson | OnRelease Camera ThirdPerson",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
-Bindings=(Name="FirstPersonToggle",Command="Camera FirstPerson | setbind RightMouseButton FirstPersonZoom | setbind F1 ThirdPersonToggle",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
-Bindings=(Name="ThirdPersonToggle",Command="Camera ThirdPerson | setbind RightMouseButton ThirdPersonZoom | setbind F1 FirstPersonToggle",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
-Bindings=(Name="F1",Command="ThirdPersonToggle",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
-```
-Just like on the print below.
-
-<div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/02dbcc03-181c-43ca-b217-11abe5e20786" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
-</div>
-<div> </div>
+It should appears in your game list as `EthanCarter-Win64-Console`.
 
 ## Controls
 <style>
@@ -106,12 +83,12 @@ Just like on the print below.
             <td>Detach and enable camera movements</td>
         </tr>
         <tr>
-            <td>End</td>
-            <td>Enable SloMo</td>
-        </tr>
-        <tr>
             <td>Delete</td>
             <td>Disable HUD</td>
+        </tr>
+        <tr>
+            <td>NUMPAD 0</td>
+            <td>Stop time</td>
         </tr>
         <tr>
             <td><br></td>
@@ -134,12 +111,8 @@ Just like on the print below.
             <td>Zoom in, out</td>
         </tr>
         <tr>
-            <td>Arrow up, down</td>
-            <td>Pitch up and down</td>
-        </tr>
-        <tr>
-            <td>Arrow left, right</td>
-            <td>Yaw left and right</td>
+            <td>Arrows</td>
+            <td>Pitch and yaw</td>
         </tr>
         <tr>
             <td><br></td>
@@ -163,15 +136,18 @@ Once you have installed Cheat Engine 7.5 or higher (if not already done), click 
 Press `Page Down` to enable the camera structure.
 
 <div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/07c92f7d-0936-4589-b620-662359a128fb" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+<img src="https://github.com/user-attachments/assets/e4a04762-8e90-4135-88be-2dedc9972b9b" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
 
 ### Take A Screenshot
-This is in fact pretty simple.
-* Pause the game.
+This is in fact pretty simple. Press `Page Down` when you start your gaming session and leave it on. So, when you feel taking a shot, do the following:
+* Press `NUMPAD 0` to pause the game.
 * Press `Delete` to disable the HUD
-* Press `Insert` to detach and activate the camera movement
+* Press `Insert` to detach the camera and activate the camera movement
 * Frame, take your shot and go the other way around to get back in game.
 
+Camera also works in cutscenes!
+
 ## Resources 
+* [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/State_of_Mind)
