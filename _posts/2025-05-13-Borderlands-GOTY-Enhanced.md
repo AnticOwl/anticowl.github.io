@@ -168,7 +168,7 @@ Press `Page Down` to enable the camera structure.
 <div> </div>
 
 ### Take A Screenshot
-This is in fact pretty simple.
+This is in fact pretty simple. Press `Page Down` when you start your gaming session and leave it on. So, when you feel taking a shot, do the following:
 * Pause the game.
 * Press `Delete` to disable the HUD
 * Press `Insert` to detach and activate the camera movement
