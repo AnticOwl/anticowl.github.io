@@ -44,12 +44,6 @@ Bindings=(Name="FirstPersonToggle",Command="Camera FirstPerson | setbind RightMo
 Bindings=(Name="ThirdPersonToggle",Command="Camera ThirdPerson | setbind RightMouseButton ThirdPersonZoom | setbind F1 FirstPersonToggle",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
 Bindings=(Name="F1",Command="ThirdPersonToggle",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
 ```
-Just like on the print below.
-
-<div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/02dbcc03-181c-43ca-b217-11abe5e20786" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
-</div>
-<div> </div>
 
 ## Controls
 <style>
@@ -163,9 +157,10 @@ Once you have installed Cheat Engine 7.5 or higher (if not already done), click 
 Press `Page Down` to enable the camera structure.
 
 <div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/07c92f7d-0936-4589-b620-662359a128fb" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+<img src="https://github.com/user-attachments/assets/02dbcc03-181c-43ca-b217-11abe5e20786" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
+
 
 ### Take A Screenshot
 This is in fact pretty simple. Press `Page Down` when you start your gaming session and leave it on. So, when you feel taking a shot, do the following:
