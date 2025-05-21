@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Vanishing of Ethan Carter Redux"
-date:   2023-05-13 08:05:55 +0300
+date:   2025-05-13 08:05:55 +0300
 image:  TVOEC_POST.jpg
 tags:   Screenshooting
 ---
