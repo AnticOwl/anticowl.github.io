@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>37</ID>
+      <Description>"----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>35</ID>
+      <Description>"- Outlast Camera for Steam"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>36</ID>
+      <Description>"- Antic Owl and Akira Fudo"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4027</ID>
+      <Description>"- See Table Extra for info"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>34</ID>
+      <Description>"----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"Auto Attach To Game"</Description>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$lua}
+[ENABLE]
+
+local processName = "OLGame.exe"
+local function onTimer_Tick(timer)
+  if readInteger(processName) == nil then
+    local processId = getProcessIDFromProcessName(processName)
+    if processId and processId ~= getOpenedProcessID() then
+      openProcess(processId)
+    end
+  end
+end
+local autoAttachTimer = createTimer(getMainForm(), true)
+autoAttachTimer.Interval = 1000
+autoAttachTimer.OnTimer = onTimer_Tick
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>5</ID>
+      <Description>"Auto Assemble script"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+assert(OLGame.exe+CB710A,8B 81 F0 30 00 00 41) // should be unique
+define(camStruct,OLGame.exe+CB710A)
+registersymbol(camStruct)
+
+alloc(camStructMem,$1000,OLGame.exe+CB710A)
+registersymbol(camStructMem)
+
+define(pCamStruct,camStructMem+100)
+registersymbol(pCamStruct)
+
+label(code)
+label(return)
+
+camStructMem:
+
+code:
+  mov [pCamStruct],rcx
+  mov eax,[rcx+000030F0]
+  jmp return
+
+camStruct:
+  jmp camStructMem
+  nop
+
+return:
+
+[DISABLE]
+
+camStruct:
+  db 8B 81 F0 30 00 00
+unregistersymbol(pCamStruct)
+unregistersymbol(camStructMem)
+unregistersymbol(camStruct)
+dealloc(camStructMem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: OLGame.exe+CB710A
+
+OLGame.exe+CB70EC: CC                 - int 3 
+OLGame.exe+CB70ED: CC                 - int 3 
+OLGame.exe+CB70EE: CC                 - int 3 
+OLGame.exe+CB70EF: CC                 - int 3 
+OLGame.exe+CB70F0: 8B 81 E4 30 00 00  - mov eax,[rcx+000030E4]
+OLGame.exe+CB70F6: 89 02              - mov [rdx],eax
+OLGame.exe+CB70F8: 8B 81 E8 30 00 00  - mov eax,[rcx+000030E8]
+OLGame.exe+CB70FE: 89 42 04           - mov [rdx+04],eax
+OLGame.exe+CB7101: 8B 81 EC 30 00 00  - mov eax,[rcx+000030EC]
+OLGame.exe+CB7107: 89 42 08           - mov [rdx+08],eax
+// ---------- INJECTING HERE ----------
+OLGame.exe+CB710A: 8B 81 F0 30 00 00  - mov eax,[rcx+000030F0]
+// ---------- DONE INJECTING  ----------
+OLGame.exe+CB7110: 41 89 00           - mov [r8],eax
+OLGame.exe+CB7113: 8B 81 F4 30 00 00  - mov eax,[rcx+000030F4]
+OLGame.exe+CB7119: 41 89 40 04        - mov [r8+04],eax
+OLGame.exe+CB711D: 8B 81 F8 30 00 00  - mov eax,[rcx+000030F8]
+OLGame.exe+CB7123: 41 89 40 08        - mov [r8+08],eax
+OLGame.exe+CB7127: 8B 81 FC 30 00 00  - mov eax,[rcx+000030FC]
+OLGame.exe+CB712D: 41 89 01           - mov [r9],eax
+OLGame.exe+CB7130: C3                 - ret 
+OLGame.exe+CB7131: CC                 - int 3 
+OLGame.exe+CB7132: CC                 - int 3 
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>34</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>8</ID>
+          <Description>"X +30E4"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+30E4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>7</ID>
+          <Description>"Y +30E8"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+30E8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>12</ID>
+          <Description>"Z +30EC"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+30EC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>6</ID>
+          <Description>"Pitch +30F0"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+30f0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>11</ID>
+          <Description>"Yaw +30F4"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+30f4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>10</ID>
+          <Description>"Roll +30F8"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+30f8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>9</ID>
+          <Description>"FOV +30FC"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+30fC</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>13</ID>
+      <Description>"Detach Camera"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>//-- Speed modifier for camera movement
+
+globalalloc(speedModifier,8)
+speedModifier:
+dd (float)7
+
+[ENABLE]
+OLGame.exe+D5DA45:
+  db 90 90 90 90 90 90
+OLGame.exe+D5DA4F:
+  db 90 90 90 90 90 90
+OLGame.exe+D5DA59:
+  db 90 90 90 90 90 90
+OLGame.exe+D5DAC0:
+  db 90 90 90 90 90 90
+OLGame.exe+D5DAC6:
+  db 90 90 90 90 90 90
+OLGame.exe+D5DACC:
+  db 90 90 90 90 90 90
+OLGame.exe+CC948E:
+  db 90 90 90 90 90 90 90 90
+
+{$lua}
+function toDegrees(value)
+  return (value / 32768) * 180
+end
+
+function checkKeys()
+  local speed = readFloat("speedModifier")
+
+  -- Read angles as integers and convert to degrees
+  local pitch = math.rad(toDegrees(readInteger("[pCamStruct]+30F0")))
+  local campitch = readInteger("[pCamStruct]+30F0")
+  local yaw = math.rad(toDegrees(readInteger("[pCamStruct]+30F4")))
+  local camyaw = readInteger("[pCamStruct]+30F4")
+  local roll = math.rad(toDegrees(readInteger("[pCamStruct]+30F8")))
+  local camroll = readInteger("[pCamStruct]+30F8")
+  local fov = readFloat("[pCamStruct]+30FC")
+
+  -- Read camera position
+  local camx = readFloat("[pCamStruct]+30E4")
+  local camy = readFloat("[pCamStruct]+30E8")
+  local camz = readFloat("[pCamStruct]+30EC")
+
+  local siny = math.sin(yaw)
+  local cosy = math.cos(yaw)
+  local sinp = math.sin(pitch)
+  local cosp = math.cos(pitch)
+
+-- print (campitch,fov,pitch,camx,camy,camz)
+
+
+  -- =============================
+  -- CAMERA CONTROL MODE
+  -- =============================
+
+  -- Forward
+  if isKeyPressed(VK_NUMPAD8) then
+    writeFloat("[pCamStruct]+30E4", camx + (cosy * speed))
+    writeFloat("[pCamStruct]+30E8", camy + (siny * speed))
+  end
+
+  -- Backward
+  if isKeyPressed(VK_NUMPAD5) then
+    writeFloat("[pCamStruct]+30E4", camx - (cosy * speed))
+    writeFloat("[pCamStruct]+30E8", camy - (siny * speed))
+  end
+
+  -- Left
+  if isKeyPressed(VK_NUMPAD4) then
+    writeFloat("[pCamStruct]+30E4", camx + (math.cos(yaw - math.rad(90)) * speed))
+    writeFloat("[pCamStruct]+30E8", camy + (math.sin(yaw - math.rad(90)) * speed))
+  end
+  -- Right
+  if isKeyPressed(VK_NUMPAD6) then
+    writeFloat("[pCamStruct]+30E4", camx - (math.cos(yaw - math.rad(90)) * speed))
+    writeFloat("[pCamStruct]+30E8", camy - (math.sin(yaw - math.rad(90)) * speed))
+  end
+
+  -- Up
+  if isKeyPressed(VK_NUMPAD9) then
+    writeFloat("[pCamStruct]+30EC", camz + speed)
+  end
+
+  -- Down
+  if isKeyPressed(VK_NUMPAD7) then
+    writeFloat("[pCamStruct]+30EC", camz - speed)
+  end
+
+  -- Pitch
+  if isKeyPressed(VK_UP) then
+    writeInteger("[pCamStruct]+30F0", campitch + (speed * 40))
+  end
+  if isKeyPressed(VK_DOWN) then
+    writeInteger("[pCamStruct]+30F0", campitch - (speed * 40))
+  end
+
+  -- Yaw
+  if isKeyPressed(VK_LEFT) then
+    writeInteger("[pCamStruct]+30F4", camyaw - (speed * 40))
+  end
+  if isKeyPressed(VK_RIGHT) then
+    writeInteger("[pCamStruct]+30F4", camyaw + (speed * 40))
+  end
+
+  -- Roll
+  if isKeyPressed(VK_NUMPAD1) then
+    writeInteger("[pCamStruct]+30F8", camroll - (speed * 20))
+  end
+  if isKeyPressed(VK_NUMPAD3) then
+    writeInteger("[pCamStruct]+30F8", camroll + (speed * 20))
+  end
+
+  -- FoV
+    if isKeyPressed(VK_ADD) then
+    writeFloat("[pCamStruct]+30FC", fov - (speed * 0.5))
+  end
+    if isKeyPressed(VK_SUBTRACT) then
+    writeFloat("[pCamStruct]+30FC", fov + (speed * 0.5))
+  end
+
+
+  -- Speed Modifiers
+  if isKeyPressed(VK_F) and isKeyPressed(VK_MENU) then
+    writeFloat("speedModifier", 500)
+  elseif isKeyPressed(VK_LCONTROL) then
+    if speed &lt; 5000 then
+      writeFloat("speedModifier", speed + 2)
+    end
+  elseif isKeyPressed(VK_MENU) then
+    writeFloat("speedModifier", 0.5)
+  else
+    writeFloat("speedModifier", 7)
+  end
+end
+
+-- Timer to check key input
+t = createTimer(nil)
+timer_setInterval(t, 10)
+timer_onTimer(t, checkKeys)
+timer_setEnabled(t, true)
+
+
+{$asm}
+[DISABLE]
+OLGame.exe+D5DA45:
+  db 89 87 E4 30 00 00
+OLGame.exe+D5DA4F:
+  db 89 87 E8 30 00 00
+OLGame.exe+D5DA59:
+  db 89 87 EC 30 00 00
+OLGame.exe+D5DAC0:
+  db 89 97 F0 30 00 00
+OLGame.exe+D5DAC6:
+  db 89 87 F4 30 00 00
+OLGame.exe+D5DACC:
+  db 89 8F F8 30 00 00
+OLGame.exe+CC948E:
+  db F3 0F 11 83 FC 30 00 00
+
+
+{$lua}
+timer_setEnabled(t, false)
+
+
+
+
+
+
+
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>45</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26236</ID>
+      <Description>"Grain and Colours (Post Process)"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+aobscanmodule(grain,OLGame.exe,F3 0F 10 80 90 01 00 00 8B) // should be unique
+alloc(newmem,$1000,grain)
+
+label(code)
+label(return)
+label(mGrain)
+
+newmem:
+  mov [mGrain], rax
+
+code:
+  movss xmm0,[rax+00000190]
+  jmp return
+
+mGrain:
+  dq 0
+
+grain:
+  jmp newmem
+  nop 3
+
+return:
+registersymbol(grain)
+registersymbol(mGrain)
+
+[DISABLE]
+
+grain:
+  db F3 0F 10 80 90 01 00 00
+
+unregistersymbol(*)
+dealloc(*)
+
+{
+// ORIGINAL CODE - INJECTION POINT: OLGame.exe+256EE0
+
+OLGame.exe+256EB3: 0F 44 C6                 - cmove eax,esi
+OLGame.exe+256EB6: 89 43 04                 - mov [rbx+04],eax
+OLGame.exe+256EB9: 48 8B CF                 - mov rcx,rdi
+OLGame.exe+256EBC: E8 EF D9 FF FF           - call OLGame.exe+2548B0
+OLGame.exe+256EC1: 48 85 C0                 - test rax,rax
+OLGame.exe+256EC4: 74 3A                    - je OLGame.exe+256F00
+OLGame.exe+256EC6: C7 43 08 01 00 00 00     - mov [rbx+08],00000001
+OLGame.exe+256ECD: 48 8B 88 98 01 00 00     - mov rcx,[rax+00000198]
+OLGame.exe+256ED4: 48 89 4B 0C              - mov [rbx+0C],rcx
+OLGame.exe+256ED8: F3 0F 10 88 94 01 00 00  - movss xmm1,[rax+00000194]
+// ---------- INJECTING HERE ----------
+OLGame.exe+256EE0: F3 0F 10 80 90 01 00 00  - movss xmm0,[rax+00000190]
+// ---------- DONE INJECTING  ----------
+OLGame.exe+256EE8: 8B 80 8C 01 00 00        - mov eax,[rax+0000018C]
+OLGame.exe+256EEE: 89 43 20                 - mov [rbx+20],eax
+OLGame.exe+256EF1: F3 0F 11 43 24           - movss [rbx+24],xmm0
+OLGame.exe+256EF6: F3 0F 11 4B 28           - movss [rbx+28],xmm1
+OLGame.exe+256EFB: 89 73 2C                 - mov [rbx+2C],esi
+OLGame.exe+256EFE: EB 03                    - jmp OLGame.exe+256F03
+OLGame.exe+256F00: 89 73 08                 - mov [rbx+08],esi
+OLGame.exe+256F03: 48 8B C3                 - mov rax,rbx
+OLGame.exe+256F06: 48 8B 5C 24 40           - mov rbx,[rsp+40]
+OLGame.exe+256F0B: 48 8B 74 24 48           - mov rsi,[rsp+48]
+}
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>26237</ID>
+          <Description>"PP - Grain Opacity"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>mGrain</Address>
+          <Offsets>
+            <Offset>190</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26238</ID>
+          <Description>"PP - Grain Scale"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>mGrain</Address>
+          <Offsets>
+            <Offset>194</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26242</ID>
+          <Description>"Red"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>mGrain</Address>
+          <Offsets>
+            <Offset>118</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26243</ID>
+          <Description>"Green"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>mGrain</Address>
+          <Offsets>
+            <Offset>11C</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26244</ID>
+          <Description>"Blue"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>mGrain</Address>
+          <Offsets>
+            <Offset>120</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Code :mov eax,[rcx+000030F0]</Description>
+      <AddressString>OLGame.exe+CB710A</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>89</Byte>
+        <Byte>42</Byte>
+        <Byte>08</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>81</Byte>
+        <Byte>F0</Byte>
+        <Byte>30</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>41</Byte>
+        <Byte>89</Byte>
+        <Byte>00</Byte>
+        <Byte>8B</Byte>
+        <Byte>81</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :movss xmm0,[rcx+000030EC]</Description>
+      <AddressString>OLGame.exe+D5DD9C</AddressString>
+      <Before>
+        <Byte>81</Byte>
+        <Byte>80</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>10</Byte>
+        <Byte>81</Byte>
+        <Byte>EC</Byte>
+        <Byte>30</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>10</Byte>
+        <Byte>99</Byte>
+        <Byte>D8</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :mov eax,[rcx+000030EC]</Description>
+      <AddressString>OLGame.exe+CB7101</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>89</Byte>
+        <Byte>42</Byte>
+        <Byte>04</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>81</Byte>
+        <Byte>EC</Byte>
+        <Byte>30</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>89</Byte>
+        <Byte>42</Byte>
+        <Byte>08</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :subss xmm5,[rbx+000030EC]</Description>
+      <AddressString>OLGame.exe+D00701</AddressString>
+      <Before>
+        <Byte>A3</Byte>
+        <Byte>E8</Byte>
+        <Byte>30</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>5C</Byte>
+        <Byte>AB</Byte>
+        <Byte>EC</Byte>
+        <Byte>30</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>11</Byte>
+        <Byte>4D</Byte>
+        <Byte>1C</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :subss xmm0,[r12+000030EC]</Description>
+      <AddressString>OLGame.exe+CF17B0</AddressString>
+      <Before>
+        <Byte>24</Byte>
+        <Byte>E8</Byte>
+        <Byte>30</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>F3</Byte>
+        <Byte>41</Byte>
+        <Byte>0F</Byte>
+        <Byte>5C</Byte>
+        <Byte>84</Byte>
+        <Byte>24</Byte>
+        <Byte>EC</Byte>
+        <Byte>30</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>59</Byte>
+        <Byte>D2</Byte>
+        <Byte>F3</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :subss xmm0,[rax+08]</Description>
+      <AddressString>OLGame.exe+D2EFBA</AddressString>
+      <Before>
+        <Byte>D2</Byte>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>59</Byte>
+        <Byte>C9</Byte>
+      </Before>
+      <Actual>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>5C</Byte>
+        <Byte>40</Byte>
+        <Byte>08</Byte>
+      </Actual>
+      <After>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>58</Byte>
+        <Byte>D1</Byte>
+        <Byte>F3</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :mov [rdi+000030EC],eax</Description>
+      <AddressString>OLGame.exe+D5DA59</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>41</Byte>
+        <Byte>8B</Byte>
+        <Byte>43</Byte>
+        <Byte>70</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>87</Byte>
+        <Byte>EC</Byte>
+        <Byte>30</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>F3</Byte>
+        <Byte>41</Byte>
+        <Byte>0F</Byte>
+        <Byte>10</Byte>
+        <Byte>43</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :mov [rdi+000030E4],eax</Description>
+      <AddressString>OLGame.exe+D5DA45</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>41</Byte>
+        <Byte>8B</Byte>
+        <Byte>43</Byte>
+        <Byte>68</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>87</Byte>
+        <Byte>E4</Byte>
+        <Byte>30</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>41</Byte>
+        <Byte>8B</Byte>
+        <Byte>43</Byte>
+        <Byte>6C</Byte>
+        <Byte>89</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :mov [rdi+000030E8],eax</Description>
+      <AddressString>OLGame.exe+D5DA4F</AddressString>
+      <Before>
+        <Byte>90</Byte>
+        <Byte>41</Byte>
+        <Byte>8B</Byte>
+        <Byte>43</Byte>
+        <Byte>6C</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>87</Byte>
+        <Byte>E8</Byte>
+        <Byte>30</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>41</Byte>
+        <Byte>8B</Byte>
+        <Byte>43</Byte>
+        <Byte>70</Byte>
+        <Byte>90</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of movss [rbx+000030FC],xmm0</Description>
+      <AddressString>OLGame.exe+CC948E</AddressString>
+      <Before>
+        <Byte>0F</Byte>
+        <Byte>28</Byte>
+        <Byte>74</Byte>
+        <Byte>24</Byte>
+        <Byte>60</Byte>
+      </Before>
+      <Actual>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>11</Byte>
+        <Byte>83</Byte>
+        <Byte>FC</Byte>
+        <Byte>30</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>44</Byte>
+        <Byte>0F</Byte>
+        <Byte>28</Byte>
+        <Byte>54</Byte>
+        <Byte>24</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>speedModifier</Name>
+      <Address>01540000</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+</CheatTable>
