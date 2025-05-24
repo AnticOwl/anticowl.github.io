@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>37</ID>
+      <Description>"----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>35</ID>
+      <Description>"- Outlast 2 Camera for Steam"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>36</ID>
+      <Description>"- Antic Owl and Akira Fudo"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4027</ID>
+      <Description>"- See Table Extra for info"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>34</ID>
+      <Description>"----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"Auto Attach To Game"</Description>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$lua}
+[ENABLE]
+
+local processName = "Outlast2.exe"
+local function onTimer_Tick(timer)
+  if readInteger(processName) == nil then
+    local processId = getProcessIDFromProcessName(processName)
+    if processId and processId ~= getOpenedProcessID() then
+      openProcess(processId)
+    end
+  end
+end
+local autoAttachTimer = createTimer(getMainForm(), true)
+autoAttachTimer.Interval = 1000
+autoAttachTimer.OnTimer = onTimer_Tick
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>6</ID>
+      <Description>"Camera Structure - Leave ON"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+assert("Outlast2.exe"+ECE76A,8B 81 80 7E 00 00 41) // should be unique
+define(camStruct,"Outlast2.exe"+ECE76A)
+registersymbol(camStruct)
+
+alloc(camStructMem,$1000,"Outlast2.exe"+ECE76A)
+registersymbol(camStructMem)
+
+define(pcamStruct,camStructMem+100)
+registersymbol(pcamStruct)
+
+label(code)
+label(return)
+
+camStructMem:
+
+code:
+  mov [pcamStruct], rcx
+  mov eax,[rcx+00007E80]
+  jmp return
+
+camStruct:
+  jmp camStructMem
+  nop
+return:
+
+[DISABLE]
+
+camStruct:
+  db 8B 81 80 7E 00 00
+unregistersymbol(camStructMem)
+unregistersymbol(pcamStruct)
+unregistersymbol(camStruct)
+dealloc(camStrcutMem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: Outlast2.exe+ECE76A
+
+Outlast2.exe+ECE74C: CC                    - int 3 
+Outlast2.exe+ECE74D: CC                    - int 3 
+Outlast2.exe+ECE74E: CC                    - int 3 
+Outlast2.exe+ECE74F: CC                    - int 3 
+Outlast2.exe+ECE750: 8B 81 74 7E 00 00     - mov eax,[rcx+00007E74]
+Outlast2.exe+ECE756: 89 02                 - mov [rdx],eax
+Outlast2.exe+ECE758: 8B 81 78 7E 00 00     - mov eax,[rcx+00007E78]
+Outlast2.exe+ECE75E: 89 42 04              - mov [rdx+04],eax
+Outlast2.exe+ECE761: 8B 81 7C 7E 00 00     - mov eax,[rcx+00007E7C]
+Outlast2.exe+ECE767: 89 42 08              - mov [rdx+08],eax
+// ---------- INJECTING HERE ----------
+Outlast2.exe+ECE76A: 8B 81 80 7E 00 00     - mov eax,[rcx+00007E80]
+// ---------- DONE INJECTING  ----------
+Outlast2.exe+ECE770: 41 89 00              - mov [r8],eax
+Outlast2.exe+ECE773: 8B 81 84 7E 00 00     - mov eax,[rcx+00007E84]
+Outlast2.exe+ECE779: 41 89 40 04           - mov [r8+04],eax
+Outlast2.exe+ECE77D: 8B 81 88 7E 00 00     - mov eax,[rcx+00007E88]
+Outlast2.exe+ECE783: 41 89 40 08           - mov [r8+08],eax
+Outlast2.exe+ECE787: 48 8B 05 CA 17 2D 01  - mov rax,[Outlast2.exe+219FF58]
+Outlast2.exe+ECE78E: 48 85 C0              - test rax,rax
+Outlast2.exe+ECE791: 74 7A                 - je Outlast2.exe+ECE80D
+Outlast2.exe+ECE793: 48 8B 80 60 0C 00 00  - mov rax,[rax+00000C60]
+Outlast2.exe+ECE79A: 48 85 C0              - test rax,rax
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>34</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>125</ID>
+          <Description>"X +00007E74"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pcamStruct]+00007E74</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>131</ID>
+          <Description>"Y +00007E78"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pcamStruct]+00007E78</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>130</ID>
+          <Description>"Z +00007E7C"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pcamStruct]+00007E7C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>129</ID>
+          <Description>"Pitch +00007E80"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pcamStruct]+00007E80</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>128</ID>
+          <Description>"Yaw +00007E84"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pcamStruct]+00007E84</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>127</ID>
+          <Description>"Roll +00007E88"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pcamStruct]+00007E88</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>126</ID>
+          <Description>"FOV +00007E8C"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct]+00007E8C</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>124</ID>
+      <Description>"Detach Camera"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>//-- Speed modifier for camera movement
+
+globalalloc(speedModifier,8)
+speedModifier:
+dd (float)7
+
+{$asm}
+[ENABLE]
+//Re-attache X
+Outlast2.exe+ECEB20:
+  db 90 90 90 90 90 90
+//Re-attache Y
+Outlast2.exe+ECEB29:
+  db 90 90 90 90 90 90
+//Re-attache Z
+Outlast2.exe+ECEB32:
+  db 90 90 90 90 90 90
+//Re-attache Pitch
+Outlast2.exe+ECEB9C:
+  db 90 90 90 90 90 90
+//Re-attach Yaw
+Outlast2.exe+ECEBA2:
+  db 90 90 90 90 90 90
+//Re-attache Roll
+Outlast2.exe+ECEBA8:
+  db 90 90 90 90 90 90
+
+{$lua}
+function toDegrees(value)
+  return (value / 32768) * 180
+end
+
+function checkKeys()
+  local speed = readFloat("speedModifier")
+
+  -- Read angles as integers and convert to degrees
+  local pitch = math.rad(toDegrees(readInteger("[pCamStruct]+7E80")))
+  local campitch = readInteger("[pCamStruct]+7E80")
+  local yaw = math.rad(toDegrees(readInteger("[pCamStruct]+7E84")))
+  local camyaw = readInteger("[pCamStruct]+7E84")
+  local roll = math.rad(toDegrees(readInteger("[pCamStruct]+7E88")))
+  local camroll = readInteger("[pCamStruct]+7E88")
+  local fov = readFloat("[pCamStruct]+7E8C")
+
+  -- Read camera position
+  local camx = readFloat("[pCamStruct]+7E74")
+  local camy = readFloat("[pCamStruct]+7E78")
+  local camz = readFloat("[pCamStruct]+7E7C")
+
+  local siny = math.sin(yaw)
+  local cosy = math.cos(yaw)
+  local sinp = math.sin(pitch)
+  local cosp = math.cos(pitch)
+
+-- print (campitch,fov,pitch,camx,camy,camz)
+
+
+  -- =============================
+  -- CAMERA CONTROL MODE
+  -- =============================
+  if isKeyPressed(VK_ADD) then
+    local adjustSpeed = speed * 0.5
+
+    -- Pitch
+    if isKeyPressed(VK_NUMPAD8) then
+    writeInteger("[pCamStruct]+7E80", campitch + (speed * 40))
+    end
+    if isKeyPressed(VK_NUMPAD5) then
+    writeInteger("[pCamStruct]+7E80", campitch - (speed * 40))
+    end
+
+    -- Yaw
+    if isKeyPressed(VK_NUMPAD4) then
+    writeInteger("[pCamStruct]+7E84", camyaw - (speed * 40))
+    end
+    if isKeyPressed(VK_NUMPAD6) then
+    writeInteger("[pCamStruct]+7E84", camyaw + (speed * 40))
+    end
+
+    -- FOV
+    if isKeyPressed(VK_NUMPAD7) then
+    writeFloat("[pCamStruct]+7E8C", fov - (speed * 0.5))
+    end
+    if isKeyPressed(VK_NUMPAD9) then
+    writeFloat("[pCamStruct]+7E8C", fov + (speed * 0.5))
+    end
+
+  else
+  -- Forward
+  if isKeyPressed(VK_NUMPAD8) then
+    writeFloat("[pCamStruct]+7E74", camx + (cosy * speed))
+    writeFloat("[pCamStruct]+7E78", camy + (siny * speed))
+  end
+
+  -- Backward
+  if isKeyPressed(VK_NUMPAD5) then
+    writeFloat("[pCamStruct]+7E74", camx - (cosy * speed))
+    writeFloat("[pCamStruct]+7E78", camy - (siny * speed))
+  end
+
+  -- Left
+  if isKeyPressed(VK_NUMPAD4) then
+    writeFloat("[pCamStruct]+7E74", camx + (math.cos(yaw - math.rad(90)) * speed))
+    writeFloat("[pCamStruct]+7E78", camy + (math.sin(yaw - math.rad(90)) * speed))
+  end
+
+  -- Right
+  if isKeyPressed(VK_NUMPAD6) then
+    writeFloat("[pCamStruct]+7E74", camx - (math.cos(yaw - math.rad(90)) * speed))
+    writeFloat("[pCamStruct]+7E78", camy - (math.sin(yaw - math.rad(90)) * speed))
+  end
+
+  -- Up
+  if isKeyPressed(VK_NUMPAD9) then
+    writeFloat("[pCamStruct]+7E7C", camz + (speed * 0.5))
+  end
+
+  -- Down
+  if isKeyPressed(VK_NUMPAD7) then
+    writeFloat("[pCamStruct]+7E7C", camz - (speed * 0.5))
+  end
+
+  -- Roll
+  if isKeyPressed(VK_NUMPAD1) then
+    writeInteger("[pCamStruct]+7E88", camroll - (speed * 20))
+  end
+  if isKeyPressed(VK_NUMPAD3) then
+    writeInteger("[pCamStruct]+7E88", camroll + (speed * 20))
+  end
+end
+
+  -- Speed Modifiers
+  if isKeyPressed(VK_F) and isKeyPressed(VK_MENU) then
+    writeFloat("speedModifier", 500)
+  elseif isKeyPressed(VK_LCONTROL) then
+    if speed &lt; 5000 then
+      writeFloat("speedModifier", speed + 2)
+    end
+  elseif isKeyPressed(VK_MENU) then
+    writeFloat("speedModifier", 0.5)
+  else
+    writeFloat("speedModifier", 7)
+  end
+end
+
+-- Timer to check key input
+t = createTimer(nil)
+timer_setInterval(t, 10)
+timer_onTimer(t, checkKeys)
+timer_setEnabled(t, true)
+
+{$asm}
+[DISABLE]
+//Re-attache X
+Outlast2.exe+ECEB20:
+  db 89 86 74 7E 00 00
+//Re-attache Y
+Outlast2.exe+ECEB29:
+  db 89 86 78 7E 00 00
+//Re-attache Z
+Outlast2.exe+ECEB32:
+  db 89 86 7C 7E 00 00
+//Re-attache Pitch
+Outlast2.exe+ECEB9C:
+  db 89 96 80 7E 00 00
+//Re-attach Yaw
+Outlast2.exe+ECEBA2:
+  db 89 86 84 7E 00 00
+//Re-attache Roll
+Outlast2.exe+ECEBA8:
+  db 89 8E 88 7E 00 00
+
+{$lua}
+timer_setEnabled(t, false)
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>45</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>29394</ID>
+      <Description>"Disable Pause Menu"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+Outlast2.exe+E4C9B8:
+ db 00 00 00 00
+
+[DISABLE]
+Outlast2.exe+E4C9B8:
+ db 00 00 80 3F
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>46</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26237</ID>
+      <Description>"Post Process"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+aobscanmodule(postPro,Outlast2.exe,F3 0F 58 86 E4 00 00 00 F3 0F 11 87) // should be unique
+alloc(newmem,$1000,postPro)
+
+label(code)
+label(return)
+label(mPostp)
+
+newmem:
+  mov [mPostp], rsi
+
+code:
+  addss xmm0,[rsi+000000E4]
+  jmp return
+
+mPostp:
+  dq 0
+
+postPro:
+  jmp newmem
+  nop 3
+
+return:
+
+registersymbol(mPostp)
+registersymbol(postPro)
+
+[DISABLE]
+
+postPro:
+  db F3 0F 58 86 E4 00 00 00
+
+unregistersymbol(*)
+dealloc(*)
+
+{
+// ORIGINAL CODE - INJECTION POINT: Outlast2.exe+195B3E
+
+Outlast2.exe+195B10: 74 0A                    - je Outlast2.exe+195B1C
+Outlast2.exe+195B12: F3 0F 10 83 40 01 00 00  - movss xmm0,[rbx+00000140]
+Outlast2.exe+195B1A: EB 08                    - jmp Outlast2.exe+195B24
+Outlast2.exe+195B1C: F3 0F 10 86 E0 00 00 00  - movss xmm0,[rsi+000000E0]
+Outlast2.exe+195B24: F3 0F 11 87 8C 00 00 00  - movss [rdi+0000008C],xmm0
+Outlast2.exe+195B2C: 48 85 DB                 - test rbx,rbx
+Outlast2.exe+195B2F: 74 0A                    - je Outlast2.exe+195B3B
+Outlast2.exe+195B31: F3 0F 10 83 30 01 00 00  - movss xmm0,[rbx+00000130]
+Outlast2.exe+195B39: EB 03                    - jmp Outlast2.exe+195B3E
+Outlast2.exe+195B3B: 0F 28 C6                 - movaps xmm0,xmm6
+// ---------- INJECTING HERE ----------
+Outlast2.exe+195B3E: F3 0F 58 86 E4 00 00 00  - addss xmm0,[rsi+000000E4]
+// ---------- DONE INJECTING  ----------
+Outlast2.exe+195B46: F3 0F 11 87 90 00 00 00  - movss [rdi+00000090],xmm0
+Outlast2.exe+195B4E: 39 2D 38 AF E3 01        - cmp [Outlast2.exe+1FD0A8C],ebp
+Outlast2.exe+195B54: 75 1E                    - jne Outlast2.exe+195B74
+Outlast2.exe+195B56: 89 6F 18                 - mov [rdi+18],ebp
+Outlast2.exe+195B59: 0F 2E 77 20              - ucomiss xmm6,[rdi+20]
+Outlast2.exe+195B5D: 74 0A                    - je Outlast2.exe+195B69
+Outlast2.exe+195B5F: F3 0F 10 05 59 2D A7 01  - movss xmm0,[Outlast2.exe+1C088C0]
+Outlast2.exe+195B67: EB 03                    - jmp Outlast2.exe+195B6C
+Outlast2.exe+195B69: 0F 28 C6                 - movaps xmm0,xmm6
+Outlast2.exe+195B6C: F3 0F 11 47 20           - movss [rdi+20],xmm0
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>35</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>26238</ID>
+          <Description>"Manual Exposure"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>mPostp</Address>
+          <Offsets>
+            <Offset>E4</Offset>
+          </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Increase Value</Action>
+              <Keys>
+                <Key>112</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>0</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Decrease Value</Action>
+              <Keys>
+                <Key>17</Key>
+                <Key>112</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>1</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Increase Value</Action>
+              <Keys>
+                <Key>16</Key>
+                <Key>112</Key>
+              </Keys>
+              <Value>0.01</Value>
+              <ID>2</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Decrease Value</Action>
+              <Keys>
+                <Key>17</Key>
+                <Key>16</Key>
+                <Key>112</Key>
+              </Keys>
+              <Value>0.01</Value>
+              <ID>3</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26239</ID>
+          <Description>"Red"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>mPostp</Address>
+          <Offsets>
+            <Offset>144</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26240</ID>
+          <Description>"Green"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>mPostp</Address>
+          <Offsets>
+            <Offset>148</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26241</ID>
+          <Description>"Blue"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>mPostp</Address>
+          <Offsets>
+            <Offset>14C</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26243</ID>
+          <Description>"Lens Flare Intensity"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>mPostp</Address>
+          <Offsets>
+            <Offset>18C</Offset>
+          </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Increase Value</Action>
+              <Keys>
+                <Key>116</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>0</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Decrease Value</Action>
+              <Keys>
+                <Key>17</Key>
+                <Key>116</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>1</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Increase Value</Action>
+              <Keys>
+                <Key>16</Key>
+                <Key>116</Key>
+              </Keys>
+              <Value>0.01</Value>
+              <ID>2</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Decrease Value</Action>
+              <Keys>
+                <Key>17</Key>
+                <Key>16</Key>
+                <Key>116</Key>
+              </Keys>
+              <Value>0.01</Value>
+              <ID>3</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26242</ID>
+          <Description>"Lens Flare Resolution"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>mPostp</Address>
+          <Offsets>
+            <Offset>188</Offset>
+          </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Increase Value</Action>
+              <Keys>
+                <Key>117</Key>
+              </Keys>
+              <Value>1</Value>
+              <ID>0</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Decrease Value</Action>
+              <Keys>
+                <Key>16</Key>
+                <Key>117</Key>
+              </Keys>
+              <Value>1</Value>
+              <ID>1</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26244</ID>
+          <Description>"Grain Scale"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>mPostp</Address>
+          <Offsets>
+            <Offset>264</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26245</ID>
+          <Description>"Grain Opacity"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>mPostp</Address>
+          <Offsets>
+            <Offset>260</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Change of mov [r10],eax</Description>
+      <AddressString>Outlast2.exe+E5C91</AddressString>
+      <Before>
+        <Byte>75</Byte>
+        <Byte>07</Byte>
+        <Byte>41</Byte>
+        <Byte>8B</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>41</Byte>
+        <Byte>89</Byte>
+        <Byte>02</Byte>
+      </Actual>
+      <After>
+        <Byte>C3</Byte>
+        <Byte>8B</Byte>
+        <Byte>41</Byte>
+        <Byte>74</Byte>
+        <Byte>49</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of movss [r9],xmm1</Description>
+      <AddressString>Outlast2.exe+ECE507</AddressString>
+      <Before>
+        <Byte>89</Byte>
+        <Byte>90</Byte>
+        <Byte>7E</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>F3</Byte>
+        <Byte>41</Byte>
+        <Byte>0F</Byte>
+        <Byte>11</Byte>
+        <Byte>09</Byte>
+      </Actual>
+      <After>
+        <Byte>90</Byte>
+        <Byte>48</Byte>
+        <Byte>8D</Byte>
+        <Byte>15</Byte>
+        <Byte>6C</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of movss [r9],xmm1</Description>
+      <AddressString>Outlast2.exe+ECE507</AddressString>
+      <Before>
+        <Byte>89</Byte>
+        <Byte>90</Byte>
+        <Byte>7E</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>F3</Byte>
+        <Byte>41</Byte>
+        <Byte>0F</Byte>
+        <Byte>11</Byte>
+        <Byte>09</Byte>
+      </Actual>
+      <After>
+        <Byte>C3</Byte>
+        <Byte>48</Byte>
+        <Byte>8D</Byte>
+        <Byte>15</Byte>
+        <Byte>6C</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :mov [rsi+00007E80],edx</Description>
+      <AddressString>Outlast2.exe+ECEB9C</AddressString>
+      <Before>
+        <Byte>2D</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>01</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>96</Byte>
+        <Byte>80</Byte>
+        <Byte>7E</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>89</Byte>
+        <Byte>86</Byte>
+        <Byte>84</Byte>
+        <Byte>7E</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov [rsi+00007E74],eax</Description>
+      <AddressString>Outlast2.exe+ECEB20</AddressString>
+      <Before>
+        <Byte>D3</Byte>
+        <Byte>00</Byte>
+        <Byte>8B</Byte>
+        <Byte>42</Byte>
+        <Byte>70</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>86</Byte>
+        <Byte>74</Byte>
+        <Byte>7E</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>42</Byte>
+        <Byte>74</Byte>
+        <Byte>89</Byte>
+        <Byte>86</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov [rsi+00007E78],eax</Description>
+      <AddressString>Outlast2.exe+ECEB29</AddressString>
+      <Before>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>8B</Byte>
+        <Byte>42</Byte>
+        <Byte>74</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>86</Byte>
+        <Byte>78</Byte>
+        <Byte>7E</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>42</Byte>
+        <Byte>78</Byte>
+        <Byte>89</Byte>
+        <Byte>86</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov eax,[rcx+00000240]</Description>
+      <AddressString>Outlast2.exe+38A88F</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>49</Byte>
+        <Byte>89</Byte>
+        <Byte>40</Byte>
+        <Byte>24</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>81</Byte>
+        <Byte>40</Byte>
+        <Byte>02</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>41</Byte>
+        <Byte>89</Byte>
+        <Byte>40</Byte>
+        <Byte>30</Byte>
+        <Byte>8B</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of cmp byte ptr [rdi],-7F</Description>
+      <AddressString>Outlast2.exe+E4C9BA</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>80</Byte>
+        <Byte>3F</Byte>
+        <Byte>81</Byte>
+      </Actual>
+      <After>
+        <Byte>4E</Byte>
+        <Byte>08</Byte>
+        <Byte>00</Byte>
+        <Byte>40</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mulss xmm6,[r13+00000608]</Description>
+      <AddressString>Outlast2.exe+591C2D</AddressString>
+      <Before>
+        <Byte>72</Byte>
+        <Byte>03</Byte>
+        <Byte>0F</Byte>
+        <Byte>28</Byte>
+        <Byte>F0</Byte>
+      </Before>
+      <Actual>
+        <Byte>F3</Byte>
+        <Byte>41</Byte>
+        <Byte>0F</Byte>
+        <Byte>59</Byte>
+        <Byte>B5</Byte>
+        <Byte>08</Byte>
+        <Byte>06</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>49</Byte>
+        <Byte>8B</Byte>
+        <Byte>87</Byte>
+        <Byte>88</Byte>
+        <Byte>01</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>_fova</Name>
+      <Address>07360000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>_cor</Name>
+      <Address>08A50000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>_cafov</Name>
+      <Address>07630000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>_fovik</Name>
+      <Address>06230010</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>_fov</Name>
+      <Address>06230000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>_fovk</Name>
+      <Address>064D0010</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>_op</Name>
+      <Address>07350020</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>gof</Name>
+      <Address>13F755C8E</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>_player</Name>
+      <Address>5AE21950</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>corz</Name>
+      <Address>14082C71B</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>_camfov</Name>
+      <Address>40B504B0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>speedModifier</Name>
+      <Address>19E841F0000</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <Comments>Key	Description
+NUMPAD 8,5,4,6	Forward, backward, left and right
+NUMPAD 7,9	Camera up and down
+NUMPAD 1,3	Camera roll
+NUMPAD+ + NUMPAD 8,5	Pitch up and down
+NUMPAD+ + NUMPAD 4,6	Yaw left and right
+NUMPAD+ + NUMPAD 7,9	Zoom in an out
+
+
+Del	Disable HUD
+Page Down	Enable camera structure
+Ins	Enable camera movements
+End	Enable Post Processing
+
+
+Left Control	Fast camera movements
+Left Alt	Slow camera movements</Comments>
+</CheatTable>
