@@ -62,7 +62,7 @@ Tokyo's population has vanished, and deadly supernatural forces prowl the street
     </thead>
     <tbody>
         <tr>
-            <td>NUMPAD 85,4,6</td>
+            <td>NUMPAD 8,5,4,6</td>
             <td>Forward, backward, left and right</td>
         </tr>
         <tr>
