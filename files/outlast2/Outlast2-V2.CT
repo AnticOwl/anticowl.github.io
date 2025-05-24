@@ -502,25 +502,6 @@ Outlast2.exe+195B6C: F3 0F 11 47 20           - movss [rdi+20],xmm0
               <Value>0.1</Value>
               <ID>1</ID>
             </Hotkey>
-            <Hotkey>
-              <Action>Increase Value</Action>
-              <Keys>
-                <Key>16</Key>
-                <Key>112</Key>
-              </Keys>
-              <Value>0.01</Value>
-              <ID>2</ID>
-            </Hotkey>
-            <Hotkey>
-              <Action>Decrease Value</Action>
-              <Keys>
-                <Key>17</Key>
-                <Key>16</Key>
-                <Key>112</Key>
-              </Keys>
-              <Value>0.01</Value>
-              <ID>3</ID>
-            </Hotkey>
           </Hotkeys>
         </CheatEntry>
         <CheatEntry>
@@ -532,6 +513,25 @@ Outlast2.exe+195B6C: F3 0F 11 47 20           - movss [rdi+20],xmm0
           <Offsets>
             <Offset>144</Offset>
           </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Increase Value</Action>
+              <Keys>
+                <Key>113</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>0</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Decrease Value</Action>
+              <Keys>
+                <Key>17</Key>
+                <Key>113</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>1</ID>
+            </Hotkey>
+          </Hotkeys>
         </CheatEntry>
         <CheatEntry>
           <ID>26240</ID>
@@ -542,6 +542,25 @@ Outlast2.exe+195B6C: F3 0F 11 47 20           - movss [rdi+20],xmm0
           <Offsets>
             <Offset>148</Offset>
           </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Increase Value</Action>
+              <Keys>
+                <Key>114</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>0</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Decrease Value</Action>
+              <Keys>
+                <Key>17</Key>
+                <Key>114</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>1</ID>
+            </Hotkey>
+          </Hotkeys>
         </CheatEntry>
         <CheatEntry>
           <ID>26241</ID>
@@ -552,6 +571,25 @@ Outlast2.exe+195B6C: F3 0F 11 47 20           - movss [rdi+20],xmm0
           <Offsets>
             <Offset>14C</Offset>
           </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Increase Value</Action>
+              <Keys>
+                <Key>115</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>0</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Decrease Value</Action>
+              <Keys>
+                <Key>17</Key>
+                <Key>115</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>1</ID>
+            </Hotkey>
+          </Hotkeys>
         </CheatEntry>
         <CheatEntry>
           <ID>26243</ID>
@@ -622,7 +660,7 @@ Outlast2.exe+195B6C: F3 0F 11 47 20           - movss [rdi+20],xmm0
             <Hotkey>
               <Action>Decrease Value</Action>
               <Keys>
-                <Key>16</Key>
+                <Key>17</Key>
                 <Key>117</Key>
               </Keys>
               <Value>1</Value>
@@ -639,6 +677,25 @@ Outlast2.exe+195B6C: F3 0F 11 47 20           - movss [rdi+20],xmm0
           <Offsets>
             <Offset>264</Offset>
           </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Increase Value</Action>
+              <Keys>
+                <Key>120</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>0</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Decrease Value</Action>
+              <Keys>
+                <Key>17</Key>
+                <Key>120</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>1</ID>
+            </Hotkey>
+          </Hotkeys>
         </CheatEntry>
         <CheatEntry>
           <ID>26245</ID>
@@ -649,6 +706,25 @@ Outlast2.exe+195B6C: F3 0F 11 47 20           - movss [rdi+20],xmm0
           <Offsets>
             <Offset>260</Offset>
           </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Increase Value</Action>
+              <Keys>
+                <Key>121</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>0</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Decrease Value</Action>
+              <Keys>
+                <Key>17</Key>
+                <Key>121</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>1</ID>
+            </Hotkey>
+          </Hotkeys>
         </CheatEntry>
       </CheatEntries>
     </CheatEntry>
@@ -931,7 +1007,7 @@ Outlast2.exe+195B6C: F3 0F 11 47 20           - movss [rdi+20],xmm0
     </SymbolEntry>
     <SymbolEntry>
       <Name>speedModifier</Name>
-      <Address>19E841F0000</Address>
+      <Address>15885FE0000</Address>
     </SymbolEntry>
   </UserdefinedSymbols>
   <Comments>Key	Description
@@ -941,14 +1017,11 @@ NUMPAD 1,3	Camera roll
 NUMPAD+ + NUMPAD 8,5	Pitch up and down
 NUMPAD+ + NUMPAD 4,6	Yaw left and right
 NUMPAD+ + NUMPAD 7,9	Zoom in an out
-
-
 Del	Disable HUD
 Page Down	Enable camera structure
 Ins	Enable camera movements
 End	Enable Post Processing
-
-
 Left Control	Fast camera movements
-Left Alt	Slow camera movements</Comments>
+Left Alt	Slow camera movements
+</Comments>
 </CheatTable>
