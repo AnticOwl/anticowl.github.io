@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>37</ID>
+      <Description>"--------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>35</ID>
+      <Description>"- Dishonored Camera for Xbox Gamepass"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>36</ID>
+      <Description>"- Antic Owl"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>39</ID>
+      <Description>"- See Table Extra for info"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>34</ID>
+      <Description>"--------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8397</ID>
+      <Description>"Auto Attach To Game"</Description>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$lua}
+[ENABLE]
+
+local processName = "Dishonored.exe"
+local function onTimer_Tick(timer)
+  if readInteger(processName) == nil then
+    local processId = getProcessIDFromProcessName(processName)
+    if processId and processId ~= getOpenedProcessID() then
+      openProcess(processId)
+    end
+  end
+end
+local autoAttachTimer = createTimer(getMainForm(), true)
+autoAttachTimer.Interval = 1000
+autoAttachTimer.OnTimer = onTimer_Tick
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26233</ID>
+      <Description>"Camera Structure - Leave ON"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+assert("Dishonored.exe"+2651E8,8B 81 A8 03 00 00 89 45) // should be unique
+define(camStruct,"Dishonored.exe"+2651E8)
+registersymbol(camStruct)
+
+alloc(camStructMem,$1000,"Dishonored.exe"+2651E8)
+registersymbol(camStructMem)
+
+define(pCamStruct,camStructMem+100)
+registersymbol(pCamStruct)
+
+label(code)
+label(return)
+
+camStructMem:
+
+code:
+  mov [pCamStruct],rcx
+  mov eax,[rcx+000003A8]
+  jmp return
+
+camStruct:
+  jmp camStructMem
+  nop
+
+return:
+
+[DISABLE]
+
+camStrcut:
+  db 8B 81 A8 03 00 00
+unregistersymbol(pCamStruct)
+unregistersymbol(camStructMem)
+unregistersymbol(camStruct)
+dealloc(camStructMem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: Dishonored.exe+2651E8
+
+Dishonored.exe+2651B5: 4C 8D 84 24 90 00 00 00  - lea r8,[rsp+00000090]
+Dishonored.exe+2651BD: 45 33 C9                 - xor r9d,r9d
+Dishonored.exe+2651C0: 48 8B D0                 - mov rdx,rax
+Dishonored.exe+2651C3: 49 8B CC                 - mov rcx,r12
+Dishonored.exe+2651C6: FF 93 D8 01 00 00        - call qword ptr [rbx+000001D8]
+Dishonored.exe+2651CC: 48 8B 9C 24 98 00 00 00  - mov rbx,[rsp+00000098]
+Dishonored.exe+2651D4: 4C 8B A4 24 A0 00 00 00  - mov r12,[rsp+000000A0]
+Dishonored.exe+2651DC: 48 8B 8F 44 04 00 00     - mov rcx,[rdi+00000444]
+Dishonored.exe+2651E3: 48 85 C9                 - test rcx,rcx
+Dishonored.exe+2651E6: 74 3D                    - je Dishonored.exe+265225
+// ---------- INJECTING HERE ----------
+Dishonored.exe+2651E8: 8B 81 A8 03 00 00        - mov eax,[rcx+000003A8]
+// ---------- DONE INJECTING  ----------
+Dishonored.exe+2651EE: 89 45 00                 - mov [rbp+00],eax
+Dishonored.exe+2651F1: 8B 81 AC 03 00 00        - mov eax,[rcx+000003AC]
+Dishonored.exe+2651F7: 89 45 04                 - mov [rbp+04],eax
+Dishonored.exe+2651FA: 8B 81 B0 03 00 00        - mov eax,[rcx+000003B0]
+Dishonored.exe+265200: 89 45 08                 - mov [rbp+08],eax
+Dishonored.exe+265203: 8B 81 B4 03 00 00        - mov eax,[rcx+000003B4]
+Dishonored.exe+265209: 89 06                    - mov [rsi],eax
+Dishonored.exe+26520B: 8B 81 B8 03 00 00        - mov eax,[rcx+000003B8]
+Dishonored.exe+265211: 89 46 04                 - mov [rsi+04],eax
+Dishonored.exe+265214: 8B 81 BC 03 00 00        - mov eax,[rcx+000003BC]
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>34</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>26241</ID>
+          <Description>"X +3A8"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct] +3A8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26237</ID>
+          <Description>"Y +3AC"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct] +3AC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26236</ID>
+          <Description>"Z +3B0"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct] +3B0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26240</ID>
+          <Description>"Pitch +3B4"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct] +3B4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26239</ID>
+          <Description>"Yaw +3B8"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct] +3B8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26238</ID>
+          <Description>"Roll + 3BC"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct] +3BC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26242</ID>
+          <Description>"FOV +3C0"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct] +3C0</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26243</ID>
+      <Description>"Detach Camera"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>//-- Speed modifier for camera movement
+
+globalalloc(speedModifier,8)
+speedModifier:
+dd (float)7
+
+[ENABLE]
+Dishonored.exe+261E28:
+  db 90 90 90 90 90 90
+Dishonored.exe+261E31:
+  db 90 90 90 90 90 90
+Dishonored.exe+261E3A:
+  db 90 90 90 90 90 90
+Dishonored.exe+261E43:
+  db 90 90 90 90 90 90
+Dishonored.exe+261E4C:
+  db 90 90 90 90 90 90
+Dishonored.exe+261E55:
+  db 90 90 90 90 90 90
+Dishonored.exe+261E5E:
+  db 90 90 90 90 90 90
+
+{$lua}
+function toDegrees(value)
+  return (value / 32768) * 180
+end
+
+function checkKeys()
+  local speed = readFloat("speedModifier")
+
+  -- Read angles as integers and convert to degrees
+  local pitch = math.rad(toDegrees(readInteger("[pCamStruct]+3B4")))
+  local campitch = readInteger("[pCamStruct]+3B4")
+  local yaw = math.rad(toDegrees(readInteger("[pCamStruct]+3B8")))
+  local camyaw = readInteger("[pCamStruct]+3B8")
+  local roll = math.rad(toDegrees(readInteger("[pCamStruct]+3BC")))
+  local camroll = readInteger("[pCamStruct]+3BC")
+  local fov = readFloat("[pCamStruct]+3C0")
+
+  -- Read camera position
+  local camx = readFloat("[pCamStruct]+3A8")
+  local camy = readFloat("[pCamStruct]+3AC")
+  local camz = readFloat("[pCamStruct]+3B0")
+
+  local siny = math.sin(yaw)
+  local cosy = math.cos(yaw)
+  local sinp = math.sin(pitch)
+  local cosp = math.cos(pitch)
+
+-- print (campitch,fov,pitch,camx,camy,camz)
+
+
+  -- =============================
+  -- CAMERA CONTROL MODE
+  -- =============================
+
+  -- Forward
+  if isKeyPressed(VK_NUMPAD8) then
+    writeFloat("[pCamStruct]+3A8", camx + (cosy * speed))
+    writeFloat("[pCamStruct]+3AC", camy + (siny * speed))
+  end
+
+  -- Backward
+  if isKeyPressed(VK_NUMPAD5) then
+    writeFloat("[pCamStruct]+3A8", camx - (cosy * speed))
+    writeFloat("[pCamStruct]+3AC", camy - (siny * speed))
+  end
+
+  -- Left
+  if isKeyPressed(VK_NUMPAD4) then
+    writeFloat("[pCamStruct]+3A8", camx + (math.cos(yaw - math.rad(90)) * speed))
+    writeFloat("[pCamStruct]+3AC", camy + (math.sin(yaw - math.rad(90)) * speed))
+  end
+  -- Right
+  if isKeyPressed(VK_NUMPAD6) then
+    writeFloat("[pCamStruct]+3A8", camx - (math.cos(yaw - math.rad(90)) * speed))
+    writeFloat("[pCamStruct]+3AC", camy - (math.sin(yaw - math.rad(90)) * speed))
+  end
+
+  -- Up
+  if isKeyPressed(VK_NUMPAD9) then
+    writeFloat("[pCamStruct]+3B0", camz + speed)
+  end
+
+  -- Down
+  if isKeyPressed(VK_NUMPAD7) then
+    writeFloat("[pCamStruct]+3B0", camz - speed)
+  end
+
+  -- Pitch
+  if isKeyPressed(VK_UP) then
+    writeInteger("[pCamStruct]+3B4", campitch + (speed * 40))
+  end
+  if isKeyPressed(VK_DOWN) then
+    writeInteger("[pCamStruct]+3B4", campitch - (speed * 40))
+  end
+
+  -- Yaw
+  if isKeyPressed(VK_LEFT) then
+    writeInteger("[pCamStruct]+3B8", camyaw - (speed * 40))
+  end
+  if isKeyPressed(VK_RIGHT) then
+    writeInteger("[pCamStruct]+3B8", camyaw + (speed * 40))
+  end
+
+  -- Roll
+  if isKeyPressed(VK_NUMPAD1) then
+    writeInteger("[pCamStruct]+3BC", camroll - (speed * 20))
+  end
+  if isKeyPressed(VK_NUMPAD3) then
+    writeInteger("[pCamStruct]+3BC", camroll + (speed * 20))
+  end
+
+  -- FoV
+    if isKeyPressed(VK_ADD) then
+    writeFloat("[pCamStruct]+3C0", fov - (speed * 0.5))
+  end
+    if isKeyPressed(VK_SUBTRACT) then
+    writeFloat("[pCamStruct]+3C0", fov + (speed * 0.5))
+  end
+
+
+  -- Speed Modifiers
+  if isKeyPressed(VK_F) and isKeyPressed(VK_MENU) then
+    writeFloat("speedModifier", 500)
+  elseif isKeyPressed(VK_LCONTROL) then
+    if speed &lt; 5000 then
+      writeFloat("speedModifier", speed + 2)
+    end
+  elseif isKeyPressed(VK_MENU) then
+    writeFloat("speedModifier", 0.5)
+  else
+    writeFloat("speedModifier", 7)
+  end
+end
+
+-- Timer to check key input
+t = createTimer(nil)
+timer_setInterval(t, 10)
+timer_onTimer(t, checkKeys)
+timer_setEnabled(t, true)
+
+
+{$asm}
+[DISABLE]
+Dishonored.exe+261E28:
+  db 89 81 A8 03 00 00
+Dishonored.exe+261E31:
+  db 89 81 AC 03 00 00
+Dishonored.exe+261E3A:
+  db 89 81 B0 03 00 00
+Dishonored.exe+261E43:
+  db 89 81 B4 03 00 00
+Dishonored.exe+261E4C:
+  db 89 81 B8 03 00 00
+Dishonored.exe+261E55:
+  db 89 81 BC 03 00 00
+Dishonored.exe+261E5E:
+  db 89 81 C0 03 00 00
+
+{$lua}
+timer_setEnabled(t, false)
+
+
+
+
+
+
+
+
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>45</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26251</ID>
+      <Description>"Slomo"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+aobscanmodule(slomo,Dishonored.exe,89 81 60 04 00 00) // should be unique
+alloc(newmem,$1000,slomo)
+
+label(code)
+label(return)
+label(slom)
+
+newmem:
+  mov [slom], rcx
+
+code:
+  //;mov [rcx+00000460],eax
+  jmp return
+
+slom:
+  dq 0
+
+slomo:
+  jmp newmem
+  nop
+
+return:
+registersymbol(slomo)
+registersymbol(slom)
+
+[DISABLE]
+
+slomo:
+  db 89 81 60 04 00 00
+unregistersymbol(slom)
+unregistersymbol(slomo)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: Dishonored.exe+7CD4F9
+
+Dishonored.exe+7CD4D0: C1 FA 06                 - sar edx,06
+Dishonored.exe+7CD4D3: 8B C2                    - mov eax,edx
+Dishonored.exe+7CD4D5: C1 E8 1F                 - shr eax,1F
+Dishonored.exe+7CD4D8: 03 D0                    - add edx,eax
+Dishonored.exe+7CD4DA: 6B D2 78                 - imul edx,edx,78
+Dishonored.exe+7CD4DD: 2B CA                    - sub ecx,edx
+Dishonored.exe+7CD4DF: 89 8F 28 14 00 00        - mov [rdi+00001428],ecx
+Dishonored.exe+7CD4E5: 48 8B 05 7C 54 05 01     - mov rax,[Dishonored.exe+1822968]
+Dishonored.exe+7CD4EC: 48 8B 88 80 03 00 00     - mov rcx,[rax+00000380]
+Dishonored.exe+7CD4F3: 8B 87 8C 04 00 00        - mov eax,[rdi+0000048C]
+// ---------- INJECTING HERE ----------
+Dishonored.exe+7CD4F9: 89 81 60 04 00 00        - mov [rcx+00000460],eax
+// ---------- DONE INJECTING  ----------
+Dishonored.exe+7CD4FF: 48 8B 07                 - mov rax,[rdi]
+Dishonored.exe+7CD502: 48 8B CF                 - mov rcx,rdi
+Dishonored.exe+7CD505: FF 90 A8 07 00 00        - call qword ptr [rax+000007A8]
+Dishonored.exe+7CD50B: 85 F6                    - test esi,esi
+Dishonored.exe+7CD50D: 75 0E                    - jne Dishonored.exe+7CD51D
+Dishonored.exe+7CD50F: 85 C0                    - test eax,eax
+Dishonored.exe+7CD511: 74 36                    - je Dishonored.exe+7CD549
+Dishonored.exe+7CD513: C7 44 24 28 0B 00 00 00  - mov [rsp+28],0000000B
+Dishonored.exe+7CD51B: EB 0C                    - jmp Dishonored.exe+7CD529
+Dishonored.exe+7CD51D: 85 C0                    - test eax,eax
+}
+
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>35</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>26252</ID>
+          <Description>"Slomo Value"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>slom</Address>
+          <Offsets>
+            <Offset>460</Offset>
+          </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Set Value</Action>
+              <Keys>
+                <Key>113</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>0</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Set Value</Action>
+              <Keys>
+                <Key>114</Key>
+              </Keys>
+              <Value>0.3</Value>
+              <ID>1</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Set Value</Action>
+              <Keys>
+                <Key>115</Key>
+              </Keys>
+              <Value>0.5</Value>
+              <ID>2</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Set Value</Action>
+              <Keys>
+                <Key>17</Key>
+                <Key>112</Key>
+              </Keys>
+              <Value>1.0</Value>
+              <ID>3</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>speedModifier</Name>
+      <Address>65500000</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <Comments>Key	           Description
+NUMPAD 8,5,4,6	   Forward, backward, left and right
+NUMPAD 7,9	   Camera up and down
+NUMPAD 1,3	   Camera roll
+ARROW Up, Down	   Pitch up and down
+ARROW Left,Right   Yaw left and right
+NUMPAD +,-         Zoom in an out
+Page Down	   Enable camera structure
+Ins	           Enable camera movements
+End	           Enable and disable slomo  
+                   F2=0.1, F3=0.3 F4=0.5
+F5                 Pause game
+F6                 Disable HUD
+Left Control	   Fast camera movements
+Left Alt	   Slow camera movements
+</Comments>
+</CheatTable>
