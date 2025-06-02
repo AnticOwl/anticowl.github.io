@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Dishonored Definitive Edition (GamePass)"
-date:   2023-06-01 08:05:55 +0300
+date:   2025-06-01 08:05:55 +0300
 image:  DISHONORED_POST.jpg
 tags:   Screenshooting
 ---
