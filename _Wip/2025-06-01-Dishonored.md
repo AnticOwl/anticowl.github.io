@@ -2,7 +2,7 @@
 layout: post
 title:  "Dishonorer Definitive Edition (GamePass)"
 date:   2025-06-01 08:05:55 +0300
-image:  GWT_POST.jpg
+image:  DISHONORED_POST.jpg
 tags:   Screenshooting
 ---
 Dishonored is an immersive first-person action game that casts you as a supernatural assassin driven by revenge. 
