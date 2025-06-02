@@ -22,27 +22,119 @@ m_PCBindings=(Name="F5",Command="PAUSE")
 m_PCBindings=(Name="F6",Command="ShowHUD true")
 ```
 
-### Resolution and Anti Aliasing
-
-
-
 ## Controls
-Key	           Description
-NUMPAD 8,5,4,6	   Forward, backward, left and right
-NUMPAD 7,9	   Camera up and down
-NUMPAD 1,3	   Camera roll
-ARROW Up, Down	   Pitch up and down
-ARROW Left,Right   Yaw left and right
-NUMPAD +,-         Zoom in an out
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
 
-Page Down	   Enable camera structure
-Ins	           Enable camera movements
-End	           Enable and disable slomo  
-                   F2=0.1, F3=0.3 F4=0.5
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
 
-F5                 Pause game
-F6                 Disable HUD
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
 
-Left Control	   Fast camera movements
-Left Alt	   Slow camera movements
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
 
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <caption><br></caption>
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>NUMPAD 8,5,4,6</td>
+            <td>Forward, backward, left and right</td>
+        </tr>
+        <tr>
+            <td>NUMPAD 7,9</td>
+            <td>Camera up and down</td>
+        </tr>
+        <tr>
+            <td>NUMPAD 1,3</td>
+            <td>Camera roll</td>
+        </tr>
+        <tr>
+            <td>ARROW Up, Down </td>
+            <td>Pitch up and down</td>
+        </tr>
+        <tr>
+            <td>ARROW Left, Right</td>
+            <td>Yaw left and right</td>
+        </tr>
+        <tr>
+            <td>NUMPAD +,-</td>
+            <td>Zoom in an out</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>Page Down</td>
+            <td>Enable camera structure</td>
+        </tr>
+        <tr>
+            <td>Ins</td>
+            <td>Enable camera movements</td>
+        </tr>
+        <tr>
+            <td>End</td>
+            <td>Enable slomo</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>Left Control</td>
+            <td>Fast camera movements</td>
+        </tr>
+        <tr>
+            <td>Left Alt</td>
+            <td>Slow camera movements</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>F5</td>
+            <td>Pause game</td>
+        </tr>
+              <tr>
+            <td>F6</td>
+            <td>Disable HUD</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+### Resolution and Anti Aliasing
