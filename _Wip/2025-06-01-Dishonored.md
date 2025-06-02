@@ -149,4 +149,6 @@ In game, change to your monitor resoltion.
 ### Anti Aliasing And Other Tweaks
 For a better AA, set it to MLAA and, if you have an NVIDIA card, take a look at the detailed settings [HERE](https://www.pcgamingwiki.com/wiki/Dishonored#Anisotropic_filtering_.28AF.29)
 
+## Resources
+[PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Dishonored)
 
