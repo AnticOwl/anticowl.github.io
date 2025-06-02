@@ -15,12 +15,13 @@ Dishonoed cheat table
 Reshade
 
 ## Confguration
-in `\Documents\My Games\Dishonored\DishonoredGame` open `DishonoredInput.ini` and add the following lines in the `[Engine.PlayerInput]` section.
+To be able to pause the game and remove the HUD, in `\Documents\My Games\Dishonored\DishonoredGame` open `DishonoredInput.ini` and add the following lines in the `[Engine.PlayerInput]` section.
 
 ```
 m_PCBindings=(Name="F5",Command="PAUSE")
 m_PCBindings=(Name="F6",Command="ShowHUD true")
 ```
+Save the file and set it to read only. Not mandatatory but you never know.
 
 ## Controls
 <style>
@@ -110,6 +111,10 @@ m_PCBindings=(Name="F6",Command="ShowHUD true")
         </tr>
         <tr>
             <td><br></td>
+            <td>F2=0.1, F3=0.3, F4=0.5, CTRL+F1=1.0</td>
+        </tr>
+        <tr>
+            <td><br></td>
             <td><br></td>
         </tr>
         <tr>
@@ -137,4 +142,11 @@ m_PCBindings=(Name="F6",Command="ShowHUD true")
 </div>
 
 
-### Resolution and Anti Aliasing
+### DSR Resolutions
+For some reason, the fullscreen is like borderless. So, if you want to play at like 4K (3840x2160), you will have to set your screen at that resolution and change the DPI scalling from 200% to 100%.
+In game, change to your monitor resoltion.
+
+### Anti Aliasing And Other Tweaks
+For a better AA, set it to MLAA and, if you have an NVIDIA card, take a look at the detailed settings [HERE](https://www.pcgamingwiki.com/wiki/Dishonored#Anisotropic_filtering_.28AF.29)
+
+
