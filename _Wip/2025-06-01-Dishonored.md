@@ -9,7 +9,7 @@ Dishonored is an immersive first-person action game that casts you as a supernat
 With Dishonored’s flexible combat system, creatively eliminate your targets as you combine the supernatural abilities, weapons and unusual gadgets at your disposal.
 
 ## Required
-Dishonoed cheat table
+Dishonored cheat table
 
 ## Optional
 Reshade
