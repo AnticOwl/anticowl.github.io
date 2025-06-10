@@ -137,6 +137,9 @@ Press `Page Down` to enable the camera structure and `End` for the pause and slo
 * Press `Insert` to detach and activate the camera movement
 * Frame, take your shot.
 * Press `Insert` then `F4` to get back to the game.
+<div> </div>
+
+Many many thanks to [Pino44io](https://bsky.app/profile/pino44io.bsky.social) for the banner image!
 
 ## Resources 
 [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Inner_Chains)
