@@ -9,7 +9,7 @@ tags:   Screenshooting
 An FPS horror game set in a surreal, dark and deadly biomechanical world never seen before. Humankind is just a small part of a hostile universe. Want to survive? Discover its secrets.
 
 ## Required
-* [Inner Chains cheat table](anticowl.github.io/files/InnerChains-Win64-Shipping.CT)
+* [Inner Chains cheat table](https://anticowl.github.io/files/InnerChains-Win64-Shipping.CT)
 * [Cheat Engine 7.5 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
 
 ## Optional
