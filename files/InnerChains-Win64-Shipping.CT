@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>37</ID>
+      <Description>"----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>35</ID>
+      <Description>"- Inner Chains Camera for Steam"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>36</ID>
+      <Description>"- Antic Owl"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4027</ID>
+      <Description>"- See Table Extra for info"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>34</ID>
+      <Description>"----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"Auto Attach To Game"</Description>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$lua}
+[ENABLE]
+
+local processName = "InnerChains-Win64-Shipping.exe"
+local function onTimer_Tick(timer)
+  if readInteger(processName) == nil then
+    local processId = getProcessIDFromProcessName(processName)
+    if processId and processId ~= getOpenedProcessID() then
+      openProcess(processId)
+    end
+  end
+end
+local autoAttachTimer = createTimer(getMainForm(), true)
+autoAttachTimer.Interval = 1000
+autoAttachTimer.OnTimer = onTimer_Tick
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26288</ID>
+      <Description>"Camera Structure - Leave ON"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+assert("InnerChains-Win64-Shipping.exe"+F99220,F3 0F 10 81 9C 03 00 00 0F) // should be unique
+define(camStruct,"InnerChains-Win64-Shipping.exe"+F99220)
+registersymbol(camStruct)
+
+alloc(camStructMem,$1000,"InnerChains-Win64-Shipping.exe"+F99220)
+registersymbol(camStructMem)
+
+define(pCamStruct,camStructMem+100)
+registersymbol(pCamStruct)
+
+label(code)
+label(return)
+
+camStructMem:
+
+code:
+  mov [pCamStruct], rcx
+  movss xmm0,[rcx+0000039C]
+  jmp return
+
+camStruct:
+  jmp camStructMem
+  nop 3
+
+return:
+
+[DISABLE]
+
+camStruct:
+  db F3 0F 10 81 9C 03 00 00
+unregistersymbol(camStructMem)
+unregistersymbol(pcamStruct)
+unregistersymbol(camStruct)
+dealloc(camStrcutMem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: InnerChains-Win64-Shipping.exe+F99220
+
+InnerChains-Win64-Shipping.exe+F99216: 5F                       - pop rdi
+InnerChains-Win64-Shipping.exe+F99217: C3                       - ret 
+InnerChains-Win64-Shipping.exe+F99218: CC                       - int 3 
+InnerChains-Win64-Shipping.exe+F99219: CC                       - int 3 
+InnerChains-Win64-Shipping.exe+F9921A: CC                       - int 3 
+InnerChains-Win64-Shipping.exe+F9921B: CC                       - int 3 
+InnerChains-Win64-Shipping.exe+F9921C: CC                       - int 3 
+InnerChains-Win64-Shipping.exe+F9921D: CC                       - int 3 
+InnerChains-Win64-Shipping.exe+F9921E: CC                       - int 3 
+InnerChains-Win64-Shipping.exe+F9921F: CC                       - int 3 
+// ---------- INJECTING HERE ----------
+InnerChains-Win64-Shipping.exe+F99220: F3 0F 10 81 9C 03 00 00  - movss xmm0,[rcx+0000039C]
+// ---------- DONE INJECTING  ----------
+InnerChains-Win64-Shipping.exe+F99228: 0F 57 C9                 - xorps xmm1,xmm1
+InnerChains-Win64-Shipping.exe+F9922B: 0F 2F C1                 - comiss xmm0,xmm1
+InnerChains-Win64-Shipping.exe+F9922E: 77 08                    - ja InnerChains-Win64-Shipping.exe+F99238
+InnerChains-Win64-Shipping.exe+F99230: F3 0F 10 81 10 04 00 00  - movss xmm0,[rcx+00000410]
+InnerChains-Win64-Shipping.exe+F99238: C3                       - ret 
+InnerChains-Win64-Shipping.exe+F99239: CC                       - int 3 
+InnerChains-Win64-Shipping.exe+F9923A: CC                       - int 3 
+InnerChains-Win64-Shipping.exe+F9923B: CC                       - int 3 
+InnerChains-Win64-Shipping.exe+F9923C: CC                       - int 3 
+InnerChains-Win64-Shipping.exe+F9923D: CC                       - int 3 
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>34</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>26298</ID>
+          <Description>"X +3F8"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+3F8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26290</ID>
+          <Description>"Y +3FC"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+3FC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26291</ID>
+          <Description>"Z +400"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+400</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26292</ID>
+          <Description>"Pitch +404"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+404</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26293</ID>
+          <Description>"Yaw +408"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+408</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26294</ID>
+          <Description>"Roll +40C"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+40C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26289</ID>
+          <Description>"FOV +410"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+410</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26241</ID>
+      <Description>"Detach Camera"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>//-- Speed modifier for camera movement
+globalalloc(speedModifier,8)
+speedModifier:
+dd (float)7
+
+{$asm}
+[ENABLE]
+
+assert("InnerChains-Win64-Shipping.exe"+F926EA,F2 0F 11 87 F8 03 00 00)
+//Detach Camera X and Y
+"InnerChains-Win64-Shipping.exe"+F926EA:
+  db 90 90 90 90 90 90 90 90
+
+"InnerChains-Win64-Shipping.exe"+F92705:
+  db 90 90 90 90 90 90
+
+"InnerChains-Win64-Shipping.exe"+F926F8:
+  db 90 90 90 90 90 90 90 90
+
+"InnerChains-Win64-Shipping.exe"+F9270F:
+  db 90 90 90 90 90 90
+//Disable FOV
+"InnerChains-Win64-Shipping.exe"+F92719:
+  db 90 90 90 90 90 90 90
+
+{$lua}
+
+function checkKeys()
+
+  local speed = readFloat("speedModifier")
+  local pitch = math.rad(readFloat("[pCamStruct]+404")) -- Vertical (Pitch)
+  local yaw = math.rad(readFloat("[pCamStruct]+408")) -- Horizontal (Yaw)
+  local campitch = readFloat("[pCamStruct]+404") -- Vertical (Pitch)
+  local camyaw = readFloat("[pCamStruct]+408") -- Horizontal (Yaw)
+  local FOV = math.deg(readFloat("[pCamStruct]+410"))
+  local camFOV = readFloat("[pCamStruct]+410")
+
+  local roll = math.rad(readFloat("[pCamStruct]+40C"))
+  local camroll = readFloat("[pCamStruct]+40C")
+
+  local camx = readFloat("[pCamStruct]+3F8") -- Camera X
+  local camy = readFloat("[pCamStruct]+3FC") -- Camera Y
+  local camz = readFloat("[pCamStruct]+400") -- Camera Z
+
+  --Sine and Cosine of Rotation Values
+  local siny = math.sin(yaw) -- Sine of Horizontal (Yaw)
+  local cosy = math.cos(yaw) -- Cosine of Horizontal (Yaw)
+  local sinp = math.sin(pitch) -- Sine of Vertical (Pitch)
+  local cosp = math.cos(pitch) -- Cosine of Vertical (Pitch)
+
+  --Forward
+  if isKeyPressed(VK_NUMPAD8) then
+    writeFloat("[pCamStruct]+3F8", camx + (cosy * speed))
+    writeFloat("[pCamStruct]+3FC", camy + (siny * speed))
+    writeFloat("[pCamStruct]+400", camz + (sinp * speed))
+  end
+  --Left
+  if isKeyPressed(VK_NUMPAD4) then
+    writeFloat("[pCamStruct]+3F8", camx + (math.cos(yaw - math.rad(90)) * speed))
+    writeFloat("[pCamStruct]+3FC", camy + (math.sin(yaw - math.rad(90)) * speed))
+  end
+  --Back
+  if isKeyPressed(VK_NUMPAD5) then
+    writeFloat("[pCamStruct]+3F8", camx - (cosy * speed))
+    writeFloat("[pCamStruct]+3FC", camy - (siny * speed))
+    writeFloat("[pCamStruct]+400", camz - (sinp * speed))
+  end
+  --Right
+  if isKeyPressed(VK_NUMPAD6) then
+    writeFloat("[pCamStruct]+3F8", camx - (math.cos(yaw - math.rad(90)) * speed))
+    writeFloat("[pCamStruct]+3FC", camy - (math.sin(yaw - math.rad(90)) * speed))
+  end
+  --Forward/Right
+  if isKeyPressed(VK_NUMPAD8) and isKeyPressed(VK_NUMPAD6) then
+    writeFloat("[pCamStruct]+3F8", camx + (math.cos(yaw + math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+3FC", camy + (math.sin(yaw + math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+400", camz + (sinp * speed))
+  end
+  --Forward/Left
+  if isKeyPressed(VK_NUMPAD8) and isKeyPressed(VK_NUMPAD4) then
+    writeFloat("[pCamStruct]+3F8", camx + (math.cos(yaw - math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+3FC", camy + (math.sin(yaw - math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+400", camz + (sinp * speed))
+  end
+  --Back/Left
+  if isKeyPressed(VK_NUMPAD5) and isKeyPressed(VK_NUMPAD4) then
+    writeFloat("[pCamStruct]+3F8", camx - (math.cos(yaw + math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+3FC", camy - (math.sin(yaw + math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+400", camz - (sinp * speed))
+  end
+  --Back/Right
+  if isKeyPressed(VK_NUMPAD5) and isKeyPressed(VK_NUMPAD6) then
+    writeFloat("[pCamStruct]+3F8", camx - (math.cos(yaw - math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+3FC", camy - (math.sin(yaw - math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+400", camz - (sinp * speed))
+  end
+  --Up
+  if isKeyPressed(VK_NUMPAD7) then
+   writeFloat("[pCamStruct]+400", camz + (speed * 0.5))
+  end
+    --Down
+ if isKeyPressed(VK_NUMPAD9) then
+  writeFloat("[pCamStruct]+400", camz - (speed * 0.5))
+ end
+    --Pitch Up
+  if isKeyPressed(VK_UP) then
+   writeFloat("[pCamStruct]+404", campitch + (speed * 0.5))
+  end
+    --Pitch Down
+  if isKeyPressed(VK_DOWN) then
+   writeFloat("[pCamStruct]+404", campitch - (speed * 0.5))
+  end
+      --Yaw Right
+  if isKeyPressed(VK_RIGHT) then
+   writeFloat("[pCamStruct]+408", camyaw + (speed * 0.5))
+  end
+    --Pitch Left
+  if isKeyPressed(VK_LEFT) then
+   writeFloat("[pCamStruct]+408", camyaw - (speed * 0.5))
+  end
+      --FoVIn
+  if isKeyPressed(VK_ADD) then
+   writeFloat("[pCamStruct]+410", camFOV + (speed * 0.5))
+  end
+      --FoVOut
+  if isKeyPressed(VK_SUBTRACT) then
+   writeFloat("[pCamStruct]+410", camFOV - (speed * 0.5))
+  end
+        --Roll Right
+  if isKeyPressed(VK_NUMPAD3) then
+   writeFloat("[pCamStruct]+40C", camroll + (speed * 0.5))
+  end
+        --Roll Left
+  if isKeyPressed(VK_NUMPAD1) then
+   writeFloat("[pCamStruct]+40C", camroll - (speed * 0.5))
+  end
+
+
+  --Speed Modifiers
+  if isKeyPressed(VK_F) and isKeyPressed(VK_MENU) then --Normal-Fast
+    writeFloat("speedModifier", 500)
+  elseif isKeyPressed(VK_MENU) then --If V is pressed, increase speed
+    if (speed &lt; 5000) then
+      writeFloat("speedModifier", speed + 2)
+    end
+  elseif isKeyPressed(VK_RCONTROL) then --If Alt is pressed, slow way down
+    writeFloat("speedModifier", .5)
+  else --If nothing is pressed, speed is normal
+    writeFloat("speedModifier", 7)
+  end
+end
+
+t=createTimer(nil)
+timer_setInterval(t, 10)
+timer_onTimer(t, checkKeys)
+timer_setEnabled(t, true)
+
+
+{$asm}
+[DISABLE]
+//Re-attach Camera
+"InnerChains-Win64-Shipping.exe"+F926EA:
+  db F2 0F 11 87 F8 03 00 00
+
+"InnerChains-Win64-Shipping.exe"+F92705:
+  db 89 87 00 04 00 00
+
+"InnerChains-Win64-Shipping.exe"+F926F8:
+  db F2 0F 11 87 04 04 00 00
+
+"InnerChains-Win64-Shipping.exe"+F9270F:
+  db 89 87 0C 04 00 00
+
+"InnerChains-Win64-Shipping.exe"+F92719:
+  db 0F 11 87 10 04 00 00
+
+
+{$lua}
+timer_setEnabled(t, false)
+
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>45</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26304</ID>
+      <Description>"Slomo and Pause"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+aobscanmodule(slomo,InnerChains-Win64-Shipping.exe,F3 0F 59 80 E8 04 00 00 F3 0F 59 80 F0 04 00 00 0F) // should be unique
+alloc(newmem,$1000,slomo)
+
+label(code)
+label(return)
+label(pSlomo)
+
+newmem:
+  mov [pSlomo], rax
+
+code:
+  mulss xmm0,[rax+000004E8]
+  jmp return
+
+pSlomo:
+  dq 0
+
+slomo:
+  jmp newmem
+  nop 3
+return:
+registersymbol(slomo)
+registersymbol(pSlomo)
+
+[DISABLE]
+
+slomo:
+  db F3 0F 59 80 E8 04 00 00
+unregistersymbol(pSlomo)
+unregistersymbol(slomo)
+dealloc(newmem)
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>35</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>26305</ID>
+          <Description>"Slomo Value"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pSlomo</Address>
+          <Offsets>
+            <Offset>4E8</Offset>
+          </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Set Value</Action>
+              <Keys>
+                <Key>112</Key>
+              </Keys>
+              <Value>0.0</Value>
+              <ID>0</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Set Value</Action>
+              <Keys>
+                <Key>113</Key>
+              </Keys>
+              <Value>0.1</Value>
+              <ID>1</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Set Value</Action>
+              <Keys>
+                <Key>114</Key>
+              </Keys>
+              <Value>0.3</Value>
+              <ID>2</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Set Value</Action>
+              <Keys>
+                <Key>115</Key>
+              </Keys>
+              <Value>1.0</Value>
+              <ID>3</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Code :movss [rcx+000004E8],xmm0</Description>
+      <AddressString>"InnerChains-Win64-Shipping.exe"+1122069</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>5D</Byte>
+        <Byte>C1</Byte>
+      </Before>
+      <Actual>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>11</Byte>
+        <Byte>81</Byte>
+        <Byte>E8</Byte>
+        <Byte>04</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>C3</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>speedModifier</Name>
+      <Address>2537E8C0000</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <Comments>Key	           Description
+NUMPAD 8,5,4,6	   Forward, backward, left and right
+NUMPAD 7,9	   Camera up and down
+NUMPAD 1,3	   Camera roll
+ARROW Up, Down	   Pitch up and down
+ARROW Left,Right   Yaw left and right
+NUMPAD +,-         Zoom in an out
+Page Down	   Enable camera structure
+Ins	           Enable camera movements
+End	           Enable Slomo and Game pause 
+                   F1=Pause, F2=0.1, F3=0.3 F4=1.0
+Righ Control	   Fast camera movements
+Left Alt	   Slow camera movements
+
+</Comments>
+</CheatTable>
