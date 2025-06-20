@@ -71,6 +71,10 @@ retrofuturistic city in an alternative 1960s England. Hide, fight and conform yo
             <td>Detach and enable camera movements</td>
         </tr>
         <tr>
+            <td>F1</td>
+            <td>Display console</td>
+        </tr>
+        <tr>
             <td>F2</td>
             <td>Pause</td>
         </tr>
@@ -128,9 +132,10 @@ Once you have installed Cheat Engine 7.5 or higher (if not already done), click 
 Press `Page Down` to enable the camera structure and `End` for the pause and slomo.
 
 <div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/7b14887e-0fcd-4187-bdcd-c125a64d6396" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+<img src="("https://github.com/user-attachments/assets/7ac00f59-8fac-4430-8f3b-4acaa1f232f6" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
+
 
 ### Take A Screenshot
 
