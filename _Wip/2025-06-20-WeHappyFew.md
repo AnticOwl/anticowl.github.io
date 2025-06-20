@@ -129,23 +129,28 @@ retrofuturistic city in an alternative 1960s England. Hide, fight and conform yo
 ## How To 
 ### Use The Cheat Table
 Once you have installed Cheat Engine 7.5 or higher (if not already done), click twice on the cheat table file you downloaded. Check the `Auto Attach to Game` box. Cheat Engine will automatically connect to the game when detected.
-Press `Page Down` to enable the camera structure and `End` for the pause and slomo.
+Press `Page Down` to enable the camera structure. Leave on the whole time.
 
 <div style="width:65%; margin: auto;">
-<img src="("https://github.com/user-attachments/assets/7ac00f59-8fac-4430-8f3b-4acaa1f232f6" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+<img src="https://github.com/user-attachments/assets/7ac00f59-8fac-4430-8f3b-4acaa1f232f6" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
 
 
 ### Take A Screenshot
 
-* Press `F1` to pause the game.
+* Press `F3` the `F3` to pause the game and disable the HUD.
 * Press `Insert` to detach and activate the camera movement
 * Frame, take your shot.
-* Press `Insert` then `F4` to get back to the game.
+* Press `Insert`, `F3` then `F2` to get back to the game.
 <div> </div>
 
-Many many thanks to [Pino44io](https://bsky.app/profile/pino44io.bsky.social) for the banner image!
+## Interesting commands
+###Change Weather 
+The command `SetWeatherState` followed by one of the following will change the current weathe. `Clear`, `Overcast`, `Foggy` and `Raining`. E.g. `SetWeatherState Overcast`
+To change the time of day, type `SetTime` followed by `Hour`, `Minutes` and `1`. E.g. `SetTime 12 15 1`. 
+
+
 
 ## Resources 
 [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Inner_Chains)
