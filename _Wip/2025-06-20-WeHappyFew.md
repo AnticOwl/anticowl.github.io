@@ -148,7 +148,7 @@ Press `Page Down` to enable the camera structure. Leave on the whole time.
 ## Interesting commands
 ###Change Weather 
 The command `SetWeatherState` followed by one of the following will change the current weathe. `Clear`, `Overcast`, `Foggy` and `Raining`. E.g. `SetWeatherState Overcast`
-To change the time of day, type `SetTime` followed by `Hour`, `Minutes` and `1`. E.g. `SetTime 12 15 1`. 
+To change the time of day, type `SetTime` followed by `Hour`, `Minutes` and `1`. E.g. `SetTime 12 15 1`. The time must be set in 24h format.
 
 
 
