@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>37</ID>
+      <Description>"----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>35</ID>
+      <Description>"- Abzu Camera for Steam/Epic"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>36</ID>
+      <Description>"- Antic Owl"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4027</ID>
+      <Description>"- See Table Extra for info"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>34</ID>
+      <Description>"----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"Auto Attach To Game"</Description>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$lua}
+[ENABLE]
+
+local processName = "AbzuGame-Win64-Shipping.exe"
+local function onTimer_Tick(timer)
+  if readInteger(processName) == nil then
+    local processId = getProcessIDFromProcessName(processName)
+    if processId and processId ~= getOpenedProcessID() then
+      openProcess(processId)
+    end
+  end
+end
+local autoAttachTimer = createTimer(getMainForm(), true)
+autoAttachTimer.Interval = 1000
+autoAttachTimer.OnTimer = onTimer_Tick
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4019</ID>
+      <Description>"Camera Structure - Leave ON"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+assert("AbzuGame-Win64-Shipping.exe"+12F151A,F2 0F 10 81 F8 03 00 00 F2 0F 11 06) // should be unique
+define(camStruct,"AbzuGame-Win64-Shipping.exe"+12F151A)
+registersymbol(camStruct)
+
+alloc(camStructMem,$1000,"AbzuGame-Win64-Shipping.exe"+12F151A)
+registersymbol(camStructMem)
+
+define(pCamStruct,camStructMem+100)
+registersymbol(pCamStruct)
+
+label(code)
+label(return)
+
+camStructMem:
+
+code:
+  mov [pCamStruct], rcx
+  movsd xmm0,[rcx+000003F8]
+  jmp return
+
+camStruct:
+  jmp camStructMem
+  nop 3
+
+return:
+
+[DISABLE]
+
+camStruct:
+  db F2 0F 10 81 F8 03 00 00
+unregistersymbol(camStructMem)
+unregistersymbol(pcamStruct)
+unregistersymbol(camStruct)
+dealloc(camStrcutMem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: AbzuGame-Win64-Shipping.exe+12F151A
+
+AbzuGame-Win64-Shipping.exe+12F14F7: 48 8B 74 24 58           - mov rsi,[rsp+58]
+AbzuGame-Win64-Shipping.exe+12F14FC: 48 83 C4 40              - add rsp,40
+AbzuGame-Win64-Shipping.exe+12F1500: 5F                       - pop rdi
+AbzuGame-Win64-Shipping.exe+12F1501: C3                       - ret 
+AbzuGame-Win64-Shipping.exe+12F1502: 48 8B 8B 18 04 00 00     - mov rcx,[rbx+00000418]
+AbzuGame-Win64-Shipping.exe+12F1509: 0F 57 C0                 - xorps xmm0,xmm0
+AbzuGame-Win64-Shipping.exe+12F150C: 48 85 C9                 - test rcx,rcx
+AbzuGame-Win64-Shipping.exe+12F150F: 74 43                    - je AbzuGame-Win64-Shipping.exe+12F1554
+AbzuGame-Win64-Shipping.exe+12F1511: 0F 2F 81 F0 03 00 00     - comiss xmm0,[rcx+000003F0]
+AbzuGame-Win64-Shipping.exe+12F1518: 73 3A                    - jae AbzuGame-Win64-Shipping.exe+12F1554
+// ---------- INJECTING HERE ----------
+AbzuGame-Win64-Shipping.exe+12F151A: F2 0F 10 81 F8 03 00 00  - movsd xmm0,[rcx+000003F8]
+// ---------- DONE INJECTING  ----------
+AbzuGame-Win64-Shipping.exe+12F1522: F2 0F 11 06              - movsd [rsi],xmm0
+AbzuGame-Win64-Shipping.exe+12F1526: 8B 81 00 04 00 00        - mov eax,[rcx+00000400]
+AbzuGame-Win64-Shipping.exe+12F152C: 89 46 08                 - mov [rsi+08],eax
+AbzuGame-Win64-Shipping.exe+12F152F: F2 0F 10 81 04 04 00 00  - movsd xmm0,[rcx+00000404]
+AbzuGame-Win64-Shipping.exe+12F1537: F2 0F 11 07              - movsd [rdi],xmm0
+AbzuGame-Win64-Shipping.exe+12F153B: 8B 81 0C 04 00 00        - mov eax,[rcx+0000040C]
+AbzuGame-Win64-Shipping.exe+12F1541: 89 47 08                 - mov [rdi+08],eax
+AbzuGame-Win64-Shipping.exe+12F1544: 48 8B 5C 24 50           - mov rbx,[rsp+50]
+AbzuGame-Win64-Shipping.exe+12F1549: 48 8B 74 24 58           - mov rsi,[rsp+58]
+AbzuGame-Win64-Shipping.exe+12F154E: 48 83 C4 40              - add rsp,40
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>34</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>4020</ID>
+          <Description>"X +3F8"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+3F8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4025</ID>
+          <Description>"Y +3FC"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+3FC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4024</ID>
+          <Description>"Z +400"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+400</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4023</ID>
+          <Description>"Pitch +404"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+404</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4022</ID>
+          <Description>"Yaw +408"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+408</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4021</ID>
+          <Description>"Roll +40C"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+40C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4026</ID>
+          <Description>"FOV +410"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+410</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>39</ID>
+      <Description>"Detach Camera"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>//-- Speed modifier for camera movement
+globalalloc(speedModifier,8)
+speedModifier:
+dd (float)7
+
+{$asm}
+[ENABLE]
+assert(AbzuGame-Win64-Shipping.exe+12E750A,F2 0F 11 87 F8 03 00 00)
+//Disable X and Y
+AbzuGame-Win64-Shipping.exe+12E750A:
+  db 90 90 90 90 90 90 90 90
+
+//Disable Z
+AbzuGame-Win64-Shipping.exe+12E7525:
+  db 90 90 90 90 90 90
+
+//Disable Pitch and Yaw
+AbzuGame-Win64-Shipping.exe+12E7518:
+  db 90 90 90 90 90 90 90 90
+
+//Disable Roll
+AbzuGame-Win64-Shipping.exe+12E752F:
+  db 90 90 90 90 90 90
+
+//Disable FOV
+AbzuGame-Win64-Shipping.exe+12E7539:
+  db 90 90 90 90 90 90 90
+
+{$lua}
+function checkKeys()
+  local speed = readFloat("speedModifier")
+  local pitch = math.rad(readFloat("[pCamStruct]+404")) -- Vertical (Pitch)
+  local yaw = math.rad(readFloat("[pCamStruct]+408")) -- Horizontal (Yaw)
+  local campitch = readFloat("[pCamStruct]+404")
+  local camyaw = readFloat("[pCamStruct]+408")
+  local FOV = math.deg(readFloat("[pCamStruct]+410"))
+  local camFOV = readFloat("[pCamStruct]+410")
+  local roll = math.rad(readFloat("[pCamStruct]+40C"))
+  local camroll = readFloat("[pCamStruct]+40C")
+
+  local camx = readFloat("[pCamStruct]+3F8")
+  local camy = readFloat("[pCamStruct]+3FC")
+  local camz = readFloat("[pCamStruct]+400")
+
+  local siny = math.sin(yaw)
+  local cosy = math.cos(yaw)
+  local sinp = math.sin(pitch)
+  local cosp = math.cos(pitch)
+
+  -- =============================
+  -- CAMERA CONTROL MODE
+  -- =============================
+  if isKeyPressed(VK_ADD) then
+    local adjustSpeed = speed * 0.5
+
+    -- Pitch
+    if isKeyPressed(VK_NUMPAD8) then
+      writeFloat("[pCamStruct]+404", campitch + adjustSpeed)
+    end
+    if isKeyPressed(VK_NUMPAD5) then
+      writeFloat("[pCamStruct]+404", campitch - adjustSpeed)
+    end
+
+    -- Yaw
+    if isKeyPressed(VK_NUMPAD4) then
+      writeFloat("[pCamStruct]+408", camyaw - adjustSpeed)
+    end
+    if isKeyPressed(VK_NUMPAD6) then
+      writeFloat("[pCamStruct]+408", camyaw + adjustSpeed)
+    end
+
+    -- FOV
+    if isKeyPressed(VK_NUMPAD7) then
+      writeFloat("[pCamStruct]+410", camFOV - adjustSpeed)
+    end
+    if isKeyPressed(VK_NUMPAD9) then
+      writeFloat("[pCamStruct]+410", camFOV + adjustSpeed)
+    end
+
+  else
+    -- =============================
+    -- NORMAL CAMERA MOVEMENT MODE
+    -- =============================
+
+    -- Forward
+    if isKeyPressed(VK_NUMPAD8) then
+      writeFloat("[pCamStruct]+3F8", camx + (cosy * speed))
+      writeFloat("[pCamStruct]+3FC", camy + (siny * speed))
+      writeFloat("[pCamStruct]+400", camz + (sinp * speed))
+    end
+    -- Left
+    if isKeyPressed(VK_NUMPAD4) then
+      writeFloat("[pCamStruct]+3F8", camx + (math.cos(yaw - math.rad(90)) * speed))
+      writeFloat("[pCamStruct]+3FC", camy + (math.sin(yaw - math.rad(90)) * speed))
+    end
+    -- Back
+    if isKeyPressed(VK_NUMPAD5) then
+      writeFloat("[pCamStruct]+3F8", camx - (cosy * speed))
+      writeFloat("[pCamStruct]+3FC", camy - (siny * speed))
+      writeFloat("[pCamStruct]+400", camz - (sinp * speed))
+    end
+    -- Right
+    if isKeyPressed(VK_NUMPAD6) then
+      writeFloat("[pCamStruct]+3F8", camx - (math.cos(yaw - math.rad(90)) * speed))
+      writeFloat("[pCamStruct]+3FC", camy - (math.sin(yaw - math.rad(90)) * speed))
+    end
+    -- Forward/Right
+    if isKeyPressed(VK_NUMPAD8) and isKeyPressed(VK_NUMPAD6) then
+      writeFloat("[pCamStruct]+3F8", camx + (math.cos(yaw + math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+3FC", camy + (math.sin(yaw + math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+400", camz + (sinp * speed))
+    end
+    -- Forward/Left
+    if isKeyPressed(VK_NUMPAD8) and isKeyPressed(VK_NUMPAD4) then
+      writeFloat("[pCamStruct]+3F8", camx + (math.cos(yaw - math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+3FC", camy + (math.sin(yaw - math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+400", camz + (sinp * speed))
+    end
+    -- Back/Left
+    if isKeyPressed(VK_NUMPAD5) and isKeyPressed(VK_NUMPAD4) then
+      writeFloat("[pCamStruct]+3F8", camx - (math.cos(yaw + math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+3FC", camy - (math.sin(yaw + math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+400", camz - (sinp * speed))
+    end
+    -- Back/Right
+    if isKeyPressed(VK_NUMPAD5) and isKeyPressed(VK_NUMPAD6) then
+      writeFloat("[pCamStruct]+3F8", camx - (math.cos(yaw - math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+3FC", camy - (math.sin(yaw - math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+400", camz - (sinp * speed))
+    end
+    -- Up
+    if isKeyPressed(VK_NUMPAD9) then
+      writeFloat("[pCamStruct]+400", camz + (speed * 0.5))
+    end
+    -- Down
+    if isKeyPressed(VK_NUMPAD7) then
+      writeFloat("[pCamStruct]+400", camz - (speed * 0.5))
+    end
+        -- Roll
+    if isKeyPressed(VK_NUMPAD1) then
+      writeFloat("[pCamStruct]+40C", camroll - (speed * 0.5))
+    end
+    if isKeyPressed(VK_NUMPAD3) then
+      writeFloat("[pCamStruct]+40C", camroll + (speed * 0.5))
+    end
+  end
+
+   -- Speed Modifiers
+  if isKeyPressed(VK_F) and isKeyPressed(VK_MENU) then
+    writeFloat("speedModifier", 500)
+  elseif isKeyPressed(VK_LCONTROL) then
+    if (speed &lt; 5000) then
+      writeFloat("speedModifier", speed + 2)
+    end
+  elseif isKeyPressed(VK_MENU) then
+    writeFloat("speedModifier", 0.5)
+  else
+    writeFloat("speedModifier", 7)
+  end
+end
+
+-- Timer to check key input
+t = createTimer(nil)
+timer_setInterval(t, 10)
+timer_onTimer(t, checkKeys)
+timer_setEnabled(t, true)
+
+
+
+{$asm}
+[DISABLE]
+//Enable X and Y
+AbzuGame-Win64-Shipping.exe+12E750A:
+  db F2 0F 11 87 F8 03 00 00
+
+//Enable Z
+AbzuGame-Win64-Shipping.exe+12E7525:
+  db 89 87 00 04 00 00
+
+//Enable Pitch and Yaw
+AbzuGame-Win64-Shipping.exe+12E7518:
+  db F2 0F 11 87 04 04 00 00
+
+//Enable Roll
+AbzuGame-Win64-Shipping.exe+12E752F:
+  db 89 87 0C 04 00 00
+
+//Enable FOV
+AbzuGame-Win64-Shipping.exe+12E7539:
+  db 0F 11 87 10 04 00 00
+
+{$lua}
+timer_setEnabled(t, false)
+
+
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>45</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>399</ID>
+      <Description>"Disable HUD"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+AbzuGame-Win64-Shipping.NvOptimusEnablement+6EB6:
+  db 90 90 90
+
+[DISABLE]
+AbzuGame-Win64-Shipping.NvOptimusEnablement+6EB6:
+  db 80 3F 00
+
+
+
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>46</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Change of mov al,[4CCCCD4282000041]</Description>
+      <AddressString>AbzuGame-Win64-Shipping.exe+2ACC0A6</AddressString>
+      <Before>
+        <Byte>D7</Byte>
+        <Byte>23</Byte>
+        <Byte>3B</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>A0</Byte>
+        <Byte>41</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>82</Byte>
+        <Byte>42</Byte>
+        <Byte>CD</Byte>
+        <Byte>CC</Byte>
+        <Byte>4C</Byte>
+      </Actual>
+      <After>
+        <Byte>BE</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>AA</Byte>
+        <Byte>C2</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov [rcx+000000F4],eax</Description>
+      <AddressString>AbzuGame-Win64-Shipping.exe+19D2A52</AddressString>
+      <Before>
+        <Byte>82</Byte>
+        <Byte>F4</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>81</Byte>
+        <Byte>F4</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>82</Byte>
+        <Byte>F8</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of add al,[rax]</Description>
+      <AddressString>AbzuGame-Win64-Shipping.exe+28E0E40</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>02</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>12</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :mov [rcx+000000F4],eax</Description>
+      <AddressString>AbzuGame-Win64-Shipping.exe+19D2A52</AddressString>
+      <Before>
+        <Byte>82</Byte>
+        <Byte>F4</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>81</Byte>
+        <Byte>F4</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>82</Byte>
+        <Byte>F8</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov [rbx+40],rax</Description>
+      <AddressString>AbzuGame-Win64-Shipping.exe+A3DBDD</AddressString>
+      <Before>
+        <Byte>E8</Byte>
+        <Byte>D3</Byte>
+        <Byte>5E</Byte>
+        <Byte>AD</Byte>
+        <Byte>FF</Byte>
+      </Before>
+      <Actual>
+        <Byte>48</Byte>
+        <Byte>89</Byte>
+        <Byte>43</Byte>
+        <Byte>40</Byte>
+      </Actual>
+      <After>
+        <Byte>48</Byte>
+        <Byte>8B</Byte>
+        <Byte>4B</Byte>
+        <Byte>40</Byte>
+        <Byte>4C</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>speedModifier</Name>
+      <Address>2E690B30000</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <Comments>Key	Description
+NUMPAD 8,5,4,6	Forward, backward, left and right
+NUMPAD 7,9	Camera up and down
+NUMPAD 1,3	Camera roll
+NUMPAD+ + NUMPAD 8,5	Pitch up and down
+NUMPAD+ + NUMPAD 4,6	Yaw left and right
+NUMPAD+ + NUMPAD 7,9	Zoom in an out
+Del	Disable HUD
+Page Down	Enable camera structure
+</Comments>
+</CheatTable>
