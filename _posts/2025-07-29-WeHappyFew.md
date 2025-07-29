@@ -10,7 +10,7 @@ From the independent studio that brought you Contrast, We Happy Few is an action
 retrofuturistic city in an alternative 1960s England. Hide, fight and conform your way out of this delusional, Joy-obsessed world.
 
 ## Required
-* [We Happy Few cheat table]
+* [We Happy Few cheat table](http://anticowl.github.io/files/wehappyfew/GlimpseGame.CT)
 * [Cheat Engine 7.5 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
 
 ## Optional
