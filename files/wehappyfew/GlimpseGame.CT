@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>83</ID>
+      <Description>"-------------------------------------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>35</ID>
+      <Description>"- We Happy Few Camera for Steam"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>36</ID>
+      <Description>"- Antic Owl"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>39</ID>
+      <Description>"- See Table Extra for info"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>34</ID>
+      <Description>"-------------------------------------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"Auto Attach To Game"</Description>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$lua}
+[ENABLE]
+
+local processName = "GlimpseGame.exe"
+local function onTimer_Tick(timer)
+  if readInteger(processName) == nil then
+    local processId = getProcessIDFromProcessName(processName)
+    if processId and processId ~= getOpenedProcessID() then
+      openProcess(processId)
+    end
+  end
+end
+local autoAttachTimer = createTimer(getMainForm(), true)
+autoAttachTimer.Interval = 1000
+autoAttachTimer.OnTimer = onTimer_Tick
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"Camera Structure - Leave ON"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+assert("GlimpseGame.exe"+1C3C38F,F2 0F 10 81 BC 04 00 00 F2 0F 11 07)
+define(camStruct,"GlimpseGame.exe"+1C3C38F)
+registersymbol(camStruct)
+
+alloc(camStructMem,$1000,"GlimpseGame.exe"+1C3C38F)
+registersymbol(camStructMem)
+
+define(pCamStruct,camStructMem+100)
+registersymbol(pCamStruct)
+
+label(code)
+label(return)
+
+camStructMem:
+
+code:
+  mov [pCamStruct], rcx
+  movsd xmm0,[rcx+000004BC]
+  jmp return
+
+camStruct:
+  jmp camStructMem
+  nop 3
+
+return:
+
+[DISABLE]
+
+camStruct:
+  db F2 0F 10 81 BC 04 00 00
+unregistersymbol(pCamStruct)
+unregistersymbol(camStructMem)
+unregistersymbol(camStruct)
+dealloc(camStructMem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: GlimpseGame.exe+1C3C38F
+
+GlimpseGame.exe+1C3C362: 48 8B 8B C0 04 00 00     - mov rcx,[rbx+000004C0]
+GlimpseGame.exe+1C3C369: 0F 57 C0                 - xorps xmm0,xmm0
+GlimpseGame.exe+1C3C36C: 48 85 C9                 - test rcx,rcx
+GlimpseGame.exe+1C3C36F: 74 43                    - je GlimpseGame.exe+1C3C3B4
+GlimpseGame.exe+1C3C371: 0F 2F 81 A0 04 00 00     - comiss xmm0,[rcx+000004A0]
+GlimpseGame.exe+1C3C378: 73 3A                    - jae GlimpseGame.exe+1C3C3B4
+GlimpseGame.exe+1C3C37A: F2 0F 10 81 B0 04 00 00  - movsd xmm0,[rcx+000004B0]
+GlimpseGame.exe+1C3C382: F2 0F 11 06              - movsd [rsi],xmm0
+GlimpseGame.exe+1C3C386: 8B 81 B8 04 00 00        - mov eax,[rcx+000004B8]
+GlimpseGame.exe+1C3C38C: 89 46 08                 - mov [rsi+08],eax
+// ---------- INJECTING HERE ----------
+GlimpseGame.exe+1C3C38F: F2 0F 10 81 BC 04 00 00  - movsd xmm0,[rcx+000004BC]
+// ---------- DONE INJECTING  ----------
+GlimpseGame.exe+1C3C397: F2 0F 11 07              - movsd [rdi],xmm0
+GlimpseGame.exe+1C3C39B: 8B 81 C4 04 00 00        - mov eax,[rcx+000004C4]
+GlimpseGame.exe+1C3C3A1: 89 47 08                 - mov [rdi+08],eax
+GlimpseGame.exe+1C3C3A4: 48 8B 5C 24 50           - mov rbx,[rsp+50]
+GlimpseGame.exe+1C3C3A9: 48 8B 74 24 58           - mov rsi,[rsp+58]
+GlimpseGame.exe+1C3C3AE: 48 83 C4 40              - add rsp,40
+GlimpseGame.exe+1C3C3B2: 5F                       - pop rdi
+GlimpseGame.exe+1C3C3B3: C3                       - ret 
+GlimpseGame.exe+1C3C3B4: 48 8B 03                 - mov rax,[rbx]
+GlimpseGame.exe+1C3C3B7: 48 8B CB                 - mov rcx,rbx
+}
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>18</ID>
+          <Description>"X +4B0"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+4B0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>14</ID>
+          <Description>"Y +4B4"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+4B4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>13</ID>
+          <Description>"Z +4B8"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+4B8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>12</ID>
+          <Description>"Pitch +4BC"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+4BC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>17</ID>
+          <Description>"Yaw +4C0"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+4C0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>16</ID>
+          <Description>"Roll +4C4"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>[pCamStruct]+4C4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>15</ID>
+          <Description>"Fov +4C8"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pCamStruct]+4C8</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>38</ID>
+      <Description>"Detach and Enable Camera Movements"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>//-- Speed modifier for camera movement
+globalalloc(speedModifier,8)
+speedModifier:
+dd (float)7
+
+{$asm}
+[ENABLE]
+assert("GlimpseGame.exe"+1C3007A,F2 0F 11 87 B0 04 00 00)
+//Disable X and Y
+"GlimpseGame.exe"+1C3007A:
+  db 90 90 90 90 90 90 90 90
+
+//Disable Z
+GlimpseGame.exe+1C30095:
+  db 90 90 90 90 90 90
+
+//Disable Pitch
+GlimpseGame.exe+1C30088:
+  db 90 90 90 90 90 90 90 90
+
+//Disable Roll
+GlimpseGame.exe+1C3009F:
+  db 90 90 90 90 90 90
+
+//Disable FOV
+GlimpseGame.exe+1C300A9:
+  db 90 90 90 90 90 90 90
+
+{$lua}
+function checkKeys()
+
+  local speed = readFloat("speedModifier")
+  local pitch = math.rad(readFloat("[pCamStruct]+4BC")) -- Vertical (Pitch)
+  local yaw = math.rad(readFloat("[pCamStruct]+4C0")) -- Horizontal (Yaw)
+  local campitch = readFloat("[pCamStruct]+4BC") -- Vertical (Pitch)
+  local camyaw = readFloat("[pCamStruct]+4C0") -- Horizontal (Yaw)
+  local FOV = math.deg(readFloat("[pCamStruct]+4C8"))
+  local camFOV = readFloat("[pCamStruct]+4C8")
+
+  local roll = math.rad(readFloat("[pCamStruct]+4C4"))
+  local camroll = readFloat("[pCamStruct]+4C4")
+
+  local camx = readFloat("[pCamStruct]+4B0") -- Camera X
+  local camy = readFloat("[pCamStruct]+4B4") -- Camera Y
+  local camz = readFloat("[pCamStruct]+4B8") -- Camera Z
+
+  --Sine and Cosine of Rotation Values
+  local siny = math.sin(yaw) -- Sine of Horizontal (Yaw)
+  local cosy = math.cos(yaw) -- Cosine of Horizontal (Yaw)
+  local sinp = math.sin(pitch) -- Sine of Vertical (Pitch)
+  local cosp = math.cos(pitch) -- Cosine of Vertical (Pitch)
+
+  --Forward
+  if isKeyPressed(VK_NUMPAD8) then
+    writeFloat("[pCamStruct]+4B0", camx + (cosy * speed))
+    writeFloat("[pCamStruct]+4B4", camy + (siny * speed))
+    writeFloat("[pCamStruct]+4B8", camz + (sinp * speed))
+  end
+  --Left
+  if isKeyPressed(VK_NUMPAD4) then
+    writeFloat("[pCamStruct]+4B0", camx + (math.cos(yaw - math.rad(90)) * speed))
+    writeFloat("[pCamStruct]+4B4", camy + (math.sin(yaw - math.rad(90)) * speed))
+  end
+  --Back
+  if isKeyPressed(VK_NUMPAD5) then
+    writeFloat("[pCamStruct]+4B0", camx - (cosy * speed))
+    writeFloat("[pCamStruct]+4B4", camy - (siny * speed))
+    writeFloat("[pCamStruct]+4B8", camz - (sinp * speed))
+  end
+  --Right
+  if isKeyPressed(VK_NUMPAD6) then
+    writeFloat("[pCamStruct]+4B0", camx - (math.cos(yaw - math.rad(90)) * speed))
+    writeFloat("[pCamStruct]+4B4", camy - (math.sin(yaw - math.rad(90)) * speed))
+  end
+  --Forward/Right
+  if isKeyPressed(VK_NUMPAD8) and isKeyPressed(VK_NUMPAD6) then
+    writeFloat("[pCamStruct]+4B0", camx + (math.cos(yaw + math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+4B4", camy + (math.sin(yaw + math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+4B8", camz + (sinp * speed))
+  end
+  --Forward/Left
+  if isKeyPressed(VK_NUMPAD8) and isKeyPressed(VK_NUMPAD4) then
+    writeFloat("[pCamStruct]+4B0", camx + (math.cos(yaw - math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+4B4", camy + (math.sin(yaw - math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+4B8", camz + (sinp * speed))
+  end
+  --Back/Left
+  if isKeyPressed(VK_NUMPAD5) and isKeyPressed(VK_NUMPAD4) then
+    writeFloat("[pCamStruct]+4B0", camx - (math.cos(yaw + math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+4B4", camy - (math.sin(yaw + math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+4B8", camz - (sinp * speed))
+  end
+  --Back/Right
+  if isKeyPressed(VK_NUMPAD5) and isKeyPressed(VK_NUMPAD6) then
+    writeFloat("[pCamStruct]+4B0", camx - (math.cos(yaw - math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+4B4", camy - (math.sin(yaw - math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+4B8", camz - (sinp * speed))
+  end
+  --Up
+  if isKeyPressed(VK_NUMPAD9) then
+   writeFloat("[pCamStruct]+4B8", camz + (speed * 0.5))
+  end
+    --Down
+  if isKeyPressed(VK_NUMPAD7) then
+   writeFloat("[pCamStruct]+4B8", camz - (speed * 0.5))
+  end
+    --Pitch Up
+  if isKeyPressed(VK_UP) then
+   writeFloat("[pCamStruct]+4BC", campitch + (speed * 0.5))
+  end
+    --Pitch Down
+  if isKeyPressed(VK_DOWN) then
+   writeFloat("[pCamStruct]+4BC", campitch - (speed * 0.5))
+  end
+      --Yaw Right
+  if isKeyPressed(VK_RIGHT) then
+   writeFloat("[pCamStruct]+4C0", camyaw + (speed * 0.5))
+  end
+    --Pitch Left
+  if isKeyPressed(VK_LEFT) then
+   writeFloat("[pCamStruct]+4C0", camyaw - (speed * 0.5))
+  end
+      --FoVIn
+  if isKeyPressed(VK_ADD) then
+   writeFloat("[pCamStruct]+4C8", camFOV + (speed * 0.5))
+  end
+      --FoVOut
+  if isKeyPressed(VK_SUBTRACT) then
+   writeFloat("[pCamStruct]+4C8", camFOV - (speed * 0.5))
+  end
+        --Roll Right
+  if isKeyPressed(VK_NUMPAD3) then
+   writeFloat("[pCamStruct]+4C4", camroll + (speed * 0.5))
+  end
+        --Roll Left
+  if isKeyPressed(VK_NUMPAD1) then
+   writeFloat("[pCamStruct]+4C4", camroll - (speed * 0.5))
+  end
+
+
+  --Speed Modifiers
+  if isKeyPressed(VK_F) and isKeyPressed(VK_MENU) then --Normal-Fast
+    writeFloat("speedModifier", 500)
+  elseif isKeyPressed(VK_LCONTROL) then --If V is pressed, increase speed
+    if (speed &lt; 5000) then
+      writeFloat("speedModifier", speed + 2)
+    end
+  elseif isKeyPressed(VK_MENU) then --If Alt is pressed, slow way down
+    writeFloat("speedModifier", .5)
+  else --If nothing is pressed, speed is normal
+    writeFloat("speedModifier", 7)
+  end
+end
+
+t=createTimer(nil)
+timer_setInterval(t, 10)
+timer_onTimer(t, checkKeys)
+timer_setEnabled(t, true)
+
+{$asm}
+[DISABLE]
+//Enable X and Y
+GlimpseGame.exe+1C3007A:
+  db F2 0F 11 87 B0 04 00 00
+
+  //Enable Z
+GlimpseGame.exe+1C30095:
+  db 89 87 B8 04 00 00
+
+//Disable Pitch
+GlimpseGame.exe+1C30088:
+  db F2 0F 11 87 BC 04 00 00
+
+//Disable Roll
+GlimpseGame.exe+1C3009F:
+  db 89 87 C4 04 00 00
+//Disable FOV
+GlimpseGame.exe+1C300A9:
+  db 0F 11 87 C8 04 00 00
+
+{$lua}
+timer_setEnabled(t, false)
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>45</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>89</ID>
+      <Description>"Time Stop"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+GlimpseGame.exe+1AF2DC4:
+  db B0 01
+
+[DISABLE]
+GlimpseGame.exe+1AF2DC4:
+  db 32 C0
+
+
+
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>96</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Code :movsd [rdi+000004B0],xmm0 - X and Y</Description>
+      <AddressString>GlimpseGame.exe+1C3007A</AddressString>
+      <Before>
+        <Byte>DC</Byte>
+        <Byte>04</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>FC</Byte>
+      </Before>
+      <Actual>
+        <Byte>F2</Byte>
+        <Byte>0F</Byte>
+        <Byte>11</Byte>
+        <Byte>87</Byte>
+        <Byte>B0</Byte>
+        <Byte>04</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>F2</Byte>
+        <Byte>0F</Byte>
+        <Byte>10</Byte>
+        <Byte>44</Byte>
+        <Byte>24</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :movsd [rdi+000004BC],xmm0 - Yaw</Description>
+      <AddressString>GlimpseGame.exe+1C30088</AddressString>
+      <Before>
+        <Byte>0F</Byte>
+        <Byte>10</Byte>
+        <Byte>44</Byte>
+        <Byte>24</Byte>
+        <Byte>3C</Byte>
+      </Before>
+      <Actual>
+        <Byte>F2</Byte>
+        <Byte>0F</Byte>
+        <Byte>11</Byte>
+        <Byte>87</Byte>
+        <Byte>BC</Byte>
+        <Byte>04</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>0F</Byte>
+        <Byte>10</Byte>
+        <Byte>44</Byte>
+        <Byte>24</Byte>
+        <Byte>48</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>speedModifier</Name>
+      <Address>241CC7B0000</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <Comments>PgDn - Camera structure
+Ins - Detach and enable camera movements
+NUMPAD 0 - Time Stop
+NUMPAD 8/5/4/6 - Forw/Backward/Left/Right
+NUMPAD 7/9 - Up/Down
+NUMPAD 1/3 - Roll
+NUMPAD +/- - FOV (use ALT for slower movements)
+Arrows - Pitch and Yaw
+Left Control - Fast Camera Movments
+Left ALT - Slow Camera Movements
+F1 - Display console
+F2 - Pause
+F3 - Disable HUD
+</Comments>
+</CheatTable>
