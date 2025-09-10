@@ -33,7 +33,7 @@ Lets take by example Formula Legends demo as the game is not yet out at the time
 </div>
 <div> </div> 
 
-Formula Legends
+Formula Legends (Unreal Engine 5)
 <script defer
   src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
 </script>
@@ -47,6 +47,33 @@ Formula Legends
   <img slot="second" src="/images/FL-After.png" />
 </img-comparison-slider>
 
+Trail Out (Unreal Engine 4)
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
+
+<img-comparison-slider>
+  <img slot="first" src="/images/TO-Before.png" />
+  <img slot="second" src="/images/TO-After.png" />
+</img-comparison-slider>
+
+Rennsport (Unreal Engine 5)
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
+
+<img-comparison-slider>
+  <img slot="first" src="/images/RS-Before.png" />
+  <img slot="second" src="/images/RS-After.png" />
+</img-comparison-slider>
 
 ### Cheat Engine A.K.A. The Frame Generator
 
