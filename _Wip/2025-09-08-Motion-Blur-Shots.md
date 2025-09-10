@@ -6,11 +6,15 @@ image:  MBL_POST.jpg
 tags:   Reshade Cheat-Engine
 ---
 
-## Required
+For motion blur shots, PC virtual photography gives us the opportunity to experiment not only with the internal photo mode and game options available but also with tools. Free or paid ones. 
+While it would be nice to have a single solution for this, the nature of the development mades it totally impossible. So let see some of the solutions available. 
+
+## Absolutely Required at 99%
 Reshade 6.x with reallongtimeexposure.fx
 
-## Game Engine Dependent 
-UUU 4.x and 5.x
+## Tools and processes
+### UUU 4.x and 5.x
+
 Cheat Engine 7.5
 
 Higher FPS = Better motion blur quality
