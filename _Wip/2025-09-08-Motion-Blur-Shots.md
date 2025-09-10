@@ -1,13 +1,15 @@
 ---
 layout: post
 title:  "How to create motion blur shots"
-date:   2024-12-30 18:05:55 +0300
+date:   2025-09-08 18:05:55 +0300
 image:  MBL_POST.jpg
 tags:   Reshade Cheat-Engine
 ---
 
-
+## Required
 Reshade 6.x with reallongtimeexposure.fx
+
+## Game Engine Dependent 
 UUU 4.x and 5.x
 Cheat Engine 7.5
 
