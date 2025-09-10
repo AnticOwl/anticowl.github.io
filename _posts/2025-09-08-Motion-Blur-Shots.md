@@ -15,7 +15,6 @@ Reshade 6.x with reallongtimeexposure.fx
 ## Tools and processes
 ### UUU 4.x/5.x for Unreal Engine 4/5
 Depending the engine of your game, you will need one of the 2 versions. And whatever the version the modus operandi is the same. 
-<br></br>
 Lets take by example Formula Legends demo as the game is not yet out at the time of writing this guide. Game is Unreal Engine 5. So, you will use UUU 5.x.
 
 #### How to
