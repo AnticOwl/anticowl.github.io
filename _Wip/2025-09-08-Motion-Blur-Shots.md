@@ -9,7 +9,7 @@ tags:   Reshade Cheat-Engine
 For motion blur shots, PC virtual photography gives us the opportunity to experiment not only with the internal photo mode and game options available but also with tools. Free or paid ones. 
 While it would be nice to have a single solution for this, the nature of the development mades it totally impossible. So let see some of the solutions available. 
 
-## Absolutely Required at 99%
+## Absolutely Required at 100%
 Reshade 6.x with reallongtimeexposure.fx
 
 ## Tools and processes
@@ -25,8 +25,27 @@ Lets take by example Formula Legends demo as the game is not yet out at the time
 2. Press `Delete` then `Insert` to hide the HUD and enable the free camera.
 3. Frame your shot (FOV, angle, etc).
 4. Go to UUU Client and enable the `Camera Path` window.
-5. Check the print screen and do exactly as is. Set the gamespeed to 0.05.
-   <img width="404" height="849" alt="image" src="https://github.com/user-attachments/assets/a7b48945-f786-470c-9ed5-e0266ed4ddd3" />
+5. Check the print screen below and do exactly as is. You will need 1 camera path and 2 nodes. These nodes need to be at the sample place. So click twice on `+`. Set the gamespeed to 0.05 or lower.
+6. Press F7 or `Play` to start. The camera will the follow the vehicle.
+7. Press the assigned key to start the long exposure.
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/a7b48945-f786-470c-9ed5-e0266ed4ddd3" alt="UUU Camera Path" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div> 
+
+Formula Legends
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
+
+<img-comparison-slider>
+  <img slot="first" src="/images/FL-Before.png" />
+  <img slot="second" src="/images/FL-After.png" />
+</img-comparison-slider>
 
 
 Cheat Engine 7.5
