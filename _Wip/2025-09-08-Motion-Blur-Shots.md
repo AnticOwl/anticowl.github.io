@@ -48,18 +48,14 @@ Formula Legends
 </img-comparison-slider>
 
 
-Cheat Engine 7.5
+### Cheat Engine A.K.A. The Frame Generator
 
 Higher FPS = Better motion blur quality
-![image](https://github.com/user-attachments/assets/b5dc41bf-458a-4b98-b598-5cd8a31f32ef)
-Otherwise choppy 
-
-UUU Camera Path
-1 Path and 2 nodes at the same place or a bit spaced.
-
-Cheat engine
 Speed hack at like 0.05 or 0.1 to get a high fps
 Not working in all games
+
+
+
 
 Reshade 
 Reallongexposure.fx 
