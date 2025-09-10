@@ -13,7 +13,21 @@ While it would be nice to have a single solution for this, the nature of the dev
 Reshade 6.x with reallongtimeexposure.fx
 
 ## Tools and processes
-### UUU 4.x and 5.x
+### UUU 4.x/5.x for Unreal Engine 4/5
+Depending the engine of your game, you will need one of the 2 versions. And whatever the version the modus operandi is the same. 
+<br>
+</br>
+Lets take by example Formula Legends demo as the game is not yet out at the time of writing this guide. Game is Unreal Engine 5. So, you will use UUU 5.x.
+
+#### How to
+
+1. While in game and UUU 5.x loaded. Press `Page Down` or `NumPad 0` to pause the game when driving.
+2. Press `Delete` then `Insert` to hide the HUD and enable the free camera.
+3. Frame your shot (FOV, angle, etc).
+4. Go to UUU Client and enable the `Camera Path` window.
+5. Check the print screen and do exactly as is. Set the gamespeed to 0.05.
+   <img width="404" height="849" alt="image" src="https://github.com/user-attachments/assets/a7b48945-f786-470c-9ed5-e0266ed4ddd3" />
+
 
 Cheat Engine 7.5
 
