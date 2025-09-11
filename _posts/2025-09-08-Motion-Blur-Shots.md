@@ -6,16 +6,14 @@ image:  MBL_POST.jpg
 tags:   Reshade Cheat-Engine
 ---
 
-For motion blur shots, PC virtual photography gives us the opportunity to experiment not only with the internal photo mode and game options available but also with tools. Free or paid ones. 
-While it would be nice to have a single solution for this, the nature of the development mades it totally impossible. So let see some of the solutions available. 
+For shots that include motion blur, PC virtual photography gives us the opportunity to experiment not only with the internal photo mode and game options available but also with third party tools: both free and paid ones. While it would be nice to have a single solution for this, the nature of game development makes that totally impossible. So, let's see some of the solutions that are available.
 
 ## Absolutely Required at 100%
 Reshade 6.x with reallongtimeexposure.fx
 
 ## Tools and processes
 ### UUU 4.x/5.x for Unreal Engine 4/5
-Depending the engine of your game, you will need one of the 2 versions. And whatever the version the modus operandi is the same. 
-Lets take by example Formula Legends demo as the game is not yet out at the time of writing this guide. Game is Unreal Engine 5. So, you will use UUU 5.x.
+Let's take Formula Legends as an example. The game is yet to be released at the time of writing this guide, so I have used the demo. The game is build on Unreal Engine 5, so you will use UUU 5.x here.
 
 #### How to
 
