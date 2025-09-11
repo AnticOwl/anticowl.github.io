@@ -80,13 +80,11 @@ Not working in all games
 
 
 
-Reshade 
-Reallongexposure.fx 
 
-Games
-Batman: Arkham Knight
-WATCH_DOGS
-Cyberpunk 77
-Days Gone
-Mad Max
-Death Stranding ???
+
+## Game Specific Tools. Or Not.
+### Batman: Arkham Knight
+### WATCH_DOGS
+### Cyberpunk 77
+### Mad Max
+
