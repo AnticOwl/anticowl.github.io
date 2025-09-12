@@ -84,6 +84,17 @@ Not working in all games
 
 ## Game Specific Tools. Or Not.
 ### Batman: Arkham Knight
+* In console, paste that command `set BmGame.RVehicleBatmobileBase ForceHeadlightsSwitchedOn 1` **!!!IMPORTANT!!!**<br />
+*If you do not enter that command, the batmobile lights will be turned off as soon as you start the motion blur.*
+* Enter debug camera by pressing `backspace`
+* Frame your shot and enter orbital mode by pressing the right stick. **!!!IMPORTANT!!!**
+* In console type `slomo 0.05`. Lower values won't work. The car won't move at all.
+* In console type `playersonly`.
+* Press your assigned key to start the motion blur.
+* Press your assigned key to take your shot.
+* In console disable the slomo by typing `slomo 1`. **!!!IMPORTANT!!!**
+*If you do not disable the slomo, the game will still run at 0.05 when you come back to it*
+* Press `Backspace` to disable the debug camera.
 ### WATCH_DOGS
 ### Cyberpunk 77
 ### Mad Max
