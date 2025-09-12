@@ -86,7 +86,8 @@ One should be at 1.000 and the other at by example 0.100 or even lower.
 * When the game is running in slow motion, press the assigned key for your second slow motion.
 * When you are done taking your shot, press the second key to get back to the first slow motion (in game one).
 
-In a lot of cases, and depending on the resolution and hardware, you will be able to reach 1K+ Fps. 
+In a lot of cases, and depending on the resolution and hardware, you will be able to reach 1K+ Fps. This will allow you to get even smoother shots. 
+
 Example here for WATCH_DOGS at 4K.
 <div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/991875bf-9b02-49cc-aa14-353a9cdffb62" alt="UUU v3 GUI" style="box-shadow: 3px 3px 3px gray;">
