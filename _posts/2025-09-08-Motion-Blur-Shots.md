@@ -84,7 +84,7 @@ Not working in all games
 
 ## Game Specific Tools. Or Not.
 ### Batman: Arkham Knight
-[Requirements](https://anticowl.github.io/2024/11/12/Batman-Arkham-Knight/) 
+* [Requirements](https://anticowl.github.io/2024/11/12/Batman-Arkham-Knight/) 
 
 * In console, paste that command `set BmGame.RVehicleBatmobileBase ForceHeadlightsSwitchedOn 1` **!!!IMPORTANT!!!**<br />
 *If you do not enter that command, the batmobile lights will be turned off as soon as you start the motion blur.*
@@ -104,7 +104,7 @@ Not working in all games
 <div> </div>
 
 ### WATCH_DOGS
-[Requirements](https://anticowl.github.io/2024/07/20/WATCH_DOGS/) 
+* [Requirements](https://anticowl.github.io/2024/07/20/WATCH_DOGS/) 
 - Press F5 to pause the game and F4 to hide the HUD.
 - Activate the camera by pressing Home then Insert to show the UCT GUI.
 - Change the mode to Look At Player. The camera will be positioned attached to back back of the vehicule.                 
@@ -124,7 +124,7 @@ Not working in all games
 <div> </div>
 
 ### Cyberpunk 77
-[Otis_inf Cyberpunk 2077 Camera Tools](https://www.patreon.com/posts/46311727)
+* [Otis_inf Cyberpunk 2077 Camera Tools](https://www.patreon.com/posts/46311727)
 As the tool is from Otis_inf and his tools are using a standard interface. The process is the same as for UUU4.x/5.x.
 
 * While in game and the tool loader, press `NumPad 0` to pause the game when driving.
