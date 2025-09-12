@@ -123,7 +123,7 @@ Not working in all games
 <div> </div>
 
 ### Cyberpunk 77
-[Otis_inf Cyberpunk 2077 Camera Tools](https://www.patreon.com/posts/46311727)
+Required: [Otis_inf Cyberpunk 2077 Camera Tools](https://www.patreon.com/posts/46311727)
 <br>
 As the tool is from Otis_inf and his tools are using a standard interface. The process is the same as for UUU4.x/5.x.
 
