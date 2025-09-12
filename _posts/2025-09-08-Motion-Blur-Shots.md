@@ -84,8 +84,7 @@ Not working in all games
 
 ## Game Specific Tools. Or Not.
 ### Batman: Arkham Knight
-#### Required
-Check [this link](https://anticowl.github.io/2024/11/12/Batman-Arkham-Knight/) for requirements
+[Requirements](https://anticowl.github.io/2024/11/12/Batman-Arkham-Knight/) 
 
 * In console, paste that command `set BmGame.RVehicleBatmobileBase ForceHeadlightsSwitchedOn 1` **!!!IMPORTANT!!!**<br />
 *If you do not enter that command, the batmobile lights will be turned off as soon as you start the motion blur.*
@@ -105,6 +104,7 @@ Check [this link](https://anticowl.github.io/2024/11/12/Batman-Arkham-Knight/) f
 <div> </div>
 
 ### WATCH_DOGS
+[Requirements](https://anticowl.github.io/2024/07/20/WATCH_DOGS/) 
 - Press F5 to pause the game and F4 to hide the HUD.
 - Activate the camera by pressing Home then Insert to show the UCT GUI.
 - Change the mode to Look At Player. The camera will be positioned attached to back back of the vehicule.                 
