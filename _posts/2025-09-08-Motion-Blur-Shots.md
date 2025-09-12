@@ -84,7 +84,7 @@ Not working in all games
 
 ## Game Specific Tools. Or Not.
 ### Batman: Arkham Knight
-
+#### Required
 Check [this link](https://anticowl.github.io/2024/11/12/Batman-Arkham-Knight/) for requirements
 
 * In console, paste that command `set BmGame.RVehicleBatmobileBase ForceHeadlightsSwitchedOn 1` **!!!IMPORTANT!!!**<br />
@@ -98,7 +98,10 @@ Check [this link](https://anticowl.github.io/2024/11/12/Batman-Arkham-Knight/) f
 * In console disable the slomo by typing `slomo 1`. **!!!IMPORTANT!!!**
 *If you do not disable the slomo, the game will still run at 0.05 when you come back to it*
 * Press `Backspace` to disable the debug camera.
+<br></br>
 ### WATCH_DOGS
+<br></br>
 ### Cyberpunk 77
+<br></br>
 ### Mad Max
 
