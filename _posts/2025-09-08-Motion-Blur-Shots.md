@@ -104,7 +104,6 @@ Check [this link](https://anticowl.github.io/2024/11/12/Batman-Arkham-Knight/) f
 </div>
 <div> </div>
 
-<br></br>
 ### WATCH_DOGS
 - Press F5 to pause the game and F4 to hide the HUD.
 - Activate the camera by pressing Home then Insert to show the UCT GUI.
