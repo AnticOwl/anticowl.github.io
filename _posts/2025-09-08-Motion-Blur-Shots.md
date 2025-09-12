@@ -73,14 +73,25 @@ Rennsport (Unreal Engine 5)
 
 ### Cheat Engine A.K.A. The Frame Generator
 
-Higher FPS = Better motion blur quality
-Speed hack at like 0.05 or 0.1 to get a high fps
-Not working in all games
+In some cases, you can use Cheat Engine as a second slow motion to create motion blured shots. The goal will be then to use the `Speed Hack` feature.
+You will need to configure two keys. One for the slow motion and one for the normal speed. For this, go to `Edit`, `Settings` then `Hotkeys`. Configure your keys.
+One should be at 1.000 and the other at by example 0.100 or even lower. 
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/a9d92b46-83d1-45eb-8f9a-1af8d379cda7" alt="UUU v3 GUI" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
+#### How To
+* While in game and ready to take a motion blur shot, start the slow motion.
+* When the game is running in slow motion, press the assigned key for your second slow motion.
+* When you are done taking your shot, press the second key to get back to the first slow motion (in game one).
 
-
-
-
+In a lot of cases, and depending on the resolution and hardware, you will be able to reach 1K+ Fps. 
+Example here for WATCH_DOGS at 4K.
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/991875bf-9b02-49cc-aa14-353a9cdffb62" alt="UUU v3 GUI" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
 ## Game Specific Tools. Or Not.
 ### Batman: Arkham Knight
