@@ -149,6 +149,10 @@ Great thing about it is that it has 3 modes: Free, track and oribtal.
             <td>H</td>
             <td>High Speed</td>
         </tr>
+        <tr>
+            <td>Tilde</td>
+            <td>Console</td>
+        </tr>
     </tbody>
 </table>
 </div>
