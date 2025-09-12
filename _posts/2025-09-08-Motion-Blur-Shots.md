@@ -84,6 +84,9 @@ Not working in all games
 
 ## Game Specific Tools. Or Not.
 ### Batman: Arkham Knight
+
+Check [this link](https://anticowl.github.io/2024/11/12/Batman-Arkham-Knight/) for requirements
+
 * In console, paste that command `set BmGame.RVehicleBatmobileBase ForceHeadlightsSwitchedOn 1` **!!!IMPORTANT!!!**<br />
 *If you do not enter that command, the batmobile lights will be turned off as soon as you start the motion blur.*
 * Enter debug camera by pressing `backspace`
