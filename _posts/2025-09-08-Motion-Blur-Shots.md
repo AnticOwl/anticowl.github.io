@@ -118,7 +118,12 @@ Check [this link](https://anticowl.github.io/2024/11/12/Batman-Arkham-Knight/) f
 - Press your assigned shortcut to start the long exposure. 
 - Press Print Screen to save your shot.
 - Press your long exposure shortcut, disable the camera and press F6 to return to the game normal speed.
-<br></br>
+
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/e8006492-04f2-4779-ba7c-bfb91ae4d4cd" alt="UUU v3 GUI" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+
 ### Cyberpunk 77
 <br></br>
 ### Mad Max
