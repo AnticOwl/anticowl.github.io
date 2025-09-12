@@ -126,7 +126,7 @@ Not working in all games
 [Otis_inf Cyberpunk 2077 Camera Tools](https://www.patreon.com/posts/46311727)
 <br>
 As the tool is from Otis_inf and his tools are using a standard interface. The process is the same as for UUU4.x/5.x.
-</br>
+
 * While in game and the tool loader, press `NumPad 0` to pause the game when driving.
 * Press `Delete` then `Insert` to hide the HUD and enable the free camera.
 * Frame your shot (FOV, angle, etc).
