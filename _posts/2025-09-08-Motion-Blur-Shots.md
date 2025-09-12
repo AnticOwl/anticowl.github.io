@@ -17,13 +17,13 @@ Let's take Formula Legends as an example. The game is yet to be released at the 
 
 #### How to
 
-1. While in game and UUU 5.x loaded. Press `Page Down` or `NumPad 0` to pause the game when driving.
-2. Press `Delete` then `Insert` to hide the HUD and enable the free camera.
-3. Frame your shot (FOV, angle, etc).
-4. Go to UUU Client and enable the `Camera Path` window.
-5. Check the print screen below and do exactly as is. You will need 1 camera path and 2 nodes. These nodes need to be at the sample place. So click twice on `+`. Set the gamespeed to 0.05 or lower.
-6. Press F7 or `Play` to start. The camera will the follow the vehicle.
-7. Press the assigned key to start the long exposure.
+* While in game and UUU 5.x loaded. Press `Page Down` or `NumPad 0` to pause the game when driving.
+* Press `Delete` then `Insert` to hide the HUD and enable the free camera.
+* Frame your shot (FOV, angle, etc).
+* Go to UUU Client and enable the `Camera Path` window.
+* Check the print screen below and do exactly as is. You will need 1 camera path and 2 nodes. These nodes need to be at the sample place. So click twice on `+`. Set the gamespeed to 0.05 or lower.
+* Press F7 or `Play` to start. The camera will the follow the vehicle. P
+* Press the assigned key to start the long exposure.
 <div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/a7b48945-f786-470c-9ed5-e0266ed4ddd3" alt="UUU Camera Path" style="box-shadow: 3px 3px 3px gray;">
 </div>
@@ -124,6 +124,21 @@ Not working in all games
 <div> </div>
 
 ### Cyberpunk 77
-<br></br>
+[Otis_inf Cyberpunk 2077 Camera Tools](https://www.patreon.com/posts/46311727)
+As the tool is from Otis_inf and his tools are using a standard interface. The process is the same as for UUU4.x/5.x.
+
+* While in game and the tool loader, press `NumPad 0` to pause the game when driving.
+* Press `Delete` then `Insert` to hide the HUD and enable the free camera.
+* Frame your shot (FOV, angle, etc).
+* Go to UUU Client and enable the `Camera Path` window.
+* Check the print screen below and do exactly as is. You will need 1 camera path and 2 nodes. These nodes need to be at the sample place. So click twice on `+`. Set the gamespeed to 0.05 or lower.
+* Press F7 or `Play` to start. The camera will the follow the vehicle. 
+* Press the assigned key to start the long exposure.
+
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/abdbd1d6-9edf-47d2-8cda-05f2329cc212" alt="Cyberpunk 2077" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+
 ### Mad Max
 
