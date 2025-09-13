@@ -94,7 +94,7 @@ Example here for WATCH_DOGS at 4K.
 </div>
 <div> </div>
 
-## Game Specific Tools. Or Not.
+## Game Specific Tools. 
 ### Batman: Arkham Knight
 [Requirements](https://anticowl.github.io/2024/11/12/Batman-Arkham-Knight/) 
 * In console, paste that command `set BmGame.RVehicleBatmobileBase ForceHeadlightsSwitchedOn 1` **!!!IMPORTANT!!!**<br />
