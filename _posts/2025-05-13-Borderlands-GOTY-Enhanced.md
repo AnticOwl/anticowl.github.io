@@ -35,7 +35,7 @@ Copy the `ShadderToggler.ini` file here `.\steamapps\common\BorderlandsGOTYEnhan
 <div> </div>
 
 ## Configuration
-**This part is optional unless you want you characte in third person**
+**This part is optional unless you want you character in third person**
 Open `WillowInput.ini` located in `C:\Users\<YOURUSERAME>\Documents\My Games\Borderlands Game of the Year\WillowGame\Config` and add the following lines at the end of `[Engine.PlayerInput]` and just before `[Engine.DebugCameraInput]`
 ```
 Bindings=(Name="FirstPersonZoom",Command="advancedbutton bAdvancedButtonAux5",Control=False,Shift=False,Alt=False,LeftTrigger=False,RightTrigger=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
