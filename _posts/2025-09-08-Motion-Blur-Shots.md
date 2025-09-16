@@ -22,7 +22,7 @@ Let's take Formula Legends as an example. The game is yet to be released at the 
 * Frame your shot (FOV, angle, etc).
 * Go to UUU Client and enable the `Camera Path` window.
 * Check the print screen below and do exactly as is. You will need 1 camera path and 2 nodes. These nodes need to be at the sample place. So click twice on `+`. Set the gamespeed to 0.05 or lower.
-* Press F7 or `Play` to start. The camera will the follow the vehicle. 
+* Press F7 or `Play` to start. The camera will then follow the vehicle. 
 * Press the assigned key to start the long exposure.
 * Take your shot and press back the long exposure key to stop it.
 <div style="width:65%; margin: auto;">
@@ -145,7 +145,7 @@ As the tool is from Otis_inf and his tools are using a standard interface, the p
 * Frame your shot (FOV, angle, etc).
 * Go to UUU Client and enable the `Camera Path` window.
 * The Camera Path Control settings should be the same as those shown in the UUU 4.x/5.x for Unreal Engine 4/5 section above. You will need 1 camera path and 2 nodes. These nodes need to be at the sample place. So click twice on `+`. Set the gamespeed to 0.05 or lower.
-* Press F7 or `Play` to start. The camera will the follow the vehicle. 
+* Press F7 or `Play` to start. The camera will then follow the vehicle. 
 * Press the assigned key to start the long exposure.
 * Take your shot and press back the long exposure key to stop it.
 
