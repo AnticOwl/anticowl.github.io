@@ -175,4 +175,4 @@ The built-in Photo Mode has a Video Mode feature that is enabled when two contro
 </div>
 <div> </div>
 
-
+In my next guide, I will cover some of the NFS games as they all don't have standard tools. To Be Continued
