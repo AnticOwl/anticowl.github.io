@@ -153,6 +153,13 @@ As the tool is from Otis_inf and his tools are using a standard interface. The p
 <div> </div>
 
 ### Mad Max
+The built-in Photo Mode has a Video Mode feature that is enabled when two controllers are connected. The second controller is then used to control the in-game camera while the first controller (or KB and Mouse) control the car and Max. This video can help describe the feature further.
 
+* Go into Photo Mode (X+C or < + >), set the filter, position the camera where you want it anchored
+* Go into Video Mode (R or y) then Begin Session (ENTER or A)
+* Review the Capture Video notes and buttons. Press ENTER again.
+* As soon as you are in Video Capture Mode press A on the second controller to anchor the camera in it's current position. The camera will follow the car or Max.
+* Set Timeflow to 0.1 (F7), start long exposure, wait 1s - 2s or longer and stop the long exposure. Take screenshot.
+* Set Timeflow back to 0.01 (F5) to freeze things in place in case you need to redo the shot.
 
 
