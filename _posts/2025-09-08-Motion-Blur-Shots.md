@@ -118,16 +118,16 @@ Example here for WATCH_DOGS at 4K.
 [Requirements](https://anticowl.github.io/2024/07/20/WATCH_DOGS/) 
 - Press F5 to pause the game and F4 to hide the HUD.
 - Activate the camera by pressing Home then Insert to show the UCT GUI.
-- Change the mode to Look At Player. The camera will be positioned attached to back back of the vehicule.                 
+- Change the mode to Look At Player. The camera will be positioned attached to the back of the vehicule.                 
 - Press Static Angles.
 - Change the angles to your preferences in the Ideal Position Offset.
-  First box is for horizontal axe, second is he depth, and third vertical.
+  First box is for horizontal axis, second is the depth, and third for the vertical axis.
 - Change the angles to your preferences in the Ideal Angle Offset.
   First box is for tilt, second is roll, and third pan.
 - Start the game back but in slow motion by pressing F6.
 - Press your assigned shortcut to start the long exposure. 
 - Press Print Screen to save your shot.
-- Press your long exposure shortcut, disable the camera and press F6 to return to the game normal speed.
+- Press your long exposure shortcut, disable the camera and press F6 to return the game to normal speed.
 
 <div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/e8006492-04f2-4779-ba7c-bfb91ae4d4cd" alt="UUU v3 GUI" style="box-shadow: 3px 3px 3px gray;">
