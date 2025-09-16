@@ -164,5 +164,6 @@ The built-in Photo Mode has a Video Mode feature that is enabled when two contro
 * Press your assigned long exposure key.
 * Take your shot.
 
+{% include note.html content="It is fairly recommended to use the cheat engine speedhack feature for a better motion blur."%}
 <img width="2720" height="1440" alt="image" src="https://github.com/user-attachments/assets/c7327f68-0913-4786-82c0-adeb12d90e96" />
 
