@@ -157,12 +157,12 @@ The built-in Photo Mode has a Video Mode feature that is enabled when two contro
 
 <img width="1181" height="666" alt="image" src="https://github.com/user-attachments/assets/4770dd34-e3b1-404e-a56e-f66374377177" />
 
-* Go into Photo Mode (X+C or < + >), set the filter, position the camera where you want it anchored
-* Go into Video Mode (R or y) then Begin Session (ENTER or A)
-* Review the Capture Video notes and buttons. Press ENTER again.
-* As soon as you are in Video Capture Mode press A on the second controller to anchor the camera in it's current position. The camera will follow the car or Max.
-* Set Timeflow to 0.1 (F7), start long exposure, wait 1s - 2s or longer and stop the long exposure. Take screenshot.
-* Set Timeflow back to 0.01 (F5) to freeze things in place in case you need to redo the shot.
+* Go into Photo Mode by pressing left and right stick down, set the filter, position the camera where you want it anchored.
+* Go into Video Mode by pressing Y then Begin Session by pressing A.
+* As soon as you are in Video Capture Mode press A on the second controller to anchor the camera in it's current position. The camera will follow the car or Max. And you still can move it around to reframe if needed.
+* Press d-pad up to enter slow motion mode.
+* Press your assigned long exposure key.
+* Take your shot.
 
 <img width="2720" height="1440" alt="image" src="https://github.com/user-attachments/assets/c7327f68-0913-4786-82c0-adeb12d90e96" />
 
