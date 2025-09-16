@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How To Create Motion Blur Shots"
-date:   2023-09-08 18:05:55 +0300
+date:   2025-09-16 17:05:55 +0300
 image:  MBL_POST.jpg
 tags:   Reshade Cheat-Engine
 ---
