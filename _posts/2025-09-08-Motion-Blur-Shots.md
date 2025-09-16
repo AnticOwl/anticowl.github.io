@@ -137,9 +137,9 @@ Example here for WATCH_DOGS at 4K.
 ### Cyberpunk 2077
 Required: [Otis_inf Cyberpunk 2077 Camera Tools](https://www.patreon.com/posts/46311727)
 <br>
-As the tool is from Otis_inf and his tools are using a standard interface. The process is the same as for UUU4.x/5.x.
+As the tool is from Otis_inf and his tools are using a standard interface, the process is the same as for UUU4.x/5.x.
 
-* While in game and the tool loader, press `NumPad 0` to pause the game when driving.
+* While in game and the tool loaded, press `NumPad 0` to pause the game when driving.
 * Press `Delete` then `Insert` to hide the HUD and enable the free camera.
 * Frame your shot (FOV, angle, etc).
 * Go to UUU Client and enable the `Camera Path` window.
@@ -155,7 +155,10 @@ As the tool is from Otis_inf and his tools are using a standard interface. The p
 ### Mad Max
 The built-in Photo Mode has a Video Mode feature that is enabled when two controllers are connected. The second controller is then used to control the in-game camera while the first controller (or KB and Mouse) control the car and Max. This video can help describe the feature further.
 
-<img width="1181" height="666" alt="image" src="https://github.com/user-attachments/assets/4770dd34-e3b1-404e-a56e-f66374377177" />
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/4770dd34-e3b1-404e-a56e-f66374377177" alt="Mad Max Video" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
 * Go into Photo Mode by pressing left and right stick down, set the filter, position the camera where you want it anchored.
 * Go into Video Mode by pressing Y then Begin Session by pressing A.
@@ -165,5 +168,9 @@ The built-in Photo Mode has a Video Mode feature that is enabled when two contro
 * Take your shot.
 
 {% include note.html content="It is fairly recommended to use the cheat engine speedhack feature for a better motion blur."%}
-<img width="2720" height="1440" alt="image" src="https://github.com/user-attachments/assets/c7327f68-0913-4786-82c0-adeb12d90e96" />
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/c7327f68-0913-4786-82c0-adeb12d90e96" alt="Mad Max Video" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+
 
