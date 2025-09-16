@@ -155,7 +155,7 @@ As the tool is from Otis_inf and his tools are using a standard interface, the p
 <div> </div>
 
 ### Mad Max
-The built-in Photo Mode has a Video Mode feature that is enabled when two controllers are connected. The second controller is then used to control the in-game camera while the first controller (or KB and Mouse) control the car and Max. This video can help describe the feature further.
+The built-in Photo Mode has a Video Mode feature that is enabled when two controllers are connected. The second controller is then used to control the in-game camera while the first controller (or KB and Mouse) control the car and Max. 
 
 <div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/4770dd34-e3b1-404e-a56e-f66374377177" alt="Mad Max Video" style="box-shadow: 3px 3px 3px gray;">
