@@ -19,7 +19,7 @@ You are a Runner called Faith and this innovative first-person action-adventure 
 * [ReShade](https://reshade.me)
 
 ## Installation
-For the multiplayer mod, download `Launcher.exe` and `mmultiplayer.dll` and move them into your game directory. Usually `\steamapps\common\mirrors edge\Binaries`. Where `MirrorsEdge.exe` resides.
+For the multiplayer mod, download the zip (mirrors-edge-multiplayer-2.4.0-portable.zip) that contains `Launcher.exe` and `mmultiplayer.dll` and move them into your game directory. Usually `\steamapps\common\mirrors edge\Binaries`. Where `MirrorsEdge.exe` resides.
 <p></p>
 Download and extract the tweaker in your game directory. 
 
