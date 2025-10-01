@@ -236,6 +236,10 @@ Start `Launcher` from the `\steamapps\common\mirrors edge\Binaries` folder and t
     </thead>
     <tbody>
         <tr>
+            <td>Insert</td>
+            <td>Open/close the MMultiplayer Interface</td>
+        </tr>        
+        <tr>
             <td>W, A, S, D</td>
             <td>Forward, backward, left and right</td>
         </tr>
