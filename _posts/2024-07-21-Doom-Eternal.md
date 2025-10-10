@@ -11,7 +11,7 @@ So let's see what we can do to get the most of the game for some epic shots.
 
 ## Required
 
-* [DOOM Eternal Mod Injector](https://gamebanana.com/dl/1327676)
+* [DOOM Eternal Mod Injector](https://gamebanana.com/tools/7475)
 
 ## Optional
 * ReShade 6.1.1
