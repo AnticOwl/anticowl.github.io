@@ -119,6 +119,7 @@ bDisablePauseGameOnFocusLoss = true
 </table>
 </div>
 
+### Cheat Table
 <style>
 .table_component {
     overflow: auto;
