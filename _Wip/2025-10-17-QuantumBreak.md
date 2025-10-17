@@ -92,8 +92,8 @@ bDisablePauseGameOnFocusLoss = true
             <td>Disable/Enable Tool UI</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
+            <td><br></td>
+            <td><br></td>
         </tr>
         <tr>
             <td>Left stick</td>
