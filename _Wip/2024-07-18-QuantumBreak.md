@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Quantum Break"
-date:   2025-10-18 00:05:55 +0300
+date:   2025-10-17 00:05:55 +0300
 image:  QB_POST.jpg
 tags:   Screenshooting
 ---
