@@ -6,6 +6,8 @@ image:  QB_POST.jpg
 tags:   Screenshooting
 ---
 
+From Remedy Entertainment, the masters of cinematic action games, comes Quantum Break, a time-amplified suspenseful blockbuster. The Quantum Break experience is part game, part live action show—where decisions in one dramatically affect the other.
+
 ## Required
 * [Hatti Watti Camera Tool](https://www.mediafire.com/file/63a2cpfs46gzefn/CT_QuantumBreak_20181024.rar/file)
 * [Quantum Break game patche with dev menu](https://github.com/illusion0001/Windows-Game-Patches/releases/tag/1.0.201-0349c14b%2B910-branch-main) (download the file named Windows-Game-Patches-1.0.201-0349c14b+910-branch-main.7z
