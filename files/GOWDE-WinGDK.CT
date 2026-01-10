@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1337140164</ID>
+      <Description>"------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1337140167</ID>
+      <Description>"- Gears of War: Reloaded Camera"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1337140166</ID>
+      <Description>"- Antic Owl and Akira Fudo"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1337140168</ID>
+      <Description>"- See Table Extra for info"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1337140165</ID>
+      <Description>"------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26235</ID>
+      <Description>"Camera"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+aobscanmodule(Camera,GOWDE-WinGDK.exe,49 8B 80 94 04 00 00 0F) // should be unique
+alloc(newmem,$1000,Camera)
+
+label(code)
+label(return)
+label(pCamera)
+
+newmem:
+mov [pCamera], r8
+
+code:
+  mov rax,[r8+00000494]
+  jmp return
+
+pCamera:
+  dq 0
+
+Camera:
+  jmp newmem
+  nop 2
+
+return:
+registersymbol(Camera)
+registersymbol(pCamera)
+
+{$lua}
+function getCamBase()
+    local base = getAddressSafe("pCamera")
+    if not base then return nil end
+
+    local addr = readPointer(base)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x494)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x0)
+    if not addr then return nil end
+    addrlp = readPointer(addr + 0x68)
+    if not addrlp then return nil end
+    addr = readPointer(addrlp + 0x37C)
+    if not addr then return nil end
+
+    return addr
+end
+
+function toDegrees(v)
+    return (v / 32768) * 180
+end
+
+speedFast  = 3
+speedSlow  = 1
+speedSlow2 = 0.5
+
+function checkKeys()
+    local cam = getCamBase()
+    if not cam then return end
+
+ if getOpenedProcessID() ~= getForegroundProcess() then return end
+
+    -- Key Speed
+    local speed = speedFast
+    if isKeyPressed(VK_LCONTROL) then speed = speedSlow end
+    if isKeyPressed(VK_LMENU)   then speed = speedSlow2 end
+
+    -- rotations
+    local pitchI = readInteger(cam + 0x3bc)
+    local yawI   = readInteger(cam + 0x3c0)
+    local rollI  = readInteger(cam + 0x3c4)
+
+    local pitch = math.rad(toDegrees(pitchI))
+    local yaw   = math.rad(toDegrees(yawI))
+
+    -- position
+    local x = readFloat(cam + 0x3b0)
+    local y = readFloat(cam + 0x3b4)
+    local z = readFloat(cam + 0x3b8)
+
+    -- fov
+    local fov = readFloat(cam + 0x3c8)
+
+    local siny = math.sin(yaw)
+    local cosy = math.cos(yaw)
+
+    -- Forward
+    if isKeyPressed(VK_NUMPAD8) then
+        writeFloat(cam + 0x3b0, x + (cosy * speed))
+        writeFloat(cam + 0x3b4, y + (siny * speed))
+    end
+
+    -- Backward
+    if isKeyPressed(VK_NUMPAD5) then
+        writeFloat(cam + 0x3b0, x - (cosy * speed))
+        writeFloat(cam + 0x3b4, y - (siny * speed))
+    end
+
+    -- Left
+    if isKeyPressed(VK_NUMPAD4) then
+        writeFloat(cam + 0x3b0, x + math.cos(yaw - math.rad(90)) * speed)
+        writeFloat(cam + 0x3b4, y + math.sin(yaw - math.rad(90)) * speed)
+    end
+
+    -- Right
+    if isKeyPressed(VK_NUMPAD6) then
+        writeFloat(cam + 0x3b0, x - math.cos(yaw - math.rad(90)) * speed)
+        writeFloat(cam + 0x3b4, y - math.sin(yaw - math.rad(90)) * speed)
+    end
+
+    -- Up / Down
+    if isKeyPressed(VK_NUMPAD7) then
+        writeFloat(cam + 0x3b8, z + speed)
+    end
+    if isKeyPressed(VK_NUMPAD9) then
+        writeFloat(cam + 0x3b8, z - speed)
+    end
+
+    -- Pitch
+    if isKeyPressed(VK_UP)    then writeInteger(cam + 0x3bc, pitchI + (speed * 40)) end
+    if isKeyPressed(VK_DOWN)  then writeInteger(cam + 0x3bc, pitchI - (speed * 40)) end
+
+    -- Yaw
+    if isKeyPressed(VK_LEFT)  then writeInteger(cam + 0x3c0, yawI   - (speed * 40)) end
+    if isKeyPressed(VK_RIGHT) then writeInteger(cam + 0x3c0, yawI   + (speed * 40)) end
+
+    -- Roll
+    if isKeyPressed(VK_NUMPAD1) then writeInteger(cam + 0x3c4, rollI - (speed * 20)) end
+    if isKeyPressed(VK_NUMPAD3) then writeInteger(cam + 0x3c4, rollI + (speed * 20)) end
+
+    -- FOV
+    if isKeyPressed(VK_ADD)      then writeFloat(cam + 0x3c8, fov - (speed * 0.5)) end
+    if isKeyPressed(VK_SUBTRACT) then writeFloat(cam + 0x3c8, fov + (speed * 0.5)) end
+end
+
+
+if camTimer then camTimer.destroy() end
+
+camTimer = createTimer()
+camTimer.Interval = 10
+camTimer.OnTimer = checkKeys
+
+{$asm}
+[DISABLE]
+
+Camera:
+  db 49 8B 80 94 04 00 00
+
+unregistersymbol(*)
+dealloc(*)
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>45</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>26237</ID>
+          <Description>"X"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>3B0</Offset>
+            <Offset>37C</Offset>
+            <Offset>68</Offset>
+            <Offset>0</Offset>
+            <Offset>494</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26242</ID>
+          <Description>"Y"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>3B4</Offset>
+            <Offset>37C</Offset>
+            <Offset>68</Offset>
+            <Offset>0</Offset>
+            <Offset>494</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26241</ID>
+          <Description>"Z"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>3B8</Offset>
+            <Offset>37C</Offset>
+            <Offset>68</Offset>
+            <Offset>0</Offset>
+            <Offset>494</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26240</ID>
+          <Description>"Pitch"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>3BC</Offset>
+            <Offset>37C</Offset>
+            <Offset>68</Offset>
+            <Offset>0</Offset>
+            <Offset>494</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26239</ID>
+          <Description>"Yaw"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>3C0</Offset>
+            <Offset>37C</Offset>
+            <Offset>68</Offset>
+            <Offset>0</Offset>
+            <Offset>494</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26244</ID>
+          <Description>"Roll"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>3C4</Offset>
+            <Offset>37C</Offset>
+            <Offset>68</Offset>
+            <Offset>0</Offset>
+            <Offset>494</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26243</ID>
+          <Description>"FOV"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>3C8</Offset>
+            <Offset>37C</Offset>
+            <Offset>68</Offset>
+            <Offset>0</Offset>
+            <Offset>494</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26238</ID>
+      <Description>"HUD Disable"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+{$lua}
+local bShowHudPtr = getAddressSafe("[[[[[pCamera]+494]+0]+68]+41C]+258", false, false)
+
+-- Flags HUD (bitmask)
+local HUD_FLAGS = {
+    MessageBeep              = 0x010,
+    ShowBadConnectionAlert   = 0x008,
+    ShowScores               = 0x002,
+    ShowHUD                  = 0x001,
+    ShowDebugInfo            = 0x001
+}
+
+function enable_flag(current_value, flag)
+    return current_value | flag
+end
+
+function disable_flag(current_value, flag)
+    return current_value &amp; (~flag)
+end
+
+-- Get the current status
+local current_value = readInteger(bShowHudPtr) -- read the current value
+current_value = disable_flag(current_value, HUD_FLAGS["ShowHUD"]) -- disable whichever flag you want
+writeInteger(bShowHudPtr, current_value) -- write it back
+
+{$asm}
+[DISABLE]
+{$lua}
+local bShowHudPtr = getAddressSafe("[[[[[pCamera]+494]+0]+68]+41C]+258", false, false)
+
+-- Flags HUD (bitmask)
+local HUD_FLAGS = {
+    MessageBeep              = 0x010,
+    ShowBadConnectionAlert   = 0x008,
+    ShowScores               = 0x002,
+    ShowHUD                  = 0x001,
+    ShowDebugInfo            = 0x001
+}
+
+function enable_flag(current_value, flag)
+    return current_value | flag
+end
+
+function disable_flag(current_value, flag)
+    return current_value &amp; (~flag)
+end
+
+-- Get the current status
+local current_value = readInteger(bShowHudPtr) -- read the current value
+current_value = enable_flag(current_value, HUD_FLAGS["ShowHUD"]) -- disable whichever flag you want
+writeInteger(bShowHudPtr, current_value) -- write it back
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>46</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26245</ID>
+      <Description>"Slo mo"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>pCamera</Address>
+      <Offsets>
+        <Offset>440</Offset>
+        <Offset>D0</Offset>
+        <Offset>68</Offset>
+        <Offset>0</Offset>
+        <Offset>494</Offset>
+      </Offsets>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>112</Key>
+          </Keys>
+          <Value>0.1</Value>
+          <ID>0</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>113</Key>
+          </Keys>
+          <Value>0.3</Value>
+          <ID>1</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>114</Key>
+          </Keys>
+          <Value>1.0</Value>
+          <ID>2</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1337140163</ID>
+      <Description>"Pause Game"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+{$lua}
+-- Pause Game
+
+function getInheritedClassByIndex( class, index )
+   local i     = 0
+   while class ~= 0 do
+         if index == i then return class end
+         i = i + 1
+         class = readPointer( class + 0x60 )
+   end
+end
+
+function getClassFunctionByIndex( class, index )
+   local i         = 0
+   local uFunction = readPointer( class + 0x80 )
+   while uFunction ~= 0 do
+         if index == i then return uFunction end
+         i         = i + 1
+         uFunction = readPointer( uFunction + 0x68 )
+   end
+end
+
+PlayerControllerInheritance = {
+   ['WarPC']                = 0,
+   ['GamePlayerController'] = 1,
+   ['PlayerController']     = 2,
+   ['Controller']           = 3,
+   ['Actor']                = 4,
+   ['Object']               = 5
+}
+
+registerSymbol( 'UObject::ProcessEvent', AOBScanModuleUnique( process, "40 ?? 41 ?? 41 ?? 41 ?? 41 ?? 48 81 EC ?? ?? ?? ?? 48 8D ?? ?? ?? 48 89 ?? ?? ?? ?? ?? 48 89 ?? ?? ?? ?? ?? 48 89 ?? ?? ?? ?? ?? 48 8B ?? ?? ?? ?? ?? 48 33 ?? 48 89 ?? ?? 4D 8B" ) )
+
+local instance  = getAddress(addrlp)
+local class     = getInheritedClassByIndex( readPointer( instance + 0x50 ), PlayerControllerInheritance.PlayerController )
+local ufunction = getClassFunctionByIndex( class, 189 )
+local procEvent = getAddress( 'UObject::ProcessEvent' )
+
+local struct = allocateMemory( 0x1000 )
+executeCodeEx( 0, nil, procEvent, instance, ufunction, struct )
+deAlloc( struct )
+
+{$asm}
+[DISABLE]
+
+{$lua}
+-- unPause Game
+
+function getInheritedClassByIndex( class, index )
+   local i     = 0
+   while class ~= 0 do
+         if index == i then return class end
+         i = i + 1
+         class = readPointer( class + 0x60 )
+   end
+end
+
+function getClassFunctionByIndex( class, index )
+   local i         = 0
+   local uFunction = readPointer( class + 0x80 )
+   while uFunction ~= 0 do
+         if index == i then return uFunction end
+         i         = i + 1
+         uFunction = readPointer( uFunction + 0x68 )
+   end
+end
+
+PlayerControllerInheritance = {
+   ['WarPC']                = 0,
+   ['GamePlayerController'] = 1,
+   ['PlayerController']     = 2,
+   ['Controller']           = 3,
+   ['Actor']                = 4,
+   ['Object']               = 5
+}
+
+registerSymbol( 'UObject::ProcessEvent', AOBScanModuleUnique( process, "40 ?? 41 ?? 41 ?? 41 ?? 41 ?? 48 81 EC ?? ?? ?? ?? 48 8D ?? ?? ?? 48 89 ?? ?? ?? ?? ?? 48 89 ?? ?? ?? ?? ?? 48 89 ?? ?? ?? ?? ?? 48 8B ?? ?? ?? ?? ?? 48 33 ?? 48 89 ?? ?? 4D 8B" ) )
+
+local instance  = getAddress(addrlp)
+local class     = getInheritedClassByIndex( readPointer( instance + 0x50 ), PlayerControllerInheritance.PlayerController )
+local ufunction = getClassFunctionByIndex( class, 189 )
+local procEvent = getAddress( 'UObject::ProcessEvent' )
+
+local struct = allocateMemory( 0x1000 )
+executeCodeEx( 0, nil, procEvent, instance, ufunction, struct )
+deAlloc( struct )
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>96</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>UObject::ProcessEvent</Name>
+      <Address>140162AE0</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <Comments>Start the game with WeMod. Can be closed once loaded.
+
+Numpad 1/3 = Roll
+Numpad 4/6 = L/R
+Numpad 7/9 = U/D
+Numpad 8/5 = F/B
+Numpad +/- = FOV
+
+Arrows = Pitch/Yaw
+
+Numpad 0 = Pause Game
+
+Insert = Activate camera (leave on!!!!!!)
+
+Del = HUD
+
+F1-F3 = Slomo 0.1, 0.2, 1.0</Comments>
+</CheatTable>
