@@ -81,15 +81,15 @@ Once the game is loaded, you can close WeMod.
     <tbody>
         <tr>
             <td>Numpad 8/5</td>
-            <td>Forward/backward</td>
+            <td>Forward/Backward</td>
         </tr>
         <tr>
             <td>Numpad 4/6</td>
-            <td>Left/right</td>
+            <td>Left/Right</td>
         </tr>
         <tr>
             <td>Numpad 7/9</td>
-            <td>Up/down</td>
+            <td>Up/Down</td>
         </tr>
         <tr>
             <td>Numpad 1/3</td>
@@ -101,7 +101,7 @@ Once the game is loaded, you can close WeMod.
         </tr>
         <tr>
             <td>Arrows</td>
-            <td>Pitch/Tilt</td>
+            <td>Pitch/Yaw</td>
         </tr>
         <tr>
             <td> </td>
@@ -121,7 +121,7 @@ Once the game is loaded, you can close WeMod.
         </tr>
         <tr>
             <td>Numpad 0</td>
-            <td>Pause game</td>
+            <td>Pause Game</td>
         </tr>
         <tr>
             <td> </td>
