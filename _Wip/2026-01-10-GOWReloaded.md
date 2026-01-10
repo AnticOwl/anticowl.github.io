@@ -20,7 +20,7 @@ Outnumbered and outgunned, Marcus and Dom must work together with the other memb
 * [ReShade](https://reshade.me)
 
 ## Installation
-Nothing beside Cheat Engine that should be already installed.
+Nothing beside Cheat Engine that should already be installed.
 
 ## How to
 Start WeMod/Wand and choose Gears of War Reloaded. Click `Play`. This will start the game without EAC active.
