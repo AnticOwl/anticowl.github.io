@@ -133,7 +133,7 @@ Once the game is loaded, you can close WeMod.
             </tr>
    </tbody>
 ## Resources
-[PC Gaming ]Wiki(https://www.pcgamingwiki.com/wiki/Gears_of_War:_Reloaded)
+[PC Gaming Wiki](https://www.pcgamingwiki.com/wiki/Gears_of_War:_Reloaded)
 
 Very big thanks to Akira Fudo! 
 </table>
