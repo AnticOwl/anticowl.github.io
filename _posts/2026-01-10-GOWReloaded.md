@@ -132,9 +132,10 @@ Once the game is loaded, you can close WeMod.
             <td>Activate Camera</td>
             </tr>
    </tbody>
+</table>
+</div>
 ## Resources
 [PC Gaming Wiki](https://www.pcgamingwiki.com/wiki/Gears_of_War:_Reloaded)
 
 Very big thanks to Akira Fudo! 
-</table>
-</div>
+
