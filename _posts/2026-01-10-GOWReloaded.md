@@ -109,7 +109,7 @@ Once the game is loaded, you can close WeMod.
         </tr>
         <tr>
             <td>F1 to F3</td>
-            <td>Dlomo 0.1, 0.3 and 1.0</td>
+            <td>Slomo 0.1, 0.3 and 1.0</td>
         </tr>
         <tr>
             <td>Del</td>
