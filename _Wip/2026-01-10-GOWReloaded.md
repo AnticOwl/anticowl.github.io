@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Gears of War: Reloaded"
+title:  "Gears of War: Reloaded (GamePass)"
 date:   2026-01-10 05:05:55 +0300
 image:  GOWR_POST.jpg
 tags:   Screenshooting
@@ -12,7 +12,7 @@ Crush the Locust threat in the iconic original third-person cover shooter that s
 Outnumbered and outgunned, Marcus and Dom must work together with the other members of Delta squad to defeat the Locust threat and save humanity from utter extinction.
 
 ## Required
-* [Gears of War: Reloaded Cheat Table](https://github.com/ghostinthecamera/IGCS-GITC/releases/tag/RE7v1.0.0b)
+* [Gears of War: Reloaded Cheat Table](https://anticowl.github.io/files/GOWDE-WinGDK.CT)
 * [WeMod/Wand](https://www.wemod.com/)
 * [Cheat Engine](https://www.cheatengine.org/)
 
