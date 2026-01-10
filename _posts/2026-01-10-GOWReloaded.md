@@ -25,13 +25,12 @@ Nothing beside Cheat Engine that should already be installed.
 ## How to
 Start WeMod/Wand and choose Gears of War Reloaded. Click `Play`. This will start the game without EAC active.
 Load the CT in Cheat Engine and connecto to the game. While in game press `Insert` to activate the camera. Leave active the whole session.  
-Once the game is loaded, you can close WeMod
+Once the game is loaded, you can close WeMod.
 
 ## Things to Know
 * The game isn't really full screen but borderless. They use the internal resolution.
-* If you alt-tab the pause menu will somehow appears in the form of a blured background. It disappears when coming back in the game
-* When you using reshade, the pause menu activate after a while. Closing reshade interface will solve the problem.
-* 
+* If you alt-tab the pause menu will somehow appears in the form of a blured background. It disappears when coming back in the game.
+* When you using reshade, the pause menu activate after a while. Closing reshade interface will solve the problem..
 
 ## Controls
 
@@ -131,7 +130,11 @@ Once the game is loaded, you can close WeMod
         <tr>
             <td>Insert</td>
             <td>Activate Camera</td>
-        </tr>
-    </tbody>
+            </tr>
+   </tbody>
+## Resources
+[PC Gaming ]Wiki(https://www.pcgamingwiki.com/wiki/Gears_of_War:_Reloaded)
+
+Very big thanks to Akira Fudo! 
 </table>
 </div>
