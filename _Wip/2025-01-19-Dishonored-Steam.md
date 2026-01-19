@@ -9,7 +9,7 @@ Dishonored is an immersive first-person action game that casts you as a supernat
 With Dishonored’s flexible combat system, creatively eliminate your targets as you combine the supernatural abilities, weapons and unusual gadgets at your disposal.
 
 ## Required
-* [Dishonored Cheat Table](http://anticowl.github.io/files/Dishonored.ct)
+* [Dishonored Cheat Table](http://anticowl.github.io/files/Dishonored-Steam.ct)
 * [Cheat Engine 7.5 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
 
 ## Optional
@@ -145,7 +145,7 @@ Save the file and set it to read only. Not mandatatory but you never know.
 ## How To
 ### Use The Cheat Table
 Once you have installed Cheat Engine 7.5 or higher (if not already done), click twice on the cheat table file you downloaded. Check the `Auto Attach to Game` box. Cheat Engine will automatically connect to the game when detected.
-Press `Page Down` to enable the camera structure.
+Press `Page Down` to enable the camera structure and leae on.
 
 <div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/4b40c40f-b969-4f94-9410-a5d319c1a8cd" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
@@ -160,8 +160,7 @@ Press `Page Down` to enable the camera structure.
 * Frame, take your shot and go the other way around to get back in game.
   
 ### DSR Resolutions
-For some reason, the fullscreen is like borderless. So, if you want to play at like 4K (3840x2160), you will have to set your screen at that resolution and change the DPI scalling from 200% to 100%.
-In game, change to your monitor resoltion.
+Unlike the Game Pass version, Steam one had no problem with full screen.
 
 ### Anti Aliasing And Other Tweaks
 For a better AA, set it to MLAA and, if you have an NVIDIA card, take a look at the detailed settings [HERE](https://www.pcgamingwiki.com/wiki/Dishonored#Anisotropic_filtering_.28AF.29)
