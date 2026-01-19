@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Dishonored (Steam)"
-date:   2025-06-19 08:05:55 +0300
+date:   2026-06-19 08:05:55 +0300
 image:  DISHONORED_STEAM_POST.jpg
 tags:   Screenshooting
 ---
