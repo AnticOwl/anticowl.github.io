@@ -2,7 +2,7 @@
 layout: post
 title:  "Dishonored (Steam)"
 date:   2025-06-19 08:05:55 +0300
-image:  DISHONORED_POST.jpg
+image:  DISHONORED_STEAM_POST.jpg
 tags:   Screenshooting
 ---
 Dishonored is an immersive first-person action game that casts you as a supernatural assassin driven by revenge. 
