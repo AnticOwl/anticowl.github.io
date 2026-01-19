@@ -148,7 +148,7 @@ Once you have installed Cheat Engine 7.5 or higher (if not already done), click 
 Press `Page Down` to enable the camera structure.
 
 <div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/aed7123d-b477-43d8-aef6-e92e0e4e020e" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+<img src="https://github.com/user-attachments/assets/4b40c40f-b969-4f94-9410-a5d319c1a8cd" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
 
