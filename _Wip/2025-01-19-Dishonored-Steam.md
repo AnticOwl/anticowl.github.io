@@ -112,7 +112,7 @@ Save the file and set it to read only. Not mandatatory but you never know.
         </tr>
         <tr>
             <td><br></td>
-            <td>F2=0.1, F3=0.3, F4=0.5, CTRL+F1=1.0</td>
+            <td>F1=0.1, F2=0.3, F3=1.0</td>
         </tr>
         <tr>
             <td><br></td>
