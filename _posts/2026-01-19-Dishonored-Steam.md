@@ -15,7 +15,7 @@ With Dishonored’s flexible combat system, creatively eliminate your targets as
 ## Optional
 * [ReShade](https://reshade.me)
 
-## Confguration
+## Configuration
 To be able to pause the game and remove the HUD, in `\Documents\My Games\Dishonored\DishonoredGame` open `DishonoredInput.ini` and add the following lines in the `[Engine.PlayerInput]` section.
 
 ```
