@@ -9,7 +9,7 @@ Dishonored is an immersive first-person action game that casts you as a supernat
 With Dishonored’s flexible combat system, creatively eliminate your targets as you combine the supernatural abilities, weapons and unusual gadgets at your disposal.
 
 ## Required
-* [Dishonored Cheat Table](http://anticowl.github.io/files/Dishonored-Steam.ct)
+* [Dishonored Cheat Table](http://anticowl.github.io/files/Dishonored-Steam.CT)
 * [Cheat Engine 7.5 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
 
 ## Optional
