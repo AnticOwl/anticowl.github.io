@@ -12,7 +12,7 @@ Fight Today's War: Elite Special Forces in a gritty combat campaign using the su
 * [Medal of Honor Cheat Table](https://anticowl.github.io/files/moh/MOH.CT)
 * [HUD and Pause Menu Toggler](https://anticowl.github.io/files/moh/ShaderToggler.ini)
 * [Cheat Engine 7.6 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
-* [ReShade](https://reshade.me)
+* [ReShade with addon support](https://reshade.me)
 * [Shader Toggler x86](https://github.com/FransBouma/ShaderToggler/releases/tag/1.2.1)
 
 ## Configuration
