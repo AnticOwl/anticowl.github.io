@@ -20,7 +20,6 @@ Fight Today's War: Elite Special Forces in a gritty combat campaign using the su
 Go to `%USERPROFILE%\Documents\EA Games\Medal of Honor\Config\` and open `MOHAInput.ini`.  
 Under `[Engine.PlayerInput]`, at the end of the section or just before the first `Binding` add `Bindings=(Name="F10",Command="Pause")`.  
 Close the file and set it to `Read Only`.
-<br></br>
 Install ReShade and Shader Toggler addon in `\Medal of Honor\Binaries`. Do not forget to also copy previously downloaded ini at the same place.  
 It will be used to remove the text and blur while pausing the game.
 
