@@ -3,7 +3,7 @@ layout: post
 title:  "Lost in Random"
 date:   2024-09-05 07:05:55 +0300
 image:  LIR_POST.jpg
-tags:   Screenshooting
+tags:   Screenshooting Unity
 ---
 Play the odds in Lost in Random™, a gothic-fairy-tale-inspired action-adventure where every citizen’s fate is determined by a roll of the dice. 
 New adventures await!
