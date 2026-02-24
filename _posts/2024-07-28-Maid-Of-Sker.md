@@ -3,7 +3,7 @@ layout: post
 title:  "Maid Of Sker"
 date:   2024-07-28 13:55:55 +0300
 image:  MOS_POST.jpg
-tags:   Screenshooting
+tags:   Screenshooting Unity
 ---
 
 Now the Originalnicodr release his last version of his Cinematic Unity Explorer, it is even easier than before to shot some of these marvelous Unity games.
