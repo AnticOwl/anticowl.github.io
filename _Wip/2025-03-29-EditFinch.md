@@ -1,0 +1,117 @@
+---
+layout: post
+title:  "Resident Evil 7: Biohazard"
+date:   2026-03-29 12:05:55 +0300
+image:  EDITH_POST.jpg
+tags:   Screenshooting
+---
+
+Fear and isolation seep through the walls of an abandoned southern farmhouse. "7" marks a new beginning for survival horror with the “Isolated View” of the visceral new first-person perspective.
+
+## Required
+* [Resident Evil 7 camera by GhostInTheCamera](https://github.com/ghostinthecamera/IGCS-GITC/releases/tag/RE7v1.0.0b)
+
+## Optional
+* [ReShade](https://reshade.me)
+
+## Installation
+Extract the rar file in a folder of your choice and you are done. 
+
+## Controls
+
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <caption><br></caption>
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>W, A, S, D</td>
+            <td>Forward, backward, left and right</td>
+        </tr>
+        <tr>
+            <td>Control</td>
+            <td>Camera lift down</td>
+        </tr>
+        <tr>
+            <td>Space</td>
+            <td>Camera lift up</td>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td>Yaw and tilt</td>
+        </tr>
+        <tr>
+            <td>R</td>
+            <td>FOV increase</td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>FOV decrease</td>
+        </tr>
+        <tr>
+            <td>Q</td>
+            <td>Roll increase</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td>Roll decrease</td>
+        </tr>
+        <tr>
+            <td>Shift</td>
+            <td>Faster camera movements</td>
+        </tr>
+        <tr>
+            <td>Backspace</td>
+            <td>Stop time and enter photo mode</td>
+        </tr>
+        <tr>
+            <td>F10</td>
+            <td>Configuration screen</td>
+        </tr>
+        <tr>
+            <td>F11</td>
+            <td>Take a screenshot&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div>
