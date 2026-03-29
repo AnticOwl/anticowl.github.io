@@ -134,3 +134,5 @@ Press `Home` to enable the camera structure and leave on.
 ## Resources
 
 [PC Gaming Wiki](https://www.pcgamingwiki.com/wiki/What_Remains_of_Edith_Finch)
+
+Screenshot by VAIN
