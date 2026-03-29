@@ -1,24 +1,21 @@
 ---
 layout: post
-title:  "Resident Evil 7: Biohazard"
+title:  "What Remains of Edith Finch"
 date:   2026-03-29 12:05:55 +0300
 image:  EDITH_POST.jpg
 tags:   Screenshooting
 ---
 
-Fear and isolation seep through the walls of an abandoned southern farmhouse. "7" marks a new beginning for survival horror with the “Isolated View” of the visceral new first-person perspective.
+What Remains of Edith Finch is a collection of strange tales about a family in Washington state. As Edith, you’ll explore the colossal Finch house, searching for stories as she explores her family history and tries to figure out why she's the last one in her family left alive.
 
 ## Required
-* [Resident Evil 7 camera by GhostInTheCamera](https://github.com/ghostinthecamera/IGCS-GITC/releases/tag/RE7v1.0.0b)
+* [Edith Finch Cheat Table](https://github.com/ghostinthecamera/IGCS-GITC/releases/tag/RE7v1.0.0b)
+* [Cheat Engine 7.6 or higher](https://www.cheatengine.org)
 
 ## Optional
 * [ReShade](https://reshade.me)
 
-## Installation
-Extract the rar file in a folder of your choice and you are done. 
-
 ## Controls
-
 <style>
 .table_component {
     overflow: auto;
@@ -65,53 +62,75 @@ Extract the rar file in a folder of your choice and you are done.
     </thead>
     <tbody>
         <tr>
-            <td>W, A, S, D</td>
+            <td>NUMPAD 8,5,4,6</td>
             <td>Forward, backward, left and right</td>
         </tr>
         <tr>
-            <td>Control</td>
-            <td>Camera lift down</td>
+            <td>NUMPAD 7,9</td>
+            <td>Camera up and down</td>
         </tr>
         <tr>
-            <td>Space</td>
-            <td>Camera lift up</td>
+            <td>NUMPAD 1,3</td>
+            <td>Camera roll</td>
         </tr>
         <tr>
-            <td>Mouse</td>
-            <td>Yaw and tilt</td>
+            <td>ARROW Up, Down </td>
+            <td>Pitch up and down</td>
         </tr>
         <tr>
-            <td>R</td>
-            <td>FOV increase</td>
+            <td>ARROW Left, Right</td>
+            <td>Yaw left and right</td>
         </tr>
         <tr>
-            <td>F</td>
-            <td>FOV decrease</td>
+            <td>NUMPAD +,-</td>
+            <td>Zoom in an out</td>
         </tr>
         <tr>
-            <td>Q</td>
-            <td>Roll increase</td>
+            <td><br></td>
+            <td><br></td>
         </tr>
         <tr>
-            <td>E</td>
-            <td>Roll decrease</td>
+            <td>Insert</td>
+            <td>Enable camera structure</td>
         </tr>
         <tr>
-            <td>Shift</td>
-            <td>Faster camera movements</td>
+            <td><br></td>
+            <td><br></td>
         </tr>
         <tr>
-            <td>Backspace</td>
-            <td>Stop time and enter photo mode</td>
+            <td>Left Control</td>
+            <td>Fast camera movements</td>
         </tr>
         <tr>
-            <td>F10</td>
-            <td>Configuration screen</td>
+            <td>Left Alt</td>
+            <td>Slow camera movements</td>
         </tr>
         <tr>
-            <td>F11</td>
-            <td>Take a screenshot&nbsp;</td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>NumPad 0</td>
+            <td>Pause game</td>
         </tr>
     </tbody>
 </table>
 </div>
+
+## How To
+### Use The Cheat Table
+Once you have installed Cheat Engine 7.6 or higher (if not already done), click twice on the cheat table file you downloaded. Check the `Auto Attach to Game` box. Cheat Engine will automatically connect to the game when detected.
+Press `Home` to enable the camera structure and leave on.  
+
+<div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/c1a56103-0eea-47f5-84c7-f1b46344be47" alt="Advanced Launcher" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+
+### Take A Screenshot
+* Press `NumPad 0` to pause the game.
+* Press `Insert` to activate the camera.
+* Frame, take your shot and go the other way around to get back in game.
+
+## Resources
+
+[PC Gaming Wiki](https://www.pcgamingwiki.com/wiki/What_Remains_of_Edith_Finch)
