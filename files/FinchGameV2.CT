@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="46">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>26251</ID>
+      <Description>"------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26255</ID>
+      <Description>"- Edith Finch Camera for Steam"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26254</ID>
+      <Description>"- Antic Owl"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26253</ID>
+      <Description>"- See Table Extra for Info"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26252</ID>
+      <Description>"------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8397</ID>
+      <Description>"Auto Attach To Game"</Description>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$lua}
+[ENABLE]
+
+local processName = "FinchGame.exe"
+local function onTimer_Tick(timer)
+  if readInteger(processName) == nil then
+    local processId = getProcessIDFromProcessName(processName)
+    if processId and processId ~= getOpenedProcessID() then
+      openProcess(processId)
+    end
+  end
+end
+local autoAttachTimer = createTimer(getMainForm(), true)
+autoAttachTimer.Interval = 1000
+autoAttachTimer.OnTimer = onTimer_Tick
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>7</ID>
+      <Description>"Camera Structure - Leave ON"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+assert(FinchGame.exe+1108084,F2 0F 11 87 CC 03 00 00) // should be unique
+define(camStruct,FinchGame.exe+1108084)
+registersymbol(camStruct)
+
+alloc(camStructMem,$1000,FinchGame.exe+1108084)
+registersymbol(camStructMem)
+
+define(pcamStruct,camStructMem+100)
+registersymbol(pcamStruct)
+
+label(code)
+label(return)
+
+camStructMem:
+
+code:
+  mov [pcamStruct], rdi
+  movsd [rdi+000003CC],xmm0
+  jmp return
+
+camStruct:
+  jmp camStructMem
+  nop 3
+
+return:
+
+FinchGame.exe+12E67B2:
+  db 00
+
+[DISABLE]
+
+camStruct:
+  db F2 0F 11 87 CC 03 00 00
+
+FinchGame.exe+12E67B2:
+  db 01
+
+unregistersymbol(camStructMem)
+unregistersymbol(pcamStruct)
+unregistersymbol(camStruct)
+dealloc(camStrcutMem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: FinchGame.exe+1108084
+
+FinchGame.exe+1108047: F2 0F 10 44 24 30        - movsd xmm0,[rsp+30]
+FinchGame.exe+110804D: 48 8D 54 24 70           - lea rdx,[rsp+70]
+FinchGame.exe+1108052: F3 0F 10 4C 24 5C        - movss xmm1,[rsp+5C]
+FinchGame.exe+1108058: 8B 88 E8 06 00 00        - mov ecx,[rax+000006E8]
+FinchGame.exe+110805E: 8B 44 24 38              - mov eax,[rsp+38]
+FinchGame.exe+1108062: 89 8F B8 03 00 00        - mov [rdi+000003B8],ecx
+FinchGame.exe+1108068: 48 8D 8F 00 04 00 00     - lea rcx,[rdi+00000400]
+FinchGame.exe+110806F: 83 A7 F0 03 00 00 FC     - and dword ptr [rdi+000003F0],-04
+FinchGame.exe+1108076: F2 0F 11 87 C0 03 00 00  - movsd [rdi+000003C0],xmm0
+FinchGame.exe+110807E: F2 0F 10 44 24 3C        - movsd xmm0,[rsp+3C]
+// ---------- INJECTING HERE ----------
+FinchGame.exe+1108084: F2 0F 11 87 CC 03 00 00  - movsd [rdi+000003CC],xmm0
+// ---------- DONE INJECTING  ----------
+FinchGame.exe+110808C: 0F 10 44 24 48           - movups xmm0,[rsp+48]
+FinchGame.exe+1108091: 89 87 C8 03 00 00        - mov [rdi+000003C8],eax
+FinchGame.exe+1108097: 8B 44 24 44              - mov eax,[rsp+44]
+FinchGame.exe+110809B: 89 87 D4 03 00 00        - mov [rdi+000003D4],eax
+FinchGame.exe+11080A1: 8B 44 24 60              - mov eax,[rsp+60]
+FinchGame.exe+11080A5: 0F 11 87 D8 03 00 00     - movups [rdi+000003D8],xmm0
+FinchGame.exe+11080AC: 83 E0 03                 - and eax,03
+FinchGame.exe+11080AF: F3 0F 10 44 24 58        - movss xmm0,[rsp+58]
+FinchGame.exe+11080B5: 09 87 F0 03 00 00        - or [rdi+000003F0],eax
+FinchGame.exe+11080BB: 0F B6 44 24 64           - movzx eax,byte ptr [rsp+64]
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>36</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>11</ID>
+          <Description>"X +3C0"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct]+3C0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>12</ID>
+          <Description>"Y +3C4"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct]+3C4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>13</ID>
+          <Description>"Z +3C8"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct]+3C8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>6</ID>
+          <Description>"Pitch +3CC"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct]+3CC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>9</ID>
+          <Description>"Yaw +3D0"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct]+3D0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>8</ID>
+          <Description>"Roll +3D4"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct]+3D4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>42</ID>
+          <Description>"FOV +3D8"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct]+3D8</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>39</ID>
+      <Description>"Detach Camera"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>//-- Speed modifier for camera movement
+globalalloc(speedModifier,8)
+speedModifier:
+dd (float)7
+
+{$asm}
+[ENABLE]
+assert(FinchGame.exe+1108076,F2 0F 11 87 C0 03 00 00)
+//Disable X and Y
+FinchGame.exe+1108076:
+  db 90 90 90 90 90 90 90 90
+
+//Disable Z
+FinchGame.exe+1108091:
+  db 90 90 90 90 90 90
+
+//Disable Pitch and Yaw
+FinchGame.exe+1108084:
+  db 90 90 90 90 90 90 90 90
+
+//Disable Roll
+FinchGame.exe+110809B:
+  db 90 90 90 90 90 90
+
+//Disable FOV
+FinchGame.exe+11080A5:
+  db 90 90 90 90 90 90 90
+
+{$lua}
+originalFov = 0
+function checkKeys()
+  local speed = readFloat("speedModifier")
+  local pitch = math.rad(readFloat("[pCamStruct]+3CC")) -- Vertical (Pitch)
+  local yaw = math.rad(readFloat("[pCamStruct]+3D0")) -- Horizontal (Yaw)
+  local campitch = readFloat("[pCamStruct]+3CC")
+  local camyaw = readFloat("[pCamStruct]+3D0")
+  local FOV = math.deg(readFloat("[pCamStruct]+3D8"))
+  local camFOV = readFloat("[pCamStruct]+3D8")
+  local roll = math.rad(readFloat("[pCamStruct]+3D4"))
+  local camroll = readFloat("[pCamStruct]+3D4")
+
+  local camx = readFloat("[pCamStruct]+3C0")
+  local camy = readFloat("[pCamStruct]+3C4")
+  local camz = readFloat("[pCamStruct]+3C8")
+
+  local siny = math.sin(yaw)
+  local cosy = math.cos(yaw)
+  local sinp = math.sin(pitch)
+  local cosp = math.cos(pitch)
+
+if getOpenedProcessID() == getForegroundProcess() then
+
+  -- =============================
+  -- CAMERA CONTROL MODE
+  -- =============================
+
+  local adjustSpeed = speed * 0.5
+
+    -- Pitch
+    if isKeyPressed(VK_UP) then
+      writeFloat("[pCamStruct]+3CC", campitch + adjustSpeed)
+    end
+    if isKeyPressed(VK_DOWN) then
+      writeFloat("[pCamStruct]+3CC", campitch - adjustSpeed)
+    end
+
+    -- Yaw
+    if isKeyPressed(VK_LEFT) then
+      writeFloat("[pCamStruct]+3D0", camyaw - adjustSpeed)
+    end
+    if isKeyPressed(VK_RIGHT) then
+      writeFloat("[pCamStruct]+3D0", camyaw + adjustSpeed)
+    end
+
+    -- FOV
+    if isKeyPressed(VK_SUBTRACT) then
+      writeFloat("[pCamStruct]+3D8", camFOV - adjustSpeed)
+    end
+    if isKeyPressed(VK_ADD) then
+      writeFloat("[pCamStruct]+3D8", camFOV + adjustSpeed)
+    end
+
+    -- =============================
+    -- NORMAL CAMERA MOVEMENT MODE
+    -- =============================
+
+    -- Forward
+    if isKeyPressed(VK_NUMPAD8) then
+      writeFloat("[pCamStruct]+3C0", camx + (cosy * speed))
+      writeFloat("[pCamStruct]+3C4", camy + (siny * speed))
+      writeFloat("[pCamStruct]+3C8", camz + (sinp * speed))
+    end
+    -- Left
+    if isKeyPressed(VK_NUMPAD4) then
+      writeFloat("[pCamStruct]+3C0", camx + (math.cos(yaw - math.rad(90)) * speed))
+      writeFloat("[pCamStruct]+3C4", camy + (math.sin(yaw - math.rad(90)) * speed))
+    end
+    -- Back
+    if isKeyPressed(VK_NUMPAD5) then
+      writeFloat("[pCamStruct]+3C0", camx - (cosy * speed))
+      writeFloat("[pCamStruct]+3C4", camy - (siny * speed))
+      writeFloat("[pCamStruct]+3C8", camz - (sinp * speed))
+    end
+    -- Right
+    if isKeyPressed(VK_NUMPAD6) then
+      writeFloat("[pCamStruct]+3C0", camx - (math.cos(yaw - math.rad(90)) * speed))
+      writeFloat("[pCamStruct]+3C4", camy - (math.sin(yaw - math.rad(90)) * speed))
+    end
+    -- Forward/Right
+    if isKeyPressed(VK_NUMPAD8) and isKeyPressed(VK_NUMPAD6) then
+      writeFloat("[pCamStruct]+3C0", camx + (math.cos(yaw + math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+3C4", camy + (math.sin(yaw + math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+3C8", camz + (sinp * speed))
+    end
+    -- Forward/Left
+    if isKeyPressed(VK_NUMPAD8) and isKeyPressed(VK_NUMPAD4) then
+      writeFloat("[pCamStruct]+3C0", camx + (math.cos(yaw - math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+3C4", camy + (math.sin(yaw - math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+3C8", camz + (sinp * speed))
+    end
+    -- Back/Left
+    if isKeyPressed(VK_NUMPAD5) and isKeyPressed(VK_NUMPAD4) then
+      writeFloat("[pCamStruct]+3C0", camx - (math.cos(yaw + math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+3C4", camy - (math.sin(yaw + math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+3C8", camz - (sinp * speed))
+    end
+    -- Back/Right
+    if isKeyPressed(VK_NUMPAD5) and isKeyPressed(VK_NUMPAD6) then
+      writeFloat("[pCamStruct]+3C0", camx - (math.cos(yaw - math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+3C4", camy - (math.sin(yaw - math.rad(45)) * speed))
+      writeFloat("[pCamStruct]+3C8", camz - (sinp * speed))
+    end
+    -- Up
+    if isKeyPressed(VK_NUMPAD9) then
+      writeFloat("[pCamStruct]+3C8", camz + (speed * 0.5))
+    end
+    -- Down
+    if isKeyPressed(VK_NUMPAD7) then
+      writeFloat("[pCamStruct]+3C8", camz - (speed * 0.5))
+    end
+        -- Roll
+    if isKeyPressed(VK_NUMPAD1) then
+      writeFloat("[pCamStruct]+3D4", camroll - (speed * 0.5))
+    end
+    if isKeyPressed(VK_NUMPAD3) then
+      writeFloat("[pCamStruct]+3D4", camroll + (speed * 0.5))
+    end
+  end
+
+   -- Speed Modifiers
+  if isKeyPressed(VK_F) and isKeyPressed(VK_MENU) then
+    writeFloat("speedModifier", 500)
+  elseif isKeyPressed(VK_LCONTROL) then
+    if (speed &lt; 5000) then
+      writeFloat("speedModifier", speed + 2)
+    end
+  elseif isKeyPressed(VK_MENU) then
+    writeFloat("speedModifier", 0.5)
+  else
+    writeFloat("speedModifier", 7)
+  end
+end
+
+-- Timer to check key input
+t = createTimer(nil)
+timer_setInterval(t, 10)
+timer_onTimer(t, checkKeys)
+timer_setEnabled(t, true)
+
+
+
+{$asm}
+[DISABLE]
+//Enable X and Y
+FinchGame.exe+1108076:
+  db F2 0F 11 87 C0 03 00 00
+
+//Enable Z
+FinchGame.exe+1108091:
+  db 89 87 C8 03 00 00
+
+//Enable Pitch and Yaw
+FinchGame.exe+1108084:
+  db F2 0F 11 87 CC 03 00 00
+
+//Enable Roll
+FinchGame.exe+110809B:
+  db 89 87 D4 03 00 00
+
+//Enable FOV
+FinchGame.exe+11080A5:
+  db 0F 11 87 D8 03 00 00
+
+
+{$lua}
+timer_setEnabled(t, false)
+writeFloat("[pCamStruct]-5C", originalFov)
+originalFov = nil
+
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>45</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>41</ID>
+      <Description>"Time Stop"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+assert(FinchGame.exe+10D1A93,F7 83 64 07 00 00 00 10 00 00)
+FinchGame.exe+10D1A9F:
+  db B0 01
+
+[DISABLE]
+FinchGame.exe+10D1A9F:
+  db 32 C0
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>96</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Change of add [rdi],ecx</Description>
+      <AddressString>FinchGame.exe+12E67B2</AddressString>
+      <Before>
+        <Byte>6B</Byte>
+        <Byte>01</Byte>
+        <Byte>F6</Byte>
+        <Byte>41</Byte>
+        <Byte>30</Byte>
+      </Before>
+      <Actual>
+        <Byte>01</Byte>
+        <Byte>0F</Byte>
+      </Actual>
+      <After>
+        <Byte>84</Byte>
+        <Byte>A7</Byte>
+        <Byte>01</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>speedModifier</Name>
+      <Address>1AA414C0000</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+</CheatTable>
