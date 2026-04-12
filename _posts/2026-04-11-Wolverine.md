@@ -6,7 +6,7 @@ image:  WOLVERINE_POST.jpg
 tags:   Screenshooting
 ---
 
-What Remains of Edith Finch is a collection of strange tales about a family in Washington state. As Edith, you’ll explore the colossal Finch house, searching for stories as she explores her family history and tries to figure out why she's the last one in her family left alive.
+After years of working as a mutant mercenary, Logan lives a quiet life with his girlfriend, Kayla. However, a figure from his past brutally assassinates Kayla, compelling Logan to seek vengeance.
 
 ## Required
 * [X-Men Origins: Wolverine Cheat Table](https://anticowl.github.io/files/wolverine/wolverine.ct)
