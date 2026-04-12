@@ -9,7 +9,7 @@ tags:   Screenshooting
 After years of working as a mutant mercenary, Logan lives a quiet life with his girlfriend, Kayla. However, a figure from his past brutally assassinates Kayla, compelling Logan to seek vengeance.
 
 ## Required
-* [X-Men Origins: Wolverine Cheat Table](https://anticowl.github.io/files/wolverine/wolverine.ct)
+* [X-Men Origins: Wolverine Cheat Table](https://anticowl.github.io/files/wolverine/Wolverine.CT)
 * [HUD and Pause Menu Toggler](https://anticowl.github.io/files/wolverine/ShaderToggler.ini)
 * [Cheat Engine 7.6 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
 * [ReShade with addon support](https://reshade.me)
