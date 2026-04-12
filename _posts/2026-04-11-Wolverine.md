@@ -17,7 +17,7 @@ After years of working as a mutant mercenary, Logan lives a quiet life with his 
 
 ## Configuration
 
-Install ReShade and Shader Toggler addon in `\Medal of Honor\Binaries`. Do not forget to also copy previously downloaded ini at the same place.  
+Install ReShade and Shader Toggler addon in `\X-Men Origins Wolverine\Binaries`. Do not forget to also copy previously downloaded ini at the same place.  
 It will be used to remove the pause menu while in pause.
 
 ## Controls
