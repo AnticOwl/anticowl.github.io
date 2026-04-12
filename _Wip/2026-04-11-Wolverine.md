@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "X-Men Origins: Wolverine"
-date:   2026-03-29 12:05:55 +0300
+date:   2026-04-12 12:05:55 +0300
 image:  WOLVERINE_POST.jpg
 tags:   Screenshooting
 ---
