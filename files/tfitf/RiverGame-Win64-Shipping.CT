@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="46">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>37</ID>
+      <Description>"----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>35</ID>
+      <Description>"- The Flame in the Flood Camera for Steam"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>36</ID>
+      <Description>"- Antic Owl"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4027</ID>
+      <Description>"- See Table Extra for info"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>34</ID>
+      <Description>"----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"Auto Attach To Game"</Description>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$lua}
+[ENABLE]
+
+local processName = "RiverGame-Win64-Shipping.exe"
+local function onTimer_Tick(timer)
+  if readInteger(processName) == nil then
+    local processId = getProcessIDFromProcessName(processName)
+    if processId and processId ~= getOpenedProcessID() then
+      openProcess(processId)
+    end
+  end
+end
+local autoAttachTimer = createTimer(getMainForm(), true)
+autoAttachTimer.Interval = 1000
+autoAttachTimer.OnTimer = onTimer_Tick
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26230</ID>
+      <Description>"Camera Structure - Leave On"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+assert("RiverGame-Win64-Shipping.exe"+1093986,F2 0F 10 81 C0 03 00 00 F2 0F 11 02 89) // should be unique
+define(camStruct,"RiverGame-Win64-Shipping.exe"+1093986)
+registersymbol(camStruct)
+
+alloc(camStructMem,$1000,"RiverGame-Win64-Shipping.exe"+1093986)
+registersymbol(camStructMem)
+
+define(pcamStruct,camStructMem+100)
+registersymbol(pcamStruct)
+
+label(code)
+label(return)
+
+camStructMem:
+
+code:
+  mov [pcamStruct], rcx
+  movsd xmm0,[rcx+000003C0]
+  jmp return
+
+camStruct:
+  jmp camStructMem
+  nop 3
+
+return:
+
+
+[DISABLE]
+
+camStruct:
+  db F2 0F 10 81 C0 03 00 00
+unregistersymbol(camStructMem)
+unregistersymbol(pcamStruct)
+unregistersymbol(camStruct)
+dealloc(camStrcutMem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: RiverGame-Win64-Shipping.exe+1093986
+
+RiverGame-Win64-Shipping.exe+1093977: C3                       - ret 
+RiverGame-Win64-Shipping.exe+1093978: CC                       - int 3 
+RiverGame-Win64-Shipping.exe+1093979: CC                       - int 3 
+RiverGame-Win64-Shipping.exe+109397A: CC                       - int 3 
+RiverGame-Win64-Shipping.exe+109397B: CC                       - int 3 
+RiverGame-Win64-Shipping.exe+109397C: CC                       - int 3 
+RiverGame-Win64-Shipping.exe+109397D: CC                       - int 3 
+RiverGame-Win64-Shipping.exe+109397E: CC                       - int 3 
+RiverGame-Win64-Shipping.exe+109397F: CC                       - int 3 
+RiverGame-Win64-Shipping.exe+1093980: 8B 81 C8 03 00 00        - mov eax,[rcx+000003C8]
+// ---------- INJECTING HERE ----------
+RiverGame-Win64-Shipping.exe+1093986: F2 0F 10 81 C0 03 00 00  - movsd xmm0,[rcx+000003C0]
+// ---------- DONE INJECTING  ----------
+RiverGame-Win64-Shipping.exe+109398E: F2 0F 11 02              - movsd [rdx],xmm0
+RiverGame-Win64-Shipping.exe+1093992: 89 42 08                 - mov [rdx+08],eax
+RiverGame-Win64-Shipping.exe+1093995: 48 8B C2                 - mov rax,rdx
+RiverGame-Win64-Shipping.exe+1093998: C3                       - ret 
+RiverGame-Win64-Shipping.exe+1093999: CC                       - int 3 
+RiverGame-Win64-Shipping.exe+109399A: CC                       - int 3 
+RiverGame-Win64-Shipping.exe+109399B: CC                       - int 3 
+RiverGame-Win64-Shipping.exe+109399C: CC                       - int 3 
+RiverGame-Win64-Shipping.exe+109399D: CC                       - int 3 
+RiverGame-Win64-Shipping.exe+109399E: CC                       - int 3 
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>34</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>26231</ID>
+          <Description>"X +3C0"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct] +3C0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26235</ID>
+          <Description>"Y +3C4"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct] +3C4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26234</ID>
+          <Description>"Z +3C8"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct] +3C8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26237</ID>
+          <Description>"Pitch +3CC"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct] +3CC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26236</ID>
+          <Description>"Yaw +3D0"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct] +3D0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26233</ID>
+          <Description>"Roll +3D4"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct] +3D4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26232</ID>
+          <Description>"FOV +3D8"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>[pcamStruct] +3D8</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>38</ID>
+      <Description>"Detach Camera"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>//-- Speed modifier for camera movement
+globalalloc(speedModifier,8)
+speedModifier:
+dd (float)7
+
+{$asm}
+[ENABLE]
+
+assert("RiverGame-Win64-Shipping.exe"+E5A14D,F2 0F 11 87 C0 03 00 00)
+"RiverGame-Win64-Shipping.exe"+E5A14D:
+  db 90 90 90 90 90 90 90 90
+
+"RiverGame-Win64-Shipping.exe"+E5A168:
+  db 90 90 90 90 90 90
+
+"RiverGame-Win64-Shipping.exe"+E5A15B:
+  db 90 90 90 90 90 90 90 90
+
+"RiverGame-Win64-Shipping.exe"+E5A172:
+  db 90 90 90 90 90 90
+
+"RiverGame-Win64-Shipping.exe"+E5A17C:
+  db 90 90 90 90 90 90 90
+
+{$lua}
+function checkKeys()
+
+  local speed = readFloat("speedModifier")
+  local pitch = math.rad(readFloat("[pCamStruct]+3CC")) -- Vertical (Pitch)
+  local yaw = math.rad(readFloat("[pCamStruct]+3D0")) -- Horizontal (Yaw)
+  local campitch = readFloat("[pCamStruct]+3CC") -- Vertical (Pitch)
+  local camyaw = readFloat("[pCamStruct]+3D0") -- Horizontal (Yaw)
+  local FOV = math.deg(readFloat("[pCamStruct]+3D8"))
+  local camFOV = readFloat("[pCamStruct]+3D8")
+
+  local roll = math.rad(readFloat("[pCamStruct]+3D4"))
+  local camroll = readFloat("[pCamStruct]+3D4")
+
+  local camx = readFloat("[pCamStruct]+3C0") -- Camera X
+  local camy = readFloat("[pCamStruct]+3C4") -- Camera Y
+  local camz = readFloat("[pCamStruct]+3C8") -- Camera Z
+
+  --Sine and Cosine of Rotation Values
+  local siny = math.sin(yaw) -- Sine of Horizontal (Yaw)
+  local cosy = math.cos(yaw) -- Cosine of Horizontal (Yaw)
+  local sinp = math.sin(pitch) -- Sine of Vertical (Pitch)
+  local cosp = math.cos(pitch) -- Cosine of Vertical (Pitch)
+
+  --Forward
+  if isKeyPressed(VK_NUMPAD8) then
+    writeFloat("[pCamStruct]+3C0", camx + (cosy * speed))
+    writeFloat("[pCamStruct]+3C4", camy + (siny * speed))
+    writeFloat("[pCamStruct]+3C8", camz + (sinp * speed))
+  end
+  --Left
+  if isKeyPressed(VK_NUMPAD4) then
+    writeFloat("[pCamStruct]+3C0", camx + (math.cos(yaw - math.rad(90)) * speed))
+    writeFloat("[pCamStruct]+3C4", camy + (math.sin(yaw - math.rad(90)) * speed))
+  end
+  --Back
+  if isKeyPressed(VK_NUMPAD5) then
+    writeFloat("[pCamStruct]+3C0", camx - (cosy * speed))
+    writeFloat("[pCamStruct]+3C4", camy - (siny * speed))
+    writeFloat("[pCamStruct]+3C8", camz - (sinp * speed))
+  end
+  --Right
+  if isKeyPressed(VK_NUMPAD6) then
+    writeFloat("[pCamStruct]+3C0", camx - (math.cos(yaw - math.rad(90)) * speed))
+    writeFloat("[pCamStruct]+3C4", camy - (math.sin(yaw - math.rad(90)) * speed))
+  end
+  --Forward/Right
+  if isKeyPressed(VK_NUMPAD8) and isKeyPressed(VK_NUMPAD6) then
+    writeFloat("[pCamStruct]+3C0", camx + (math.cos(yaw + math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+3C4", camy + (math.sin(yaw + math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+3C8", camz + (sinp * speed))
+  end
+  --Forward/Left
+  if isKeyPressed(VK_NUMPAD8) and isKeyPressed(VK_NUMPAD4) then
+    writeFloat("[pCamStruct]+3C0", camx + (math.cos(yaw - math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+3C4", camy + (math.sin(yaw - math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+3C8", camz + (sinp * speed))
+  end
+  --Back/Left
+  if isKeyPressed(VK_NUMPAD5) and isKeyPressed(VK_NUMPAD4) then
+    writeFloat("[pCamStruct]+3C0", camx - (math.cos(yaw + math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+3C4", camy - (math.sin(yaw + math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+3C8", camz - (sinp * speed))
+  end
+  --Back/Right
+  if isKeyPressed(VK_NUMPAD5) and isKeyPressed(VK_NUMPAD6) then
+    writeFloat("[pCamStruct]+3C0", camx - (math.cos(yaw - math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+3C4", camy - (math.sin(yaw - math.rad(45)) * speed))
+    writeFloat("[pCamStruct]+3C8", camz - (sinp * speed))
+  end
+  --Up
+  if isKeyPressed(VK_NUMPAD9) then
+   writeFloat("[pCamStruct]+3C8", camz + (speed * 0.5))
+  end
+    --Down
+  if isKeyPressed(VK_NUMPAD7) then
+   writeFloat("[pCamStruct]+3C8", camz - (speed * 0.5))
+  end
+    --Pitch Up
+  if isKeyPressed(VK_UP) then
+   writeFloat("[pCamStruct]+3CC", campitch + (speed * 0.5))
+  end
+    --Pitch Down
+  if isKeyPressed(VK_DOWN) then
+   writeFloat("[pCamStruct]+3CC", campitch - (speed * 0.5))
+  end
+      --Yaw Right
+  if isKeyPressed(VK_RIGHT) then
+   writeFloat("[pCamStruct]+3D0", camyaw + (speed * 0.5))
+  end
+    --Pitch Left
+  if isKeyPressed(VK_LEFT) then
+   writeFloat("[pCamStruct]+3D0", camyaw - (speed * 0.5))
+  end
+      --FoVIn
+  if isKeyPressed(VK_ADD) then
+   writeFloat("[pCamStruct]+3D8", camFOV + (speed * 0.5))
+  end
+      --FoVOut
+  if isKeyPressed(VK_SUBTRACT) then
+   writeFloat("[pCamStruct]+3D8", camFOV - (speed * 0.5))
+  end
+        --Roll Right
+  if isKeyPressed(VK_NUMPAD3) then
+   writeFloat("[pCamStruct]+3D4", camroll + (speed * 0.5))
+  end
+        --Roll Left
+  if isKeyPressed(VK_NUMPAD1) then
+   writeFloat("[pCamStruct]+3D4", camroll - (speed * 0.5))
+  end
+
+
+  --Speed Modifiers
+  if isKeyPressed(VK_F) and isKeyPressed(VK_MENU) then --Normal-Fast
+    writeFloat("speedModifier", 500)
+  elseif isKeyPressed(VK_LCONTROL) then --If V is pressed, increase speed
+    if (speed &lt; 5000) then
+      writeFloat("speedModifier", speed + 2)
+    end
+  elseif isKeyPressed(VK_MENU) then --If Alt is pressed, slow way down
+    writeFloat("speedModifier", .5)
+  else --If nothing is pressed, speed is normal
+    writeFloat("speedModifier", 7)
+  end
+end
+
+t=createTimer(nil)
+timer_setInterval(t, 10)
+timer_onTimer(t, checkKeys)
+timer_setEnabled(t, true)
+
+
+{$asm}
+[DISABLE]
+"RiverGame-Win64-Shipping.exe"+E5A14D:
+  db F2 0F 11 87 C0 03 00 00
+
+"RiverGame-Win64-Shipping.exe"+E5A168:
+  db 89 87 C8 03 00 00
+
+"RiverGame-Win64-Shipping.exe"+E5A15B:
+  db F2 0F 11 87 CC 03 00 00
+
+"RiverGame-Win64-Shipping.exe"+E5A172:
+  db 89 87 D4 03 00 00
+
+"RiverGame-Win64-Shipping.exe"+E5A17C:
+  db 0F 11 87 D8 03 00 00
+
+{$lua}
+timer_setEnabled(t, false)
+writeFloat("[pCamStruct]+33C", originalFov)
+originalFov = nil
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>45</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>speedModifier</Name>
+      <Address>22EBD9A0000</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+</CheatTable>
