@@ -9,9 +9,9 @@ tags:   Screenshooting
 A rogue-like river journey through the backwaters of a forgotten post-societal America. Forage, craft, evade predators.
 
 ## Required
-* [Batman: Arkham Asylum Cheat Table](https://anticowl.github.io/files/tfitf/RiverGame-Win64-Shipping.CT)
-* [Batman: Arkham City Cheat Table](https://anticowl.github.io/files/tfitf/ShaderToggler.ini)
-* [Batman: Arkham Origins Cheat Table](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
+* [Batman: Arkham Asylum Cheat Table](https://anticowl.github.io/files/Batman_Arkham_Origins_v2.2.CT)
+* [Batman: Arkham City Cheat Table](https://anticowl.github.io/files/Batman_Arkham_Origins_v2.2.CT)
+* [Batman: Arkham Origins Cheat Table](https://anticowl.github.io/files/Batman_Arkham_Origins_v2.2.CT)
 * [Cheat Engine 7.6 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
 
 ## Configuration
