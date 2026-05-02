@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="46">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>37</ID>
+      <Description>"-----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>35</ID>
+      <Description>"- Batman: Arkham Origins Camera for Steam"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>36</ID>
+      <Description>"- One3rd and Antic Owl"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>39</ID>
+      <Description>"- See Table Extra for info"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>34</ID>
+      <Description>"-----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8397</ID>
+      <Description>"Auto Attach To Game"</Description>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$lua}
+[ENABLE]
+
+local processName = "BatmanOrigins.exe"
+local function onTimer_Tick(timer)
+  if readInteger(processName) == nil then
+    local processId = getProcessIDFromProcessName(processName)
+    if processId and processId ~= getOpenedProcessID() then
+      openProcess(processId)
+    end
+  end
+end
+local autoAttachTimer = createTimer(getMainForm(), true)
+autoAttachTimer.Interval = 1000
+autoAttachTimer.OnTimer = onTimer_Tick
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26238</ID>
+      <Description>"Camera"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+aobscanmodule(Camera,BatmanOrigins.exe,8B 8B CC 04 00 00 8B 04) // should be unique
+alloc(newmem,$1000,Camera)
+
+label(code)
+label(return)
+label(pCamera)
+
+newmem:
+mov [pCamera], ebx
+
+code:
+  mov ecx,[ebx+000004CC]
+  jmp return
+
+pCamera:
+  dd 0
+
+Camera:
+  jmp newmem
+  nop
+
+return:
+registersymbol(Camera)
+registersymbol(pCamera)
+
+
+
+{$lua}
+function getCamBase()
+    local base = getAddressSafe("pCamera")
+    if not base then return nil end
+
+    local addr = readPointer(base)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x4CC)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x0)
+    if not addr then return nil end
+    addrlp = readPointer(addr + 0x30)
+    if not addrlp then return nil end
+    addr = readPointer(addrlp + 0x370)
+    if not addr then return nil end
+
+    return addr
+end
+
+function toDegrees(v)
+    return (v / 32768) * 180
+end
+
+speedFast  = 1
+speedFaster  = 2.5
+speedSlow = 0.1
+
+function checkKeys()
+    local cam = getCamBase()
+    if not cam then return end
+
+if getOpenedProcessID() == getForegroundProcess() then
+
+    -- Key Speed
+    local speed = speedFast
+    if isKeyPressed(VK_LCONTROL) then speed = speedFaster end
+    if isKeyPressed(VK_LMENU)   then speed = speedSlow end
+
+    -- rotations
+    local pitchI = readInteger(cam + 0x3E4)
+    local yawI   = readInteger(cam + 0x3E8)
+    local rollI  = readInteger(cam + 0x3EC)
+
+    local pitch = math.rad(toDegrees(pitchI))
+    local yaw   = math.rad(toDegrees(yawI))
+
+    -- position
+    local x = readFloat(cam + 0x3D8)
+    local y = readFloat(cam + 0x3DC)
+    local z = readFloat(cam + 0x3E0)
+
+    -- fov
+    local fov = readFloat(cam + 0x3F0)
+
+    local siny = math.sin(yaw)
+    local cosy = math.cos(yaw)
+
+    -- Pitch
+    if isKeyPressed(VK_UP)    then writeInteger(cam + 0x3E4, pitchI + (speed * 40)) end
+    if isKeyPressed(VK_DOWN)  then writeInteger(cam + 0x3E4, pitchI - (speed * 40)) end
+
+    -- Yaw
+    if isKeyPressed(VK_LEFT)  then writeInteger(cam + 0x3E8, yawI   - (speed * 40)) end
+    if isKeyPressed(VK_RIGHT) then writeInteger(cam + 0x3E8, yawI   + (speed * 40)) end
+
+        -- FOV
+    if isKeyPressed(VK_ADD)      then writeFloat(cam + 0x3F0, fov - (speed * 0.5)) end
+    if isKeyPressed(VK_SUBTRACT) then writeFloat(cam + 0x3F0, fov + (speed * 0.5)) end
+
+    -- Forward
+    if isKeyPressed(VK_NUMPAD8) then
+        writeFloat(cam + 0x3D8, x + (cosy * speed))
+        writeFloat(cam + 0x3DC, y + (siny * speed))
+    end
+
+    -- Backward
+    if isKeyPressed(VK_NUMPAD5) then
+        writeFloat(cam + 0x3D8, x - (cosy * speed))
+        writeFloat(cam + 0x3DC, y - (siny * speed))
+    end
+
+    -- Left
+    if isKeyPressed(VK_NUMPAD4) then
+        writeFloat(cam + 0x3D8, x + math.cos(yaw - math.rad(90)) * speed)
+        writeFloat(cam + 0x3DC, y + math.sin(yaw - math.rad(90)) * speed)
+    end
+
+    -- Right
+    if isKeyPressed(VK_NUMPAD6) then
+        writeFloat(cam + 0x3D8, x - math.cos(yaw - math.rad(90)) * speed)
+        writeFloat(cam + 0x3DC, y - math.sin(yaw - math.rad(90)) * speed)
+    end
+
+    -- Up / Down
+    if isKeyPressed(VK_NUMPAD7) then
+        writeFloat(cam + 0x3E0, z + speed)
+    end
+    if isKeyPressed(VK_NUMPAD9) then
+        writeFloat(cam + 0x3E0, z - speed)
+    end
+
+    -- Roll
+    if isKeyPressed(VK_NUMPAD1) then writeInteger(cam + 0x3EC, rollI - (speed * 20)) end
+    if isKeyPressed(VK_NUMPAD3) then writeInteger(cam + 0x3EC, rollI + (speed * 20)) end
+
+end
+end
+
+if camTimer then camTimer.destroy() end
+
+camTimer = createTimer()
+camTimer.Interval = 10
+camTimer.OnTimer = checkKeys
+
+
+{$asm}
+[DISABLE]
+
+Camera:
+  db 8B 8B CC 04 00 00
+
+unregistersymbol(*)
+dealloc(*)
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>45</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>26240</ID>
+          <Description>"X"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>3D8</Offset>
+            <Offset>370</Offset>
+            <Offset>30</Offset>
+            <Offset>0</Offset>
+            <Offset>4CC</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26246</ID>
+          <Description>"Y"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>3DC</Offset>
+            <Offset>370</Offset>
+            <Offset>30</Offset>
+            <Offset>0</Offset>
+            <Offset>4CC</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26245</ID>
+          <Description>"Z"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>3E0</Offset>
+            <Offset>370</Offset>
+            <Offset>30</Offset>
+            <Offset>0</Offset>
+            <Offset>4CC</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26244</ID>
+          <Description>"Pitch"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>3E4</Offset>
+            <Offset>370</Offset>
+            <Offset>30</Offset>
+            <Offset>0</Offset>
+            <Offset>4CC</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26243</ID>
+          <Description>"Yaw"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>3E8</Offset>
+            <Offset>370</Offset>
+            <Offset>30</Offset>
+            <Offset>0</Offset>
+            <Offset>4CC</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26242</ID>
+          <Description>"Roll"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>3EC</Offset>
+            <Offset>370</Offset>
+            <Offset>30</Offset>
+            <Offset>0</Offset>
+            <Offset>4CC</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26241</ID>
+          <Description>"FOV"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>3F0</Offset>
+            <Offset>370</Offset>
+            <Offset>30</Offset>
+            <Offset>0</Offset>
+            <Offset>4CC</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26247</ID>
+      <Description>"Pause Menu"</Description>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>26248</ID>
+          <Description>"Disable Pause Menu Text and Filter"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+aobscanmodule(MenuText,BatmanOrigins.exe,40 00 00 00 01 00 00 00 01 00 00 00 00 00)
+define(MenuText,MenuText+08)
+MenuText:
+  db 00 00
+
+{$lua}
+local filter = ('[[[[[BatmanOrigins.exe+14F62B4]+75C]+234]+B0]+100]+8')
+writeFloat (filter, 0.0)
+
+{$asm}
+[DISABLE]
+MenuText:
+  db 01 00
+
+
+</AssemblerScript>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Toggle Activation</Action>
+              <Keys>
+                <Key>46</Key>
+              </Keys>
+              <ID>0</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26234</ID>
+      <Description>"Slomo"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>pCamera</Address>
+      <Offsets>
+        <Offset>434</Offset>
+        <Offset>C0</Offset>
+        <Offset>370</Offset>
+        <Offset>30</Offset>
+        <Offset>0</Offset>
+        <Offset>4CC</Offset>
+      </Offsets>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>112</Key>
+          </Keys>
+          <Value>0.15</Value>
+          <ID>0</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>113</Key>
+          </Keys>
+          <Value>0.3</Value>
+          <ID>1</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>114</Key>
+          </Keys>
+          <Value>1.0</Value>
+          <ID>2</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26237</ID>
+      <Description>"Better LOD"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$LUA}
+if syntaxcheck then return end
+
+[ENABLE]
+
+local addr = AOBScanModuleUnique( process, 'D9 05 ?? ?? ?? ?? DC C8 D9 E8 DE F1 DE C9 D9 FA D9 9B' )
+registerSymbol( 'ilod1', readInteger( addr + 0x02 ) )
+
+addr = AOBScanModuleUnique( process, 'F3 0F 59 0D ?? ?? ?? ?? 0F 2F C8 76 ?? 83 3D ?? ?? ?? ?? 00 74' )
+registerSymbol( 'ilod2', readInteger( addr + 0x04 ) )
+
+writeFloat( 'ilod1', 0.5 )
+writeFloat( 'ilod2', 5.0 )
+
+[DISABLE]
+
+writeFloat( 'ilod1', 25.0 )
+writeFloat( 'ilod2', 1.0 )
+
+unregisterSymbol( 'ilod1' )
+unregisterSymbol( 'ilod2' )
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>33</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>ilod1</Name>
+      <Address>17CC9A0</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>ilod2</Name>
+      <Address>17CC964</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+</CheatTable>
