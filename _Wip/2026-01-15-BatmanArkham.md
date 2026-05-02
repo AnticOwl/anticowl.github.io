@@ -6,18 +6,13 @@ image:  BAS_POST.jpg
 tags:   Screenshooting
 ---
 
-A rogue-like river journey through the backwaters of a forgotten post-societal America. Forage, craft, evade predators.
+
 
 ## Required
 * [Batman: Arkham Asylum Cheat Table](https://anticowl.github.io/files/Batman_Arkham_Origins_v2.2.CT)
 * [Batman: Arkham City Cheat Table](https://anticowl.github.io/files/Batman_Arkham_Origins_v2.2.CT)
 * [Batman: Arkham Origins Cheat Table](https://anticowl.github.io/files/Batman_Arkham_Origins_v2.2.CT)
 * [Cheat Engine 7.6 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
-
-## Configuration
-
-Install ReShade and Shader Toggler addon in `\FlameInTheFlood\RiverGame\Binaries\Win64`. Do not forget to also copy previously downloaded ini at the same place.  
-It will be used to remove the pause menu while in pause.
 
 ## Controls
 <style>
@@ -88,6 +83,14 @@ It will be used to remove the pause menu while in pause.
         <tr>
             <td>NUMPAD +,-</td>
             <td>Zoom in an out</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>Page Down</td>
+            <td>Enable camera structure</td>
         </tr>
         <tr>
             <td><br></td>
