@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Batman: Arkham Series"
-date:   2025-10-30 18:05:55 +0300
+date:   2023-10-30 18:05:55 +0300
 image:  BAS_POST.jpg
 tags:   Screenshooting
 ---
