@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "RBatman: Arkham Series"
+title:  "Batman: Arkham Series"
 date:   2025-10-30 18:05:55 +0300
 image:  BAS_POST.jpg
 tags:   Screenshooting
@@ -128,6 +128,36 @@ tags:   Screenshooting
 </table>
 </div>
 
+## LOD
+### Arkham Origins
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
+
+<img-comparison-slider>
+  <img slot="first" src="/images/BAO-01.jpg" />
+  <img slot="second" src="/images/BAO-02.jpg" />
+</img-comparison-slider>
+
+### Arkham City
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
+
+<img-comparison-slider>
+  <img slot="first" src="/images/BAC_04.jpg" />
+  <img slot="second" src="/images/BAC_05.jpg" />
+</img-comparison-slider>
+
 ## How To
 ### Use The Cheat Table
 Once you have installed Cheat Engine 7.6 or higher (if not already done), click twice on the cheat table file you downloaded. Check the `Auto Attach to Game` box. Cheat Engine will automatically connect to the game when detected.
@@ -137,6 +167,23 @@ Press `Page Down` to enable the camera structure and leave on.
 <img src="https://github.com/user-attachments/assets/3b02796a-417c-4bae-a8ef-aea4d76e79d1" alt="Cheat Engine" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
+
+## LOD
+### Arkham Origins
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
+
+<img-comparison-slider>
+  <img slot="first" src="/images/BAO-01.jpg" />
+  <img slot="second" src="/images/BAO-02.jpg" />
+</img-comparison-slider>
+
 
 ### Take A Screenshot
 * Press `Escape` on keyboard or `Pause` on your controller to pause the game.
