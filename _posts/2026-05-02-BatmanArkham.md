@@ -146,8 +146,8 @@ These mods are optional but highly recommended. Read their description and how t
 />
 
 <img-comparison-slider>
-  <img slot="first" src="/images/BAO_02.jpg" />
-  <img slot="second" src="/images/BAO_01.jpg" />
+  <img slot="first" src="/images/BAO_01.jpg" />
+  <img slot="second" src="/images/BAO_02.jpg" />
 </img-comparison-slider>
 
 ### Arkham City
