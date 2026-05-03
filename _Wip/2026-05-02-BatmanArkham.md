@@ -1,18 +1,23 @@
 ---
 layout: post
 title:  "Batman: Arkham Series"
-date:   2023-10-30 18:05:55 +0300
+date:   2026-05-02 18:05:55 +0300
 image:  BAS_POST.jpg
 tags:   Screenshooting
 ---
-
-
+Here is pack cameras for Batman: Arkham Asylum, Batman: Arkham City, and Batman: Arkham Origins, giving a fresh cinematic feel to exploring Gotham from every angle. On top of that, a better LOD for sharper visuals because Batman deserves nothing less than a crystal-clear night patrol.
 
 ## Required
 * [Batman: Arkham Asylum Cheat Table](https://anticowl.github.io/files/Batman_Arkham_Origins_v2.2.CT)
 * [Batman: Arkham City Cheat Table](https://anticowl.github.io/files/Batman_Arkham_Origins_v2.2.CT)
 * [Batman: Arkham Origins Cheat Table](https://anticowl.github.io/files/Batman_Arkham_Origins_v2.2.CT)
 * [Cheat Engine 7.6 or higher](https://du0wcodktyky8.cloudfront.net/installer/003333/420362877561915)
+
+## Optional
+These mods are optional but highly recommended. Read their description and how to install.
+* [Batman: Arkham Asylum](https://www.nexusmods.com/batmanarkhamasylum/mods/1?tab=description)
+* [Batman: Arkham City](https://www.nexusmods.com/batmanarkhamcity/mods/407)
+* [Batman: Arkham Origins](https://www.nexusmods.com/batmanarkhamorigins/mods/451)
 
 ## Controls
 <style>
@@ -128,7 +133,8 @@ tags:   Screenshooting
 </table>
 </div>
 
-## LOD
+## Better Level of Detail
+
 ### Arkham Origins
 
 <script defer
@@ -140,8 +146,8 @@ tags:   Screenshooting
 />
 
 <img-comparison-slider>
-  <img slot="first" src="/images/BAO-01.jpg" />
-  <img slot="second" src="/images/BAO-02.jpg" />
+  <img slot="first" src="/images/BAO_02.jpg" />
+  <img slot="second" src="/images/BAO_01.jpg" />
 </img-comparison-slider>
 
 ### Arkham City
@@ -154,8 +160,8 @@ tags:   Screenshooting
 />
 
 <img-comparison-slider>
-  <img slot="first" src="/images/BAC_04.jpg" />
-  <img slot="second" src="/images/BAC_05.jpg" />
+  <img slot="first" src="/images/BAC_01.jpg" />
+  <img slot="second" src="/images/BAC_02.jpg" />
 </img-comparison-slider>
 
 ## How To
@@ -168,22 +174,6 @@ Press `Page Down` to enable the camera structure and leave on.
 </div>
 <div> </div>
 
-## LOD
-### Arkham Origins
-
-<script defer
-  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js">
-</script>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
-/>
-
-<img-comparison-slider>
-  <img slot="first" src="/images/BAO-01.jpg" />
-  <img slot="second" src="/images/BAO-02.jpg" />
-</img-comparison-slider>
-
 
 ### Take A Screenshot
 * Press `Escape` on keyboard or `Pause` on your controller to pause the game.
@@ -192,5 +182,8 @@ Press `Page Down` to enable the camera structure and leave on.
 
 ## Resources
 
-[PC Gaming Wiki](https://www.pcgamingwiki.com/wiki/The_Flame_in_the_Flood)
+* [PC Gaming Wiki - Arkham Origins](https://www.pcgamingwiki.com/wiki/Batman:_Arkham_Origins)
+* [PC Gaming Wiki - Arkham City](https://www.pcgamingwiki.com/wiki/Batman:_Arkham_City)
+* [PC Gaming Wiki - Arkham Asylum](https://www.pcgamingwiki.com/wiki/Batman:_Arkham_Aylum)
 
+Thanks to Shkegulka for the tests. 
