@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="46">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>37</ID>
+      <Description>"----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>35</ID>
+      <Description>"- TRON: Evolution Camera for Steam"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>36</ID>
+      <Description>"- Antic Owl and One3rd"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4027</ID>
+      <Description>"- See Table Extra for info"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>34</ID>
+      <Description>"----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8397</ID>
+      <Description>"Auto Attach To Game"</Description>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$lua}
+[ENABLE]
+
+local processName = "GridGame.exe"
+local function onTimer_Tick(timer)
+  if readInteger(processName) == nil then
+    local processId = getProcessIDFromProcessName(processName)
+    if processId and processId ~= getOpenedProcessID() then
+      openProcess(processId)
+    end
+  end
+end
+local autoAttachTimer = createTimer(getMainForm(), true)
+autoAttachTimer.Interval = 1000
+autoAttachTimer.OnTimer = onTimer_Tick
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26232</ID>
+      <Description>"Camera"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+aobscanmodule(GridCamera,GridGame.exe,8B 83 68 04 00 00 83) // should be unique
+alloc(newmem,$1000,GridCamera)
+
+label(code)
+label(return)
+label(pGridCam)
+
+newmem:
+  mov [pGridCam],ebx
+
+code:
+  mov eax,[ebx+00000468]
+  jmp return
+
+pGridCam:
+  dq 0
+
+GridCamera:
+  jmp newmem
+  nop
+
+return:
+registersymbol(GridCamera)
+registersymbol(pGridCam)
+
+{$lua}
+function getCamBase()
+    local base = getAddressSafe("pGridCam")
+    if not base then return nil end
+
+    local addr = readPointer(base)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x468)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x0)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x40)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x370)
+    if not addr then return nil end
+
+    return addr
+end
+
+function toDegrees(v)
+    return (v / 32768) * 180
+end
+
+speedFast  = 7
+speedSlow  = 2
+speedSlow2 = 0.5
+
+function checkKeys()
+    local cam = getCamBase()
+    if not cam then return end
+
+    -- Key Speed
+    local speed = speedFast
+    if isKeyPressed(VK_LCONTROL) then speed = speedSlow end
+    if isKeyPressed(VK_LMENU)   then speed = speedSlow2 end
+
+    -- rotations
+    local pitchI = readInteger(cam + 0x31C)
+    local yawI   = readInteger(cam + 0x320)
+    local rollI  = readInteger(cam + 0x324)
+
+    local pitch = math.rad(toDegrees(pitchI))
+    local yaw   = math.rad(toDegrees(yawI))
+
+    -- position
+    local x = readFloat(cam + 0x310)
+    local y = readFloat(cam + 0x314)
+    local z = readFloat(cam + 0x318)
+
+    -- fov
+    local fov = readFloat(cam + 0x328)
+
+    local siny = math.sin(yaw)
+    local cosy = math.cos(yaw)
+
+    -- Forward
+    if isKeyPressed(VK_NUMPAD8) then
+        writeFloat(cam + 0x310, x + (cosy * speed))
+        writeFloat(cam + 0x314, y + (siny * speed))
+    end
+
+    -- Backward
+    if isKeyPressed(VK_NUMPAD5) then
+        writeFloat(cam + 0x310, x - (cosy * speed))
+        writeFloat(cam + 0x314, y - (siny * speed))
+    end
+
+    -- Left
+    if isKeyPressed(VK_NUMPAD4) then
+        writeFloat(cam + 0x310, x + math.cos(yaw - math.rad(90)) * speed)
+        writeFloat(cam + 0x314, y + math.sin(yaw - math.rad(90)) * speed)
+    end
+
+    -- Right
+    if isKeyPressed(VK_NUMPAD6) then
+        writeFloat(cam + 0x310, x - math.cos(yaw - math.rad(90)) * speed)
+        writeFloat(cam + 0x314, y - math.sin(yaw - math.rad(90)) * speed)
+    end
+
+    -- Up / Down
+    if isKeyPressed(VK_NUMPAD7) then
+        writeFloat(cam + 0x318, z + speed)
+    end
+    if isKeyPressed(VK_NUMPAD9) then
+        writeFloat(cam + 0x318, z - speed)
+    end
+
+    -- Pitch
+    if isKeyPressed(VK_UP)    then writeInteger(cam + 0x31C, pitchI + (speed * 40)) end
+    if isKeyPressed(VK_DOWN)  then writeInteger(cam + 0x31C, pitchI - (speed * 40)) end
+
+    -- Yaw
+    if isKeyPressed(VK_LEFT)  then writeInteger(cam + 0x320, yawI   - (speed * 40)) end
+    if isKeyPressed(VK_RIGHT) then writeInteger(cam + 0x320, yawI   + (speed * 40)) end
+
+    -- Roll
+    if isKeyPressed(VK_NUMPAD1) then writeInteger(cam + 0x324, rollI - (speed * 20)) end
+    if isKeyPressed(VK_NUMPAD3) then writeInteger(cam + 0x324, rollI + (speed * 20)) end
+
+    -- FOV
+    if isKeyPressed(VK_ADD)      then writeFloat(cam + 0x328, fov - (speed * 0.5)) end
+    if isKeyPressed(VK_SUBTRACT) then writeFloat(cam + 0x328, fov + (speed * 0.5)) end
+end
+
+
+if camTimer then camTimer.destroy() end
+
+camTimer = createTimer()
+camTimer.Interval = 10
+camTimer.OnTimer = checkKeys
+
+
+{$asm}
+[DISABLE]
+
+GridCamera:
+  db 8B 83 68 04 00 00
+
+unregistersymbol(*)
+dealloc(*)
+
+{$lua}
+if freecamTimer then
+    freecamTimer.destroy()
+    freecamTimer = nil
+end
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>34</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>26233</ID>
+          <Description>"X"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pGridCam</Address>
+          <Offsets>
+            <Offset>310</Offset>
+            <Offset>370</Offset>
+            <Offset>40</Offset>
+            <Offset>0</Offset>
+            <Offset>468</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26238</ID>
+          <Description>"Y"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pGridCam</Address>
+          <Offsets>
+            <Offset>314</Offset>
+            <Offset>370</Offset>
+            <Offset>40</Offset>
+            <Offset>0</Offset>
+            <Offset>468</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26237</ID>
+          <Description>"Z"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pGridCam</Address>
+          <Offsets>
+            <Offset>318</Offset>
+            <Offset>370</Offset>
+            <Offset>40</Offset>
+            <Offset>0</Offset>
+            <Offset>468</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26236</ID>
+          <Description>"Pitch"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pGridCam</Address>
+          <Offsets>
+            <Offset>31C</Offset>
+            <Offset>370</Offset>
+            <Offset>40</Offset>
+            <Offset>0</Offset>
+            <Offset>468</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26235</ID>
+          <Description>"Yaw"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pGridCam</Address>
+          <Offsets>
+            <Offset>320</Offset>
+            <Offset>370</Offset>
+            <Offset>40</Offset>
+            <Offset>0</Offset>
+            <Offset>468</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26234</ID>
+          <Description>"Roll"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pGridCam</Address>
+          <Offsets>
+            <Offset>324</Offset>
+            <Offset>370</Offset>
+            <Offset>40</Offset>
+            <Offset>0</Offset>
+            <Offset>468</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26239</ID>
+          <Description>"Fov"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pGridCam</Address>
+          <Offsets>
+            <Offset>328</Offset>
+            <Offset>370</Offset>
+            <Offset>40</Offset>
+            <Offset>0</Offset>
+            <Offset>468</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26241</ID>
+      <Description>"---------------------------------------------------------------------------------------------"</Description>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26231</ID>
+      <Description>"Slomo"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>pGridCam</Address>
+      <Offsets>
+        <Offset>36C</Offset>
+        <Offset>E8</Offset>
+        <Offset>E8</Offset>
+        <Offset>40</Offset>
+        <Offset>0</Offset>
+        <Offset>+468</Offset>
+      </Offsets>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>112</Key>
+          </Keys>
+          <Value>0.1</Value>
+          <ID>0</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>113</Key>
+          </Keys>
+          <Value>0.3</Value>
+          <ID>1</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>114</Key>
+          </Keys>
+          <Value>1.0</Value>
+          <ID>2</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26242</ID>
+      <Description>"Disable HUD"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+{$lua}
+local hud = getAddressSafe("[[[[[pGridCam]+468]+0]+40]+3D0]+200", false, false)
+writeInteger(hud, 32)
+
+{$asm}
+[DISABLE]
+{$lua}
+local hud = getAddressSafe("[[[[[pGridCam]+468]+0]+40]+3D0]+200", false, false)
+writeInteger(hud, 35)
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>46</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <LuaScript>function getHUD()
+    local base = getAddressSafe("pGridCam")
+    if not base then return nil end
+
+    local addr = readPointer(base)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x468)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x0)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x40)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x3D0)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x200)
+    if not addr then return nil end
+
+    return addr
+end
+
+local hud = getHUD()
+
+Print (hud)
+</LuaScript>
+</CheatTable>
