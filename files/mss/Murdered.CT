@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="46">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>37</ID>
+      <Description>"-----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>35</ID>
+      <Description>"- Murdered: Souls Suspect Camera for Steam"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>36</ID>
+      <Description>"- One3rd and Antic Owl"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>39</ID>
+      <Description>"- See Table Extra for info"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>34</ID>
+      <Description>"-----------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8397</ID>
+      <Description>"Auto Attach To Game"</Description>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$lua}
+[ENABLE]
+
+local processName = "Murdered.exe"
+local function onTimer_Tick(timer)
+  if readInteger(processName) == nil then
+    local processId = getProcessIDFromProcessName(processName)
+    if processId and processId ~= getOpenedProcessID() then
+      openProcess(processId)
+    end
+  end
+end
+local autoAttachTimer = createTimer(getMainForm(), true)
+autoAttachTimer.Interval = 1000
+autoAttachTimer.OnTimer = onTimer_Tick
+
+[DISABLE]
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>34</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26251</ID>
+      <Description>"Camera"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+aobscanmodule(Camera,Murdered.exe,48 8B 83 D8 06 00 00 48 8B 0D) // should be unique
+alloc(newmem,$1000,Camera)
+
+label(code)
+label(return)
+label(pCamera)
+
+newmem:
+  mov [pCamera], rbx
+
+code:
+  mov rax,[rbx+000006D8]
+  jmp return
+
+pCamera:
+  dq 0
+
+Camera:
+  jmp newmem
+  nop 2
+
+return:
+registersymbol(Camera)
+registersymbol(pCamera)
+
+{$lua}
+function getCamBase()
+    local base = getAddressSafe("pCamera")
+    if not base then return nil end
+
+    local addr = readPointer(base)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x6D8)
+    if not addr then return nil end
+    addr = readPointer(addr + 0x0)
+    if not addr then return nil end
+    addrlp = readPointer(addr + 0x74)
+    if not addrlp then return nil end
+    addr = readPointer(addrlp + 0x460)
+    if not addr then return nil end
+
+    return addr
+end
+
+function toDegrees(v)
+    return (v / 32768) * 180
+end
+
+speedFast  = 7
+speedSlow  = 2
+speedSlow2 = 0.5
+
+function checkKeys()
+    local cam = getCamBase()
+    if not cam then return end
+
+    -- Key Speed
+    local speed = speedFast
+    if isKeyPressed(VK_LCONTROL) then speed = speedSlow end
+    if isKeyPressed(VK_LMENU)   then speed = speedSlow2 end
+
+    -- rotations
+    local pitchI = readInteger(cam + 0x98)
+    local yawI   = readInteger(cam + 0x9C)
+    local rollI  = readInteger(cam + 0xA0)
+
+    local pitch = math.rad(toDegrees(pitchI))
+    local yaw   = math.rad(toDegrees(yawI))
+
+    -- position
+    local x = readFloat(cam + 0x8C)
+    local y = readFloat(cam + 0x90)
+    local z = readFloat(cam + 0x94)
+
+    -- fov
+    local fov = readFloat(cam + 0x7A8)
+
+    local siny = math.sin(yaw)
+    local cosy = math.cos(yaw)
+
+    -- Forward
+    if isKeyPressed(VK_NUMPAD8) then
+        writeFloat(cam + 0x8C, x + (cosy * speed))
+        writeFloat(cam + 0x90, y + (siny * speed))
+    end
+
+    -- Backward
+    if isKeyPressed(VK_NUMPAD5) then
+        writeFloat(cam + 0x8C, x - (cosy * speed))
+        writeFloat(cam + 0x90, y - (siny * speed))
+    end
+
+    -- Left
+    if isKeyPressed(VK_NUMPAD4) then
+        writeFloat(cam + 0x8C, x + math.cos(yaw - math.rad(90)) * speed)
+        writeFloat(cam + 0x90, y + math.sin(yaw - math.rad(90)) * speed)
+    end
+
+    -- Right
+    if isKeyPressed(VK_NUMPAD6) then
+        writeFloat(cam + 0x8C, x - math.cos(yaw - math.rad(90)) * speed)
+        writeFloat(cam + 0x90, y - math.sin(yaw - math.rad(90)) * speed)
+    end
+
+    -- Up / Down
+    if isKeyPressed(VK_NUMPAD7) then
+        writeFloat(cam + 0x94, z + speed)
+    end
+    if isKeyPressed(VK_NUMPAD9) then
+        writeFloat(cam + 0x94, z - speed)
+    end
+
+    -- Pitch
+    if isKeyPressed(VK_UP)    then writeInteger(cam + 0x98, pitchI + (speed * 40)) end
+    if isKeyPressed(VK_DOWN)  then writeInteger(cam + 0x98, pitchI - (speed * 40)) end
+
+    -- Yaw
+    if isKeyPressed(VK_LEFT)  then writeInteger(cam + 0x9C, yawI   - (speed * 40)) end
+    if isKeyPressed(VK_RIGHT) then writeInteger(cam + 0x9C, yawI   + (speed * 40)) end
+
+    -- Roll
+    if isKeyPressed(VK_NUMPAD1) then writeInteger(cam + 0xA0, rollI - (speed * 20)) end
+    if isKeyPressed(VK_NUMPAD3) then writeInteger(cam + 0xA0, rollI + (speed * 20)) end
+
+    -- FOV
+    if isKeyPressed(VK_ADD)      then writeFloat(cam + 0x7A8, fov - (speed * 0.5)) end
+    if isKeyPressed(VK_SUBTRACT) then writeFloat(cam + 0x7A8, fov + (speed * 0.5)) end
+end
+
+
+if camTimer then camTimer.destroy() end
+
+camTimer = createTimer()
+camTimer.Interval = 10
+camTimer.OnTimer = checkKeys
+
+
+{$asm}
+[DISABLE]
+
+Camera:
+  db 48 8B 83 D8 06 00 00
+
+unregistersymbol(*)
+dealloc(*)
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>34</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>26252</ID>
+          <Description>"Base"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26253</ID>
+          <Description>"X"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>8C</Offset>
+            <Offset>460</Offset>
+            <Offset>74</Offset>
+            <Offset>0</Offset>
+            <Offset>6D8</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1337140170</ID>
+          <Description>"Y"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>90</Offset>
+            <Offset>460</Offset>
+            <Offset>74</Offset>
+            <Offset>0</Offset>
+            <Offset>6D8</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1337140169</ID>
+          <Description>"Z"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>94</Offset>
+            <Offset>460</Offset>
+            <Offset>74</Offset>
+            <Offset>0</Offset>
+            <Offset>6D8</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1337140168</ID>
+          <Description>"Pitch"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>98</Offset>
+            <Offset>460</Offset>
+            <Offset>74</Offset>
+            <Offset>0</Offset>
+            <Offset>6D8</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1337140167</ID>
+          <Description>"Yaw"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>9C</Offset>
+            <Offset>460</Offset>
+            <Offset>74</Offset>
+            <Offset>0</Offset>
+            <Offset>6D8</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1337140166</ID>
+          <Description>"Roll"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>A0</Offset>
+            <Offset>460</Offset>
+            <Offset>74</Offset>
+            <Offset>0</Offset>
+            <Offset>6D8</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1337140165</ID>
+          <Description>"Fov"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>pCamera</Address>
+          <Offsets>
+            <Offset>7A8</Offset>
+            <Offset>460</Offset>
+            <Offset>74</Offset>
+            <Offset>0</Offset>
+            <Offset>6D8</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <LuaScript>-- CEIGCS universal Lua bridge - UE3 records template
+-- Use with CEIGCSBridge_x86_addon32.dll or CEIGCSBridge_x64_addon64.dll.
+-- Assumes CE address list records expose X/Y/Z/Pitch/Yaw/Roll/FOV.
+-- UE3 rotations are int32 rotator units: 65536 = 360 degrees.
+
+if syntaxcheck then return end
+
+------------------------------------------------------------
+-- CONFIG
+------------------------------------------------------------
+------------------------------------------------------------
+-- DLL CONFIG
+------------------------------------------------------------
+
+local BRIDGE_DLL_PATH_X86 =
+[[F:\CE Projects\CEIGCSBridge_Universal\bin\x86\CEIGCSBridge_x86_addon32.dll]]
+
+local BRIDGE_DLL_PATH_X64 =
+[[F:\CE Projects\CEIGCSBridge_Universal\bin\x64\CEIGCSBridge_x64_addon64.dll]]
+-- For x64 games, use for example:
+-- local BRIDGE_DLL_PATH = [[F:\CE Projects\CEIGCSBridge_Universal\bin\x64\CEIGCSBridge_x64_addon64.dll]]
+
+local CAMERA_FILE  = os.getenv("TEMP") .. [[\CEIGCSBridge_camera.txt]]
+local COMMAND_FILE = os.getenv("TEMP") .. [[\CEIGCSBridge_commands.txt]]
+local POLL_INTERVAL = 10
+
+local RECORD_X     = "X"
+local RECORD_Y     = "Y"
+local RECORD_Z     = "Z"
+local RECORD_PITCH = "Pitch"
+local RECORD_YAW   = "Yaw"
+local RECORD_ROLL  = "Roll"
+local RECORD_FOV   = "FOV"
+
+------------------------------------------------------------
+-- ADDRESS LIST HELPERS
+------------------------------------------------------------
+
+local al = getAddressList()
+local function rec(name)
+  local r = al.getMemoryRecordByDescription(name)
+  if not r then print("[CEIGCS] Missing record:", name) end
+  return r
+end
+
+local REC_X, REC_Y, REC_Z = rec(RECORD_X), rec(RECORD_Y), rec(RECORD_Z)
+local REC_PITCH, REC_YAW, REC_ROLL, REC_FOV = rec(RECORD_PITCH), rec(RECORD_YAW), rec(RECORD_ROLL), rec(RECORD_FOV)
+
+local function rf(r) return r and (tonumber(r.Value) or 0) or 0 end
+local function ri(r) return r and (tonumber(r.Value) or 0) or 0 end
+local function wf(r,v) if r then r.Value=string.format("%.6f", v) end end
+local function wi(r,v) if r then r.Value=tostring(v) end end
+
+------------------------------------------------------------
+-- UE3 ROTATOR HELPERS
+------------------------------------------------------------
+
+local function toSigned32(v)
+  if v and v &gt; 2147483647 then return v - 4294967296 end
+  return v or 0
+end
+local function ue3RotToDeg(raw) return toSigned32(raw) * 360.0 / 65536.0 end
+local function degToUE3Rot(deg)
+  local v = math.floor((deg * 65536.0 / 360.0) + 0.5)
+  if v &lt; 0 then v = v + 4294967296 end
+  return v
+end
+
+------------------------------------------------------------
+-- CAMERA READ / WRITE
+------------------------------------------------------------
+
+local function readCamera()
+  local rawPitch, rawYaw, rawRoll = ri(REC_PITCH), ri(REC_YAW), ri(REC_ROLL)
+  return {
+    x=rf(REC_X), y=rf(REC_Y), z=rf(REC_Z),
+    rawPitch=rawPitch, rawYaw=rawYaw, rawRoll=rawRoll,
+    pitch=ue3RotToDeg(rawPitch), yaw=ue3RotToDeg(rawYaw), roll=ue3RotToDeg(rawRoll),
+    fov=rf(REC_FOV)
+  }
+end
+
+local function writeCamera(c)
+  wf(REC_X,c.x); wf(REC_Y,c.y); wf(REC_Z,c.z)
+  wi(REC_PITCH,degToUE3Rot(c.pitch)); wi(REC_YAW,degToUE3Rot(c.yaw)); wi(REC_ROLL,degToUE3Rot(c.roll))
+  wf(REC_FOV,c.fov)
+end
+
+local function clone(c) return {x=c.x,y=c.y,z=c.z,pitch=c.pitch,yaw=c.yaw,roll=c.roll,fov=c.fov} end
+
+------------------------------------------------------------
+-- BRIDGE FILES
+------------------------------------------------------------
+
+local cameraSeq, lastCommandSeq = 0, 0
+local sessionActive, savedCamera = false, nil
+
+local function writeCameraFile()
+  local cam = readCamera()
+  cameraSeq = cameraSeq + 1
+  local f = io.open(CAMERA_FILE, "w")
+  if not f then return end
+  -- seq C enabled locked x y z pitchDeg yawDeg rollDeg fovDeg
+  f:write(string.format("%d C 1 0 %.8f %.8f %.8f %.8f %.8f %.8f %.8f\n",
+    cameraSeq, cam.x, cam.y, cam.z, cam.pitch, cam.yaw, cam.roll, cam.fov))
+  f:close()
+end
+
+local function parseCommandLine(line)
+  if not line then return nil end
+  local seq,cmd,a,b,c,d = line:match("^(%d+)%s+(%S+)%s+([%-%d%.]+)%s+([%-%d%.]+)%s+([%-%d%.]+)%s+([%-%d%.]+)")
+  if not seq then return nil end
+  return {seq=tonumber(seq), cmd=cmd, a=tonumber(a) or 0, b=tonumber(b) or 0, c=tonumber(c) or 0, d=tonumber(d) or 0}
+end
+
+local function readCommandFile()
+  local f=io.open(COMMAND_FILE,"r")
+  if not f then return nil end
+  local line=f:read("*l")
+  f:close()
+  return parseCommandLine(line)
+end
+
+------------------------------------------------------------
+-- IGCS COMMANDS
+------------------------------------------------------------
+
+local function onStartSession()
+  if not sessionActive then
+    savedCamera=clone(readCamera())
+    sessionActive=true
+    --print("[CEIGCS] Session start: camera saved")
+  end
+end
+
+local function onEndSession()
+  if sessionActive and savedCamera then
+    writeCamera(savedCamera)
+    --print("[CEIGCS] Session end: camera restored")
+  end
+  savedCamera=nil
+  sessionActive=false
+end
+
+local function applyMove(stepLR, stepUD)
+  local base = (sessionActive and savedCamera) and savedCamera or readCamera()
+
+  local pitch = math.rad(base.pitch)
+  local yaw   = math.rad(base.yaw)
+  local roll  = math.rad(base.roll)
+
+  local cp, sp = math.cos(pitch), math.sin(pitch)
+  local cy, sy = math.cos(yaw),   math.sin(yaw)
+  local cr, sr = math.cos(roll),  math.sin(roll)
+
+  -- Keep this basis in sync with CEIGCSBridge.cpp::basisFromEuler.
+  local rightX = cy * sr * sp - cr * sy
+  local rightY = sy * sr * sp + cr * cy
+  local rightZ = -sr * cp
+
+  local upX = -cr * cy * sp - sr * sy
+  local upY = -cr * sy * sp + sr * cy
+  local upZ =  cr * cp
+
+  local cam = clone(base)
+  -- Absolute multishot offset from saved camera, not cumulative.
+  cam.x = base.x + rightX * stepLR + upX * stepUD
+  cam.y = base.y + rightY * stepLR + upY * stepUD
+  cam.z = base.z + rightZ * stepLR + upZ * stepUD
+  writeCamera(cam)
+end
+
+local function applyPanorama(stepAngleRad)
+  local cam=readCamera()
+  cam.yaw = cam.yaw + math.deg(stepAngleRad)
+  writeCamera(cam)
+end
+
+local function handleCommand(cmd)
+  if not cmd or not cmd.seq or cmd.seq &lt;= lastCommandSeq then return end
+  lastCommandSeq = cmd.seq
+  if cmd.cmd=="L" then print("[CEIGCS] DLL loaded message received")
+  elseif cmd.cmd=="S" then onStartSession()
+  elseif cmd.cmd=="E" then onEndSession()
+  elseif cmd.cmd=="M" then applyMove(cmd.a, cmd.b)
+  elseif cmd.cmd=="P" then applyPanorama(cmd.a)
+  else print("[CEIGCS] Unknown command:", cmd.cmd) end
+end
+
+------------------------------------------------------------
+-- DLL INJECTION
+------------------------------------------------------------
+
+local function injectBridgeDll()
+
+  local bridgePath
+
+  if targetIs64Bit() then
+    bridgePath = BRIDGE_DLL_PATH_X64
+  else
+    bridgePath = BRIDGE_DLL_PATH_X86
+  end
+
+  print("[CEIGCS] targetIs64Bit:", tostring(targetIs64Bit()))
+  print("[CEIGCS] DLL path:", bridgePath)
+  print("[CEIGCS] DLL exists:", tostring(fileExists(bridgePath)))
+
+  local aa
+
+  if targetIs64Bit() then
+
+    aa = string.format([[alloc(loadlib,2048)
+alloc(dllpath,512)
+createthread(loadlib)
+
+dllpath:
+db '%s',0
+
+loadlib:
+sub rsp,28
+mov rcx,dllpath
+call LoadLibraryA
+add rsp,28
+ret
+]], bridgePath)
+
+  else
+
+    aa = string.format([[alloc(loadlib,2048)
+alloc(dllpath,512)
+createthread(loadlib)
+
+dllpath:
+db '%s',0
+
+loadlib:
+push dllpath
+call LoadLibraryA
+ret
+]], bridgePath)
+
+  end
+
+  local ok, err = autoAssemble(aa)
+
+  print(
+    "[CEIGCS] LoadLibrary injection result:",
+    tostring(ok),
+    tostring(err)
+  )
+end
+------------------------------------------------------------
+-- START
+------------------------------------------------------------
+
+if CEIGCS_Universal_Timer then CEIGCS_Universal_Timer.destroy(); CEIGCS_Universal_Timer=nil end
+os.remove(CAMERA_FILE); os.remove(COMMAND_FILE)
+
+local cam=readCamera()
+print(string.format("[CEIGCS] X=%f Y=%f Z=%f Pitch=%f Yaw=%f Roll=%f FOV=%f", cam.x,cam.y,cam.z,cam.pitch,cam.yaw,cam.roll,cam.fov))
+print(string.format("[CEIGCS] raw angles Pitch=%s Yaw=%s Roll=%s", tostring(cam.rawPitch), tostring(cam.rawYaw), tostring(cam.rawRoll)))
+print("[CEIGCS] Camera file:", CAMERA_FILE)
+print("[CEIGCS] Command file:", COMMAND_FILE)
+
+injectBridgeDll()
+
+CEIGCS_Universal_Timer=createTimer(nil,false)
+CEIGCS_Universal_Timer.Interval=POLL_INTERVAL
+CEIGCS_Universal_Timer.OnTimer=function() writeCameraFile(); handleCommand(readCommandFile()) end
+CEIGCS_Universal_Timer.Enabled=true
+print("[CEIGCS] Universal UE3 bridge started")
+
+
+
+</LuaScript>
+</CheatTable>
