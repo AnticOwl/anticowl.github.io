@@ -11,7 +11,7 @@ Will you regain control?
 
 ## Required
 * [Cheat Engine 7.6 or higher](https://www.cheatengine.org/downloads.php)
-* [Control Cheat Table]()
+* [Control Cheat Table](https://anticowl.github.io/files/Control_DX12_WithForm.CT)
 
 ## Optional
 * [ReShade 6.7.x](https://reshade.me)
