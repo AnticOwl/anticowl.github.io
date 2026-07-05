@@ -91,7 +91,7 @@ Press `Page Down` to enable the camera structure and leave on.
 <img src="https://github.com/user-attachments/assets/7c629713-5e61-43d2-b688-0735d400a1d0" alt="Cheat Engine" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
-<br></br>
+
 <div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/42ee75a7-a8ab-43c4-9269-791ab0dcdafe" alt="Cheat Engine" style="box-shadow: 3px 3px 3px gray;">
 </div>
