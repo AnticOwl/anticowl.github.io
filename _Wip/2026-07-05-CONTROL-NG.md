@@ -99,13 +99,14 @@ Press `Page Down` to enable the camera structure and leave on.
 
 ### Take A Screenshot
 First of all, for the ones who will use the hotsample feature (VERY HIGHLY RECOMMENDED), be sure that `Allow Window Resize` and `Allow Hotsampling` are checked. And be sure you are in Windowed Mode! 
+By default, the photo mode range is 8 meters (A.K.A. can of tuna. Kinding). 
 * Enter photo mode and frame your shot .
 * Open the Cheat Engine form and press `Capture Defaults` it should normally be already done at opening.
 * Experiment with the available tweaks.
 * If you decide to hotsample do as follow:
   * Open SRWE and connect to the game by clicking `Select running Application` and choose CONTROL_DX12.exe.
   * Change the `Width` and`Height` and click set. If you want by example a 4:5 type by example 4000 and the 5000 then click `Set`
-* Take your shot and go the other way around to get back in game.
+* Take your shot and click on click on `Reset All` to go back to the game settings.
   * To go back to a visible game window, change the resolution back in like 1600x900 or click `Fake Fullscreen`.
 
 ## Resources
