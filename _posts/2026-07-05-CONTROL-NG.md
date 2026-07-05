@@ -2,7 +2,7 @@
 layout: post
 title:  "CONTROL Next-Gen"
 date:   2026-07-05 10:05:55 +0300
-image:  CCONTROL_NG_POST.jpg
+image:  CONTROL_NG_POST.jpg
 tags:   Screenshooting
 ---
 
