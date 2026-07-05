@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="52">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>144</ID>
+      <Description>"------------------------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>147</ID>
+      <Description>"- CONTROL Next Gen Tweaks "</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>146</ID>
+      <Description>"- Thanks to Hatti for the help on the hotsampling part"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>145</ID>
+      <Description>"------------------------------------------------------------"</Description>
+      <Color>FFFF80</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8397</ID>
+      <Description>"Auto Attach To Game"</Description>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$lua}
+[ENABLE]
+
+local processName = "CONTROL_DX12.exe"
+local function onTimer_Tick(timer)
+  if readInteger(processName) == nil then
+    local processId = getProcessIDFromProcessName(processName)
+    if processId and processId ~= getOpenedProcessID() then
+      openProcess(processId)
+    end
+  end
+end
+local autoAttachTimer = createTimer(getMainForm(), true)
+autoAttachTimer.Interval = 1000
+autoAttachTimer.OnTimer = onTimer_Tick
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8398</ID>
+      <Description>"------------------------------------------------------------"</Description>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>77</ID>
+      <Description>"Enable Tweaks"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+{$asm}
+
+aobscanmodule(aobCONTROL,renderer_rmdwin10_f.dll,30 3A 49 6E 74 65 6E 73 69 74 79 00 00 00 00 00 00 00 00) // should be unique
+
+alloc(newmem,$1000,aobCONTROL)
+label(code)
+label(return)
+
+newmem:
+code:
+  jae renderer_rmdwin10_f.rend::LightProbeDefs::LightProbeRef::sm_classInfo+E0
+  je renderer_rmdwin10_f.rend::LightProbeDefs::LightProbeRef::sm_classInfo+F2
+  add [rax],al
+  jmp return
+
+aobCONTROL+07:
+  jmp newmem
+  nop
+return:
+registersymbol(aobCONTROL)
+
+{$lua}
+if syntaxcheck then return end
+
+-- Addresses and values to copy/backup --
+local addresses = {
+  {address = ("aobCONTROL-E52"), name = "Global Exposure"},
+  {address = ("aobCONTROL+1861Ce"), name = "Radial Blur"},
+  {address = ("aobCONTROL+184cde"), name = "Vignette"},
+  {address = ("aobCONTROL-36e"), name = "Scale X"},
+  {address = ("aobCONTROL-36a"), name = "Scale Y"},
+  {address = ("aobCONTROL-572"), name = "Intensity"},
+  {address = ("aobCONTROL-672"), name = "Threshold"},
+  {address = ("aobCONTROL-472"), name = "Lens Dirt"},
+  {address = ("aobCONTROL-772"), name = "Scatter"}
+}
+
+-- Save values --
+_G.savedValues = {}
+
+local timer = createTimer(getMainForm())
+timer.Interval = 100
+timer.OnTimer = function(timer)
+  for _, entry in ipairs(addresses) do
+    local val = readFloat(entry.address)
+    if type(val) == "number" then
+      _G.savedValues[entry.address] = {name = entry.name, value = val}
+    else
+    end
+  end
+
+  timer.Destroy()
+end
+
+
+--====================================
+-- EFFECT CONTROL VARIABLES
+--====================================
+local vars = {
+  [VK_NUMPAD1] = {name="Global Exposure", address="aobCONTROL-0xE52"},
+  [VK_NUMPAD2] = {name="Radial Blur",     address="aobCONTROL+0x1861Ce"},
+  [VK_NUMPAD3] = {name="Vignette",        address="aobCONTROL+0x184CDE"},
+  [VK_NUMPAD4] = {name="Bloom Scale X",   address="aobCONTROL-0x36e"},
+  [VK_NUMPAD5] = {name="Bloom Scale Y",   address="aobCONTROL-0x36a"},
+  [VK_NUMPAD6] = {name="Bloom Intensity", address="aobCONTROL-0x572"},
+  [VK_NUMPAD7] = {name="Bloom Threshold", address="aobCONTROL-0x672"},
+  [VK_NUMPAD8] = {name="Lens Dirt",       address="aobCONTROL-0x472"},
+  [VK_NUMPAD9] = {name="Scatter",         address="aobCONTROL-0x772"},
+}
+
+--====================================
+-- SPEED SETTINGS
+--====================================
+local adjSpeed = 0.02           -- Default per step
+local fastMult = 10             -- F key = 10× faster
+local slowDiv  = 100            -- C key = 100× slower (fine tuning)
+local superFastMult = 50        -- CTRL = super fast (50×)
+
+--====================================
+-- REQUIRED CONDITIONS
+--====================================
+local function requiredConditions()
+  return getOpenedProcessID() == getForegroundProcess()
+end
+
+--====================================
+-- SPEED MODIFIER TRACKING
+--====================================
+local didReset = true
+local didSlow = false
+local didFast = false
+local adjSpeedOrig = adjSpeed
+
+local function updateSpeedModifiers()
+  if isKeyPressed(VK_F) then
+    if not didFast then
+      adjSpeed = adjSpeedOrig * fastMult
+      didFast = true
+      didSlow = false
+      didReset = false
+    end
+  elseif isKeyPressed(VK_C) then
+    if not didSlow then
+      adjSpeed = adjSpeedOrig / slowDiv
+      didSlow = true
+      didFast = false
+      didReset = false
+    end
+  elseif not didReset then
+    adjSpeed = adjSpeedOrig
+    didFast = false
+    didSlow = false
+    didReset = true
+  end
+end
+
+--====================================
+-- CONTINUOUS ADJUSTMENT TIMER
+--====================================
+local adjustTimer = createTimer()
+adjustTimer.Interval = 20 -- update every 20ms (~50 FPS)
+adjustTimer.Enabled = true
+
+adjustTimer.OnTimer = function()
+  if not requiredConditions() then return end
+  updateSpeedModifiers()
+
+  for key, data in pairs(vars) do
+    if isKeyPressed(key) then
+      local val = readFloat(data.address)
+      if val then
+        -- Base delta
+        local delta = adjSpeed
+
+        -- Direction control: Numpad+ = increase, Numpad- = decrease
+        if isKeyPressed(VK_SUBTRACT) then
+          delta = -delta
+        elseif not isKeyPressed(VK_ADD) then
+          -- If neither + nor -, skip to avoid unintended change
+          goto continue
+        end
+
+        -- Super fast mode (CTRL)
+        if isKeyPressed(VK_CONTROL) then
+          delta = delta * superFastMult
+        end
+
+        writeFloat(data.address, val + delta)
+      end
+    end
+    ::continue::
+  end
+end
+
+------------------------------------------------------------------------------------------------------------------------------
+
+{$asm}
+
+nop
+
+
+//renderer_rmdwin10_f.rend::RenderOptions::RenderSSDiffuse:
+// db 01 00
+//renderer_rmdwin10_f.rend::RenderOptions::DrawOcclusionObjects:
+// db 00 01
+//renderer_rmdwin10_f.rend::RendererThreading::sm_pInstance+E0:
+// db 01 01
+Control_DX12.exe+3DC6FC:
+ db 90 90 90 90
+
+[DISABLE]
+
+aobCONTROL+00:
+  db 30 3A 49 6E 74 65 6E 73 69 74 79 00 00 00 00 00 00 00 00
+
+
+dealloc(newmem)
+
+{$lua}
+
+if syntaxcheck then return end
+
+if _G.savedValues then
+  for addr, data in pairs(_G.savedValues) do
+    if data and type(data.value) == "number" then
+      writeFloat(addr, data.value)
+      --print(string.format("[RESTORE] %s -&gt; %.6f", data.name or addr, data.value))
+    else
+      --print(string.format("[WARN] Skipped invalid value for %s", data.name or addr))
+    end
+  end
+  --print("All saved values restored successfully.")
+  _G.savedValues = nil
+else
+  --print("No saved values found.")
+end
+
+{$asm}
+
+unregistersymbol(aobCONTROL)
+nop
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>45</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8399</ID>
+      <Description>"------------------------------------------------------------"</Description>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>139</ID>
+      <Description>"Control Toolkit Lite Form"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$lua}
+[ENABLE]
+if syntaxcheck then return end
+
+-- Control Toolkit Lite - resizable CE 7.6/7.7 UI
+-- Sliders for broad controls, +/- steppers for precise spot controls.
+-- Hotsampling/Allow Resize intentionally not included here.
+
+local function log(fmt, ...)
+  print(string.format("[Control Toolkit Lite] " .. fmt, ...))
+end
+
+local function addr(s)
+  local ok, a = pcall(getAddressSafe, s)
+  if ok then return a end
+  return nil
+end
+
+local function rFloat(s)
+  local a = addr(s); if not a then return nil end
+  local ok, v = pcall(readFloat, a); if ok then return v end
+  return nil
+end
+
+local function wFloat(s, v)
+  local a = addr(s); local n = tonumber(v)
+  if not a or not n then return false end
+  return pcall(writeFloat, a, n)
+end
+
+local function rInt(s)
+  local a = addr(s); if not a then return nil end
+  local ok, v = pcall(readInteger, a); if ok then return v end
+  return nil
+end
+
+local function wInt(s, v)
+  local a = addr(s); local n = tonumber(v)
+  if not a or not n then return false end
+  return pcall(writeInteger, a, n)
+end
+
+local params = {
+  -- Tweaks
+  {page="Tweaks", group="Tweaks", name="Global Exposure", address="aobCONTROL-E52", type="float", min=-1.0, max=35.0, scale=1000},
+  {page="Tweaks", group="Tweaks", name="Radial Blur",      address="aobCONTROL+1861CE", type="float", min=0.0, max=1.0, scale=1000},
+  {page="Tweaks", group="Tweaks", name="Vignette",         address="aobCONTROL+184CDE", type="float", min=0.0, max=1.0, scale=1000},
+
+  -- Bloom
+  {page="Bloom", group="Bloom", name="Scale Y",   address="aobCONTROL-36E", type="float", min=0.0, max=1.0, scale=10000},
+  {page="Bloom", group="Bloom", name="Scale X",   address="aobCONTROL-36A", type="float", min=0.0, max=1.0, scale=10000},
+  {page="Bloom", group="Bloom", name="Intensity", address="aobCONTROL-572", type="float", min=0.0, max=20.0, scale=1000},
+  {page="Bloom", group="Bloom", name="Threshold", address="aobCONTROL-672", type="float", min=0.0, max=1.0, scale=10000},
+  {page="Bloom", group="Bloom", name="Lens Dirt", address="aobCONTROL-472", type="float", min=0.0, max=20.0, scale=10000},
+  {page="Bloom", group="Bloom", name="Scatter",   address="aobCONTROL-772", type="float", min=0.0, max=1.0, scale=1000},
+
+  -- Rendering values are integer toggles/flags, kept as numeric edits/buttons
+  {page="Rendering", group="Rendering", name="Render SS Diffuse", address="aobCONTROL-101B36", type="int", off=0, on=65536},
+  {page="Rendering", group="Rendering", name="Force Dynamic",     address="aobCONTROL-101B1A", type="int", off=0, on=256},
+  {page="Rendering", group="Rendering", name="Cinematic Mode",    address="aobCONTROL-101B3E", type="int", off=0, on=1},
+
+  -- Spotlight 1
+  {page="Spot 1", group="Spotlight 1", name="Intensity", address="aobCONTROL+7A",  type="float", min=0.0, max=100.0, scale=1000},
+  {page="Spot 1", group="Spotlight 1", name="Red",       address="aobCONTROL+1FA", type="float", min=0.0, max=1.0, scale=1000},
+  {page="Spot 1", group="Spotlight 1", name="Green",     address="aobCONTROL+1FE", type="float", min=0.0, max=1.0, scale=1000},
+  {page="Spot 1", group="Spotlight 1", name="Blue",      address="aobCONTROL+202", type="float", min=0.0, max=1.0, scale=1000},
+  {page="Spot 1", group="Spotlight 1", name="Offset 0",  address="aobCONTROL+2DA", type="float", min=-5.0, max=5.0, scale=1000},
+  {page="Spot 1", group="Spotlight 1", name="Offset 1",  address="aobCONTROL+2DE", type="float", min=-5.0, max=5.0, scale=1000},
+  {page="Spot 1", group="Spotlight 1", name="Offset 2",  address="aobCONTROL+2E2", type="float", min=-5.0, max=5.0, scale=1000},
+  {page="Spot 1", group="Spotlight 1", name="Heading",   address="aobCONTROL+3BA", type="float", min=-360.0, max=360.0, scale=1000},
+  {page="Spot 1", group="Spotlight 1", name="Pitch",     address="aobCONTROL+47A", type="float", min=-360.0, max=360.0, scale=1000},
+  {page="Spot 1", group="Spotlight 1", name="Clip Near", address="aobCONTROL+62A", type="float", min=0.0, max=10.0, scale=100},
+  {page="Spot 1", group="Spotlight 1", name="Clip Far",  address="aobCONTROL+6EA", type="float", min=0.0, max=10.0, scale=100},
+
+  -- Spotlight 2
+  {page="Spot 2", group="Spotlight 2", name="Intensity", address="aobCONTROL+89A", type="float", min=0.0, max=100.0, scale=1000},
+  {page="Spot 2", group="Spotlight 2", name="Red",       address="aobCONTROL+A1A", type="float", min=0.0, max=1.0, scale=1000},
+  {page="Spot 2", group="Spotlight 2", name="Green",     address="aobCONTROL+A1E", type="float", min=0.0, max=1.0, scale=1000},
+  {page="Spot 2", group="Spotlight 2", name="Blue",      address="aobCONTROL+A22", type="float", min=0.0, max=1.0, scale=1000},
+  {page="Spot 2", group="Spotlight 2", name="Offset 0",  address="aobCONTROL+AFA", type="float", min=-5.0, max=5.0, scale=1000},
+  {page="Spot 2", group="Spotlight 2", name="Offset 1",  address="aobCONTROL+AFE", type="float", min=-5.0, max=5.0, scale=1000},
+  {page="Spot 2", group="Spotlight 2", name="Offset 2",  address="aobCONTROL+B02", type="float", min=-5.0, max=5.0, scale=1000},
+  {page="Spot 2", group="Spotlight 2", name="Heading",   address="aobCONTROL+BDA", type="float", min=-360.0, max=360.0, scale=1000},
+  {page="Spot 2", group="Spotlight 2", name="Pitch",     address="aobCONTROL+C9A", type="float", min=-360.0, max=360.0, scale=1000},
+  {page="Spot 2", group="Spotlight 2", name="Clip Near", address="aobCONTROL+E4A", type="float", min=0.0, max=10.0, scale=100},
+  {page="Spot 2", group="Spotlight 2", name="Clip Far",  address="aobCONTROL+F0A", type="float", min=0.0, max=10.0, scale=100},
+
+  -- Spotlight 3
+  {page="Spot 3", group="Spotlight 3", name="Intensity", address="aobCONTROL+10BA", type="float", min=0.0, max=100.0, scale=1000},
+  {page="Spot 3", group="Spotlight 3", name="Red",       address="aobCONTROL+123A", type="float", min=0.0, max=1.0, scale=1000},
+  {page="Spot 3", group="Spotlight 3", name="Green",     address="aobCONTROL+123E", type="float", min=0.0, max=1.0, scale=1000},
+  {page="Spot 3", group="Spotlight 3", name="Blue",      address="aobCONTROL+1242", type="float", min=0.0, max=1.0, scale=1000},
+  {page="Spot 3", group="Spotlight 3", name="Offset 0",  address="aobCONTROL+131A", type="float", min=-5.0, max=5.0, scale=1000},
+  {page="Spot 3", group="Spotlight 3", name="Offset 1",  address="aobCONTROL+131E", type="float", min=-5.0, max=5.0, scale=1000},
+  {page="Spot 3", group="Spotlight 3", name="Offset 2",  address="aobCONTROL+1322", type="float", min=-5.0, max=5.0, scale=1000},
+  {page="Spot 3", group="Spotlight 3", name="Heading",   address="aobCONTROL+13FA", type="float", min=-360.0, max=360.0, scale=1000},
+  {page="Spot 3", group="Spotlight 3", name="Pitch",     address="aobCONTROL+14BA", type="float", min=-360.0, max=360.0, scale=1000},
+  {page="Spot 3", group="Spotlight 3", name="Clip Near", address="aobCONTROL+166A", type="float", min=0.0, max=10.0, scale=100},
+  {page="Spot 3", group="Spotlight 3", name="Clip Far",  address="aobCONTROL+172A", type="float", min=0.0, max=10.0, scale=100},
+}
+
+local presetPath = (os.getenv("TEMP") or ".") .. "\\ControlToolkitLite.ini"
+_G.CTLDefaults = _G.CTLDefaults or {}
+_G.CTLRows = {}
+
+local function key(p) return p.group .. "." .. p.name .. "@" .. p.address end
+local function readParam(p) if p.type=="float" then return rFloat(p.address) else return rInt(p.address) end end
+local function writeParam(p,v) if p.type=="float" then return wFloat(p.address,v) else return wInt(p.address,v) end end
+local function fmt(p,v) if v==nil then return "N/A" elseif p.type=="float" then return string.format("%.6f", v) else return tostring(v) end end
+
+local function captureDefaults()
+  for _,p in ipairs(params) do
+    local v=readParam(p)
+    if v~=nil then _G.CTLDefaults[key(p)]=v end
+  end
+  log("defaults captured")
+end
+
+local function resetGroup(name)
+  for _,p in ipairs(params) do
+    local match = name=="ALL" or
+      (name=="TWEAKS" and (p.group=="Tweaks" or p.group=="Bloom" or p.group=="Rendering")) or
+      (name=="SPOTS" and p.group:find("Spotlight")) or
+      p.group==name
+    if match then
+      local v=_G.CTLDefaults[key(p)]
+      if v~=nil then writeParam(p,v) end
+    end
+  end
+end
+
+local function savePreset()
+  local f=io.open(presetPath,"w")
+  if not f then log("could not save preset") return end
+  for _,p in ipairs(params) do
+    local v=readParam(p)
+    if v~=nil then f:write(key(p),"=",tostring(v),"\n") end
+  end
+  f:close()
+  log("preset saved: %s", presetPath)
+end
+
+local function loadPreset()
+  local f=io.open(presetPath,"r")
+  if not f then log("no preset found: %s", presetPath) return end
+  local lookup={}
+  for _,p in ipairs(params) do lookup[key(p)]=p end
+  for line in f:lines() do
+    local k,v=line:match("^([^=]+)=(.*)$")
+    if k and v and lookup[k] then writeParam(lookup[k],v) end
+  end
+  f:close()
+  log("preset loaded")
+end
+
+local pages={}
+local formRef=nil
+local contentLeft=126
+local contentTop=86
+local sideWidth=105
+
+local function label(parent,text,x,y,w)
+  local c=createLabel(parent); c.Caption=text; c.Left=x; c.Top=y; if w then c.Width=w end; return c
+end
+local function button(parent,text,x,y,w,h,fn)
+  local c=createButton(parent); c.Caption=text; c.Left=x; c.Top=y; c.Width=w; c.Height=h; c.OnClick=fn; return c
+end
+local function edit(parent,text,x,y,w)
+  local c=createEdit(parent); c.Text=text; c.Left=x; c.Top=y; c.Width=w; return c
+end
+
+local function showPage(name)
+  for n,p in pairs(pages) do p.Visible=(n==name) end
+end
+
+local function createPage(form,name)
+  local p=createPanel(form)
+  p.Left=contentLeft; p.Top=contentTop; p.Width=form.Width-contentLeft-24; p.Height=form.Height-contentTop-52
+  p.Visible=false; p.BevelOuter="bvNone"
+  pages[name]=p
+  label(p,name,10,8,250)
+  return p
+end
+
+local function sliderPos(p,v)
+  return math.floor(((tonumber(v or p.min or 0))-(p.min or 0))*(p.scale or 100)+0.5)
+end
+local function sliderVal(p,pos)
+  return (p.min or 0)+(pos/(p.scale or 100))
+end
+
+local function applyEdit(row)
+  local v=tonumber(row.edit.Text)
+  if not v then return end
+  writeParam(row.param,v)
+  if row.trackbar then
+    row.lock=true
+    local pos=sliderPos(row.param,v)
+    if pos&lt;row.trackbar.Min then pos=row.trackbar.Min end
+    if pos&gt;row.trackbar.Max then pos=row.trackbar.Max end
+    row.trackbar.Position=pos
+    row.lock=false
+  end
+end
+
+local function refreshRows()
+  for _,row in ipairs(_G.CTLRows) do
+    local p=row.param
+    local v=readParam(p)
+    if row.trackbar then
+      row.lock=true
+      if v~=nil then
+        local pos=sliderPos(p,v)
+        if pos&lt;row.trackbar.Min then pos=row.trackbar.Min end
+        if pos&gt;row.trackbar.Max then pos=row.trackbar.Max end
+        row.trackbar.Position=pos
+      end
+      row.edit.Text=fmt(p,v)
+      row.lock=false
+    else
+      row.edit.Text=fmt(p,v)
+    end
+  end
+end
+
+local function createSliderRow(parent,p,y)
+  label(parent,p.name,10,y+5,125)
+  local tb=createTrackBar(parent)
+  tb.Left=140; tb.Top=y; tb.Width=parent.Width-380; tb.Height=28
+  tb.Min=0; tb.Max=math.max(1,math.floor(((p.max or 1)-(p.min or 0))*(p.scale or 100))); tb.Position=0
+  local e=edit(parent,"",parent.Width-225,y,85)
+  local setB=button(parent,"Set",parent.Width-132,y-1,42,23,nil)
+  local resetB=button(parent,"R",parent.Width-84,y-1,28,23,nil)
+  local row={param=p,trackbar=tb,edit=e,setButton=setB,resetButton=resetB,lock=false}
+  table.insert(_G.CTLRows,row)
+  tb.OnChange=function(t)
+    if row.lock then return end
+    local v=sliderVal(p,t.Position)
+    e.Text=fmt(p,v)
+    writeParam(p,v)
+  end
+  e.OnKeyPress=function(sender,k) if k==13 then applyEdit(row); return 0 end return k end
+  setB.OnClick=function() applyEdit(row) end
+  resetB.OnClick=function()
+    local v=_G.CTLDefaults[key(p)]
+    if v~=nil then writeParam(p,v); refreshRows() end
+  end
+end
+
+local function step(row,delta)
+  local v=readParam(row.param) or 0
+  v=v+delta
+  writeParam(row.param,v)
+  row.edit.Text=fmt(row.param,v)
+end
+
+local function createStepperRow(parent,p,y)
+  label(parent,p.name,10,y+5,120)
+  local e=edit(parent,"",135,y,100)
+  local row={param=p,edit=e}
+  table.insert(_G.CTLRows,row)
+
+  local small=0.001
+  local mid=0.01
+  local big=p.big and 1.0 or 0.1
+
+  button(parent,"-1",245,y-1,34,23,function() step(row,-big) end)
+  button(parent,"-.01",282,y-1,42,23,function() step(row,-mid) end)
+  button(parent,"-.001",327,y-1,48,23,function() step(row,-small) end)
+  button(parent,"+.001",380,y-1,48,23,function() step(row, small) end)
+  button(parent,"+.01",433,y-1,42,23,function() step(row, mid) end)
+  button(parent,"+1",478,y-1,34,23,function() step(row, big) end)
+  button(parent,"Set",522,y-1,42,23,function() applyEdit(row) end)
+  button(parent,"R",568,y-1,28,23,function()
+    local v=_G.CTLDefaults[key(p)]
+    if v~=nil then writeParam(p,v); refreshRows() end
+  end)
+  e.OnKeyPress=function(sender,k) if k==13 then applyEdit(row); return 0 end return k end
+end
+
+local function createIntRow(parent,p,y)
+  label(parent,p.name,10,y+5,150)
+  local e=edit(parent,"",165,y,95)
+  local row={param=p,edit=e}
+  table.insert(_G.CTLRows,row)
+  button(parent,"Off",270,y-1,45,23,function() writeParam(p,p.off or 0); e.Text=tostring(p.off or 0) end)
+  button(parent,"On",320,y-1,45,23,function() writeParam(p,p.on or 1); e.Text=tostring(p.on or 1) end)
+  button(parent,"Set",370,y-1,45,23,function() applyEdit(row) end)
+  e.OnKeyPress=function(sender,k) if k==13 then applyEdit(row); return 0 end return k end
+end
+
+local function resizeLayout()
+  local form=formRef; if not form then return end
+  for _,p in pairs(pages) do
+    p.Left=contentLeft; p.Top=contentTop; p.Width=form.Width-contentLeft-24; p.Height=form.Height-contentTop-52
+  end
+  for _,row in ipairs(_G.CTLRows) do
+    local parent=row.edit.Parent
+    if row.trackbar then
+      row.trackbar.Width=parent.Width-380
+      row.edit.Left=parent.Width-225
+      row.setButton.Left=parent.Width-132
+      row.resetButton.Left=parent.Width-84
+    end
+  end
+end
+
+local function createToolkitForm()
+  if _G.ControlToolkitLiteForm then _G.ControlToolkitLiteForm.destroy(); _G.ControlToolkitLiteForm=nil end
+  _G.CTLRows={}
+  local form=createForm(false)
+  formRef=form
+  _G.ControlToolkitLiteForm=form
+  form.Caption="Control Toolkit Lite"
+  form.Width=900; form.Height=740
+  form.Position="poScreenCenter"
+  form.BorderStyle="bsSizeable"
+
+  label(form,"Control Toolkit Lite - Visual Tweaks",10,10,320)
+  button(form,"Capture Defaults",350,8,120,24,function() captureDefaults(); refreshRows() end)
+  button(form,"Refresh",480,8,70,24,function() refreshRows() end)
+  button(form,"Reset Tweaks",560,8,95,24,function() resetGroup("TWEAKS"); refreshRows() end)
+  button(form,"Reset Spots",665,8,85,24,function() resetGroup("SPOTS"); refreshRows() end)
+  button(form,"Reset All",760,8,75,24,function() resetGroup("ALL"); refreshRows() end)
+
+  button(form,"Save",10,42,65,24,function() savePreset() end)
+  button(form,"Load",85,42,65,24,function() loadPreset(); refreshRows() end)
+  label(form,"Preset: "..presetPath,165,46,600)
+
+  local pageNames={"Tweaks","Bloom","Rendering","Spot 1","Spot 2","Spot 3"}
+  for i,name in ipairs(pageNames) do
+    button(form,name,10,contentTop+((i-1)*36),sideWidth,28,function() showPage(name) end)
+    createPage(form,name)
+  end
+
+  local yByPage={}
+  for _,name in ipairs(pageNames) do yByPage[name]=38 end
+
+  for _,p in ipairs(params) do
+    local parent=pages[p.page]
+    if parent then
+      local y=yByPage[p.page]
+      if p.type=="int" then createIntRow(parent,p,y)
+      elseif p.control=="stepper" then createStepperRow(parent,p,y)
+      else createSliderRow(parent,p,y) end
+      yByPage[p.page]=y+34
+    end
+  end
+
+  form.OnResize=function() resizeLayout() end
+  if next(_G.CTLDefaults)==nil then captureDefaults() end
+  refreshRows()
+  resizeLayout()
+  showPage("Tweaks")
+  form.show()
+end
+
+createToolkitForm()
+
+[DISABLE]
+if syntaxcheck then return end
+if _G.ControlToolkitLiteForm then
+  _G.ControlToolkitLiteForm.destroy()
+  _G.ControlToolkitLiteForm=nil
+end
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>34</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>140</ID>
+      <Description>"Photo Mode - 8 to 100"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+aobscanmodule(PMRange,Control_DX12.exe,00 00 00 41 00 00 00 00 00 00 C8 42 00 00 00)
+alloc(newmem,$1000,PMRange)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+add [rax],al
+enter 0042,00
+jmp return
+
+PMRange:
+jmp newmem
+nop
+
+return:
+
+registersymbol(PMRange)
+Control_DX12.exe+12AC400:
+  db 00 00 C8 42 00 00
+[DISABLE]
+
+Control_DX12.exe+12AC400:
+  db 00 00 00 41 00 00
+
+unregistersymbol(PMRange)
+dealloc(newmem)
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>33</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8400</ID>
+      <Description>"------------------------------------------------------------"</Description>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>138</ID>
+      <Description>"Allow Window Resize"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{$asm}
+[ENABLE]
+assert(app_rmdwin10_f.dll+20D20,00 00)
+app_rmdwin10_f.dll+20D20:
+ db 01 00
+
+[DISABLE]
+app_rmdwin10_f.dll+20D20:
+ db 00 00
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>142</ID>
+      <Description>"Allow Hotsampling"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+aobscanmodule(DisableSW,coregame_rmdwin10_f.dll,48 8B C8 BA 03 00 00 00 FF 15 ?? ?? ?? ?? 41 B4 01)
+registersymbol(DisableSW)
+
+alloc(origDisableSW,17)
+registersymbol(origDisableSW)
+
+origDisableSW:
+  readmem(DisableSW,17)
+
+DisableSW+8:
+  db 90 90 90 90 90 90
+
+
+[DISABLE]
+DisableSW:
+  readmem(origDisableSW,17)
+
+unregistersymbol(DisableSW)
+unregistersymbol(origDisableSW)
+dealloc(origDisableSW)
+
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8401</ID>
+      <Description>"------------------------------------------------------------"</Description>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>135</ID>
+      <Description>"Spotlights"</Description>
+      <Options moHideChildren="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>79</ID>
+          <Description>"Spotlight 1"</Description>
+          <Options moHideChildren="1"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>80</ID>
+              <Description>"Intensity"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +7a</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>81</ID>
+              <Description>"Red"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +1FA</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>82</ID>
+              <Description>"Green"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +1FE</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>83</ID>
+              <Description>"Blue"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +202</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>84</ID>
+              <Description>"Offset 0"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +2DA</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>85</ID>
+              <Description>"Offset 1"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +2DE</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>86</ID>
+              <Description>"Offset 2"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +2E2</Address>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Increase Value</Action>
+                  <Keys>
+                    <Key>17</Key>
+                    <Key>100</Key>
+                  </Keys>
+                  <Value>0.1</Value>
+                  <ID>0</ID>
+                </Hotkey>
+                <Hotkey>
+                  <Action>Decrease Value</Action>
+                  <Keys>
+                    <Key>17</Key>
+                    <Key>101</Key>
+                  </Keys>
+                  <Value>0.1</Value>
+                  <ID>1</ID>
+                </Hotkey>
+              </Hotkeys>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>87</ID>
+              <Description>"Heading"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +3BA</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>88</ID>
+              <Description>"Pitch"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +47A</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>89</ID>
+              <Description>"Clip Near"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +62A</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>90</ID>
+              <Description>"Clip Far"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +6EA</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>91</ID>
+          <Description>"Spotlight 2"</Description>
+          <Options moHideChildren="1"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>92</ID>
+              <Description>"Intensity"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +89a</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>93</ID>
+              <Description>"Red"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +A1A</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>94</ID>
+              <Description>"Green"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL + A1E</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>95</ID>
+              <Description>"Blue"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +A22</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>96</ID>
+              <Description>"Offset 0"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +AFA</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>97</ID>
+              <Description>"Offset 1"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +AFE</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>98</ID>
+              <Description>"Offset 2"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +B02</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>99</ID>
+              <Description>"Heading"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +BDA</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>100</ID>
+              <Description>"Pitch"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +C9A</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>101</ID>
+              <Description>"Clip Near"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +E4A</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>102</ID>
+              <Description>"Clip Far"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +F0A</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>111</ID>
+          <Description>"Spotlight 3"</Description>
+          <Options moHideChildren="1"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>112</ID>
+              <Description>"Intensity"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +10ba</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>113</ID>
+              <Description>"Red"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +123a</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>114</ID>
+              <Description>"Green"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +123e</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>115</ID>
+              <Description>"Blue"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +1242</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>116</ID>
+              <Description>"Offset 0"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +131a</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>117</ID>
+              <Description>"Offset 1"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +131e</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>118</ID>
+              <Description>"Offset 2"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +1322</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>119</ID>
+              <Description>"Heading"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +13fa</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>120</ID>
+              <Description>"Pitch"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +14ba</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>121</ID>
+              <Description>"Clip Near"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +166a</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>122</ID>
+              <Description>"Clip Far"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL +172a</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>136</ID>
+      <Description>"Tweaks"</Description>
+      <Options moHideChildren="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>78</ID>
+          <Description>"Global Exposure"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>aobCONTROL -E52</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>103</ID>
+          <Description>"Radial Blur"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>aobCONTROL +1861Ce</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>110</ID>
+          <Description>"Vignette"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>aobCONTROL +184cde</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>123</ID>
+          <Description>"Bloom"</Description>
+          <Options moHideChildren="1"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>125</ID>
+              <Description>"Scale Y"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL -36e</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>126</ID>
+              <Description>"Scale X"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL -36a</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>128</ID>
+              <Description>"Intensity"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL -572</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>130</ID>
+              <Description>"Threshold"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL-672</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>132</ID>
+              <Description>"Lens Dirt"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL-472</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>134</ID>
+              <Description>"Scatter"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>aobCONTROL-772</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>108</ID>
+      <Description>"Rendering"</Description>
+      <Options moHideChildren="1"/>
+      <Color>FF8000</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>104</ID>
+          <Description>"Render SS Diffuse"</Description>
+          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">65536:ON
+0:OFF
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>aobCONTROL -101B36</Address>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Toggle Activation</Action>
+              <Keys/>
+              <ID>0</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>105</ID>
+          <Description>"Force Dynamic"</Description>
+          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">256:ON
+0:OFF
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>aobCONTROL -101B1a</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>106</ID>
+          <Description>"Cinematic Mode"</Description>
+          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">257:ON
+1:OFF
+</DropDownList>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>aobCONTROL -101B3e</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Code :movss [rax],xmm0</Description>
+      <AddressString>Control_DX12.exe+3DC6FC</AddressString>
+      <Before>
+        <Byte>0F</Byte>
+        <Byte>10</Byte>
+        <Byte>44</Byte>
+        <Byte>24</Byte>
+        <Byte>60</Byte>
+      </Before>
+      <Actual>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>11</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>48</Byte>
+        <Byte>C7</Byte>
+        <Byte>C0</Byte>
+        <Byte>F8</Byte>
+        <Byte>FF</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols/>
+  <LuaScript>{$asm}
+[ENABLE]
+assert(app_rmdwin10_f.dll+20D20,00 00)
+app_rmdwin10_f.dll+20D20:
+ db 01 00
+
+[DISABLE]
+app_rmdwin10_f.dll+20D20:
+ db 00 00
+
+</LuaScript>
+</CheatTable>
