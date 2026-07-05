@@ -110,4 +110,4 @@ By default, the photo mode range is 8 meters (A.K.A. can of tuna. Kinding).
   * To go back to a visible game window, change the resolution back in like 1600x900 or click `Fake Fullscreen`.
 
 ## Resources
-*[PC Gaming Wiki](https://www.pcgamingwiki.com/wiki/Murdered:_Soul_Suspect)
+*[PC Gaming Wiki](https://www.pcgamingwiki.com/wiki/Control)
