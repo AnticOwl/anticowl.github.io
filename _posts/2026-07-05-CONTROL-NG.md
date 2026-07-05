@@ -85,7 +85,7 @@ If you decide to use the hotsampling feature (what I highly recommend), download
 ## How To
 ### Use The Cheat Table
 Once you have installed Cheat Engine 7.6 or higher (if not already done), click twice on the cheat table file you downloaded. Check the `Auto Attach to Game` box. Cheat Engine will automatically connect to the game when detected.
-Press `Page Down` to enable the camera structure and leave on.  
+Press `Insert` to enable the tweaks.  
 
 <div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/7c629713-5e61-43d2-b688-0735d400a1d0" alt="Cheat Engine" style="box-shadow: 3px 3px 3px gray;">
