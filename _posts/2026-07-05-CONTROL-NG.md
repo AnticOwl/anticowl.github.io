@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "CONTROL NGen"
+title:  "CONTROL NextGen"
 date:   2026-07-05 10:05:55 +0300
 image:  CONTROL_NG_POST.jpg
 tags:   Screenshooting
