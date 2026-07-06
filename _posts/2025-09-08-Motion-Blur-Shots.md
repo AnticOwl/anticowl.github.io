@@ -3,7 +3,7 @@ layout: post
 title:  "How To Create Motion Blur Shots"
 date:   2025-09-16 17:05:55 +0300
 image:  MBL_POST.jpg
-tags:   Reshade Cheat-Engine
+tags:   Reshade Cheat-Engine Screenshooting
 ---
 
 For shots that include motion blur, PC virtual photography gives us the opportunity to experiment not only with the internal photo mode and game options available but also with third party tools: both free and paid ones. While it would be nice to have a single solution for this, the nature of game development makes that totally impossible. So, let's see some of the solutions that are available.
