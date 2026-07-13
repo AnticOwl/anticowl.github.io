@@ -1,5 +1,4 @@
-2026-07-06-BIOSHOCK1-2-REMASTRED.md
-%appdata%\BioshockHD\Bioshock---
+---
 layout: post
 title:  "Titanfall 2"
 date:   2024-07-18 18:05:55 +0300
