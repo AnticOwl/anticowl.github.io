@@ -65,11 +65,15 @@ When the render is finished, the camera will return to its original position.
 
 ## How to add IGCS Relay support to an existing Cheat Engine table
 
-If you already have a working Cheat Engine free camera, adding IGCS Relay support is usually quite simple.
+If you already have a working Cheat Engine camera, adding IGCS Relay support is straightforward.
 
-You do **not** need to rewrite the whole camera table.
+Download or copy the Generic Raw Provider script and add it to your existing Cheat Engine table as a new Auto Assembler script.
 
-In most cases, you only need to add the IGCS Relay Lua script and configure a few values so it knows where your camera data is stored.
+The provider already contains [ENABLE] and [DISABLE] sections, so once it has been added to the table it behaves like any other Cheat Engine script: simply check the box to enable Relay support.
+
+Do not replace your existing camera script. The Generic Raw Provider is added alongside it.
+
+You normally only need to edit the configuration section so the provider knows where your camera data is stored.
 
 The important information is:
 
