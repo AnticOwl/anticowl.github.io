@@ -223,7 +223,7 @@ You do not need to understand the complete Cheat Engine script. In most cases, y
 
 ### Example
 
-If you want to see how Relay support is added to a real Cheat Engine table, have a look at the **DmC: Devil May Cry** table.
+If you want to see how Relay support is added to a real Cheat Engine table, have a look at the **[DmC: Devil May Cry](https://github.com/AnticOwl/IGCS-Relay/tree/main/examples/reference_cameras)** table.
 
 DmC uses the **UE3** profile and is a good reference for:
 
