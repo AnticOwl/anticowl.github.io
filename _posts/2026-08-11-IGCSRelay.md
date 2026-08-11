@@ -21,7 +21,7 @@ Once the camera is enabled and the Relay status is OK, you can frame your shot, 
 ## Required
 * [ReShade 6.7 or higher with add-on support](https://reshade.me/downloads/ReShade_Setup_6.8.0_Addon.exe)
 * [IGCS Relay](https://github.com/AnticOwl/IGCS-Relay/releases)
-* [IGCS Connector](https://github.com/FransBouma/IgcsConnector/releases)
+* [IGCS Connector by Frans Bouma](https://github.com/FransBouma/IgcsConnector/releases)
 * [Cheat Engine 7.6 or higher](https://www.cheatengine.org)
 * A compatible cheat table
 
@@ -81,35 +81,64 @@ The important information is:
 
 A typical configuration looks like this:
 
-```lua
--- =========================
--- IGCS RELAY CONFIG
--- =========================
-
-ENGINE = "UE3"
-
-X_OFFSET     = 0x...
-Y_OFFSET     = 0x...
-Z_OFFSET     = 0x...
-
-PITCH_OFFSET = 0x...
-YAW_OFFSET   = 0x...
-ROLL_OFFSET  = 0x...
-
-FOV_OFFSET   = 0x...
 ```
+------------------------------------------------------------
+-- USER CONFIGURATION
+------------------------------------------------------------
 
+local CONFIG = {
+
+  engine = "UE3",
+
+  bases = {
+    position = "pCamera",
+    rotation = "pCamera",
+    fov      = "pCamera"
+  },
+
+  position = {
+    x = 0x56C,
+    y = 0x570,
+    z = 0x574
+  },
+
+  rotation = {
+    pitch = 0x578,
+    yaw   = 0x57C,
+    roll  = 0x580
+  },
+
+  fov = {
+    offset = 0x584
+  },
+
+  cameraLockSymbol = "",
+
+  writers = {
+  },
+
+  restoreHoldMs = 250,
+  cameraIntervalMs = 16
+}
+
+------------------------------------------------------------
+-- END USER CONFIGURATION
+--
+-- STOP EDITING HERE.
+-- Everything below this line is universal provider core.
+------------------------------------------------------------
+```
 The Relay script then uses your existing camera pointer.
 
 For example, if your table already exposes a symbol such as:
 
-```lua
-pCamera
-```
+
+`pCamera`
+
 
 the Relay only needs a small function that returns the actual camera address.
 
-```lua
+```
 function getCamBase()
     local p = getAddressSafe("pCamera")
     if not p then return nil end
@@ -121,13 +150,58 @@ function getCamBase()
 end
 ```
 
+### Engine tag
+
+The engine tag tells IGCS Relay which camera math should be used.
+
+Use one of the supported tags defined in the Relay Lua script.
+
+For example:
+
+```
+ENGINE = "UE3"
+```
+
+for a compatible Unreal Engine 3 camera.
+
+### Camera bases
+
+You also need to tell the Relay which camera base contains the position, rotation and FOV values.
+
+In many Cheat Engine cameras, everything is stored in the same camera structure:
+
+```
+bases = {
+  position = "pCamera",
+  rotation = "pCamera",
+  fov      = "pCamera"
+},
+```
+
+This means that the Position, Rotation and FOV offsets are all calculated from `pCamera`.
+
+If your table uses different structures, you can define a different base for each one.
+
+For example:
+
+```
+bases = {
+  position = "pCamera",
+  rotation = "pRotation",
+  fov      = "pFov"
+},
+```
+
+Most existing camera tables will only need the first configuration.
+
+
 ### Finding the offsets
 
 The easiest way is usually to look at the existing camera script.
 
 If the camera code reads or writes values such as:
 
-```text
+```
 [pCamera]+5C
 [pCamera]+60
 [pCamera]+64
@@ -137,7 +211,7 @@ those values are the offsets used by the camera structure.
 
 For example:
 
-```lua
+```
 X_OFFSET = 0x5C
 Y_OFFSET = 0x60
 Z_OFFSET = 0x64
@@ -146,20 +220,6 @@ Z_OFFSET = 0x64
 Do the same for Pitch, Yaw, Roll and FOV.
 
 You do not need to understand the complete Cheat Engine script. In most cases, you only need to identify the offsets already used by the working camera.
-
-### Engine tag
-
-The engine tag tells IGCS Relay which camera math should be used.
-
-Use one of the supported tags defined in the Relay Lua script.
-
-For example:
-
-```lua
-ENGINE = "UE3"
-```
-
-for a compatible Unreal Engine 3 camera.
 
 ### Example
 
