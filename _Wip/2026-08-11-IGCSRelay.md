@@ -47,6 +47,7 @@ You should see the IGCS Relay panel.
 * Open the compatible Cheat Engine table.
 * Attach Cheat Engine to the game.
 * Enable the camera / Photo Mode.
+* Enable the IGCS support.
 * Check the IGCS Relay panel in ReShade.
 * Make sure the Relay status is OK.
 * Frame your shot.
