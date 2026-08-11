@@ -67,7 +67,7 @@ When the render is finished, the camera will return to its original position.
 
 If you already have a working Cheat Engine camera, adding IGCS Relay support is straightforward.
 
-Download or copy the **[Generic Raw Provider](https://github.com/AnticOwl/IGCS-Relay/blob/main/examples/Generic_RAW_Provider.lua** script and add it to your existing Cheat Engine table as a new Auto Assembler script.
+Download or copy the **[Generic Raw Provider](https://github.com/AnticOwl/IGCS-Relay/blob/main/examples/Generic_RAW_Provider.lua)** script and add it to your existing Cheat Engine table as a new Auto Assembler script.
 
 The provider already contains [ENABLE] and [DISABLE] sections, so once it has been added to the table it behaves like any other Cheat Engine script: simply check the box to enable Relay support.
 
