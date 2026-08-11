@@ -223,6 +223,8 @@ Z_OFFSET = 0x64
 
 Do the same for Pitch, Yaw, Roll and FOV.
 
+Save the table when finished.
+
 You do not need to understand the complete Cheat Engine script. In most cases, you only need to identify the offsets already used by the working camera.
 
 ### Example
