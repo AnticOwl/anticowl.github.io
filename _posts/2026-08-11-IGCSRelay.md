@@ -38,12 +38,6 @@ Launch the game and open the ReShade overlay.
 You should see the IGCS Relay panel.
 
 <div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/ecc37fb1-b7ab-4cdf-b7ce-a4df954ed7ab" alt="Cheat Engine" style="box-shadow: 3px 3px 3px gray;">
-</div>
-<div> </div>
-
-
-<div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/ecc37fb1-b7ab-4cdf-b7ce-a4df954ed7ab" alt="IGCS Relay" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
