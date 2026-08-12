@@ -38,7 +38,7 @@ Launch the game and open the ReShade overlay.
 You should see the IGCS Relay panel.
 
 <div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/ecc37fb1-b7ab-4cdf-b7ce-a4df954ed7ab" alt="IGCS Relay" style="box-shadow: 3px 3px 3px gray;">
+<img src="/images/IGCSRelay01.jpg" alt="IGCS Relay" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
 
@@ -58,7 +58,7 @@ You should see the IGCS Relay panel.
 IGCSDOF will automatically control the camera during the render.
 
 <div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/2bba9692-668f-4794-87ec-56aa79dffa38" alt="IGCS Relay" style="box-shadow: 3px 3px 3px gray;">
+<img src="/images/IGCSRelay02.jpg" alt="IGCS Relay" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
 
