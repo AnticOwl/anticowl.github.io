@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "IGCS Relay"
-date:   2023-07-18 18:05:55 +0300
+date:   2026-08-12 18:05:55 +0300
 image:  IGCSRELAY_POST.jpg
 tags:   Screenshooting
 ---
