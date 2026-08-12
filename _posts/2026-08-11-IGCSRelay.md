@@ -38,6 +38,12 @@ Launch the game and open the ReShade overlay.
 You should see the IGCS Relay panel.
 
 <div style="width:65%; margin: auto;">
+<img src="https://github.com/user-attachments/assets/ecc37fb1-b7ab-4cdf-b7ce-a4df954ed7ab" alt="Cheat Engine" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
+
+
+<div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/ecc37fb1-b7ab-4cdf-b7ce-a4df954ed7ab" alt="IGCS Relay" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
@@ -61,6 +67,7 @@ IGCSDOF will automatically control the camera during the render.
 <img src="https://github.com/user-attachments/assets/2bba9692-668f-4794-87ec-56aa79dffa38" alt="IGCS Relay" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
+
 When the render is finished, the camera will return to its original position.
 
 ## How to add IGCS Relay support to an existing Cheat Engine table
