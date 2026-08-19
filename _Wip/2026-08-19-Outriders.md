@@ -101,6 +101,26 @@ Combining intense gunplay with violent powers and an arsenal of increasingly twi
             <td>Enable camera structure</td>
         </tr>
         <tr>
+            <td>Insert</td>
+            <td>Detach camera</td>
+        </tr>
+        <tr>
+            <td>Delete</td>
+            <td>Disable HUD</td>
+        </tr>
+        <tr>
+            <td>Numpad 0</td>
+            <td>Pause game</td>
+        </tr>
+        <tr>
+            <td>End</td>
+            <td>Enable IGCS Support</td>
+        </tr>
+        <tr>
+            <td>Page up</td>
+            <td>Enable slomo</td>
+        </tr>
+        <tr>
             <td><br></td>
             <td><br></td>
         </tr>
