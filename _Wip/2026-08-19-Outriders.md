@@ -143,8 +143,9 @@ Press `Page Down` to enable the camera structure and leave on.
 <div> </div>
 
 ### Take A Screenshot
-* Pause the game.
+* Press `Numpad 0`to pause the game.
 * Press `Delete` to disable the pause menu.
+* Press `Insert` to detach the camera
 * Frame, take your shot and go the other way around to get back in game.
 
 ## Resources
