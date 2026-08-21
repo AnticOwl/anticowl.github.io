@@ -234,7 +234,7 @@ Then open the **DirectX** tab and disable the **dgVoodoo Watermark** option so t
 
 For more information about dgVoodoo2 installation and configuration, see [dgVoodoo2 | Marty's Mods Guides](https://guides.martysmods.com/additionalguides/apiwrappers/dgvoodoo2/).
 
-Once dgVoodoo2 is configured, install ReShade for **DirectX 10/11/12**, not DirectX 9. dgVoodoo2 translates Arkham Asylum's original DX9 output to DX11 for ReShade.
+Once dgVoodoo2 is configured, install ReShade for **DirectX 10/11/12**, not DirectX 9. dgVoodoo2 translates Arkham Asylum's original DX9 output to DX11 for ReShade. This is important for the IGCS Connector/Relay add-ons, and it also allows you to use ReShade shaders and effects that require a DX10/11 rendering path and are not available through native DX9.
 
 #### Arkham City and Arkham Origins - DirectX 11
 No wrapper is needed. Install ReShade directly and select **DirectX 10/11/12**.
