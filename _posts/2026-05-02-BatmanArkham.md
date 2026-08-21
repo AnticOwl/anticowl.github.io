@@ -267,4 +267,4 @@ For more information about the Relay itself, see the [IGCS Relay guide](https://
 * [PC Gaming Wiki - Arkham City](https://www.pcgamingwiki.com/wiki/Batman:_Arkham_City)
 * [PC Gaming Wiki - Arkham Asylum](https://www.pcgamingwiki.com/wiki/Batman:_Arkham_Aylum)
 
-Thanks to Shkegulka for the tests. 
+Big thanks to [One3rd](https://www.flickr.com/photos/one3rd_v2/) for the tests. Be sure to check his work! 
