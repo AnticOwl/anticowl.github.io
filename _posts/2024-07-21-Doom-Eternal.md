@@ -28,6 +28,26 @@ The game will start after the patching is done.
 To see if everything was correctly patched, open the console by pressing `~` and type `listcvars`. you shoud have a total of 7397.
 If so, you are good to go.
 
+## IGCS Support
+DOOM Eternal uses **Vulkan** and the game's own **Photo Mode camera**. IGCS Support does not replace the Photo Mode controls: it exposes the active Photo Mode camera to IGCS Relay / IGCSDOF.
+
+Install ReShade with add-on support for Vulkan, then use the 64-bit add-ons:
+
+* `IGCSConnector.addon64`
+* `IGCSRelay.addon64`
+
+In the Cheat Engine table:
+
+* Enable `Photo Mode Camera IGCS`.
+* Enable `IGCS Support`.
+* Open the ReShade overlay and check the **IGCS Relay** panel.
+
+{% include note.html content="You must be inside the game's Photo Mode with the camera active before starting IGCSDOF. The camera data used by IGCS Relay comes from the Photo Mode camera, so the DOF render will not work correctly outside Photo Mode." %}
+
+Once the Relay status is OK and the Photo Mode camera is active, frame your shot and start IGCSDOF normally.
+
+For more information about IGCS Relay, see the [IGCS Relay guide](https://anticowl.github.io/2026/08/12/IGCSRelay/).
+
 ## Photo Mode Anytime and Image Quality 
 
 In `%USERPROFILE%\Documents\Saved Games\id Software\DOOMEternal\base` create a new file called `myconfig.cfg` and copy the content below in it. 
