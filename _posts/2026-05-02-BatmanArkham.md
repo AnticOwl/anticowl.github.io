@@ -199,40 +199,55 @@ The current tables include the camera, pause/slomo and LOD options together with
 <div> </div>
 
 ### How to use IGCS Support
-All three games are **32-bit**, so use the 32-bit versions of IGCS Connector and IGCS Relay.
+All three games are **32-bit**, so use the 32-bit versions of IGCS Connector and IGCS Relay:
+
+* `IGCSConnector.addon32`
+* `IGCSRelay.addon32`
 
 The rendering API is different depending on the game:
 
-* **Batman: Arkham Asylum** - DirectX 9
-* **Batman: Arkham City** - DirectX 11
-* **Batman: Arkham Origins** - DirectX 11
+* **Batman: Arkham Asylum** - DirectX 9. Use **dgVoodoo2** first, then install ReShade for DirectX 10/11/12.
+* **Batman: Arkham City** - DirectX 11. Install ReShade directly for DirectX 10/11/12. dgVoodoo2 is not required.
+* **Batman: Arkham Origins** - DirectX 11. Install ReShade directly for DirectX 10/11/12. dgVoodoo2 is not required.
 
 You need:
 
 * [ReShade with add-on support](https://reshade.me/)
 * [IGCS Connector](https://github.com/FransBouma/IgcsConnector/releases)
 * [IGCS Relay](https://github.com/AnticOwl/IGCS-Relay/releases)
-* [dgVoodoo2](https://dege.freeweb.hu/dgVoodoo2/dgVoodoo2/) - **Arkham Asylum only**
+* [dgVoodoo2](https://dege.freeweb.hu/dgVoodoo2/dgVoodoo2/) for **Arkham Asylum only**
 
-#### Batman: Arkham Asylum - DirectX 9
-Arkham Asylum requires **dgVoodoo2** so ReShade can run the required add-ons through a modern DirectX backend.
+#### Arkham Asylum - dgVoodoo2 setup
+Arkham Asylum uses DirectX 9, so dgVoodoo2 is required before installing ReShade.
 
-1. Copy the **32-bit** `D3D9.dll` from the dgVoodoo2 `MS\x86` folder into the same folder as the game executable.
-2. Launch the game once and make sure it starts correctly through dgVoodoo2.
-3. Install **ReShade with add-on support** and select **DirectX 10/11/12** when asked for the rendering API.
-4. Copy these 32-bit add-ons into the ReShade add-on folder:
-   * `IGCSConnector.addon32`
-   * `IGCSRelay.addon32`
+From the dgVoodoo2 archive, copy these files into the same directory as `ShippingPC-BmGame.exe`:
 
-#### Batman: Arkham City and Arkham Origins - DirectX 11
-No dgVoodoo2 wrapper is required for City or Origins.
+* `MS\x86\D3D9.dll`
+* `dgVoodooCpl.exe`
+* `dgVoodoo.conf`
 
-1. Install **ReShade with add-on support** directly for the game and select **DirectX 10/11/12**.
-2. Copy these 32-bit add-ons into the ReShade add-on folder:
-   * `IGCSConnector.addon32`
-   * `IGCSRelay.addon32`
+Run `dgVoodooCpl.exe` from the game directory so it uses the local `dgVoodoo.conf` file.
 
-Do **not** use the `.addon64` versions for any of these three games.
+In the **General** tab, set the output API to **Direct3D 11 (feature level 11.0)**. This is the recommended target for ReShade.
+
+Then open the **DirectX** tab and disable the **dgVoodoo Watermark** option so the dgVoodoo logo is not displayed in-game. Click **Apply** to save the configuration.
+
+A detailed dgVoodoo2 installation and configuration guide is available here: [dgVoodoo2 | Marty's Mods Guides](https://guides.martysmods.com/additionalguides/apiwrappers/dgvoodoo2/).
+
+Once dgVoodoo2 is configured, install ReShade for **DirectX 10/11/12**, not DirectX 9. dgVoodoo2 translates Arkham Asylum's original DX9 output to DX11 for ReShade.
+
+#### Arkham City and Arkham Origins - DirectX 11
+No wrapper is needed. Install ReShade directly and select **DirectX 10/11/12**.
+
+Make sure you use a ReShade build with **add-on support**.
+
+#### Install IGCS Connector and IGCS Relay
+Copy the 32-bit add-ons into the ReShade add-on folder:
+
+* `IGCSConnector.addon32`
+* `IGCSRelay.addon32`
+
+Do **not** use the `.addon64` versions for these games.
 
 #### Enable the camera and Relay support
 Start the game and open the Cheat Engine table.
