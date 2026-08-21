@@ -14,7 +14,7 @@ So let's see what we can do to get the most of the game for some epic shots.
 * [DOOM Eternal Mod Injector](https://gamebanana.com/tools/7475)
 
 ## Optional
-* ReShade 6.1.1
+* ReShade 6.7 or higher
 
 {% include note.html content="ReShade works only via the installer. Be sure to activate 'Enable ReShade in Vulkan Globally'." %}
 
@@ -27,6 +27,56 @@ The game will start after the patching is done.
 
 To see if everything was correctly patched, open the console by pressing `~` and type `listcvars`. you shoud have a total of 7397.
 If so, you are good to go.
+
+## IGCS Support
+DOOM Eternal uses **Vulkan** and the game's own **Photo Mode camera**. IGCS Support does not replace the Photo Mode controls: it exposes the active Photo Mode camera to IGCS Relay / IGCSDOF.
+
+Use **ReShade 6.7 or higher** with add-on support for Vulkan, then use the 64-bit add-ons:
+
+* `IGCSConnector.addon64`
+* `IGCSRelay.addon64`
+
+For the Vulkan layer used by ReShade, check the file:
+
+`C:\ProgramData\ReShade\ReShade64.json`
+
+It should contain the following configuration:
+
+```json
+{
+	"file_format_version": "1.0.0",
+	"layer": {
+		"name": "VK_LAYER_reshade",
+		"type": "GLOBAL",
+		"library_path": ".\\ReShade64.dll",
+		"api_version": "1.3.268",
+		"implementation_version": "1",
+		"description": "crosire's ReShade post-processing injector for 64-bit",
+		"device_extensions": [
+			{
+				"name": "VK_EXT_tooling_info",
+				"spec_version": "1",
+				"entrypoints": [ "vkGetPhysicalDeviceToolPropertiesEXT" ]
+			}
+		],
+		"disable_environment": {
+			"DISABLE_VK_LAYER_reshade_5": "5"			
+		}
+	}
+}
+```
+
+In the Cheat Engine table:
+
+* Enable `Photo Mode Camera IGCS`.
+* Enable `IGCS Support`.
+* Open the ReShade overlay and check the **IGCS Relay** panel.
+
+{% include note.html content="You must be inside the game's Photo Mode with the camera active before starting IGCSDOF. The camera data used by IGCS Relay comes from the Photo Mode camera, so the DOF render will not work correctly outside Photo Mode." %}
+
+Once the Relay status is OK and the Photo Mode camera is active, frame your shot and start IGCSDOF normally.
+
+For more information about IGCS Relay, see the [IGCS Relay guide](https://anticowl.github.io/2026/08/12/IGCSRelay/).
 
 ## Photo Mode Anytime and Image Quality 
 
