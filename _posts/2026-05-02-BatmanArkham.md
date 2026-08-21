@@ -185,12 +185,6 @@ Controller input is ignored while IGCSDOF is rendering so it does not interfere 
 Once you have installed Cheat Engine 7.6 or higher (if not already done), click twice on the cheat table file you downloaded. Check the `Auto Attach to Game` box. Cheat Engine will automatically connect to the game when detected.
 Press `Page Down` to enable the camera structure and leave on.  
 
-<div style="width:65%; margin: auto;">
-<img src="https://github.com/user-attachments/assets/3b02796a-417c-4bae-a8ef-aea4d76e79d1" alt="Cheat Engine" style="box-shadow: 3px 3px 3px gray;">
-</div>
-<div> </div>
-
-### Table Example
 The current tables include the camera, pause/slomo and LOD options together with the new **IGCS Support** script.
 
 <div style="width:55%; margin: auto;">
