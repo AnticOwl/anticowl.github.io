@@ -232,7 +232,7 @@ In the **General** tab, set the output API to **Direct3D 11 (feature level 11.0)
 
 Then open the **DirectX** tab and disable the **dgVoodoo Watermark** option so the dgVoodoo logo is not displayed in-game. Click **Apply** to save the configuration.
 
-A detailed dgVoodoo2 installation and configuration guide is available here: [dgVoodoo2 | Marty's Mods Guides](https://guides.martysmods.com/additionalguides/apiwrappers/dgvoodoo2/).
+For more information about dgVoodoo2 installation and configuration, see [dgVoodoo2 | Marty's Mods Guides](https://guides.martysmods.com/additionalguides/apiwrappers/dgvoodoo2/).
 
 Once dgVoodoo2 is configured, install ReShade for **DirectX 10/11/12**, not DirectX 9. dgVoodoo2 translates Arkham Asylum's original DX9 output to DX11 for ReShade.
 
