@@ -6,22 +6,53 @@ image:  IGCSRELAY_POST.jpg
 tags:   Screenshooting
 ---
 
-Forget depth-based blur that breaks on transparency. IGCSDOF doesn’t fake depth of field from the depth buffer.The result: cinematic, camera-like DoF where glass, hair, particles and translucency finally behave the way they should.
+Forget depth-based blur that breaks on transparency. IGCSDOF doesn’t fake depth of field from the depth buffer. The result: cinematic, camera-like DoF where glass, hair, particles and translucency finally behave the way they should.
+
+**IGCS Relay v0.6.9** now supports both **IGCSDOF** and **MARTY'S MODS Parallax DOF**.
 
 ## What is IGCS Relay?
 
-IGCS Relay is the link between IGCS Connector and supported custom game cameras.
+IGCS Relay is the link between supported custom game cameras and IGCS-compatible depth-of-field tools.
 
-Normally, IGCSDOF needs a compatible IGCS camera tool to control the camera during a render. IGCS Relay extends that support to other cameras, such as compatible Cheat Engine photo modes.
+Normally, tools such as IGCSDOF need a compatible IGCS camera tool to control the camera during a render. IGCS Relay extends that support to other cameras, such as compatible Cheat Engine photo modes.
 
-For the user, this simply means more games can use IGCSDOF without needing a dedicated IGCS camera tool.
+For the user, this simply means more games can use high-quality multi-sample depth of field without needing a dedicated IGCS camera tool.
 
-Once the camera is enabled and the Relay status is OK, you can frame your shot, start IGCSDOF and render as usual. The Relay handles the camera movements automatically in the background.
+Once the camera is enabled and the Relay status is OK, you can frame your shot, choose the DOF backend you want to use, and render as usual. The Relay handles the camera movements automatically in the background.
+
+## IGCSDOF or Parallax DOF
+
+Starting with **v0.6.9**, IGCS Relay can work with either:
+
+* **IGCSDOF** using the IGCS Connector
+* **MARTY'S MODS Parallax DOF**
+
+Both addons can be loaded at the same time.
+
+Open the IGCS Relay panel in ReShade and choose the backend under **DOF Integration**:
+
+```text
+Backend: IGCSDOF
+```
+
+or:
+
+```text
+Backend: Parallax DOF
+```
+
+The selected backend is shown as **Active**. The other compatible addon can remain connected as **Ready**, so you can switch between them without restarting the game, ReShade or the camera provider.
+
+If a screenshot session is started directly from IGCSDOF or Parallax DOF, the Relay automatically detects which addon started the session and follows that backend.
+
+Backend switching is disabled while a screenshot session is rendering.
 
 ## Required
 * [ReShade 6.7 or higher with add-on support](https://reshade.me/downloads/ReShade_Setup_6.8.0_Addon.exe)
 * [IGCS Relay](https://github.com/AnticOwl/IGCS-Relay/releases)
-* [IGCS Connector by Frans Bouma](https://github.com/FransBouma/IgcsConnector/releases)
+* At least one supported DOF backend:
+  * [IGCS Connector by Frans Bouma](https://github.com/FransBouma/IgcsConnector/releases) for IGCSDOF
+  * MARTY'S MODS Parallax DOF
 * [Cheat Engine 7.6 or higher](https://www.cheatengine.org)
 * A compatible cheat table
 
@@ -32,6 +63,7 @@ Once the camera is enabled and the Relay status is OK, you can frame your shot, 
 * Use the correct version for the game:
   * IGCSRelay.addon64 for 64-bit games
   * IGCSRelay.addon32 for 32-bit games
+* Install the DOF addon you want to use: IGCSDOF / IGCS Connector, Parallax DOF, or both.
 
 Launch the game and open the ReShade overlay.
 
@@ -50,12 +82,13 @@ You should see the IGCS Relay panel.
 * Enable the IGCS support.
 * Check the IGCS Relay panel in ReShade.
 * Make sure the Relay status is OK.
+* Select **IGCSDOF** or **Parallax DOF** under **DOF Integration**.
 * Frame your shot.
-* Start IGCSDOF.
-* Configure your focus, aperture, samples and other IGCSDOF settings.
+* Open the selected DOF addon.
+* Configure your focus, aperture, samples and other DOF settings.
 * Start the render.
 
-IGCSDOF will automatically control the camera during the render.
+The selected DOF addon will automatically control the camera through IGCS Relay during the render.
 
 <div style="width:65%; margin: auto;">
 <img src="/images/IGCSRelay02.jpg" alt="IGCS Relay" style="box-shadow: 3px 3px 3px gray;">
@@ -240,5 +273,4 @@ DmC uses the **UE3** profile and is a good reference for:
 * how the engine tag is defined.
 
 You can use it as a starting point when adapting another Cheat Engine camera to IGCS Relay.
-
 
