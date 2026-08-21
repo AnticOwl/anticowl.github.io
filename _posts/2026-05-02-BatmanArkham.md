@@ -194,7 +194,7 @@ Press `Page Down` to enable the camera structure and leave on.
 The current tables include the camera, pause/slomo and LOD options together with the new **IGCS Support** script.
 
 <div style="width:55%; margin: auto;">
-<img src="/images/BatmanArkham_Table_v2.3.png" alt="Batman Arkham Cheat Engine table with IGCS Support" style="box-shadow: 3px 3px 3px gray;">
+<img src="/images/BatmanArkham_Table_v2.3.jpg" alt="Batman Arkham Cheat Engine table with IGCS Support" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
 
