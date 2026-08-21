@@ -96,7 +96,7 @@ These mods are optional but highly recommended. Read their description and how t
             <td><br></td>
         </tr>
         <tr>
-            <td>Page Down</td>
+            <td>Insert</td>
             <td>Enable camera structure</td>
         </tr>
         <tr>
