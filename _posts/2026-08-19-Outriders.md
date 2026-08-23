@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Outriders"
-date:   2026-08-23 18:05:55 +0300
+date:   2026-08-23 06:05:55 +0300
 image:  OUTRIDERS_POST.jpg
 tags:   Screenshooting
 ---
