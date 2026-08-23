@@ -176,6 +176,9 @@ Press `Page Down` to enable the camera structure and leave it enabled.
 <div> </div>
 
 ### Take A Screenshot
+
+**Note:** Make sure the game is paused before detaching the camera. If you activate the free camera while the game is still running, it can go completely wild. **You have been warned. 😉**
+
 * Press `Numpad 0` to pause the game.
 * Press `Delete` to disable the pause menu.
 * Press `Insert` to detach the camera.
