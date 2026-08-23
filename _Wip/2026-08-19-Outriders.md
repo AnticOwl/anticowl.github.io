@@ -15,12 +15,12 @@ With rich storytelling spanning a diverse world, you’ll leave behind the slums
 Combining intense gunplay with violent powers and an arsenal of increasingly twisted weaponry and gear-sets, OUTRIDERS offers countless hours of gameplay from one of the finest shooter developers in the industry – People Can Fly.
 
 ## Required
-* [Outriders camera](https://anticowl.github.io/files/mss/xxxxxxxxx.CT)
+* [Outriders camera](https://anticowl.github.io/files/OUTRIDERS-Win64-Shipping.CT)
 * [Cheat Engine 7.6 or higher](https://www.cheatengine.org/)
 
 ## Optional
-* [ReShade with addon support]()
-* [IGCS Relay]
+* [ReShade with add-on support](https://reshade.me/)
+* [IGCS Relay](https://anticowl.github.io/2026/08/12/IGCSRelay/)
 
 ## Controls
 <style>
@@ -74,14 +74,14 @@ Combining intense gunplay with violent powers and an arsenal of increasingly twi
         </tr>
         <tr>
             <td>NUMPAD 7,9</td>
-            <td>Camera up and down</td>
+            <td>Camera down and up</td>
         </tr>
         <tr>
             <td>NUMPAD 1,3</td>
             <td>Camera roll</td>
         </tr>
         <tr>
-            <td>ARROW Up, Down </td>
+            <td>ARROW Up, Down</td>
             <td>Pitch up and down</td>
         </tr>
         <tr>
@@ -90,7 +90,47 @@ Combining intense gunplay with violent powers and an arsenal of increasingly twi
         </tr>
         <tr>
             <td>NUMPAD +,-</td>
-            <td>Zoom in an out</td>
+            <td>Zoom in and out</td>
+        </tr>
+        <tr>
+            <td>Left Alt</td>
+            <td>Slower camera movements</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>Controller - Left Stick</td>
+            <td>Move / strafe</td>
+        </tr>
+        <tr>
+            <td>Controller - Right Stick</td>
+            <td>Yaw / pitch</td>
+        </tr>
+        <tr>
+            <td>Controller - LT / RT</td>
+            <td>Move down / up</td>
+        </tr>
+        <tr>
+            <td>Controller - LB / RB</td>
+            <td>Roll left / right</td>
+        </tr>
+        <tr>
+            <td>Controller - D-Pad Up / Down</td>
+            <td>FOV - / +</td>
+        </tr>
+        <tr>
+            <td>Controller - B</td>
+            <td>Reset roll</td>
+        </tr>
+        <tr>
+            <td>Controller - X</td>
+            <td>Slow movement</td>
+        </tr>
+        <tr>
+            <td>Controller - Y</td>
+            <td>Fast movement</td>
         </tr>
         <tr>
             <td><br></td>
@@ -114,19 +154,11 @@ Combining intense gunplay with violent powers and an arsenal of increasingly twi
         </tr>
         <tr>
             <td>End</td>
-            <td>Enable IGCS Support</td>
+            <td>Enable IGCS Relay support</td>
         </tr>
         <tr>
-            <td>Page up</td>
+            <td>Page Up</td>
             <td>Enable slomo</td>
-        </tr>
-        <tr>
-            <td><br></td>
-            <td><br></td>
-        </tr>
-        <tr>
-            <td>Left Alt</td>
-            <td>Slower camera movements</td>
         </tr>
     </tbody>
 </table>
@@ -134,8 +166,9 @@ Combining intense gunplay with violent powers and an arsenal of increasingly twi
 
 ## How To
 ### Use The Cheat Table
-Once you have installed Cheat Engine 7.6 or higher (if not already done), click twice on the cheat table file you downloaded. Check the `Auto Attach to Game` box. Cheat Engine will automatically connect to the game when detected.
-Press `Page Down` to enable the camera structure and leave on.  
+Once you have installed Cheat Engine 7.6 or higher (if not already done), double-click the cheat table file you downloaded. Check the `Auto Attach to Game` box. Cheat Engine will automatically connect to the game when detected.
+
+Press `Page Down` to enable the camera structure and leave it enabled.
 
 <div style="width:65%; margin: auto;">
 <img src="https://github.com/user-attachments/assets/54903f71-d177-481f-a631-ae1e4f897bc8" alt="Cheat Engine" style="box-shadow: 3px 3px 3px gray;">
@@ -143,9 +176,26 @@ Press `Page Down` to enable the camera structure and leave on.
 <div> </div>
 
 ### Take A Screenshot
-* Press `Numpad 0`to pause the game.
+* Press `Numpad 0` to pause the game.
 * Press `Delete` to disable the pause menu.
-* Press `Insert` to detach the camera
-* Frame, take your shot and go the other way around to get back in game.
+* Press `Insert` to detach the camera.
+* Frame and take your shot.
+* Disable the options in reverse order to return to the game.
+
+### Use IGCS Relay
+The table includes native **IGCS Relay** support for camera-based DoF rendering with compatible backends such as **IGCSDOF** and **MARTY'S MODS Parallax DOF**.
+
+* Install ReShade with add-on support and [IGCS Relay](https://anticowl.github.io/2026/08/12/IGCSRelay/).
+* Press `Page Down` to enable the camera structure and leave it enabled.
+* Press `Insert` to detach the camera.
+* Press `End` to enable **IGCS Relay support** in the table.
+* Open the ReShade overlay and check that the IGCS Relay status is **OK**.
+* Choose your DOF backend, frame your shot and start the render.
+
+During an IGCS Relay render session, the Cheat Engine freecam temporarily ignores its own keyboard and controller input. This prevents accidental camera movement while still leaving the ReShade controls available.
+
+When the render is finished, the camera is restored to its original position.
 
 ## Resources
+* [IGCS Relay](https://anticowl.github.io/2026/08/12/IGCSRelay/)
+* [IGCS Relay releases](https://github.com/AnticOwl/IGCS-Relay/releases)
