@@ -199,3 +199,4 @@ When the render is finished, the camera is restored to its original position.
 ## Resources
 * [IGCS Relay](https://anticowl.github.io/2026/08/12/IGCSRelay/)
 * [IGCS Relay releases](https://github.com/AnticOwl/IGCS-Relay/releases)
+* [PC Wiki Gaming](https://www.pcgamingwiki.com/wiki/Outrider)
