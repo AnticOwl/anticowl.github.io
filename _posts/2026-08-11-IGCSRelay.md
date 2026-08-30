@@ -92,13 +92,76 @@ When the render is finished, the camera will return to its original position.
 
 If you already have a working Cheat Engine camera, adding IGCS Relay support is straightforward.
 
-Download or copy the **[Generic Raw Provider](https://github.com/AnticOwl/IGCS-Relay/blob/main/examples/Generic_RAW_Provider.lua)** script and add it to your existing Cheat Engine table as a new Auto Assembler script.
+There are now **two provider methods**. You can use whichever one fits your table or your preferred workflow:
 
-The provider already contains [ENABLE] and [DISABLE] sections, so once it has been added to the table it behaves like any other Cheat Engine script: simply check the box to enable Relay support.
+* **Auto-detection provider** — uses the existing Cheat Engine memory records directly.
+* **Manual provider** — uses explicit camera bases and offsets.
 
-Do not replace your existing camera script. The Generic Raw Provider is added alongside it.
+Both providers are added alongside your existing camera script. Do not replace your camera code.
 
-You normally only need to edit the configuration section so the provider knows where your camera data is stored.
+Both already contain `[ENABLE]` and `[DISABLE]` sections, so they behave like any other Cheat Engine script: add the provider as a new Auto Assembler script and check the box to enable Relay support.
+
+### Method 1 — Auto-detection provider
+
+Download or copy the **[Generic RAW Provider Auto](https://github.com/AnticOwl/IGCS-Relay/blob/main/examples/Generic_RAW_Provider_Auto.lua)** script.
+
+This provider reads the final addresses already resolved by Cheat Engine. Because of that, it does not need you to manually reproduce the camera pointer chain or enter position, rotation and FOV offsets again.
+
+It can work with camera values stored as:
+
+* direct addresses;
+* registered symbols;
+* standard Cheat Engine pointer records;
+* multi-level pointer chains;
+* different pointer chains for position, rotation and FOV.
+
+For example, your table can use a simple camera structure, a deep pointer chain, or even a separate branch such as `addr1` for Pitch/Yaw/Roll. Cheat Engine resolves the record, and the provider uses the resulting address.
+
+#### Preparing the camera records
+
+The auto provider looks for the following camera memory records:
+
+```text
+Camera X   or X
+Camera Y   or Y
+Camera Z   or Z
+Pitch
+Yaw
+Roll
+FOV
+```
+
+If your table already has `Camera X`, `Camera Y` and `Camera Z`, you can keep those names.
+
+For rotation and FOV, short clean names are recommended. For example:
+
+```text
+PITCH (-16384 to 16384, readonly)  -> Pitch
+YAW (0 to 65536, readonly)         -> Yaw
+FOV (0 to 170, default 68)         -> FOV
+ROLL (0 to 2*pi)                   -> Roll
+```
+
+You do not need to change the address, pointer chain or value type of those records. Only the description needs to be recognizable by the provider.
+
+A typical auto-provider configuration only needs the engine tag:
+
+```lua
+local CONFIG = {
+    engine = "UE3",
+    cameraIntervalMs = 16
+}
+```
+
+The engine tag is still required because it tells IGCS Relay which camera math to use. It cannot be determined reliably from a memory address alone.
+
+When the provider starts, the Cheat Engine Lua log shows which records were detected and their resolved addresses. This is useful for checking that the expected camera records are being used.
+
+### Method 2 — Manual provider
+
+If you prefer to define the camera structure yourself, use the **[Generic RAW Provider](https://github.com/AnticOwl/IGCS-Relay/blob/main/examples/Generic_RAW_Provider.lua)**.
+
+This method lets you explicitly define the camera base or bases and every offset used by the Relay.
 
 The important information is:
 
@@ -157,49 +220,26 @@ local CONFIG = {
 -- Everything below this line is universal provider core.
 ------------------------------------------------------------
 ```
-The Relay script then uses your existing camera pointer.
-
-For example, if your table already exposes a symbol such as:
-
-
-`pCamera`
-
-
-the Relay only needs a small function that returns the actual camera address.
-
-```
-function getCamBase()
-    local p = getAddressSafe("pCamera")
-    if not p then return nil end
-
-    local cam = readInteger(p)
-    if not cam or cam == 0 then return nil end
-
-    return cam
-end
-```
 
 ### Engine tag
 
 The engine tag tells IGCS Relay which camera math should be used.
 
-Use one of the supported tags defined in the Relay Lua script.
-
 For example:
 
-```
-ENGINE = "UE3"
+```lua
+engine = "UE3"
 ```
 
-for a compatible Unreal Engine 3 camera.
+Use the profile matching the camera representation used by the game.
 
 ### Camera bases
 
-You also need to tell the Relay which camera base contains the position, rotation and FOV values.
+With the manual provider, you choose which base contains position, rotation and FOV.
 
-In many Cheat Engine cameras, everything is stored in the same camera structure:
+In many Cheat Engine cameras, everything is stored in the same structure:
 
-```
+```lua
 bases = {
   position = "pCamera",
   rotation = "pCamera",
@@ -207,22 +247,17 @@ bases = {
 },
 ```
 
-This means that the Position, Rotation and FOV offsets are all calculated from `pCamera`.
+If your table uses different structures, each group can use a different base:
 
-If your table uses different structures, you can define a different base for each one.
-
-For example:
-
-```
+```lua
 bases = {
-  position = "pCamera",
-  rotation = "pRotation",
-  fov      = "pFov"
+  position = "getCamBase",
+  rotation = "addr1",
+  fov      = "addr1"
 },
 ```
 
-Most existing camera tables will only need the first configuration.
-
+A base can be an existing Lua function, Lua address or registered CE symbol. This means you can reuse camera initialization that is already present in the table instead of duplicating the pointer chain.
 
 ### Finding the offsets
 
@@ -230,7 +265,7 @@ The easiest way is usually to look at the existing camera script.
 
 If the camera code reads or writes values such as:
 
-```
+```text
 [pCamera]+5C
 [pCamera]+60
 [pCamera]+64
@@ -240,29 +275,39 @@ those values are the offsets used by the camera structure.
 
 For example:
 
-```
-X_OFFSET = 0x5C
-Y_OFFSET = 0x60
-Z_OFFSET = 0x64
+```lua
+position = {
+  x = 0x5C,
+  y = 0x60,
+  z = 0x64
+}
 ```
 
 Do the same for Pitch, Yaw, Roll and FOV.
 
 Save the table when finished.
 
-You do not need to understand the complete Cheat Engine script. In most cases, you only need to identify the offsets already used by the working camera.
+You do not need to understand the complete Cheat Engine script. In most cases, you only need to identify the camera data already used by the working camera.
+
+### Which method should I use?
+
+There is no required method.
+
+Use **Auto-detection** when your camera values already exist as clean Cheat Engine memory records and you want the provider to reuse them directly.
+
+Use **Manual configuration** when you prefer explicit control over camera bases and offsets, or when your table has a special layout that you want to describe yourself.
+
+Both methods send the same camera information to IGCS Relay.
 
 ### Example
 
-If you want to see how Relay support is added to a real Cheat Engine table, have a look at the **[DmC: Devil May Cry](https://github.com/AnticOwl/IGCS-Relay/tree/main/examples/reference_cameras)** table.
+If you want to see how manual Relay support is added to a real Cheat Engine table, have a look at the **[DmC: Devil May Cry](https://github.com/AnticOwl/IGCS-Relay/tree/main/examples/reference_cameras)** table.
 
 DmC uses the **UE3** profile and is a good reference for:
 
 * where to place the Relay Lua script;
-* how `getCamBase()` is connected to the existing camera pointer;
-* how the camera offsets are configured;
+* how the camera pointer is connected to the provider;
+* how camera offsets are configured;
 * how the engine tag is defined.
 
-You can use it as a starting point when adapting another Cheat Engine camera to IGCS Relay.
-
-
+For the auto-detection method, the important part is simply that the table exposes recognizable camera records for X, Y, Z, Pitch, Yaw, Roll and FOV.
