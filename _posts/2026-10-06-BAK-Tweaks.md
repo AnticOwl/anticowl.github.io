@@ -201,11 +201,7 @@ The interface and gizmos are independent, so it is possible to work with several
 
 ## Installation
 
-Copy or inject:
-
-`BAKTweaks.dll`
-
-using your preferred DLL injector after **Batman: Arkham Knight** has reached gameplay.
+Download **[BAKTweaks.dll](/files/BAKTweaks.dll)** and inject it using your preferred DLL injector after **Batman: Arkham Knight** has reached gameplay.
 
 BAK Tweaks creates:
 
