@@ -120,9 +120,33 @@ Not every location reacts in exactly the same way, so some effects are more usef
 
 ### Lightning
 
-Lightning can be triggered and adjusted independently.
+The Lightning section goes much further than a simple one-shot trigger.
 
-It can be useful for dramatic backlighting, brighter skies or simply experimenting with the way a location responds to a sudden light source.
+BAK Tweaks exposes both **Small Lightning** and **Vertical / Big Lightning**, and each type has its own timing, distance and salvo controls.
+
+The main controls are:
+
+* **Duration** - how long each lightning instance remains active.
+* **Distance** - how far in front of the camera the strike is placed.
+* **Instances** - how many lightning particles are produced by each individual strike. Higher values can make a single strike feel denser or more chaotic.
+* **Salvo Count** - how many strikes are fired in sequence.
+* **Salvo Interval** - the delay between strikes in the same salvo.
+* **Clusters** - divides a salvo between several screen-space areas instead of concentrating every strike in one place.
+* **Cluster Spread** - controls how tightly repeated strikes stay grouped around each cluster center.
+
+There is also a **Randomize Screen Position** option.
+
+When enabled, each salvo can be distributed across the frame using:
+
+* **Horizontal Spread** - how far strikes can move left or right.
+* **Vertical Spread** - how far strikes can move up or down.
+* **Distance Variation** - adds depth variation so repeated strikes are not all placed at exactly the same distance from the camera.
+
+Clusters are especially useful when working with longer salvos. Instead of producing a completely uniform scatter, several lightning strikes can return to roughly the same areas while still having some local variation.
+
+This makes it possible to build anything from a single controlled flash to a much more chaotic storm made of repeated, grouped strikes.
+
+The examples above use lightning as part of the composition, but there is intentionally no recommended combination of values. Try different instance counts, salvo lengths, cluster layouts and spread settings and see how they interact with rain, exposure and the scene itself.
 
 ### Misc
 
