@@ -55,42 +55,51 @@ Point Lights display their spherical influence radius.
 
 Spot Lights keep the display cleaner: they show the direction and cone, without the large radius sphere.
 
-<!-- Add the BAK Tweaks gizmo screenshot here.
+<!-- Replace with the final gizmo image when it is added to /images/
 <div style="width:85%; margin:auto;">
-<img src="/images/BAKTweaks/BAKTweaks_Gizmo.jpg" alt="BAK Tweaks BatLit gizmos" style="box-shadow: 3px 3px 3px gray;">
+<img src="/images/BAKTWEAK_GIZMO.jpg" alt="BAK Tweaks BatLit gizmos" style="box-shadow: 3px 3px 3px gray;">
 </div>
 <div> </div>
 -->
 
-## A Few Examples
+## Examples
 
-These are ideas rather than presets. The values that work in one scene may look completely different somewhere else.
+The images below are examples of what can be explored with BAK Tweaks. They are **not presets** and there is no recipe to reproduce them exactly.
 
-### Separate Batman From The Background
+### Lightning + Rain
 
-A Spot Light placed behind or to the side of the character can help create a stronger outline and make the silhouette stand out against a dark background.
+Lightning can become a major part of the composition rather than just a background effect.
 
-Use the red direction line and blue cone to see where the Spot Light is actually aimed, then move and rotate it until the result fits the scene.
+Combined with rain and a dark exposure, the flashes can create hard silhouettes, rim lighting and very high-contrast scenes.
 
-### Add A Little Fill
+<div style="width:65%; margin:auto;">
+<img src="/images/BAKTWEAK_02.jpg" alt="BAK Tweaks lightning and rain example" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
-A Point Light can be useful when part of a character or environment falls completely into shadow.
+### Lightning As Backlight
 
-The gray radius sphere gives a quick visual indication of the area influenced by the light. Moving the light a short distance can often matter more than simply increasing its intensity.
+A slightly different framing can completely change how the same effect reads.
 
-### Build With Several Lights
+Here the lightning acts almost like a giant backlight behind the subject, while the rest of the scene stays deliberately dark.
 
-Because every created light has an independent gizmo toggle, you can keep several helpers visible while arranging a scene.
+<div style="width:65%; margin:auto;">
+<img src="/images/BAKTWEAK_03.jpg" alt="BAK Tweaks lightning backlight example" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
-For example, one light might shape the subject while another affects the background or a nearby prop. Once the placement is finished, disable the gizmos individually without removing the lights.
+### Spot Lights + Heavier Rain
 
-### Mix Lighting And Environment
+A few Spot Lights can be enough to reshape a scene without replacing the original lighting.
 
-Lighting does not have to be used on its own.
+In this example, additional Spot Lights add separation and color around the subject, while a little more rain helps catch and reveal the light in the air.
 
-Rain, lightning, exposure and the existing scene lighting can all change the way a custom light feels. A setup that looks subtle in a dry scene can become much more dramatic once wet surfaces and lightning are involved.
+<div style="width:85%; margin:auto;">
+<img src="/images/BAKTWEAK_04.jpg" alt="BAK Tweaks Spot Lights and rain example" style="box-shadow: 3px 3px 3px gray;">
+</div>
+<div> </div>
 
-Experiment rather than treating any value as a recipe.
+These examples are intentionally left without exact values. Move the lights, change their direction, cone and intensity, mix them with weather and exposure, and see how the scene reacts.
 
 ## Environment
 
