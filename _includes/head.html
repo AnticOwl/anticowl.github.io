@@ -6,6 +6,32 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}</title>
   <meta name='description' content='{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.data.settings.description }}{% endif %}'>
 
+  {% capture social_description %}
+    {% if page.description %}
+      {{ page.description }}
+    {% elsif page.layout == 'post' %}
+      {{ content | strip_html | strip_newlines | truncate: 160 }}
+    {% else %}
+      {{ site.data.settings.description }}
+    {% endif %}
+  {% endcapture %}
+
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}">
+  <meta property="og:description" content="{{ social_description | strip | escape }}">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+
+  {% if page.image %}
+  <meta property="og:image" content="{{ '/images/' | append: page.image | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ '/images/' | append: page.image | absolute_url }}">
+  {% else %}
+  <meta name="twitter:card" content="summary">
+  {% endif %}
+
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}">
+  <meta name="twitter:description" content="{{ social_description | strip | escape }}">
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
