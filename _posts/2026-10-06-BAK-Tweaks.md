@@ -28,6 +28,20 @@ The idea is simple: give you useful controls and let you experiment. There are n
 * Combat VFX controls
 * Automatic cleanup of spawned lights when a level is restarted or changed
 
+## Shortcuts
+
+BAK Tweaks can be controlled without keeping the interface open.
+
+* **F6** - Trigger **Small Lightning**
+* **F7** - Trigger **Vertical / Big Lightning**
+* **F10** - Open / close the BAK Tweaks interface
+
+The Lightning shortcuts are designed for use while the interface is hidden.
+
+F6 and F7 use the **current Lightning settings** already configured in the UI, including Duration, Distance, Instances, Salvo Count, Salvo Interval, Clusters, Cluster Spread, Randomize Screen Position, Horizontal Spread, Vertical Spread and Distance Variation.
+
+Each key press triggers a single salvo. Holding the key down does not continuously retrigger it.
+
 ## BatLit
 
 **BatLit** is the runtime lighting system included in BAK Tweaks.
@@ -147,6 +161,9 @@ Clusters are especially useful when working with longer salvos. Instead of produ
 This makes it possible to build anything from a single controlled flash to a much more chaotic storm made of repeated, grouped strikes.
 
 The examples above use lightning as part of the composition, but there is intentionally no recommended combination of values. Try different instance counts, salvo lengths, cluster layouts and spread settings and see how they interact with rain, exposure and the scene itself.
+
+
+Once the setup feels right, close the interface with **F10** and use **F6** or **F7** to fire the configured lightning directly while framing the shot.
 
 ### Misc
 
