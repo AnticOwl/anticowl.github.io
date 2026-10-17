@@ -164,6 +164,10 @@ A public download link will be added here when the release file is available.
 
 **Screenshots coming soon.** The in-game interface and examples will be added once the final images are available.
 
+## Credits
+
+Banner artwork credit: **Zakon**.
+
 ## Notes
 
 ResonantTool changes game systems at runtime and is primarily intended for virtual photography and cinematic experimentation.
