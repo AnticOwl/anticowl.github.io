@@ -30,6 +30,8 @@ The idea is simple: **make a scene your own**. Add a soft light to a face, push 
 
 ## Getting Started
 
+Download **[ResonantTool.zip](https://anticowl.github.io/files/ResonantTool.zip)**.
+
 1. Launch **CONTROL Resonant** and load into gameplay.
 2. Inject `ResonantTool.dll` using your preferred DLL injector.
 3. Press **F11** to show or hide the interface.
@@ -148,17 +150,6 @@ ResonantTool uses an in-game **ImGui interface** designed to keep light creation
 Use **F11** to open or close the menu. The active adjustments are intended to be used while framing screenshots with the interface hidden.
 
 Sliders let you make quick adjustments, while supported controls also allow finer numeric entry.
-
-## Installation
-
-ResonantTool includes **`ResonantTool.dll`** and an **injector EXE**.
-
-1. Start **CONTROL Resonant**.
-2. Load your save and enter gameplay.
-3. Use the included injector EXE to load `ResonantTool.dll` into the game.
-4. Press **F11** to open the menu.
-
-Download **[ResonantTool.zip](https://anticowl.github.io/files/ResonantTool.zip)**.
 
 ## Credits
 
