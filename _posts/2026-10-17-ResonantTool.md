@@ -5,8 +5,6 @@ date: 2026-10-17 13:00:00 +0200
 tags: Screenshooting
 ---
 
-# ResonantTool
-
 **ResonantTool** is an in-game lighting and visual adjustment utility for **CONTROL Resonant**, designed for virtual photography, cinematic screenshots and experimenting with the look of a scene.
 
 It lets you create and adjust lights, fine-tune post-processing and explore level-of-detail settings without having to leave the game.
