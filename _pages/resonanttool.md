@@ -35,7 +35,7 @@ The idea is simple: **make a scene your own**. Add a soft light to a face, push 
 3. Press **F11** to show or hide the interface.
 4. Choose the tab you want to use and adjust the scene.
 
-ResonantTool is a **single DLL** and works through an in-game **DirectX 12** interface. There is no separate companion application.
+ResonantTool uses an in-game **DirectX 12** interface. The tool also comes with an **injector EXE** to load `ResonantTool.dll` into the game.
 
 When a control has an **Override** checkbox, enable it if you want that setting to take priority over the game's own updates. The four controls with this option are listed under **Post-Processing** below.
 
@@ -151,11 +151,11 @@ Sliders let you make quick adjustments, while supported controls also allow fine
 
 ## Installation
 
-ResonantTool is supplied as **`ResonantTool.dll`**.
+ResonantTool includes **`ResonantTool.dll`** and an **injector EXE**.
 
 1. Start **CONTROL Resonant**.
 2. Load your save and enter gameplay.
-3. Inject the DLL using your preferred injector.
+3. Use the included injector EXE to load `ResonantTool.dll` into the game.
 4. Press **F11** to open the menu.
 
 A public download link will be added here when the release file is available.
