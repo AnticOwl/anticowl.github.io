@@ -2,6 +2,7 @@
 layout: post
 title: "ResonantTool — CONTROL Resonant"
 date: 2026-10-17 13:00:00 +0200
+image: RESONANTTool_POST.jpg
 tags: Screenshooting
 ---
 
