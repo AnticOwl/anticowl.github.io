@@ -32,6 +32,8 @@ The idea is simple: **make a scene your own**. Add a soft light to a face, push 
 
 Download **[ResonantTool.zip](https://anticowl.github.io/files/ResonantTool.zip)**.
 
+Extract the ZIP archive into a folder of your choice.
+
 1. Launch **CONTROL Resonant** and load into gameplay.
 2. Inject `ResonantTool.dll` using your preferred DLL injector.
 3. Press **F11** to show or hide the interface.
