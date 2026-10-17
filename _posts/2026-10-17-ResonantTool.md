@@ -158,7 +158,7 @@ ResonantTool includes **`ResonantTool.dll`** and an **injector EXE**.
 3. Use the included injector EXE to load `ResonantTool.dll` into the game.
 4. Press **F11** to open the menu.
 
-A public download link will be added here when the release file is available.
+Download **[ResonantTool.zip](https://anticowl.github.io/files/ResonantTool.zip)**.
 
 ## Credits
 
