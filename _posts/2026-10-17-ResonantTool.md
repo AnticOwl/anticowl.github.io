@@ -34,6 +34,8 @@ Download **[ResonantTool.zip](https://anticowl.github.io/files/ResonantTool.zip)
 
 Extract the ZIP archive into a folder of your choice.
 
+**Windows note:** The included injector EXE may need to be unblocked before running it. Right-click the EXE, choose **Properties**, check **Unblock** (if shown), then click **Apply**.
+
 1. Launch **CONTROL Resonant** and load into gameplay.
 2. Inject `ResonantTool.dll` using your preferred DLL injector.
 3. Press **F11** to show or hide the interface.
