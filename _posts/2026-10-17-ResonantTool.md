@@ -76,6 +76,7 @@ You can experiment with:
 * **Color**
 * **Intensity**
 * **Radius and distance-related settings**
+* **ON/OFF** — turn a Point Light off by setting its native intensity to zero, then turn it back on to restore its previous intensity.
 
 Try combining a broad Point Light with a more focused Spot Light. Often, a small change is enough to add depth without overpowering the original scene.
 
@@ -104,6 +105,8 @@ The **PP** tab adjusts the overall look of the image. These are creative control
 **Vignette** and **Film Grain** also have an **Override** checkbox to the right of their slider.
 
 These are the **only four Override checkboxes** in the PP tab.
+
+**Reset PP** restores the PP values saved when entering the tab and disables the four PP overrides.
 
 ### Atmosphere
 
