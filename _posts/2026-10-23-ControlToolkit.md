@@ -20,17 +20,14 @@ The current tested baseline is **v0.4j**. The version number is displayed in the
 
 ## Getting Started
 
-1. **Unzip the CONTROL Toolkit ZIP archive into a folder of your choice.**
-2. If you are using the source package, run `Build-Release.cmd` first to compile `ControlToolkit.dll` and its injector.
-3. **Start CONTROL in DirectX 12 mode** and load your game.
-4. Run `Inject-Control.cmd` to load the toolkit into `Control_DX12.exe`.
-5. **Enter the game's Photo Mode.** Open the toolkit interface and adjust your shot.
+1. **Unzip the CONTROL Toolkit ZIP archive** into a folder of your choice.
+2. **Start CONTROL in DirectX 12 mode** and load your game.
+3. **Double-click the included injector EXE** to load the toolkit. No CMD script is needed.
+4. **Enter Photo Mode**, open the toolkit interface and start adjusting your shot.
 
-The toolkit is **exclusively for Photo Mode**. Do not use it for regular gameplay.
+**CONTROL Toolkit is exclusively designed for Photo Mode**, for virtual photography and cinematic screenshots—not regular gameplay.
 
-The package includes an injector; Cheat Engine and a separate injector are not required.
-
-> **Source package note:** The currently available ZIP contains source code and build scripts, not precompiled executables. Compiling it requires a working Windows C++ build environment.
+> If you downloaded the source-only package rather than a compiled release, you must build the DLL and injector first.
 
 ## Camera & Camera Path
 
