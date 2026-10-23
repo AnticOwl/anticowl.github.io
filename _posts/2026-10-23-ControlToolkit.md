@@ -5,7 +5,7 @@ date: 2026-10-23 10:00:00 +0200
 tags: Screenshooting
 ---
 
-**CONTROL Toolkit** is an in-game utility for the original **CONTROL** (DirectX 12), made for virtual photography and cinematic screenshots. It brings camera controls, a camera path, lighting, post-processing and resolution adjustments together in one interface.
+**CONTROL Toolkit** is an in-game utility for the original **CONTROL** (DirectX 12), **exclusively intended for use in the game's Photo Mode** for virtual photography and cinematic screenshots. It is not designed for normal gameplay. It brings camera controls, a camera path, lighting, post-processing and resolution adjustments together in one interface.
 
 The current tested baseline is **v0.4j**. The version number is displayed in the title bar, so you can easily see which build is running.
 
@@ -20,17 +20,17 @@ The current tested baseline is **v0.4j**. The version number is displayed in the
 
 ## Getting Started
 
-The toolkit is currently distributed as a **source ZIP**, including a build script and an injector.
+1. **Unzip the CONTROL Toolkit ZIP archive into a folder of your choice.**
+2. If you are using the source package, run `Build-Release.cmd` first to compile `ControlToolkit.dll` and its injector.
+3. **Start CONTROL in DirectX 12 mode** and load your game.
+4. Run `Inject-Control.cmd` to load the toolkit into `Control_DX12.exe`.
+5. **Enter the game's Photo Mode.** Open the toolkit interface and adjust your shot.
 
-1. Extract the toolkit archive.
-2. Run `Build-Release.cmd` to compile the toolkit and injector.
-3. Start the **DirectX 12** version of CONTROL and enter gameplay.
-4. Run `Inject-Control.cmd` to inject the toolkit into `Control_DX12.exe`.
-5. Open the in-game interface and choose the tab you want to use.
+The toolkit is **exclusively for Photo Mode**. Do not use it for regular gameplay.
 
-The package uses `ControlToolkit.dll`. It does **not** require Cheat Engine or an external injector.
+The package includes an injector; Cheat Engine and a separate injector are not required.
 
-> **Important:** Build and injection require a working local Windows C++ build environment. The source ZIP is not a precompiled DLL package.
+> **Source package note:** The currently available ZIP contains source code and build scripts, not precompiled executables. Compiling it requires a working Windows C++ build environment.
 
 ## Camera & Camera Path
 
