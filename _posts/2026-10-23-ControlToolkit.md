@@ -54,7 +54,13 @@ The **Post Process** tab groups the image adjustments that were previously sprea
 * **Bloom Lens Dirt**
 * **Bloom Scatter**
 
-You can also adjust **Global Exposure**, **Radial Blur** and **Vignette** from this tab. Change one setting at a time and compare the effect in your scene.
+### Additional Post-Process Controls
+
+* **Global Exposure** — adjust the overall exposure of the image.
+* **Radial Blur** — adjust the radial blur effect.
+* **Vignetting** — adjust the darkening at the edges of the image.
+
+These controls are available alongside Bloom in the **Post Process** tab. Change one setting at a time and compare the effect in your scene.
 
 ## Hotsampling
 
