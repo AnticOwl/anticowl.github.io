@@ -7,7 +7,7 @@ tags: Screenshooting
 
 **CONTROL Toolkit** is an in-game utility for the original **CONTROL** (DirectX 12), **exclusively intended for use in the game's Photo Mode** for virtual photography and cinematic screenshots. It is not designed for normal gameplay. It brings camera controls, a camera path, lighting, post-processing and resolution adjustments together in one interface.
 
-The current tested baseline is **v0.4j**. The version number is displayed in the title bar, so you can easily see which build is running.
+The last in-game validated baseline is **v0.4j**; the **v0.4k** update enables hotsampling automatically and still needs an in-game test. The version number is displayed in the title bar, so you can easily see which build is running.
 
 ## Main Features
 
@@ -66,8 +66,7 @@ The **Hotsampling** tab brings resolution management into the toolkit, reducing 
 * Pick a custom resolution and apply it.
 * Reuse resolutions from the clickable history.
 * Restore the original window dimensions.
-* Keep **Allow Window Resize** and **Allow Hotsampling** together in this tab.
-* Keep **Force EXITSIZEMOVE after window resize** enabled, so CONTROL receives the resize-complete notification.
+* **Hotsampling is enabled automatically when you enter Photo Mode.** No extra checkboxes are needed.
 
 For best results, verify that the game's **Render Resolution** follows the resized window, both when moving to a higher resolution and when restoring the original one. The v0.4j baseline was user-tested with the **Native** rendering mode; results may differ with upscaling settings.
 
