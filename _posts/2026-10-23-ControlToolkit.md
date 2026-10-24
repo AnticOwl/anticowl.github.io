@@ -2,6 +2,7 @@
 layout: post
 title: "CONTROL Toolkit — In-Game Photo Mode Tools"
 date: 2026-10-23 10:00:00 +0200
+image: CONTROLTOOLKIT_POST.jpg
 tags: Screenshooting
 ---
 
