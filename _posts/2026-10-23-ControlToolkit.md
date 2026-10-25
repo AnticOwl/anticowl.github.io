@@ -6,7 +6,7 @@ image: CONTROLTOOLKIT_POST.jpg
 tags: Screenshooting
 ---
 
-**This guide covers CONTROL Toolkit v0.5c** for the original **CONTROL** (DirectX 12). It brings Photo Mode camera controls, camera paths, lights, post-processing and high-resolution capture together in one interface. It is intended for Photo Mode, not regular gameplay.
+**This guide covers CONTROL Toolkit v0.5c** for the Next Gen **CONTROL** (DirectX 12). It brings Photo Mode camera controls, camera paths, lights, post-processing and high-resolution capture together in one interface. It is intended for Photo Mode, not regular gameplay.
 
 [Download the compiled v0.5c package](https://anticowl.github.io/files/ControlToolkit_0.5c.zip) · [Browse the source code](https://github.com/AnticOwl/CONTROL_Toolkit/tree/main/source/v0.5c)
 
