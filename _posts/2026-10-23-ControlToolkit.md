@@ -8,7 +8,7 @@ tags: Screenshooting
 
 **This guide covers CONTROL Toolkit v0.5c** for the original **CONTROL** (DirectX 12). It brings Photo Mode camera controls, camera paths, lights, post-processing and high-resolution capture together in one interface. It is intended for Photo Mode, not regular gameplay.
 
-[Download the compiled v0.5c package](https://github.com/AnticOwl/CONTROL_Toolkit/blob/main/releases/ControlToolkit_0.5c.zip) · [Browse the source code](https://github.com/AnticOwl/CONTROL_Toolkit/tree/main/source/v0.5c)
+[Download the compiled v0.5c package](https://anticowl.github.io/files/ControlToolkit_0.5c.zip) · [Browse the source code](https://github.com/AnticOwl/CONTROL_Toolkit/tree/main/source/v0.5c)
 
 ## Install the toolkit
 
@@ -21,7 +21,7 @@ Inject once per game session.
 
 ## About IGCSConnector
 
-For Frans' DOF in v0.5c, copy `IGCSRelay.addon64` from the Toolkit ZIP into the ReShade add-ons folder that contains `IgcsConnector.addon64`. That's all you need to do.
+As everything is already set in the relay, copy `IGCSRelay.addon64` from the Toolkit ZIP into the ReShade add-ons folder that contains `IgcsConnector.addon64`. That's all you need to do.
 
 ## Camera and Camera Path
 
