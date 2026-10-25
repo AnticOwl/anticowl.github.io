@@ -51,4 +51,4 @@ Use **Configuration** to change supported keyboard shortcuts and Photo Mode opti
 
 ## Compatibility
 
-This guide is for the original **CONTROL** running in **DirectX 12**. It does not describe CONTROL Resonant, which is a separate game and project.
+This guide is for the Next Gen **CONTROL** running in **DirectX 12**. It does not describe CONTROL Resonant, which is a separate game and project.
