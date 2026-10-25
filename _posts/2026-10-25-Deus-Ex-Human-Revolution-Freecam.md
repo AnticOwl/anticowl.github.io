@@ -1,16 +1,24 @@
 ---
 layout: post
-title: "Deus Ex: Human Revolution — Director's Cut: Screenshooting Guide"
+title: "Deus Ex: Human Revolution — Director's Cut"
 date: 2026-10-25 10:00:00 +0100
-description: "Freeze a scene, compose with the free camera, work with the Gold Filter and take high-resolution screenshots in Deus Ex: Human Revolution — Director's Cut."
 tags: Screenshooting
 ---
 
-**Deus Ex: Human Revolution — Director's Cut** offers plenty to photograph: its architecture, characters, lighting and atmosphere. **DXHRDC Freecam** lets you leave the gameplay viewpoint, hold a moment and compose your own image.
+You play Adam Jensen, an ex-SWAT specialist who's been handpicked to oversee the defensive needs of one of America's most experimental biotechnology firms. When a black ops team breaks in and kills the very scientists you were hired to protect, everything you thought you knew about your job changes.
 
-This guide uses **DXHRDC Freecam v0.29** with the **Steam Director's Cut** and **DirectX 11**. For high-resolution captures through hotsampling, use **windowed mode**.
+## Required
 
-## Get the camera ready
+* Deus Ex: Human Revolution — Director's Cut (Steam version).
+* DXHRDC Freecam v0.29, including **DXHRDCFreecamInjector.exe** and **DXHRDCFreecam.dll**.
+* **DirectX 11** enabled in the game settings.
+
+## Optional
+
+* [ReShade](https://reshade.me/) for additional effects and screenshot capture.
+* An Xbox / XInput controller for moving the camera.
+
+## Installation
 
 1. Launch the game and load your save into gameplay.
 2. Run **DXHRDCFreecamInjector.exe** from your extracted camera folder. Keep the camera DLL beside it. The confirmation closes after three seconds.
@@ -19,15 +27,79 @@ This guide uses **DXHRDC Freecam v0.29** with the **Steam Director's Cut** and *
 
 Close the interface with **End** before flying the camera. You can reopen it whenever you want to adjust an option. **F1** remains a game key.
 
-## Take your first shot
+## Controls
 
-### 1. Hold the moment
+<style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+</style>
+
+With **Num Lock ON**:
+
+<div class="table_component" role="region" tabindex="0">
+<table>
+<thead><tr><th>Action</th><th>Key</th></tr></thead>
+<tbody>
+<tr><td>Show / hide the interface</td><td><strong>End</strong></td></tr>
+<tr><td>Enable / release freecam</td><td><strong>Insert</strong></td></tr>
+<tr><td>Restore game and original resolution</td><td><strong>Ctrl + Insert</strong></td></tr>
+<tr><td>Forward / backward</td><td><strong>Numpad 8 / 5</strong></td></tr>
+<tr><td>Left / right</td><td><strong>Numpad 4 / 6</strong></td></tr>
+<tr><td>Down / up</td><td><strong>Numpad 7 / 9</strong></td></tr>
+<tr><td>Look</td><td><strong>Mouse</strong> or <strong>arrow keys</strong></td></tr>
+<tr><td>Roll left / right</td><td><strong>Numpad 1 / 3</strong></td></tr>
+<tr><td>Reset roll</td><td><strong>Numpad 2</strong></td></tr>
+<tr><td>Increase / decrease FOV</td><td><strong>Numpad + / −</strong></td></tr>
+<tr><td>Fast / slow movement</td><td><strong>Shift / Ctrl</strong></td></tr>
+<tr><td>Hide / show HUD and highlights</td><td><strong>Delete</strong></td></tr>
+<tr><td>Freeze / unfreeze</td><td><strong>Numpad 0</strong></td></tr>
+<tr><td>Lock / unlock camera movement</td><td><strong>Numpad decimal</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+## The Tool
+
+### Camera
+
+#### Freeze the scene
 
 Find the scene you want to photograph, then press **Numpad 0** to freeze it. Characters and the simulation stop, while the free camera remains movable.
 
 If you need the scene to advance, press **Numpad 0** again. Freeze it once more when the moment is right.
 
-### 2. Find your framing
+#### Frame the shot
 
 Use **Numpad 8 / 5** to move forward and backward, **4 / 6** to move sideways and **7 / 9** to move down and up. Look around with the **mouse** or **arrow keys**.
 
@@ -39,72 +111,82 @@ For a tilted frame, use **Numpad 1 / 3** to roll left and right. **Numpad 2** br
 
 **Num Lock must be ON** for these controls.
 
-### 3. Clear the frame
+#### Hide the HUD
 
 Press **Delete** to hide the gameplay HUD and the yellow highlights around interactable objects. Press it again to bring them back.
 
 Once you have your composition, **Numpad decimal** locks camera movement. This helps you keep the pose while working on the image. Press it again when you want to move.
 
-### 4. Work on the look
+#### Adjust the look
 
 Open the interface with **End**. The **Gold Filter** tab lets you work with the restored Human Revolution look, while ReShade can provide your additional effects.
 
 The filter is optional: experiment with its controls and keep the result that suits your shot. The available adjustments are described below.
 
-### 5. Capture
+#### Take a screenshot
 
 Close the camera interface and any ReShade panel before taking the screenshot. Use your configured **ReShade screenshot key** to include its effects. In the tested setup, that key is **Print Screen**.
 
 For a larger image, follow the **Hotsampling** steps below before capturing.
 
-## Compose with a gamepad
+### Gamepad
 
 An **Xbox / XInput controller** can move the camera while the game is frozen. Close the interface before using the sticks. While freecam is active, controller movement controls the camera without also moving Jensen.
 
-| Action | Control |
-|---|---|
-| Enable / release freecam | **Back + Start** |
-| Move | **Left stick** |
-| Look | **Right stick** |
-| Move up / down | **RT / LT** |
-| Roll right / left | **RB / LB** |
-| Increase / decrease FOV | **D-pad up / down** |
-| Halve / double movement speed | **D-pad left / right** |
-| Hide / show the HUD and highlights | **X** |
-| Freeze / unfreeze the scene | **Y** |
-| Reset roll | **B** |
-| Fast / slow movement | **Left-stick click / right-stick click** |
+<div class="table_component" role="region" tabindex="0">
+<table>
+<thead><tr><th>Action</th><th>Control</th></tr></thead>
+<tbody>
+<tr><td>Enable / release freecam</td><td><strong>Back + Start</strong></td></tr>
+<tr><td>Move</td><td><strong>Left stick</strong></td></tr>
+<tr><td>Look</td><td><strong>Right stick</strong></td></tr>
+<tr><td>Move up / down</td><td><strong>RT / LT</strong></td></tr>
+<tr><td>Roll right / left</td><td><strong>RB / LB</strong></td></tr>
+<tr><td>Increase / decrease FOV</td><td><strong>D-pad up / down</strong></td></tr>
+<tr><td>Halve / double movement speed</td><td><strong>D-pad left / right</strong></td></tr>
+<tr><td>Hide / show the HUD and highlights</td><td><strong>X</strong></td></tr>
+<tr><td>Freeze / unfreeze the scene</td><td><strong>Y</strong></td></tr>
+<tr><td>Reset roll</td><td><strong>B</strong></td></tr>
+<tr><td>Fast / slow movement</td><td><strong>Left-stick click / right-stick click</strong></td></tr>
+</tbody>
+</table>
+</div>
 
 PlayStation controllers need an XInput translation layer, such as Steam Input.
 
-## Gold Filter: shape the image
+### Gold Filter
 
 The **Gold Filter** tab brings together restoration effects from **[DXHRDC-GFX by Silent / CookiePLMonster](https://github.com/CookiePLMonster/DXHRDC-GFX)**.
 
-### Choose the overall look
+#### Choose the overall look
 
 - **Enable gold color grading** switches the grading on or off.
 - **Color preset** offers three starting looks.
 - **Bloom** switches between **Director's Cut** and **Human Revolution** bloom. Compare how bright areas and their glow appear in your scene.
 - **Lighting** offers **Director's Cut**, **Director's Cut (fixed)** and **Human Revolution** styles. Their visible effect depends on the location and lighting in the shot.
 
-### Fine-tune the grading
+#### Fine-tune the grading
 
 Open **Advanced color grading** for:
 
-| Adjustment | Use it to… |
-|---|---|
-| **Intensity** | Change the strength of the grading. |
-| **Saturation** | Adjust the amount of color. |
-| **Temperature threshold** | Change how the grading separates its temperature ranges. |
-| **Cold / Moderate / Warm** | Edit the colors used by those three ranges. |
-| **Vignette** | Adjust the vignette. **Reset vignette** returns it to its defaults. |
+<div class="table_component" role="region" tabindex="0">
+<table>
+<thead><tr><th>Adjustment</th><th>Use it to…</th></tr></thead>
+<tbody>
+<tr><td><strong>Intensity</strong></td><td>Change the strength of the grading.</td></tr>
+<tr><td><strong>Saturation</strong></td><td>Adjust the amount of color.</td></tr>
+<tr><td><strong>Temperature threshold</strong></td><td>Change how the grading separates its temperature ranges.</td></tr>
+<tr><td><strong>Cold / Moderate / Warm</strong></td><td>Edit the colors used by those three ranges.</td></tr>
+<tr><td><strong>Vignette</strong></td><td>Adjust the vignette. <strong>Reset vignette</strong> returns it to its defaults.</td></tr>
+</tbody>
+</table>
+</div>
 
 Your Gold Filter changes save automatically for later sessions.
 
 The restoration is already integrated into this camera. Leave the separate **DXHRDC-GFX ASI** disabled when using these controls, so the same effects are not applied twice.
 
-## Distance and shadows
+### Distance and shadows
 
 The Camera tab also contains two **experimental** options that may help a particular shot:
 
@@ -113,7 +195,7 @@ The Camera tab also contains two **experimental** options that may help a partic
 
 Both options can affect performance. Compare the result in the scene you are photographing; neither is a general lighting overhaul. **Restore game** returns these options to their original state.
 
-## Hotsampling: capture a larger image
+### Hotsampling
 
 Hotsampling makes the game render at a larger window size. The window can extend beyond the monitor, so you may only see part of the image on screen. The screenshot still contains the **complete rendered frame**.
 
@@ -129,15 +211,13 @@ Use **windowed DirectX 11 mode** for this. **1440p and 4K have been tested**, in
 
 Restore the original resolution before changing display mode or loading another area.
 
-### Reuse a resolution
+#### Saved resolutions
 
 The **Saved resolutions** list remembers successfully applied sizes automatically. It keeps up to **16 different resolutions**, with the most recent first.
 
 Click a saved resolution to apply it again. Your last saved size also fills the width and height fields the next time you use the camera. Failed changes and **Restore resolution** do not add entries.
 
-For screenshots, use your ReShade capture key; there is no **Save PNG** section in this tab.
-
-## Return to gameplay
+### Return to gameplay
 
 Press **Ctrl + Insert**, or choose **Restore game** in the Camera tab. This releases the free camera, restores time and the HUD, unlocks camera movement, resets object distance and enhanced shadows, and returns the window to its original resolution.
 
@@ -146,27 +226,6 @@ Your **Gold Filter** choices stay in place. Change them separately if you want a
 **Keep running without focus** is enabled when the camera is injected. It keeps the game processing when you switch windows and stays enabled after Restore game. You can turn it off in the Camera tab.
 
 Release freecam before loading another save or entering a cinematic.
-
-## Keyboard quick reference
-
-With **Num Lock ON**:
-
-| Action | Key |
-|---|---|
-| Show / hide the interface | **End** |
-| Enable / release freecam | **Insert** |
-| Restore game and original resolution | **Ctrl + Insert** |
-| Forward / backward | **Numpad 8 / 5** |
-| Left / right | **Numpad 4 / 6** |
-| Down / up | **Numpad 7 / 9** |
-| Look | **Mouse** or **arrow keys** |
-| Roll left / right | **Numpad 1 / 3** |
-| Reset roll | **Numpad 2** |
-| Increase / decrease FOV | **Numpad + / −** |
-| Fast / slow movement | **Shift / Ctrl** |
-| Hide / show HUD and highlights | **Delete** |
-| Freeze / unfreeze | **Numpad 0** |
-| Lock / unlock camera movement | **Numpad decimal** |
 
 ## Credits
 
