@@ -1,80 +1,65 @@
 ---
 layout: post
-title: "Deus Ex: Human Revolution — Director's Cut Freecam"
+title: "Deus Ex: Human Revolution — Director's Cut: Screenshooting Guide"
 date: 2026-10-25 10:00:00 +0100
-description: "Free camera, gamepad controls, Gold Filter restoration, experimental graphics options and hotsampling for Deus Ex: Human Revolution — Director's Cut."
+description: "Freeze a scene, compose with the free camera, work with the Gold Filter and take high-resolution screenshots in Deus Ex: Human Revolution — Director's Cut."
 tags: Screenshooting
 ---
 
-**DXHRDC Freecam v0.29** is a camera tool for virtual photography in **Deus Ex: Human Revolution — Director's Cut**. It provides free movement, pitch, yaw, roll and field-of-view controls, a movable camera while the game is frozen, HUD hiding, an integrated Gold Filter and hotsampling.
+**Deus Ex: Human Revolution — Director's Cut** offers plenty to photograph: its architecture, characters, lighting and atmosphere. **DXHRDC Freecam** lets you leave the gameplay viewpoint, hold a moment and compose your own image.
 
-This guide covers the **Steam Director's Cut executable 2.0.66.0 (build 235963)**. The in-game interface and hotsampling use **DirectX 11**. Hotsampling requires **windowed mode**.
+This guide uses **DXHRDC Freecam v0.29** with the **Steam Director's Cut** and **DirectX 11**. For high-resolution captures through hotsampling, use **windowed mode**.
 
-## Getting started
+## Get the camera ready
 
-1. Extract the camera release into a folder of your choice. Keep `DXHRDCFreecamInjector.exe` and `DXHRDCFreecam.dll` together.
-2. Start the game through Steam, enable DirectX 11 and load a save into gameplay.
-3. Run `DXHRDCFreecamInjector.exe`. Injection is automatic. The success message closes after three seconds.
-4. Return to the game. Press **End** to show or hide the interface, and **Insert** to enable or release the free camera.
-5. Close the interface with **End** before moving the camera.
+1. Launch the game and load your save into gameplay.
+2. Run **DXHRDCFreecamInjector.exe** from your extracted camera folder. Keep the camera DLL beside it. The confirmation closes after three seconds.
+3. Return to the game. **End** opens or closes the camera interface.
+4. Press **Insert** to activate the free camera.
 
-The injector checks the supported game executable. Inject once per game session. Closing the injector leaves the camera running.
+Close the interface with **End** before flying the camera. You can reopen it whenever you want to adjust an option. **F1** remains a game key.
 
-The interface has four tabs: **Camera**, **Gold Filter**, **Hotsampling** and **Controls**. **End** is the interface shortcut; **F1** remains available to the game.
+## Take your first shot
 
-## Camera
+### 1. Hold the moment
 
-| Option | What it does |
-|---|---|
-| **Free camera** | Enables or releases direct control of the gameplay camera. |
-| **Freeze game** | Freezes the simulation while leaving the free camera movable. |
-| **Hide HUD** | Hides the gameplay HUD and interactable-object highlights. Showing the HUD restores the previous highlight setting. |
-| **Lock camera movement** | Holds the current camera pose by disabling movement input. |
-| **Keep running without focus** | Keeps the game processing when you switch to another window. Enabled on injection. |
-| **Position XYZ** | Changes the camera's position. |
-| **Pitch / Yaw / Roll** | Adjusts the vertical look angle, horizontal look angle and camera tilt. |
-| **FOV vertical** | Changes the vertical field of view in degrees. |
-| **Reset roll** | Returns the camera tilt to zero. |
-| **Move speed** | Changes translation speed. |
-| **Rotation speed (deg/s)** | Changes keyboard and stick rotation speed. |
-| **Restore game** | Releases the camera, restores game time and the HUD, unlocks camera movement, resets object distance, disables enhanced shadows and requests the original window resolution. |
+Find the scene you want to photograph, then press **Numpad 0** to freeze it. Characters and the simulation stop, while the free camera remains movable.
 
-**Restore game** is also available through **Ctrl + Insert**. The background-focus option and Gold Filter settings keep their current values; adjust them separately in their tabs.
+If you need the scene to advance, press **Numpad 0** again. Freeze it once more when the moment is right.
 
-Release the camera before loading another save or entering a cinematic. Camera modes outside the supported gameplay layouts suspend the override.
+### 2. Find your framing
 
-### Experimental graphics options
+Use **Numpad 8 / 5** to move forward and backward, **4 / 6** to move sideways and **7 / 9** to move down and up. Look around with the **mouse** or **arrow keys**.
 
-**Object distance (experimental)** changes drawable visibility ranges from **×1 to ×16**. This can help with distant objects, but it is not a guarantee of higher-detail meshes or additional streaming.
+Hold **Shift** to cover distance quickly, or **Ctrl** for smaller adjustments. The **Move speed** and **Rotation speed** sliders in the Camera tab let you set a comfortable pace.
 
-**2x shadow resolution (experimental)** increases the supported DX11 shadow atlas from **4096 × 3072** to **8192 × 6144**. It doubles each dimension, giving four times as many shadow pixels. The larger atlas uses approximately **96 MiB of additional VRAM**, which can remain allocated after the option is switched off until cleanup.
+Use **Numpad + / −** to change the field of view. Moving the camera changes your viewpoint; changing FOV changes how much of the scene fits into the frame. You can combine the two to work on your composition.
 
-The shadow option starts disabled. Its visible benefit and performance cost depend on the scene. It affects the identified shadow atlas rather than every shadow or lighting effect in the game. Switching it off, or using **Restore game**, returns to the original shadow bindings.
+For a tilted frame, use **Numpad 1 / 3** to roll left and right. **Numpad 2** brings the roll back to zero.
 
-## Keyboard and mouse
+**Num Lock must be ON** for these controls.
 
-Use **Num Lock ON** for the numpad controls.
+### 3. Clear the frame
 
-| Action | Key |
-|---|---|
-| Show / hide the interface | **End** |
-| Enable / release freecam | **Insert** |
-| Restore game and original resolution | **Ctrl + Insert** |
-| Forward / backward | **Numpad 8 / 5** |
-| Strafe left / right | **Numpad 4 / 6** |
-| Move down / up | **Numpad 7 / 9** |
-| Look | **Arrow keys** or **mouse** |
-| Roll left / right | **Numpad 1 / 3** |
-| Reset roll | **Numpad 2** |
-| Increase / decrease vertical FOV | **Numpad + / −** |
-| Fast / slow movement | **Shift / Ctrl** |
-| Toggle HUD and object highlights | **Delete** |
-| Freeze / unfreeze the game | **Numpad 0** |
-| Lock / unlock camera movement | **Numpad decimal** |
+Press **Delete** to hide the gameplay HUD and the yellow highlights around interactable objects. Press it again to bring them back.
 
-## Xbox / XInput gamepad
+Once you have your composition, **Numpad decimal** locks camera movement. This helps you keep the pose while working on the image. Press it again when you want to move.
 
-The first connected XInput controller is used. Close the interface before flying the camera. The game's controller input is neutralized while freecam is active so that composing a shot does not also move Jensen.
+### 4. Work on the look
+
+Open the interface with **End**. The **Gold Filter** tab lets you work with the restored Human Revolution look, while ReShade can provide your additional effects.
+
+The filter is optional: experiment with its controls and keep the result that suits your shot. The available adjustments are described below.
+
+### 5. Capture
+
+Close the camera interface and any ReShade panel before taking the screenshot. Use your configured **ReShade screenshot key** to include its effects. In the tested setup, that key is **Print Screen**.
+
+For a larger image, follow the **Hotsampling** steps below before capturing.
+
+## Compose with a gamepad
+
+An **Xbox / XInput controller** can move the camera while the game is frozen. Close the interface before using the sticks. While freecam is active, controller movement controls the camera without also moving Jensen.
 
 | Action | Control |
 |---|---|
@@ -85,61 +70,108 @@ The first connected XInput controller is used. Close the interface before flying
 | Roll right / left | **RB / LB** |
 | Increase / decrease FOV | **D-pad up / down** |
 | Halve / double movement speed | **D-pad left / right** |
-| Toggle HUD and highlights | **X** |
-| Freeze / unfreeze the game | **Y** |
+| Hide / show the HUD and highlights | **X** |
+| Freeze / unfreeze the scene | **Y** |
 | Reset roll | **B** |
 | Fast / slow movement | **Left-stick click / right-stick click** |
 
-PlayStation controllers need an XInput translation layer, such as Steam Input. Stick and trigger deadzones help prevent drift. The **Controls** tab also displays the physical input values for checking controller reception.
+PlayStation controllers need an XInput translation layer, such as Steam Input.
 
-## Gold Filter
+## Gold Filter: shape the image
 
-The **Gold Filter** tab integrates the restoration effects from **[DXHRDC-GFX by Silent / CookiePLMonster](https://github.com/CookiePLMonster/DXHRDC-GFX)**. Its original color grading, bloom and lighting work is credited below.
+The **Gold Filter** tab brings together restoration effects from **[DXHRDC-GFX by Silent / CookiePLMonster](https://github.com/CookiePLMonster/DXHRDC-GFX)**.
 
-| Option | Available adjustments |
+### Choose the overall look
+
+- **Enable gold color grading** switches the grading on or off.
+- **Color preset** offers three starting looks.
+- **Bloom** switches between **Director's Cut** and **Human Revolution** bloom. Compare how bright areas and their glow appear in your scene.
+- **Lighting** offers **Director's Cut**, **Director's Cut (fixed)** and **Human Revolution** styles. Their visible effect depends on the location and lighting in the shot.
+
+### Fine-tune the grading
+
+Open **Advanced color grading** for:
+
+| Adjustment | Use it to… |
 |---|---|
-| **Enable gold color grading** | Enables or disables the integrated color-grading effect. |
-| **Bloom** | Selects **Director's Cut** or **Human Revolution** bloom. |
-| **Lighting** | Selects **Director's Cut**, **Director's Cut (fixed)** or **Human Revolution** lighting. |
-| **Color preset** | Selects one of three color-grading presets. |
-| **Intensity** | Changes color-grading strength. |
-| **Saturation** | Changes color saturation. |
-| **Temperature threshold** | Adjusts how the grading separates temperature ranges. |
-| **Cold / Moderate / Warm** | Changes the RGB colors used by the three grading ranges. |
-| **Vignette** | Edits the four vignette values. **Reset vignette** restores its defaults. |
+| **Intensity** | Change the strength of the grading. |
+| **Saturation** | Adjust the amount of color. |
+| **Temperature threshold** | Change how the grading separates its temperature ranges. |
+| **Cold / Moderate / Warm** | Edit the colors used by those three ranges. |
+| **Vignette** | Adjust the vignette. **Reset vignette** returns it to its defaults. |
 
-Open **Advanced color grading** to access intensity, saturation, temperature, the three color ranges and vignette.
+Your Gold Filter changes save automatically for later sessions.
 
-Changes save automatically in `DXHRDCFreecam-GFX.ini` beside the camera DLL. Keep that file when moving or updating the camera folder.
+The restoration is already integrated into this camera. Leave the separate **DXHRDC-GFX ASI** disabled when using these controls, so the same effects are not applied twice.
 
-The integrated controls do not require a separate installation of `DXHRDC-GFX.asi`. Leave that separate ASI disabled when using these integrated effects to avoid applying the same restoration twice. ReShade can still provide its own additional effects.
+## Distance and shadows
 
-## Hotsampling
+The Camera tab also contains two **experimental** options that may help a particular shot:
 
-Hotsampling enlarges the actual game window and render resolution beyond the desktop size. Part of the window can extend outside the monitor; the screenshot still captures the complete rendered image. The high-resolution preview is not automatically scaled down to fit the screen.
+- **Object distance** extends the visibility range of objects, from **×1 to ×16**. Check the background of your composition when changing it. It does not guarantee higher-detail models.
+- **2x shadow resolution** increases the resolution of the supported shadow atlas. It may help shadow detail in some scenes, but its benefit varies. It starts switched off and uses additional GPU memory when enabled.
 
-1. Run the game in **windowed DirectX 11 mode**.
-2. Open **Hotsampling** and use **2560 × 1440**, **3840 × 2160**, or enter a custom **Width / height** and click **Apply resolution**.
-3. Wait until **Rendered resolution** shows the requested dimensions.
-4. Close the interface with **End** and capture with your configured ReShade screenshot key. In the tested setup, this is **Print Screen**.
-5. Reopen the interface and click **Restore resolution** to return to the window size and position recorded at injection.
+Both options can affect performance. Compare the result in the scene you are photographing; neither is a general lighting overhaul. **Restore game** returns these options to their original state.
 
-**1440p and 4K have been tested**, including ReShade captures before and after its effects at **3840 × 2160**. Higher resolutions increase memory use; sizes above 4K have not received the same validation. Restore the original size before changing display mode or loading another area.
+## Hotsampling: capture a larger image
 
-### Saved resolutions
+Hotsampling makes the game render at a larger window size. The window can extend beyond the monitor, so you may only see part of the image on screen. The screenshot still contains the **complete rendered frame**.
 
-Successfully applied sizes are saved automatically in `DXHRDCFreecam-Hotsampling.ini` beside the DLL. The **Saved resolutions** list keeps up to **16 unique sizes**, with the most recent first.
+Compose your image at your normal window size first, then:
 
-Click an entry to apply it again. The last saved size fills the width and height fields on the next injection. Failed requests and **Restore resolution** do not add entries. Keep the INI when moving or updating the camera folder.
+1. Keep the scene frozen and open **End → Hotsampling**.
+2. Select **2560 × 1440** or **3840 × 2160**. You can also enter a custom **Width / height** and click **Apply resolution**.
+3. Wait until **Rendered resolution** shows the size you requested.
+4. Close the interface with **End** and take your **ReShade screenshot**.
+5. Reopen the interface and click **Restore resolution** to return to your original window size and position.
 
-Version 0.29 uses ReShade for the capture workflow; the Hotsampling tab no longer contains a **Save PNG** section.
+Use **windowed DirectX 11 mode** for this. **1440p and 4K have been tested**, including complete **3840 × 2160** ReShade captures with its effects. Larger images need more memory; sizes above 4K have not received the same validation.
+
+Restore the original resolution before changing display mode or loading another area.
+
+### Reuse a resolution
+
+The **Saved resolutions** list remembers successfully applied sizes automatically. It keeps up to **16 different resolutions**, with the most recent first.
+
+Click a saved resolution to apply it again. Your last saved size also fills the width and height fields the next time you use the camera. Failed changes and **Restore resolution** do not add entries.
+
+For screenshots, use your ReShade capture key; there is no **Save PNG** section in this tab.
+
+## Return to gameplay
+
+Press **Ctrl + Insert**, or choose **Restore game** in the Camera tab. This releases the free camera, restores time and the HUD, unlocks camera movement, resets object distance and enhanced shadows, and returns the window to its original resolution.
+
+Your **Gold Filter** choices stay in place. Change them separately if you want a different look for gameplay.
+
+**Keep running without focus** is enabled when the camera is injected. It keeps the game processing when you switch windows and stays enabled after Restore game. You can turn it off in the Camera tab.
+
+Release freecam before loading another save or entering a cinematic.
+
+## Keyboard quick reference
+
+With **Num Lock ON**:
+
+| Action | Key |
+|---|---|
+| Show / hide the interface | **End** |
+| Enable / release freecam | **Insert** |
+| Restore game and original resolution | **Ctrl + Insert** |
+| Forward / backward | **Numpad 8 / 5** |
+| Left / right | **Numpad 4 / 6** |
+| Down / up | **Numpad 7 / 9** |
+| Look | **Mouse** or **arrow keys** |
+| Roll left / right | **Numpad 1 / 3** |
+| Reset roll | **Numpad 2** |
+| Increase / decrease FOV | **Numpad + / −** |
+| Fast / slow movement | **Shift / Ctrl** |
+| Hide / show HUD and highlights | **Delete** |
+| Freeze / unfreeze | **Numpad 0** |
+| Lock / unlock camera movement | **Numpad decimal** |
 
 ## Credits
 
 - **Camera tool and integration:** AnticOwl / Olivier César.
-- **Gold Filter restoration:** **Adrian Zdanowicz (Silent / CookiePLMonster)**, author of **[DXHRDC-GFX](https://github.com/CookiePLMonster/DXHRDC-GFX)**. The integrated color grading, bloom and lighting effects are adapted from that project under its **[MIT license](https://github.com/CookiePLMonster/DXHRDC-GFX/blob/77ac54d786b6e15dde7b3b2cb6d0812beded2d53/LICENSE)**. Original copyright: **© 2020–2021 Adrian Zdanowicz (Silent)**. The camera's combined interface and injection path are adaptations; the original restoration work belongs to Silent.
-- **Interface:** **[Dear ImGui](https://github.com/ocornut/imgui)** by Omar Cornut and contributors, under the MIT license.
-- **Hooking library:** **[MinHook](https://github.com/TsudaKageyu/minhook)** by Tsuda Kageyu and contributors, under its BSD-style license.
-
-The camera package includes `DXHRDC-GFX-LICENSE.txt` with the Gold Filter's original license notice.
+- **Gold Filter restoration:** **Adrian Zdanowicz (Silent / CookiePLMonster)**, creator of **[DXHRDC-GFX](https://github.com/CookiePLMonster/DXHRDC-GFX)**. The integrated color grading, bloom and lighting effects are adapted from his work under the **[MIT license](https://github.com/CookiePLMonster/DXHRDC-GFX/blob/77ac54d786b6e15dde7b3b2cb6d0812beded2d53/LICENSE)**. Original copyright: **© 2020–2021 Adrian Zdanowicz (Silent)**. Full credit for the original restoration effects belongs to Silent.
+- **Interface:** **[Dear ImGui](https://github.com/ocornut/imgui)** by Omar Cornut and contributors.
+- **Hooking library:** **[MinHook](https://github.com/TsudaKageyu/minhook)** by Tsuda Kageyu and contributors.
 
