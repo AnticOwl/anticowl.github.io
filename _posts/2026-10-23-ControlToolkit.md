@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CONTROL Toolkit — In-Game Photo Mode Tools"
+title: "CONTROL Toolkit"
 date: 2026-10-23 10:00:00 +0200
 image: CONTROLTOOLKIT_POST.jpg
 tags: Screenshooting
@@ -8,7 +8,7 @@ tags: Screenshooting
 
 **This guide covers CONTROL Toolkit v0.5c** for the Next Gen **CONTROL** (DirectX 12). It brings Photo Mode camera controls, camera paths, lights, post-processing and high-resolution capture together in one interface. It is intended for Photo Mode, not regular gameplay.
 
-[Download the compiled v0.5c package](https://anticowl.github.io/files/ControlToolkit_0.5c.zip) · [Browse the source code](https://github.com/AnticOwl/CONTROL_Toolkit/tree/main/source/v0.5c)
+[Download the compiled v0.5c package](https://anticowl.github.io/files/ControlToolkit_0.5c.zip) 
 
 ## Install the toolkit
 
