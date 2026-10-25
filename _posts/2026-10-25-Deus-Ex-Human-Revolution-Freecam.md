@@ -2,6 +2,7 @@
 layout: post
 title: "Deus Ex: Human Revolution — Director's Cut"
 date: 2026-10-25 10:00:00 +0100
+image: DEHRDC_POST.jpg
 tags: Screenshooting
 ---
 
