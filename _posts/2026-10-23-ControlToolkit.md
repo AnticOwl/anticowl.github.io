@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "CONTROL Toolkit — In-Game Photo Mode Tools"
+title: "CONTROL Toolkit v0.5c — In-Game Photo Mode Tools"
 date: 2026-10-23 10:00:00 +0200
 image: CONTROLTOOLKIT_POST.jpg
 tags: Screenshooting
 ---
 
-**CONTROL Toolkit** is a free in-game utility for virtual photography in the original **CONTROL** (DirectX 12). It brings Photo Mode camera controls, camera paths, lights, post-processing and high-resolution capture into one interface. It is intended for Photo Mode, not regular gameplay.
+**This guide covers CONTROL Toolkit v0.5c** for the original **CONTROL** (DirectX 12). It brings Photo Mode camera controls, camera paths, lights, post-processing and high-resolution capture together in one interface. It is intended for Photo Mode, not regular gameplay.
 
 [Download the compiled v0.5c package](https://github.com/AnticOwl/CONTROL_Toolkit/blob/main/releases/ControlToolkit_0.5c.zip) · [Browse the source code](https://github.com/AnticOwl/CONTROL_Toolkit/tree/main/source/v0.5c)
 
@@ -21,14 +21,7 @@ Inject once per game session.
 
 ## About IGCSConnector — Frans' Depth of Field
 
-The Frans DOF workflow uses the **IGCS Connector** ReShade add-on together with **IGCS Relay**. The Relay add-on is included in the toolkit ZIP. ReShade with add-on support and IGCS Connector must be installed for CONTROL DX12.
-
-1. Copy `IGCSRelay.addon64` from the toolkit ZIP into the same ReShade add-ons folder as `IgcsConnector.addon64`.
-2. In ReShade, make sure **IGCS Connector** and **IGCSRelay** are enabled.
-3. In the toolkit's **IGCSDOF** tab, enable the named-pipe provider.
-4. Enter Photo Mode and move the camera. Then open **IGCS Connector → Depth of Field control** in ReShade and start the DOF session.
-
-Keep the Relay beside the Connector in ReShade's add-ons folder; it does not go beside the Toolkit DLL or injector.
+The DOF magic is already packed into **IGCSRelay**. Drop the included `IGCSRelay.addon64` next to `IgcsConnector.addon64` in ReShade's add-ons folder, and you're done. No extra wiring, no secret handshake.
 
 ## Camera and Camera Path
 
