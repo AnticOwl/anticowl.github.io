@@ -19,9 +19,9 @@ tags: Screenshooting
 
 Inject once per game session.
 
-## About IGCSConnector — Frans' Depth of Field
+## About IGCSConnector
 
-The DOF magic is already packed into **IGCSRelay**. Drop the included `IGCSRelay.addon64` next to `IgcsConnector.addon64` in ReShade's add-ons folder, and you're done. No extra wiring, no secret handshake.
+For Frans' DOF in v0.5c, copy `IGCSRelay.addon64` from the Toolkit ZIP into the ReShade add-ons folder that contains `IgcsConnector.addon64`. That's all you need to do.
 
 ## Camera and Camera Path
 
