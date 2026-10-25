@@ -2,84 +2,60 @@
 layout: post
 title: "CONTROL Toolkit — In-Game Photo Mode Tools"
 date: 2026-10-23 10:00:00 +0200
+image: CONTROLTOOLKIT_POST.jpg
 tags: Screenshooting
 ---
 
-**CONTROL Toolkit** is an in-game utility for the original **CONTROL** (DirectX 12), made for virtual photography and cinematic screenshots. It brings camera controls, a camera path, lighting, post-processing and resolution adjustments together in one interface.
+**CONTROL Toolkit** is a free in-game utility for virtual photography in the original **CONTROL** (DirectX 12). It brings Photo Mode camera controls, camera paths, lights, post-processing and high-resolution capture into one interface. It is intended for Photo Mode, not regular gameplay.
 
-The current tested baseline is **v0.4j**. The version number is displayed in the title bar, so you can easily see which build is running.
+[Download the compiled v0.5c package](https://github.com/AnticOwl/CONTROL_Toolkit/blob/main/releases/ControlToolkit_0.5c.zip) · [Browse the source code](https://github.com/AnticOwl/CONTROL_Toolkit/tree/main/source/v0.5c)
 
-## Main Features
+## Install the toolkit
 
-* **Camera & Camera Path** — frame shots and set up camera movements.
-* **Spot Lights** — work with the toolkit's native Spot Light functionality.
-* **Post Process** — adjust bloom and other image effects.
-* **Hotsampling** — switch to custom capture resolutions, revisit previously used resolutions and restore your original window size.
-* **Configuration** — adjust supported key bindings and Photo Mode settings.
-* **IGCSDOF integration** — use the existing connector features where applicable.
+1. Download and extract the compiled ZIP.
+2. Start CONTROL in **DirectX 12** and load into the game.
+3. Run `ControlToolkitInjector.exe` from the extracted folder. Keep `ControlToolkit.dll` beside it.
+4. Press **F10** to show or hide the toolkit.
 
-## Getting Started
+Inject once per game session.
 
-The toolkit is currently distributed as a **source ZIP**, including a build script and an injector.
+## About IGCSConnector — Frans' Depth of Field
 
-1. Extract the toolkit archive.
-2. Run `Build-Release.cmd` to compile the toolkit and injector.
-3. Start the **DirectX 12** version of CONTROL and enter gameplay.
-4. Run `Inject-Control.cmd` to inject the toolkit into `Control_DX12.exe`.
-5. Open the in-game interface and choose the tab you want to use.
+The Frans DOF workflow uses the **IGCS Connector** ReShade add-on together with **IGCS Relay**. The Relay add-on is included in the toolkit ZIP. ReShade with add-on support and IGCS Connector must be installed for CONTROL DX12.
 
-The package uses `ControlToolkit.dll`. It does **not** require Cheat Engine or an external injector.
+1. Copy `IGCSRelay.addon64` from the toolkit ZIP into the same ReShade add-ons folder as `IgcsConnector.addon64`.
+2. In ReShade, make sure **IGCS Connector** and **IGCSRelay** are enabled.
+3. In the toolkit's **IGCSDOF** tab, enable the named-pipe provider.
+4. Enter Photo Mode and move the camera. Then open **IGCS Connector → Depth of Field control** in ReShade and start the DOF session.
 
-> **Important:** Build and injection require a working local Windows C++ build environment. The source ZIP is not a precompiled DLL package.
+Keep the Relay beside the Connector in ReShade's add-ons folder; it does not go beside the Toolkit DLL or injector.
 
-## Camera & Camera Path
+## Camera and Camera Path
 
-Use the camera controls to compose a frame, then work with the **Camera Path** controls when you want a moving shot instead of a single still. The toolkit includes configurable shortcuts, so check the **Configuration** tab for the keys assigned to your camera and path actions.
+Use the Photo Mode camera to compose a still image. The **Camera Path** tab lets you add and play a sequence of camera positions for a moving shot. Camera path files are saved beside the Toolkit DLL.
 
 ## Lights
 
-The existing lighting controls include **native Spot Light creation**. Spots are directional: use them to highlight a subject or add an accent to a scene.
+The Toolkit supports both **Spot** and **Point / Omni** lights.
 
-### Point / Omni Lights — planned
+- A **Spot** light shines in a chosen direction, which is useful for lighting a subject or adding an accent.
+- A **Point / Omni** light shines in every direction from its position. Choose **Point / Omni**, create a light, then set its position, color, intensity and range.
+- Select a light from the list to edit it. **Enabled** turns the selected light on or off.
 
-**Point (Omni) Light creation is not part of the confirmed v0.4j feature set yet.** Work is planned to add a native light that illuminates in all directions from a chosen position, ideally with position, color, intensity and radius controls. This section will be updated only once the function is implemented and tested in the original CONTROL game.
+For Point / Omni lights, **Source Radius** changes the size of the light source; **Range** controls how far the light reaches.
 
 ## Post Process
 
-The **Post Process** tab groups the image adjustments that were previously spread across the interface. Bloom controls are clearly labeled:
-
-* **Bloom Scale X** and **Bloom Scale Y**
-* **Bloom Intensity**
-* **Bloom Threshold**
-* **Bloom Lens Dirt**
-* **Bloom Scatter**
-
-You can also adjust **Global Exposure**, **Radial Blur** and **Vignette** from this tab. Change one setting at a time and compare the effect in your scene.
+The **Post Process** tab includes Bloom Scale X/Y, Intensity, Threshold, Lens Dirt and Scatter, as well as Global Exposure, Radial Blur and Vignette.
 
 ## Hotsampling
 
-The **Hotsampling** tab brings resolution management into the toolkit, reducing the need to use a separate window-resizing utility such as SRWE.
-
-* Pick a custom resolution and apply it.
-* Reuse resolutions from the clickable history.
-* Restore the original window dimensions.
-* Keep **Allow Window Resize** and **Allow Hotsampling** together in this tab.
-* Keep **Force EXITSIZEMOVE after window resize** enabled, so CONTROL receives the resize-complete notification.
-
-For best results, verify that the game's **Render Resolution** follows the resized window, both when moving to a higher resolution and when restoring the original one. The v0.4j baseline was user-tested with the **Native** rendering mode; results may differ with upscaling settings.
+Choose a window size in the **Hotsampling** tab, apply it, and use **Restore original** to return to the original size. The Toolkit preserves the game's selected internal render scale when resizing, including reduced DLSS and supersampling ratios.
 
 ## Configuration
 
-The **Configuration** tab provides the tool's keyboard customization options and **Photo Mode — 8 to 100**, enabled by default.
+Use **Configuration** to change supported keyboard shortcuts and Photo Mode options. **F10** shows or hides the Toolkit by default.
 
-## Tips for Screenshots
+## Compatibility
 
-If the image looks wrong after a resolution change, compare the window resolution and the game's render resolution. In a normal native hotsampling workflow, they should match. Return to your usual resolution using **Restore** when you finish capturing.
-
-As with any runtime game modification, keep a backup of your working build and test new versions before replacing it.
-
-## Notes
-
-This documentation describes **CONTROL 1**, not **CONTROL Resonant**. The two toolkits are separate projects.
-
-Point / Omni Light support remains **under investigation** and will be added to this page once a working in-game implementation is confirmed.
+This guide is for the original **CONTROL** running in **DirectX 12**. It does not describe CONTROL Resonant, which is a separate game and project.
