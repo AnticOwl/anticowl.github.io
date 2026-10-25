@@ -10,8 +10,7 @@ You play Adam Jensen, an ex-SWAT specialist who's been handpicked to oversee the
 
 ## Required
 
-* Deus Ex: Human Revolution — Director's Cut (Steam version).
-* [DXHRDC Freecam v0.29](https://anticowl.github.io/files/DXHRDCFreecamInjector.zip)
+* [Deus Ex: Human Revolution — Director's Cut Camera.](https://anticowl.github.io/files/DXHRDCFreecamInjector.zip)
 * **DirectX 11** enabled in the game settings.
 
 ## Optional
