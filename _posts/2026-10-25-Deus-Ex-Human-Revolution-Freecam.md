@@ -10,7 +10,7 @@ You play Adam Jensen, an ex-SWAT specialist who's been handpicked to oversee the
 ## Required
 
 * Deus Ex: Human Revolution — Director's Cut (Steam version).
-* DXHRDC Freecam v0.29, including **DXHRDCFreecamInjector.exe** and **DXHRDCFreecam.dll**.
+* [DXHRDC Freecam v0.29](https://anticowl.github.io/files/DXHRDCFreecamInjector.zip)
 * **DirectX 11** enabled in the game settings.
 
 ## Optional
@@ -229,8 +229,6 @@ Release freecam before loading another save or entering a cinematic.
 
 ## Credits
 
-- **Camera tool and integration:** AnticOwl / Olivier César.
 - **Gold Filter restoration:** **Adrian Zdanowicz (Silent / CookiePLMonster)**, creator of **[DXHRDC-GFX](https://github.com/CookiePLMonster/DXHRDC-GFX)**. The integrated color grading, bloom and lighting effects are adapted from his work under the **[MIT license](https://github.com/CookiePLMonster/DXHRDC-GFX/blob/77ac54d786b6e15dde7b3b2cb6d0812beded2d53/LICENSE)**. Original copyright: **© 2020–2021 Adrian Zdanowicz (Silent)**. Full credit for the original restoration effects belongs to Silent.
-- **Interface:** **[Dear ImGui](https://github.com/ocornut/imgui)** by Omar Cornut and contributors.
-- **Hooking library:** **[MinHook](https://github.com/TsudaKageyu/minhook)** by Tsuda Kageyu and contributors.
+
 
