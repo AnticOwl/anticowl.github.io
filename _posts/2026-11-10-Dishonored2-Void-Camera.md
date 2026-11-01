@@ -133,8 +133,8 @@ A path is an ordered list of camera poses. Each node stores position, pitch, yaw
 #### Build a simple path
 
 1. Enable the free camera and frame the first shot.
-2. Click **Add current pose**. This creates **Node 01** at the current camera pose.
-3. Move to the next shot and click **Add current pose** again. This creates **Node 02** after Node 01.
+2. Click **Add current node**. This creates **Node 01** at the current camera pose.
+3. Move to the next shot and click **Add current node** again. This creates **Node 02** after Node 01.
 4. Select **Node 01** and set **Seconds to next node** to **2.00 s**. This is the travel time from Node 01 to Node 02.
 5. Add a third pose. Select **Node 02** and set its duration to **5.00 s**. Node 02 controls the time from Node 02 to Node 03.
 6. Click **Play from start**. Playback uses the durations on the starting nodes: for example, Node 01 → Node 02 takes 2 seconds and Node 02 → Node 03 takes 5 seconds.
@@ -153,7 +153,7 @@ To add a pose between Node 02 and Node 03:
 2. Move the camera to the new composition you want between those poses.
 3. Click **Insert after selected**. The order becomes:
 
-   `Node 01 → Node 02 → Node 03 (new) → Node 04 → Node 05 (old Node 03)`
+   `Node 01 → Node 02 → Node 03 (new) → Node 04 (old Node 03) → Node 05 (old Node 04)`
 
 4. The old Node 02 → Node 03 duration is split between the two new segments. Adjust **Seconds to next node** on the affected nodes to set the timing you want.
 
