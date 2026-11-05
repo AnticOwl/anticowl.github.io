@@ -2,6 +2,7 @@
 layout: post
 title: "Dishonored 2 — Void Camera"
 date: 2026-11-10 10:00:00 +0100
+image:  DIS2_POST.jpg
 tags: Screenshooting
 ---
 
@@ -211,5 +212,5 @@ Dishonored 2 must be in **Windowed** mode for SRWE resizing. The camera has no i
 Locking the camera with **Home** before resizing is optional; use it if you want to preserve the exact camera pose while you work in SRWE. Unlock with **Home** afterward. Resizing does not depend on the camera being locked. Hotsampling changes the render window size; it does not raise the game’s internal resolution-scale setting.
 
 ## Credits
-
+* Banner shot by VAIN
 * Camera connector: **IGCS Connector** by Frans Bouma.
