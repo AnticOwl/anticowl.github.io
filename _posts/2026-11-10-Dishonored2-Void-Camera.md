@@ -27,7 +27,7 @@ Reprise your role as a supernatural assassin in Dishonored 2. Declared a “mast
 4. When injection succeeds, load your save and enter gameplay.
 5. Press **F10** to show or hide the camera panel. Press **Insert** to enable or disable the free camera.
 
-Choose **Keyboard** or **Gamepad** in the Camera tab before enabling the camera. Your choice is saved in `%LOCALAPPDATA%\\VoidCamera\\settings.ini`. The DLL unloads when the game exits. Do not inject another camera hook at the same time.
+Choose **Keyboard** or **Gamepad** in the Camera tab before enabling the camera. Your choice is saved in `%LOCALAPPDATA%\VoidCamera\settings.ini`. The DLL unloads when the game exits. Do not inject another camera hook at the same time.
 
 ## Controls
 
