@@ -85,6 +85,7 @@ With the camera panel hidden and the game focused:
 <tr><td>Move faster / slower</td><td><strong>Shift / Ctrl</strong></td></tr>
 <tr><td>Move very slowly</td><td><strong>Alt</strong></td></tr>
 <tr><td>Stop / resume game time</td><td><strong>Numpad 0</strong></td></tr>
+<tr><td>Advance one engine frame while time is stopped</td><td><strong>Page Up</strong></td></tr>
 <tr><td>Hide / restore game UI, markers and supported cutscene subtitles</td><td><strong>Delete</strong></td></tr>
 <tr><td>Add a path node</td><td><strong>F6</strong></td></tr>
 <tr><td>Insert a node after the selected node</td><td><strong>Shift + F6</strong></td></tr>
@@ -97,7 +98,7 @@ With the camera panel hidden and the game focused:
 
 Enable **Num Lock** when using the numeric keypad. The selected input device controls free-camera movement; keyboard camera movement is not active while **Gamepad** is selected. The game disables pause-on-focus-loss when the camera is injected, so it can keep running while you use another window.
 
-The **PYR rotation speed (deg/s)** slider adjusts pitch, yaw and roll speed. Its value is saved in `settings.ini`. **Shift** multiplies movement speed by 5, **Ctrl** by 0.1, and **Alt** by 0.01.
+The **PYR rotation speed (deg/s)** slider adjusts pitch, yaw and roll speed. Its value is saved in `settings.ini`. **Shift** multiplies keyboard movement speed by 5, **Ctrl** by 0.1, and **Alt** by 0.01. With a gamepad selected, hold **Y** for 5× speed or **X** for 0.1× speed; both multipliers affect movement, rotation and FOV adjustment.
 
 ### Gamepad
 
@@ -112,7 +113,7 @@ With **Gamepad** selected, the first connected XInput controller uses these cont
 <tr><td>Move up / down</td><td><strong>Left / right trigger</strong></td></tr>
 <tr><td>Roll left / right</td><td><strong>D-pad left / right</strong></td></tr>
 <tr><td>Adjust vertical FOV</td><td><strong>D-pad up / down</strong></td></tr>
-<tr><td>Move faster / slower</td><td><strong>A / X</strong></td></tr>
+<tr><td>Move faster / slower</td><td><strong>Y / X</strong></td></tr>
 <tr><td>Reset vertical FOV</td><td><strong>B</strong></td></tr>
 </tbody>
 </table>
@@ -124,7 +125,7 @@ With **Gamepad** selected, the first connected XInput controller uses these cont
 
 Enable **Free camera** with **Insert**, then hide the panel with **F10** before moving. Use the Camera tab to choose the input device, lock the pose, set rotation speed, adjust vertical FOV, or edit the camera position and orientation numerically.
 
-**Numpad 0** toggles time stop. The camera can still move while the game simulation is paused. Press it again when you want the scene to advance. **Delete** toggles the game UI, world markers and supported cutscene subtitles. Cinematic black bars and the **Skip** prompt are shader effects and are not controlled by this camera.
+**Numpad 0** toggles time stop. The camera can still move while the game simulation is paused. While paused, press **Page Up** to request one native engine frame so the rendered view refreshes; time stop remains enabled. **Delete** toggles the game UI, world markers and supported cutscene subtitles. Cinematic black bars and the **Skip** prompt are shader effects and are not controlled by this camera.
 
 ### Camera path
 
@@ -187,9 +188,15 @@ The **Environment** tab contains live controls for fog, god rays, fog light scat
 
 ### LOD
 
-The LOD tab contains **World LOD detail scale** and **Model shadow distance**. A lower World LOD detail-scale value retains more static-world detail. Model shadow distance affects model-shadow culling; it is separate from static-world mesh visibility. The camera does not expose a confirmed general-purpose object draw-distance override.
+The **LOD** tab exposes **World LOD detail scale**. A lower value retains more static-world detail. It does not control entity visibility distances or provide a confirmed general-purpose object draw-distance override.
 
-### Hotsampling with SRWE
+### Shadows
+
+The **Shadows** tab exposes **NVIDIA HBAO+**, **Model shadow distance**, **Directional shadow slice size**, **Partial cascade updates**, and the four directional cascade far distances. HBAO+ controls ambient occlusion. Model shadow distance affects model-shadow culling; cascade distances control directional sun-shadow ranges separately.
+
+Cascade distances must remain in strictly increasing order. They use the game’s native CVar apply path and update live. Changes to directional shadow slice size request a shadow-resource rebuild and can cause a brief hitch or higher VRAM use. Set the slice size at the main menu before loading a level so the game can rebuild its shadow resources during level load. Restore initial render settings returns exposed values to their state at injection.
+
+## Hotsampling with SRWE
 
 Dishonored 2 must be in **Windowed** mode for SRWE resizing. The camera has no integrated Hotsampling tab; use SRWE to resize the game window’s client area.
 
