@@ -87,6 +87,7 @@ With the camera panel hidden and the game focused:
 <tr><td>Stop / resume game time</td><td><strong>Numpad 0</strong></td></tr>
 <tr><td>Advance one engine frame while time is stopped</td><td><strong>Page Up</strong></td></tr>
 <tr><td>Hide / restore game UI, markers and supported cutscene subtitles</td><td><strong>Delete</strong></td></tr>
+<tr><td></td><td><strong></strong></td></tr>
 <tr><td>Add a path node</td><td><strong>F6</strong></td></tr>
 <tr><td>Insert a node after the selected node</td><td><strong>Shift + F6</strong></td></tr>
 <tr><td>Delete the selected node</td><td><strong>F7</strong></td></tr>
@@ -211,5 +212,4 @@ Locking the camera with **Home** before resizing is optional; use it if you want
 
 ## Credits
 
-* Camera tools and game research: **AnticOwl**.
 * Camera connector: **IGCS Connector** by Frans Bouma.
