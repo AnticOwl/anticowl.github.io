@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Dishonored 2 — Void Camera"
-date: 2026-11-10 10:00:00 +0100
+title: "Dishonored 2"
+date: 2026-11-05 10:00:00 +0100
 image:  DIS2_POST.jpg
 tags: Screenshooting
 ---
