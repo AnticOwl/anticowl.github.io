@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Deus Ex: Mankind Divided — DXMD Freecam"
-date: 2026-11-07 00:00:00 +0100
+date: 2026-12-07 00:00:00 +0100
 permalink: /deus-ex-mankind-divided-freecam/
 tags: Screenshooting
 ---
