@@ -12,7 +12,7 @@ Use **DirectX 12** for the DX12-only shadow-bias controls. The camera supports D
 
 ## Contents
 
-Full field list: [parameter reference on the site](https://anticowl.github.io/dxmd-freecam-parameters/) · [parameter reference on GitHub](https://github.com/AnticOwl/Guides/blob/main/DXMD_Freecam_Parameters.md).
+Full field list: [parameter reference on the site](https://anticowl.github.io/dxmd-freecam-parameters/) · [parameter reference on GitHub](https://github.com/AnticOwl/anticowl.github.io/blob/main/_pages/dxmd-freecam-parameters.md).
 
 - [Install and start](#install-and-start)
 - [Keyboard and controller](#keyboard-and-controller)
