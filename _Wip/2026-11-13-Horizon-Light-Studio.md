@@ -2,6 +2,7 @@
 layout: post
 title: "Horizon Light Studio — Lighting a shot in Zero Dawn Remastered and Forbidden West"
 date: 2026-11-13 00:00:00 +0100
+image: HLS_POST.jpg
 permalink: /horizon-light-studio/
 tags: Screenshooting
 ---
