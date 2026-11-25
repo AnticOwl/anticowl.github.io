@@ -7,7 +7,7 @@ permalink: /horizon-light-studio/
 tags: Screenshooting
 ---
 
-Horizon Light Studio and Poses **0.49** lets you place spotlights and omnidirectional lights inside Horizon’s photo mode. You can light Aloy from one camera position, move back to frame the portrait, and leave the light exactly where you placed it. The same in-game panel works in both games. Switch between **Lights** and **Poses** to adjust lighting, body bones, facial controls and animation frames. This guide was updated on **23 November 2026** for the 0.49 prototype.
+Horizon Light Studio and Poses **0.51** lets you place spotlights and omnidirectional lights inside Horizon’s photo mode. You can light Aloy from one camera position, move back to frame the portrait, and leave the light exactly where you placed it. The same in-game panel works in both games. Switch between **Lights** and **Poses** to adjust lighting, body bones, facial controls and animation frames. This guide was updated on **25 November 2026** for the 0.51 prototype.
 
 | Supported Windows game | Game build |
 | --- | --- |
@@ -19,7 +19,7 @@ Horizon Light Studio and Poses **0.49** lets you place spotlights and omnidirect
 <a id="setup"></a>
 ## Set up the tool
 
-1. Extract the **Horizon Light Studio and Poses 0.49** archive to a folder of your choice. Keep `HorizonLightStudio.exe`, `HorizonLightOverlay.dll` and `HorizonLightsRuntime.dll` together.
+1. Extract the **Horizon Light Studio and Poses 0.51** archive to a folder of your choice. Keep `HorizonLightStudio.exe`, `HorizonLightOverlay.dll` and `HorizonLightsRuntime.dll` together.
 2. Launch the game, load a save and enter its native photo mode. If you already loaded an earlier version of Light Studio, restart the game once before loading the new version.
 3. Run `HorizonLightStudio.exe` and return to the game window. The panel header identifies the game and tool version. **F10** shows or hides the panel.
 4. Look for **Ready** at the bottom. If the panel is waiting for a camera update, give the game focus and move the photo-mode camera slightly.
@@ -101,13 +101,15 @@ From **0.48**, tool-created lights include dynamic objects such as Aloy in their
 
 Enter native photo mode before using **Poses** so the tool can acquire Aloy’s rig. Keep the game focused while editing.
 
-### Body bones and root position
+### Body bones, root position and rotation
 
 1. Open **Poses → Body** and enable **Enable pose edits**. Turn on **Bones and gizmo** to see the skeleton.
 2. Select a joint in the bone tree or click its node on Aloy. Use **Find bone** to narrow the tree. Expand its arrows to reach child joints.
 3. Drag a colored rotation ring, or edit **Rotation offset (degrees)**. The X / Y / Z values use the bone’s parent-local axes. Child bones follow their parent. Hold **Alt** for fine adjustment.
-4. Select **rootBone** to access **Position offset X / Y / Z (m)** and move the whole pose. These are offsets in the character’s local coordinate system, not absolute map coordinates.
-5. **Reset selected** clears the selected bone’s edits; selecting the root and resetting also clears its position offset. **Reset all** in the body panel clears the body edits and any loaded body snapshot.
+4. Select **rootBone** to access **Position offset X / Y / Z (m)** and move the whole pose. These are offsets in the character’s local coordinate system, not absolute map coordinates. With rootBone selected, use **Rotation offset (degrees)** to rotate the whole pose (pitch / yaw / roll, P/Y/R), or drag its rotation rings.
+5. **Reset selected** clears the selected bone’s edits; selecting rootBone and resetting clears both its XYZ position offset and its rotation offsets, while preserving edits on other bones. **Reset all** in the body panel clears the body edits and any loaded body snapshot.
+
+**Validated in 0.51 in both HFW and HZDR:** root XYZ movement, P/Y/R rotation and reset work with animations active. You can reposition and orient Aloy while retaining the animation and the edits on individual bones.
 
 In **HZDR**, use **Bypass Look At requirement** if body editing does not update with the native camera’s Toggle Look At disabled or unavailable. This control bypasses the body-update requirement without moving the camera. HFW does not need this checkbox.
 
@@ -157,4 +159,4 @@ If the saved-pose list is empty, check the folder path displayed in the panel an
 - **The panel is visible but the controls are grey:** enter native photo mode, focus the game window and wait for **Ready**. Check the game build against the table above.
 - **I lost a spot:** select its name, aim the camera at a nearby surface and click **Move to camera**. Back away to inspect the cone, or toggle **Enabled** to compare the surface lighting.
 - **The wireframe appears in my screenshot:** open the panel, clear **Keep gizmo visible with UI hidden**, then hide the panel with **F10**.
-- **I want to compare two setups:** duplicate the light, give each copy a descriptive name and enable one at a time. Light Studio and Poses 0.49 has no per-slider undo.
+- **I want to compare two setups:** duplicate the light, give each copy a descriptive name and enable one at a time. Light Studio and Poses 0.51 has no per-slider undo.
