@@ -162,3 +162,5 @@ If the saved-pose list is empty, check the folder path displayed in the panel an
 - **I lost a spot:** select its name, aim the camera at a nearby surface and click **Move to camera**. Back away to inspect the cone, or toggle **Enabled** to compare the surface lighting.
 - **The wireframe appears in my screenshot:** open the panel, clear **Keep gizmo visible with UI hidden**, then hide the panel with **F10**.
 - **I want to compare two setups:** duplicate the light, give each copy a descriptive name and enable one at a time. Light Studio and Poses 0.51 has no per-slider undo.
+
+Thanks to Horacelin for the banner shot! 
