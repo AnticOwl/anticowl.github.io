@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Horizon Light Studio and Poses — Lighting and posing in both Horizon games"
+title: "Horizon Light Studio and Poses"
 date: 2026-11-27 00:00:00 +0100
 image: HLS_POST.jpg
 permalink: /horizon-light-studio/
