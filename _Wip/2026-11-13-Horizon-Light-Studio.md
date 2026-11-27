@@ -19,6 +19,8 @@ Horizon Light Studio and Poses **0.51** lets you place spotlights and omnidirect
 <a id="setup"></a>
 ## Set up the tool
 
+**Download the tool [HERE](https://anticowl.github.io/files/HorizonLightStudio.0.51.zip)**
+
 1. Extract the **Horizon Light Studio and Poses 0.51** archive to a folder of your choice. Keep `HorizonLightStudio.exe`, `HorizonLightOverlay.dll` and `HorizonLightsRuntime.dll` together.
 2. Launch the game, load a save and enter its native photo mode. If you already loaded an earlier version of Light Studio, restart the game once before loading the new version.
 3. Run `HorizonLightStudio.exe` and return to the game window. The panel header identifies the game and tool version. **F10** shows or hides the panel.
